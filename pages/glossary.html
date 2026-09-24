@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>อภิธานศัพท์ | คู่มือ Warhammer 40K ฉบับมือใหม่</title>
+  <meta name="description" content="ศัพท์ Warhammer 40,000 พร้อมคำอ่านภาษาไทยและความหมาย ค้นหาได้ทันที">
+  <meta name="theme-color" content="#0d0e11">
+  <link rel="icon" href="../images/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Kanit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=5">
+</head>
+<body data-page="glossary" data-root="../">
+<script src="../js/icons.js?v=5"></script>
+
+<main>
+  <header class="page-hero">
+    <div class="hero-bg"><img src="../images/lore/imperium-aquila.webp" alt=""></div>
+    <div class="container">
+      <nav class="breadcrumb" aria-label="breadcrumb"><a href="../index.html">หน้าแรก</a><svg class="i"><use href="#i-chev-right"></use></svg><span>อภิธานศัพท์</span></nav>
+      <h1>อภิธานศัพท์ 40K</h1>
+      <p class="lead">ศัพท์ที่เจอในกติกา เนื้อเรื่อง งานอดิเรก และวงสนทนาของผู้เล่น — พร้อมคำอ่านภาษาไทยและความหมายสั้น ๆ</p>
+      <div class="page-meta"><span class="chip chip-gold">บทที่ 13</span><span class="chip" id="g-count"></span></div>
+    </div>
+  </header>
+
+  <section class="section-sm">
+    <div class="container" style="max-width:920px">
+      <div class="filter-bar">
+        <label class="search" style="max-width:none"><span class="visually-hidden">ค้นหาศัพท์</span><svg class="i"><use href="#i-search"></use></svg><input id="g-search" type="search" placeholder="พิมพ์คำอังกฤษ คำอ่าน หรือความหมาย เช่น เซฟ, charge, ขวัญ"></label>
+      </div>
+      <div class="tabs">
+        <button class="tab active" data-gcat="all">ทั้งหมด</button>
+        <button class="tab" data-gcat="rule">กติกา</button>
+        <button class="tab" data-gcat="unit">ยูนิต/คีย์เวิร์ด</button>
+        <button class="tab" data-gcat="weapon">อาวุธ/ความสามารถ</button>
+        <button class="tab" data-gcat="lore">เนื้อเรื่อง</button>
+        <button class="tab" data-gcat="hobby">งานอดิเรก</button>
+        <button class="tab" data-gcat="slang">ศัพท์ชุมชน</button>
+      </div>
+      <div class="glossary-list" id="glossary-list" aria-live="polite"></div>
+      <div class="doc-body" style="max-width:none">
+        <div class="mark-read"><button class="btn btn-ghost btn-sm" data-mark-read></button></div>
+        <div data-page-nav></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="../js/layout.js?v=5"></script>
+<script src="../js/main.js?v=5"></script>
+<script src="../js/glossary.js?v=5"></script>
+</body>
+</html>

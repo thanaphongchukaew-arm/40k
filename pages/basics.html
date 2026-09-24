@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>พื้นฐาน & Datasheet | คู่มือ Warhammer 40K ฉบับมือใหม่</title>
+  <meta name="description" content="พื้นฐานกติกา Warhammer 40,000: ยูนิต การวัดระยะ ลูกเต๋า การอ่าน Datasheet คีย์เวิร์ด Coherency Engagement และ Battle-shock">
+  <meta name="theme-color" content="#0d0e11">
+  <link rel="icon" href="../images/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Kanit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=5">
+</head>
+<body data-page="basics" data-root="../">
+<script src="../js/icons.js?v=5"></script>
+
+<main>
+  <header class="page-hero">
+    <div class="hero-bg"><img src="../images/factions/imperium/chapter-ultramarines.webp" alt=""></div>
+    <div class="container">
+      <nav class="breadcrumb" aria-label="breadcrumb"><a href="../index.html">หน้าแรก</a><svg class="i"><use href="#i-chev-right"></use></svg><span>กติกา</span><svg class="i"><use href="#i-chev-right"></use></svg><span>พื้นฐาน & Datasheet</span></nav>
+      <h1>พื้นฐานที่ต้องรู้ก่อนทอยเต๋า</h1>
+      <p class="lead">ยูนิตคืออะไร วัดระยะยังไง ลูกเต๋าอ่านอย่างไร และตัวเลขบนการ์ดยูนิต (Datasheet) แต่ละตัวหมายถึงอะไร</p>
+      <div class="page-meta"><span class="chip"><svg class="i"><use href="#i-clock"></use></svg> อ่าน ~12 นาที</span><span class="chip chip-gold">บทที่ 4</span><span class="chip chip-new">11th Edition</span></div>
+    </div>
+  </header>
+
+  <div class="container doc">
+    <aside class="toc" data-toc></aside>
+    <article class="doc-body">
+
+      <section id="units">
+        <h2><span class="num">01</span>กองทัพ ยูนิต และโมเดล</h2>
+        <div class="grid grid-3">
+          <div class="card"><div class="card-icon"><svg class="i"><use href="#i-flag"></use></svg></div><h3>Army <span class="muted" style="font-size:.85rem">(อาร์มี)</span></h3><p>กองทัพทั้งหมดของผู้เล่นหนึ่งคน</p></div>
+          <div class="card"><div class="card-icon red"><svg class="i"><use href="#i-users"></use></svg></div><h3>Unit <span class="muted" style="font-size:.85rem">(ยูนิต)</span></h3><p>กลุ่มของโมเดลที่เคลื่อนที่และสู้ไปด้วยกัน คำสั่งเกือบทุกอย่างในเกมสั่ง "ทีละยูนิต"</p></div>
+          <div class="card"><div class="card-icon blue"><svg class="i"><use href="#i-shield"></use></svg></div><h3>Model <span class="muted" style="font-size:.85rem">(โมเดล)</span></h3><p>ตัวละครหนึ่งตัวบนโต๊ะ ฐาน (base) ถือเป็นส่วนหนึ่งของโมเดลในทุกกฎ</p></div>
+        </div>
+        <p class="mt-2">ยูนิตหนึ่งอาจมีโมเดลตัวเดียว (เช่น รถถัง หรือตัวละครฮีโร่) หรือหลายตัว (เช่น ทหาร 10 นาย) จำนวนโมเดลตอนเริ่มรอบที่ 1 เรียกว่า <span class="term">Starting Strength <span class="th">(สตาร์ทติ้ง สเตรงท์)</span></span></p>
+        <ul>
+          <li><strong>At Half-strength</strong> (ครึ่งกำลัง) — เหลือโมเดลครึ่งหนึ่งพอดี เช่น ยูนิต 10 ตัวเหลือ 5 ตัว</li>
+          <li><strong>Below Half-strength</strong> (ต่ำกว่าครึ่ง) — เหลือน้อยกว่าครึ่ง เช่น ยูนิต 5 ตัวเหลือ 2 ตัว</li>
+          <li>ถ้ายูนิตมีโมเดลเดียว ให้ดูจาก <strong>จำนวนแผล (Wounds) ที่เหลือ</strong> แทน เช่น รถถัง W 12 เหลือ 6 = ครึ่งกำลัง</li>
+        </ul>
+        <div class="callout"><svg class="i"><use href="#i-info"></use></svg><div><p>ถ้าจำนวนหารสองไม่ลงตัว (เช่น 5 ตัว) ยูนิตนั้นจะไม่มีวัน "ครึ่งพอดี" แต่ยัง "ต่ำกว่าครึ่ง" ได้ (เหลือ 2 ตัว)</p></div></div>
+      </section>
+
+      <section id="measure">
+        <h2><span class="num">02</span>การวัดระยะ</h2>
+        <ul class="list-check">
+          <li>ระยะทุกอย่างวัดเป็น<strong>นิ้ว (")</strong> — 1 นิ้ว ≈ 2.54 ซม.</li>
+          <li><strong>วัดได้ทุกเมื่อ</strong> ไม่ต้องกะด้วยสายตา (เช่น เช็กระยะยิงก่อนตัดสินใจได้)</li>
+          <li>วัดจาก<strong>ส่วนที่ใกล้ที่สุดของฐาน</strong>ถึงส่วนที่ใกล้ที่สุดของอีกฝ่าย</li>
+          <li>โมเดลไม่มีฐาน เช่น รถถังส่วนใหญ่ (คีย์เวิร์ด <span class="kbd">FRAME</span>) วัดจาก<strong>ตัวถัง</strong>ส่วนที่ใกล้ที่สุด</li>
+        </ul>
+        <h3>Within กับ Wholly Within ต่างกันยังไง?</h3>
+        <div class="map-demo" role="img" aria-label="แผนภาพเปรียบเทียบ within กับ wholly within">
+          <svg viewBox="0 0 640 220">
+            <rect x="0" y="0" width="640" height="220" fill="#1b1f16"/>
+            <circle cx="170" cy="110" r="90" fill="rgba(208,168,79,.08)" stroke="#d0a84f" stroke-dasharray="6 5"/>
+            <circle cx="170" cy="110" r="6" fill="#d0a84f"/>
+            <text x="170" y="100" fill="#e6c77d" font-size="13" text-anchor="middle" font-family="Kanit">6"</text>
+            <line x1="170" y1="110" x2="260" y2="110" stroke="#d0a84f" stroke-width="1.5"/>
+            <circle cx="250" cy="60" r="16" fill="#4f86d6" stroke="#fff" stroke-width="2"/>
+            <circle cx="120" cy="150" r="16" fill="#3fb37a" stroke="#fff" stroke-width="2"/>
+            <text x="250" y="30" fill="#8db6f0" font-size="13" text-anchor="middle" font-family="IBM Plex Sans Thai">within (แตะบางส่วน)</text>
+            <text x="120" y="190" fill="#7fdcaa" font-size="13" text-anchor="middle" font-family="IBM Plex Sans Thai">wholly within (อยู่ในทั้งฐาน)</text>
+            <rect x="370" y="30" width="240" height="160" rx="10" fill="rgba(208,168,79,.06)" stroke="#3a414f"/>
+            <text x="390" y="62" fill="#ebe8e1" font-size="15" font-family="Kanit">Within 6"</text>
+            <text x="390" y="86" fill="#c9c6bf" font-size="13" font-family="IBM Plex Sans Thai">ส่วนใดส่วนหนึ่งของฐาน</text>
+            <text x="390" y="104" fill="#c9c6bf" font-size="13" font-family="IBM Plex Sans Thai">อยู่ในระยะ ก็นับแล้ว</text>
+            <text x="390" y="138" fill="#ebe8e1" font-size="15" font-family="Kanit">Wholly within 6"</text>
+            <text x="390" y="162" fill="#c9c6bf" font-size="13" font-family="IBM Plex Sans Thai">ทุกส่วนของฐานต้อง</text>
+            <text x="390" y="180" fill="#c9c6bf" font-size="13" font-family="IBM Plex Sans Thai">อยู่ในระยะทั้งหมด</text>
+          </svg>
+        </div>
+        <p class="mt-2">ยูนิตถือว่า "within" ถ้ามี<strong>อย่างน้อยหนึ่งโมเดล</strong>อยู่ในระยะ แต่ "wholly within" ต้อง<strong>ทุกโมเดล</strong>อยู่ในระยะทั้งฐาน</p>
+      </section>
+
+      <section id="dice">
+        <h2><span class="num">03</span>ลูกเต๋า</h2>
+        <div class="table-wrap"><table>
+          <thead><tr><th>สัญลักษณ์</th><th>ความหมาย</th><th>ตัวอย่าง</th></tr></thead>
+          <tbody>
+            <tr><td><span class="big-num">D6</span></td><td>ทอยลูกเต๋าหกด้าน 1 ลูก (ผล 1–6)</td><td>Advance ได้ D6 นิ้ว</td></tr>
+            <tr><td><span class="big-num">D3</span></td><td>ทอย D6 แล้วหารสอง ปัดขึ้น (1–2 = 1, 3–4 = 2, 5–6 = 3)</td><td>อาวุธดาเมจ D3</td></tr>
+            <tr><td><span class="big-num">2D6</span></td><td>ทอย 2 ลูกแล้วบวกกัน (ผล 2–12)</td><td>ระยะชาร์จ, Battle-shock</td></tr>
+            <tr><td><span class="big-num">D6+1</span></td><td>ทอยแล้วบวกค่าที่ระบุ</td><td>ดาเมจ D6+1</td></tr>
+            <tr><td><span class="big-num">3+</span></td><td>ต้องทอยได้ 3 ขึ้นไป (3, 4, 5, 6) จึงสำเร็จ</td><td>ค่า BS 3+ ยิงโดนเมื่อทอยได้ 3–6</td></tr>
+          </tbody>
+        </table></div>
+        <h3>กฎสำคัญเกี่ยวกับการทอย</h3>
+        <ul>
+          <li><strong>ทอยพร้อมกันทั้งกอง</strong> — ถ้าการโจมตีเหมือนกันทุกประการ ทอยทั้งหมดในครั้งเดียว (เกมรุ่น 11th ออกแบบให้ทำแบบนี้ได้เป็นมาตรฐาน)</li>
+          <li><strong>Unmodified</strong> (ค่าดิบ) — ผลบนลูกเต๋าก่อนบวก/ลบ ใช้ตัดสินผลพิเศษ เช่น 1 ดิบคือพลาดเสมอ 6 ดิบในการยิงคือ <strong>Critical Hit</strong></li>
+          <li><strong>Re-roll</strong> (ทอยใหม่) — ทอยซ้ำลูกเดิมได้<strong>ครั้งเดียวเท่านั้น</strong> และทอยซ้ำก่อนใส่ตัวปรับค่า ถ้าเป็นการทอยแบบรวมหลายลูก (เช่น 2D6) ต้องทอยใหม่ทุกลูก</li>
+          <li><strong>Modifier</strong> (ตัวปรับค่า) — ทอยเพื่อยิงโดน (Hit) และทอยเพื่อทำแผล (Wound) ปรับรวมได้ไม่เกิน <strong>+1 หรือ −1</strong> ไม่ว่าจะมีบัฟ/ดีบัฟกี่อย่าง ผลที่ต่ำกว่า 1 นับเป็น 1</li>
+          <li><strong>Roll-off</strong> — ทั้งสองฝ่ายทอย D6 คนละลูก ใครได้มากกว่าชนะ เสมอทอยใหม่</li>
+        </ul>
+        <div class="callout tip"><svg class="i"><use href="#i-bulb"></use></svg><div><p>ค่าบนการ์ดอย่าง BS หรือ Sv ก็ถูก "ปรับ" ได้เช่นกัน (เช่น ที่กำบังทำให้ BS แย่ลง 1) แต่ BS/WS จะดีกว่า 2+ หรือแย่กว่า 6+ ไม่ได้ และ Sv ดีกว่า 2+ ไม่ได้</p></div></div>
+      </section>
+
+      <section id="datasheet">
+        <h2><span class="num">04</span>อ่าน Datasheet (การ์ดข้อมูลยูนิต)</h2>
+        <p>ทุกยูนิตมี <span class="term">Datasheet <span class="th">(ดาต้าชีต)</span></span> บอกทุกอย่างที่ต้องรู้ <strong>ชี้เมาส์หรือแตะที่ค่าต่าง ๆ ด้านล่าง</strong> เพื่อดูคำอธิบาย</p>
+        <div class="datasheet" data-datasheet>
+          <div class="ds-head"><h3 data-explain="<b>ชื่อยูนิต</b> — ชื่อบน Datasheet ถือเป็นคีย์เวิร์ดของยูนิตด้วย">BATTLE SQUAD (ตัวอย่าง)</h3><span class="chip">5 โมเดล</span></div>
+          <div class="ds-stats">
+            <div class="ds-stat" data-explain="<b>M — Move (มูฟ)</b> ระยะที่เดินได้ต่อเทิร์นใน Normal Move = 6 นิ้ว"><small>M</small><b>6"</b></div>
+            <div class="ds-stat" data-explain="<b>T — Toughness (ทัฟเนส)</b> ความอึด ยิ่งสูงยิ่งทำแผลยาก นำไปเทียบกับค่า S ของอาวุธศัตรู"><small>T</small><b>4</b></div>
+            <div class="ds-stat" data-explain="<b>Sv — Save (เซฟ)</b> เกราะป้องกัน ต้องทอยได้ 3+ เพื่อกันการโจมตี (ถูกลดด้วยค่า AP ของอาวุธ)"><small>SV</small><b>3+</b></div>
+            <div class="ds-stat" data-explain="<b>InSv — Invulnerable Save (อินวัลเนอเรเบิล เซฟ)</b> เซฟพิเศษจากสนามพลัง/เวทมนตร์ ไม่ถูก AP ลด ยูนิตนี้ไม่มี (–) ใน 11th ระบบเช็กให้อัตโนมัติว่าเซฟไหนดีกว่า"><small>INSV</small><b>–</b></div>
+            <div class="ds-stat" data-explain="<b>W — Wounds (วูนด์ส)</b> จำนวนแผลที่รับได้ก่อนตาย โมเดลละ 2 แผล"><small>W</small><b>2</b></div>
+            <div class="ds-stat" data-explain="<b>Ld — Leadership (ลีดเดอร์ชิป)</b> ขวัญกำลังใจ ทอย 2D6 ต้องได้ 6 ขึ้นไปจึงผ่านการทดสอบ Battle-shock (ค่ายิ่งต่ำยิ่งดี)"><small>LD</small><b>6+</b></div>
+            <div class="ds-stat" data-explain="<b>OC — Objective Control (ออบเจกทีฟ คอนโทรล)</b> พลังในการยึดจุด แต่ละโมเดลนับ 2 แต้มเมื่อยืนในพื้นที่ Objective"><small>OC</small><b>2</b></div>
+          </div>
+          <div class="ds-section">
+            <h4>Ranged Weapons (อาวุธระยะไกล)</h4>
+            <div class="table-wrap" style="margin:0;border:0;background:none"><table>
+              <thead><tr><th>อาวุธ</th><th data-explain="<b>Range</b> ระยะยิงไกลสุด (นิ้ว)">RANGE</th><th data-explain="<b>A — Attacks</b> จำนวนลูกเต๋าที่ทอยต่อหนึ่งอาวุธ">A</th><th data-explain="<b>BS — Ballistic Skill</b> ความแม่นในการยิง ต้องทอยได้เท่านี้ขึ้นไปถึงจะโดน">BS</th><th data-explain="<b>S — Strength</b> ความแรง ใช้เทียบกับ T ของเป้าหมายเพื่อหาว่าต้องทอยเท่าไรถึงทำแผลได้">S</th><th data-explain="<b>AP — Armour Penetration</b> การเจาะเกราะ -1 หมายถึงเซฟของเป้าหมายแย่ลง 1 (3+ กลายเป็น 4+)">AP</th><th data-explain="<b>D — Damage</b> จำนวนแผลที่ทำได้ต่อการโจมตีหนึ่งครั้งที่ผ่านเซฟ">D</th></tr></thead>
+              <tbody>
+                <tr data-explain="<b>Bolt rifle</b> ยิง 24 นิ้ว 2 นัด โดนที่ 3+ แรง 4 เจาะเกราะ -1 ดาเมจ 1 · <span class='ab'>[ASSAULT]</span> ยิงได้แม้ Advance · <span class='ab'>[HEAVY]</span> +1 ทอยโดน ถ้าไม่มีโมเดลไหนในยูนิตเคลื่อนเกิน 3 นิ้วในเทิร์นนี้"><td>Bolt rifle <span class="ab">[ASSAULT, HEAVY]</span></td><td>24"</td><td>2</td><td>3+</td><td>4</td><td>-1</td><td>1</td></tr>
+                <tr data-explain="<b>Bolt pistol</b> ปืนพก <span class='ab'>[PISTOL]</span> = ยิงได้แม้กำลังติดพันตะลุมบอนกับศัตรู (Close-quarters shooting) แต่ต้องยิงใส่ยูนิตที่ติดพันอยู่เท่านั้น"><td>Bolt pistol <span class="ab">[PISTOL]</span></td><td>12"</td><td>1</td><td>3+</td><td>4</td><td>0</td><td>1</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <div class="ds-section">
+            <h4>Melee Weapons (อาวุธระยะประชิด)</h4>
+            <div class="table-wrap" style="margin:0;border:0;background:none"><table>
+              <thead><tr><th>อาวุธ</th><th>RANGE</th><th>A</th><th data-explain="<b>WS — Weapon Skill</b> ความชำนาญการต่อสู้ระยะประชิด ใช้แทน BS">WS</th><th>S</th><th>AP</th><th>D</th></tr></thead>
+              <tbody><tr data-explain="<b>Close combat weapon</b> อาวุธประชิดพื้นฐาน (มีด ด้ามปืน กำปั้น) ตีได้ 3 ครั้ง โดนที่ 3+ · ตอนต่อสู้แต่ละโมเดลต้องเลือกใช้อาวุธประชิด 1 ชนิด"><td>Close combat weapon</td><td>Melee</td><td>3</td><td>3+</td><td>4</td><td>0</td><td>1</td></tr></tbody>
+            </table></div>
+          </div>
+          <div class="ds-section" data-explain="<b>Abilities (ความสามารถ)</b> มี 3 แบบ: <b>Core</b> ความสามารถพื้นฐานที่อธิบายในกฎหลัก (เช่น Deep Strike), <b>Faction</b> กฎประจำทัพ, และความสามารถเฉพาะของยูนิตนี้">
+            <h4>Abilities (ความสามารถ)</h4>
+            <p style="margin:0;font-size:.9rem;color:var(--text-soft)"><b>CORE:</b> — &nbsp;·&nbsp; <b>FACTION:</b> กฎประจำทัพ &nbsp;·&nbsp; <b>Squad Tactics:</b> (ตัวอย่างความสามารถเฉพาะยูนิต)</p>
+          </div>
+          <div class="ds-section" data-explain="<b>Keywords (คีย์เวิร์ด)</b> ป้ายบอกประเภทยูนิต กฎหลายข้อพูดถึงคีย์เวิร์ด เช่น 'ใช้ได้กับยูนิต INFANTRY เท่านั้น' และ <b>Faction keyword</b> ใช้ตอนจัดทัพว่ายูนิตนี้อยู่ฝ่ายไหน">
+            <h4>Keywords</h4>
+            <p class="ds-keywords" style="margin:0">INFANTRY, BATTLELINE, GRENADES, IMPERIUM, BATTLE SQUAD &nbsp;|&nbsp; <b>FACTION:</b> ADEPTUS ASTARTES</p>
+          </div>
+          <div class="ds-explain">👆 ชี้หรือแตะที่ค่าบนการ์ดเพื่อดูความหมาย</div>
+        </div>
+        <div class="callout warn"><svg class="i"><use href="#i-alert"></use></svg><div><p>การ์ดนี้เป็น<strong>ตัวอย่างสมมติเพื่อการเรียน</strong> ตัวเลขใกล้เคียงทหารราบ Space Marine ทั่วไป แต่ไม่ใช่ค่าทางการของยูนิตใดยูนิตหนึ่ง ค่าจริงให้ดูในแอป Warhammer 40,000 หรือ Codex</p></div></div>
+        <h3>ส่วนอื่น ๆ ที่อยู่บน Datasheet</h3>
+        <ul>
+          <li><strong>Unit Composition</strong> — ยูนิตมีโมเดลกี่ตัว แต่ละตัวถืออาวุธอะไรเป็นค่าเริ่มต้น</li>
+          <li><strong>Wargear Options</strong> — ตัวเลือกเปลี่ยนอาวุธ</li>
+          <li><strong>Leader / Support</strong> — ถ้าเป็นตัวละคร จะบอกว่าเข้าไปนำ (attach) ยูนิตไหนได้</li>
+          <li><strong>Transport</strong> — ถ้าเป็นยานพาหนะ จะบอกว่าบรรทุกได้กี่ตัวและใครบ้าง</li>
+          <li><strong>Damaged</strong> — ยานใหญ่บางคันเมื่อแผลเหลือน้อยจะเสื่อมประสิทธิภาพ (ทอยโดน −1)</li>
+        </ul>
+      </section>
+
+      <section id="keywords">
+        <h2><span class="num">05</span>คีย์เวิร์ดที่เจอบ่อย</h2>
+        <div class="table-wrap"><table>
+          <thead><tr><th>คีย์เวิร์ด</th><th>คำอ่าน</th><th>ความหมายในเกม</th></tr></thead>
+          <tbody>
+            <tr><td><strong>INFANTRY</strong></td><td>อินแฟนทรี</td><td>ทหารราบ เดินทะลุฉากหนาทึบ (Dense) ได้ ได้ที่กำบังเมื่ออยู่ในพื้นที่ฉาก และซ่อนตัว (Hidden) ได้</td></tr>
+            <tr><td><strong>VEHICLE</strong></td><td>วีฮิเคิล</td><td>ยานพาหนะ เดินทะลุโมเดลศัตรูที่ไม่ใช่ยาน/สัตว์ประหลาดได้ ยิงขณะติดพันได้ (มีโทษ)</td></tr>
+            <tr><td><strong>MONSTER</strong></td><td>มอนสเตอร์</td><td>สัตว์ประหลาดขนาดใหญ่ ใช้กฎคล้าย VEHICLE</td></tr>
+            <tr><td><strong>CHARACTER</strong></td><td>คาแรกเตอร์</td><td>ตัวละครผู้นำ มักเข้าไปนำยูนิตอื่น และรับดาเมจเป็นลำดับหลังสุดในยูนิต</td></tr>
+            <tr><td><strong>EPIC HERO</strong></td><td>เอปิก ฮีโร่</td><td>ตัวละครมีชื่อในเนื้อเรื่อง มีได้ทัพละ 1 ตัวต่อชื่อ และใส่ Enhancement ไม่ได้</td></tr>
+            <tr><td><strong>BATTLELINE</strong></td><td>แบทเทิลไลน์</td><td>ทหารแกนหลักของกองทัพ ใส่ในทัพได้มากกว่ายูนิตทั่วไปสองเท่า</td></tr>
+            <tr><td><strong>FLY</strong></td><td>ฟลาย</td><td>บินได้ เลือก "Take to the Skies" เพื่อบินข้ามทุกอย่าง แลกกับระยะเดินลดลง 2 นิ้ว</td></tr>
+            <tr><td><strong>TRANSPORT</strong></td><td>ทรานสปอร์ต</td><td>บรรทุกยูนิตอื่นได้</td></tr>
+            <tr><td><strong>AIRCRAFT</strong></td><td>แอร์คราฟต์</td><td>อากาศยาน เริ่มเกมในกองหนุนเสมอ บินผ่านแล้วกลับเข้ากองหนุน</td></tr>
+            <tr><td><strong>TITANIC / TOWERING</strong></td><td>ไททานิก / ทาวเวอริ่ง</td><td>ขนาดยักษ์ มีข้อยกเว้นหลายอย่าง (เช่น TOWERING ได้ Plunging Fire ในระยะ 12")</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+
+      <section id="coherency">
+        <h2><span class="num">06</span>Coherency: ยูนิตต้องอยู่เป็นกลุ่ม</h2>
+        <p>ทุกครั้งที่ยูนิตหลายตัวเคลื่อนที่หรือถูกวางลงสนาม ต้องอยู่ใน <span class="term">Coherency <span class="th">(โคฮีเรนซี)</span></span> คือ<strong>ทั้งสองข้อ</strong>นี้เป็นจริงสำหรับทุกโมเดล:</p>
+        <ol>
+          <li>อยู่ห่างจาก<strong>อย่างน้อยหนึ่ง</strong>โมเดลในยูนิตเดียวกันไม่เกิน <strong>2 นิ้ว</strong> (แนวนอน) และ 5 นิ้ว (แนวตั้ง)</li>
+          <li>อยู่ห่างจาก<strong>ทุก</strong>โมเดลในยูนิตไม่เกิน <strong>9 นิ้ว</strong> <span class="chip chip-new">ใหม่ใน 11th</span></li>
+        </ol>
+        <div class="map-demo" role="img" aria-label="แผนภาพ coherency">
+          <svg viewBox="0 0 640 200">
+            <rect width="640" height="200" fill="#1b1f16"/>
+            <g font-family="IBM Plex Sans Thai" font-size="13">
+              <text x="20" y="28" fill="#7fdcaa" font-family="Kanit" font-size="15">✔ ถูกต้อง</text>
+              <circle cx="60" cy="100" r="14" fill="#4f86d6" stroke="#fff" stroke-width="2"/>
+              <circle cx="110" cy="80" r="14" fill="#4f86d6" stroke="#fff" stroke-width="2"/>
+              <circle cx="160" cy="100" r="14" fill="#4f86d6" stroke="#fff" stroke-width="2"/>
+              <circle cx="210" cy="120" r="14" fill="#4f86d6" stroke="#fff" stroke-width="2"/>
+              <circle cx="260" cy="100" r="14" fill="#4f86d6" stroke="#fff" stroke-width="2"/>
+              <path d="M74 96 L96 84 M124 84 L146 96 M174 104 L196 116 M224 116 L246 104" stroke="#d0a84f" stroke-width="2" stroke-dasharray="3 3"/>
+              <text x="160" y="160" fill="#c9c6bf" text-anchor="middle">ทุกตัวห่างกันไม่เกิน 2" และกลุ่มกว้างไม่เกิน 9"</text>
+              <line x1="330" y1="20" x2="330" y2="180" stroke="#3a414f"/>
+              <text x="350" y="28" fill="#f08a90" font-family="Kanit" font-size="15">✘ ผิด</text>
+              <circle cx="390" cy="100" r="14" fill="#c0343c" stroke="#fff" stroke-width="2"/>
+              <circle cx="440" cy="100" r="14" fill="#c0343c" stroke="#fff" stroke-width="2"/>
+              <circle cx="490" cy="100" r="14" fill="#c0343c" stroke="#fff" stroke-width="2"/>
+              <circle cx="600" cy="100" r="14" fill="#c0343c" stroke="#fff" stroke-width="2"/>
+              <path d="M504 100 L586 100" stroke="#f08a90" stroke-width="2" stroke-dasharray="4 4"/>
+              <text x="545" y="90" fill="#f08a90" text-anchor="middle">&gt; 2"</text>
+              <text x="490" y="160" fill="#c9c6bf" text-anchor="middle">ตัวขวาสุดห่างเกิน 2" จากทุกตัว</text>
+            </g>
+          </svg>
+        </div>
+        <p class="mt-2">ถ้าจบเทิร์นแล้วยูนิตไม่อยู่ใน Coherency (เช่น เพราะโมเดลตรงกลางตาย) ต้อง<strong>ลบโมเดลออกทีละตัว</strong>จนกลับมาอยู่ใน Coherency โมเดลที่ถูกลบนับว่าถูกทำลาย</p>
+      </section>
+
+      <section id="engagement">
+        <h2><span class="num">07</span>Engagement: ระยะติดพันตะลุมบอน</h2>
+        <p><span class="term">Engagement Range <span class="th">(เอนเกจเมนต์ เรนจ์)</span></span> คือพื้นที่ภายใน <strong>2 นิ้วแนวนอน</strong> และ 5 นิ้วแนวตั้งรอบโมเดล <span class="chip chip-new">ใน 11th ขยายจาก 1" เป็น 2"</span></p>
+        <ul>
+          <li>ถ้าโมเดลของสองฝ่ายอยู่ในระยะนี้ของกันและกัน ทั้งสองยูนิตถือว่า <strong>Engaged</strong> (ติดพัน)</li>
+          <li>ยูนิตที่ติดพันยิงปืนปกติไม่ได้ (ยกเว้นปืนพก/อาวุธ Close-quarters หรือเป็นยาน/สัตว์ประหลาด) และจะออกจากการต่อสู้ได้ด้วยการ <strong>Fall Back</strong> เท่านั้น</li>
+          <li>ในเฟสต่อสู้ โมเดลที่อยู่ในระยะ 2" ของศัตรูเท่านั้นที่ตีได้</li>
+          <li>ตอนเดินปกติ เดิน<strong>ผ่าน</strong>ระยะ Engagement ของศัตรูได้ ขอแค่<strong>จบการเดินนอกระยะ</strong></li>
+        </ul>
+      </section>
+
+      <section id="visibility">
+        <h2><span class="num">08</span>การมองเห็น (Visibility)</h2>
+        <p>จะยิงเป้าหมายได้ ต้อง<strong>มองเห็น</strong> — ลากเส้นตรงสมมติจากส่วนใดของโมเดลเรา ไปยังส่วนใดของโมเดลเป้าหมายได้โดยไม่มีอะไรบัง (โมเดลในยูนิตเราเองและในยูนิตเป้าหมายไม่นับเป็นสิ่งบัง) วิธีง่ายที่สุดคือ<strong>ก้มลงมองจากระดับสายตาของโมเดล</strong></p>
+        <div class="grid grid-2">
+          <div class="card"><h3><svg class="i"><use href="#i-eye"></use></svg> Visible (มองเห็น)</h3><p>เห็นส่วนใดส่วนหนึ่งของโมเดล — พอให้ยิงได้</p></div>
+          <div class="card"><h3><svg class="i"><use href="#i-eye"></use></svg> Fully Visible (เห็นทั้งตัว)</h3><p>เห็นทุกส่วนที่หันมาทางเรา — ถ้าเป้าหมายไม่ fully visible เพราะฉากบัง มักได้ที่กำบัง (Cover)</p></div>
+        </div>
+        <p class="mt-2">ฉาก (Terrain) มีกฎการมองเห็นเพิ่มเติมอีกหลายข้อ เช่น Obscuring และ Hidden — อ่านต่อที่หน้า <a href="terrain.html">ฉาก & Objective</a></p>
+      </section>
+
+      <section id="battleshock">
+        <h2><span class="num">09</span>Leadership และ Battle-shock (ขวัญแตก)</h2>
+        <p>ในช่วง <strong>Command Phase</strong> ของคุณ ต้องทอยทดสอบ <span class="term">Battle-shock <span class="th">(แบทเทิล ช็อก)</span></span> ให้ทุกยูนิตที่:</p>
+        <ul>
+          <li><strong>เหลือครึ่งกำลังหรือต่ำกว่า</strong> (at or below Half-strength) หรือ</li>
+          <li><strong>ขวัญแตกอยู่แล้ว</strong> จากเทิร์นก่อน <span class="chip chip-new">ใหม่: ไม่หายเองอัตโนมัติ</span></li>
+        </ul>
+        <p>วิธีทอย: ทอย <strong>2D6</strong> ถ้าได้ <strong>เท่ากับหรือมากกว่าค่า Ld</strong> = ผ่าน (ถ้าขวัญแตกอยู่ก็หายขวัญแตก) ถ้าไม่ถึง = ขวัญแตก</p>
+        <div class="callout red"><svg class="i"><use href="#i-alert"></use></svg><div><strong class="title">ยูนิตที่ขวัญแตก (Battle-shocked)</strong><ul>
+          <li>ค่า OC กลายเป็น "–" (ยึดจุด Objective ไม่ได้เลย)</li>
+          <li>ใช้ Stratagem กับยูนิตนี้ไม่ได้</li>
+          <li>เริ่ม Action ไม่ได้ และ Action ที่ทำค้างไว้จะไม่สำเร็จ</li>
+          <li>ถอยออกจากการต่อสู้ได้แค่แบบ Desperate Escape (เสี่ยงบาดเจ็บ)</li>
+        </ul></div></div>
+      </section>
+
+      <section id="cp">
+        <h2><span class="num">10</span>Command Points (CP)</h2>
+        <p><span class="term">Command Points <span class="th">(คอมมานด์ พอยต์ — แต้มบัญชาการ)</span></span> คือทรัพยากรที่ใช้จ่ายเพื่อใช้ <strong>Stratagem</strong> (ทักษะพิเศษ) ในช่วงต้น Command Phase ของ<strong>ทุกเทิร์น ทั้งสองผู้เล่นได้คนละ 1 CP</strong> (ไม่ว่าเป็นเทิร์นของใคร) และอาจได้เพิ่มจากกฎพิเศษบางอย่าง รายละเอียดอยู่ในหน้า <a href="stratagems.html">Stratagem & ความสามารถ</a></p>
+        <div class="mark-read"><button class="btn btn-ghost btn-sm" data-mark-read></button></div>
+      </section>
+
+      <div data-page-nav></div>
+    </article>
+  </div>
+</main>
+
+<script src="../js/layout.js?v=5"></script>
+<script src="../js/main.js?v=5"></script>
+</body>
+</html>

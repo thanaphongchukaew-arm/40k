@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>คู่มือ Warhammer 40K ฉบับมือใหม่ | เรียนตั้งแต่ศูนย์จนเล่นเป็น</title>
+  <meta name="description" content="คู่มือภาษาไทย Warhammer 40,000 (11th Edition) ตั้งแต่เนื้อเรื่อง ทัพต่าง ๆ กติกา การจัดทัพ จนถึงเกมแรกของคุณ อ่านง่าย มีรูปประกอบ">
+  <meta name="theme-color" content="#0d0e11">
+  <link rel="icon" href="images/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Kanit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=5">
+</head>
+<body data-page="home" data-root="./">
+<script src="js/icons.js?v=5"></script>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-bg"><img src="images/lore/hero-ultramarines-vs-black-legion.webp" alt="Ultramarines ปะทะ Black Legion ของ Chaos ในสมรภูมิ"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="eyebrow">คู่มือภาษาไทย · อัปเดตตามกติกา 11th Edition</div>
+        <h1>ในอนาคตอันมืดมิดของ <span>สหัสวรรษที่ 41</span> มีเพียงสงคราม</h1>
+        <p class="lead">เรียน <span class="term">Warhammer 40,000 <span class="th">(วอร์แฮมเมอร์ โฟร์ตี้เค)</span></span> ตั้งแต่ศูนย์ — รู้จักเนื้อเรื่อง เลือกทัพที่ใช่ เข้าใจกติกาแบบเห็นภาพ แล้วลงสนามเกมแรกได้อย่างมั่นใจ</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="pages/getting-started.html"><svg class="i"><use href="#i-flag"></use></svg> เริ่มเรียนเลย</a>
+          <a class="btn btn-ghost" href="pages/factions.html"><svg class="i"><use href="#i-shield"></use></svg> ดูทัพทั้งหมด</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>20+</b><span>ฝ่าย/กองทัพให้เลือก</span></div>
+          <div><b>5</b><span>เฟสในแต่ละเทิร์น</span></div>
+          <div><b>5</b><span>รอบการรบต่อเกม</span></div>
+          <div><b>D6</b><span>ลูกเต๋าที่ใช้ทั้งเกม</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 40K คืออะไร ============ -->
+  <section class="section">
+    <div class="container split">
+      <div class="reveal">
+        <div class="eyebrow">ทำความรู้จัก</div>
+        <h2>Warhammer 40K คืออะไร?</h2>
+        <p>Warhammer 40,000 เป็น<strong>เกมสงครามบนโต๊ะ (tabletop wargame)</strong> ของบริษัท <span class="term">Games Workshop <span class="th">(เกมส์ เวิร์คช็อป)</span></span> จากอังกฤษ ผู้เล่นสองฝ่ายนำ<strong>โมเดลจำลอง (miniatures)</strong> ที่ประกอบและทำสีเองมาวางบนโต๊ะที่จัดฉากเป็นสนามรบ แล้วผลัดกันเดิน ยิง และบุกประชิด โดยใช้<strong>ตลับเมตรวัดระยะ (นิ้ว)</strong> และ<strong>ลูกเต๋าหกด้าน (D6)</strong> ตัดสินผล</p>
+        <p>ผู้ชนะไม่จำเป็นต้องเป็นฝ่ายที่ฆ่าศัตรูหมด แต่คือฝ่ายที่ทำ <span class="term">Victory Points <span class="th">(วิกตอรี พอยต์ — แต้มชัยชนะ)</span></span> ได้มากกว่าเมื่อครบ 5 รอบ เช่น จากการยึดพื้นที่สำคัญหรือทำภารกิจสำเร็จ</p>
+        <div class="callout new">
+          <svg class="i"><use href="#i-star"></use></svg>
+          <div><strong class="title">ตอนนี้เป็นยุค 11th Edition</strong>
+          <p>กติการุ่นที่ 11 เปิดตัวเมื่อ 20 มิถุนายน 2026 พร้อมกล่อง <span class="term">Armageddon <span class="th">(อาร์มาเก็ดดอน)</span></span> ที่เป็น Blood Angels ปะทะ Orks เว็บนี้สรุปตามกติกาชุดใหม่นี้ หากเคยเห็นคลิปหรือบทความเก่า รายละเอียดบางอย่างอาจไม่ตรงกันแล้ว</p></div>
+        </div>
+      </div>
+      <figure class="figure reveal">
+        <img src="images/gameplay/table-red-marines-battle-objectives.webp" alt="โต๊ะเกม 40K จริง มีรถถังและ Dreadnought สีแดง ฉากซากตึก และจุด Objective" loading="lazy">
+        <figcaption>หน้าตาโต๊ะเกมจริง: โมเดลทำสี ฉากซากตึกและต้นไม้ จุดวงกลมคือ Objective (จุดยึด) และกองลูกเต๋าที่รอทอย · ภาพ: Wikimedia Commons (CC)</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 4 ส่วนของงานอดิเรก ============ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head center reveal">
+        <div class="eyebrow">มากกว่าแค่เกม</div>
+        <h2>งานอดิเรกที่มี 4 มิติ</h2>
+        <p>คนเล่น 40K ส่วนใหญ่สนุกกับหลายส่วนพร้อมกัน จะชอบด้านไหนมากกว่าก็ไม่ผิด</p>
+      </div>
+      <div class="grid grid-4">
+        <div class="card reveal"><div class="card-icon"><svg class="i"><use href="#i-box"></use></svg></div><h3>สะสม</h3><p>เลือกกองทัพที่ชอบ แล้วค่อย ๆ ขยายจากกล่องเล็กเป็นกองทัพใหญ่</p></div>
+        <div class="card reveal"><div class="card-icon red"><svg class="i"><use href="#i-brush"></use></svg></div><h3>ประกอบ & ทำสี</h3><p>ตัดชิ้นส่วนจากแผง ประกอบ และลงสีตามสีประจำทัพหรือออกแบบเอง</p></div>
+        <div class="card reveal"><div class="card-icon blue"><svg class="i"><use href="#i-dice"></use></svg></div><h3>เล่นเกม</h3><p>วางแผน วัดระยะ ทอยเต๋า — มีตั้งแต่เล่นชิล ๆ กับเพื่อนถึงทัวร์นาเมนต์</p></div>
+        <div class="card reveal"><div class="card-icon green"><svg class="i"><use href="#i-book"></use></svg></div><h3>อ่านเนื้อเรื่อง</h3><p>จักรวาลที่มีประวัติศาสตร์กว่า 10,000 ปีในเรื่อง นิยายนับร้อยเล่ม</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ เส้นทางการเรียน ============ -->
+  <section class="section" id="path">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">เรียนตามลำดับ</div>
+        <h2>เส้นทางจากศูนย์ สู่เกมแรก</h2>
+        <p>อ่านเรียงตามลำดับนี้จะเข้าใจง่ายที่สุด ทุกหน้ามีปุ่ม "ถัดไป" ด้านล่าง · อ่านแล้ว <b class="gold" data-path-count>0 / 14</b> หน้า</p>
+      </div>
+      <div class="path reveal">
+        <a data-id="getting-started" href="pages/getting-started.html"><svg class="i done"><use href="#i-check-circle"></use></svg><h3>เริ่มต้นต้องมีอะไร</h3><p>อุปกรณ์ ชุดเริ่มต้น และวิธีเลือกทัพแรก</p></a>
+        <a data-id="lore" href="pages/lore.html"><svg class="i done"><use href="#i-check-circle"></use></svg><h3>เนื้อเรื่องย่อ</h3><p>จักรพรรดิ Horus Heresy และ Great Rift</p></a>
+        <a data-id="factions" href="pages/factions.html"><svg class="i done"><use href="#i-check-circle"></use></svg><h3>ทัพทั้งหมด</h3><p>Imperium, Chaos, Xenos และสไตล์การเล่น</p></a>
+        <a data-id="basics" href="pages/basics.html"><svg class="i done"><use href="#i-check-circle"></use></svg><h3>พื้นฐาน & Datasheet</h3><p>อ่านการ์ดยูนิต ค่าสถานะ ลูกเต๋า ระยะ</p></a>
+        <a data-id="turn" href="pages/turn.html"><svg class="i done"><use href="#i-check-circle"></use></svg><h3>ลำดับเทิร์น 5 เฟส</h3><p>สั่งการ เคลื่อนที่ ยิง ชาร์จ ต่อสู้</p></a>
+        <a data-id="combat" href="pages/combat.html"><svg class="i done"><use href="#i-check-circle"></use></svg><h3>การโจมตี & ทอยเต๋า</h3><p>Hit → Wound → Save → Damage + ตัวจำลอง</p></a>
+        <a data-id="terrain" href="pages/terrain.html"><svg class="i done"><use href="#i-check-circle"></use></svg><h3>ฉาก & Objective</h3><p>ที่กำบัง การซ่อนตัว และการยึดจุด</p></a>
+        <a data-id="stratagems" href="pages/stratagems.html"><svg class="i done"><use href="#i-check-circle"></use></svg><h3>Stratagem & ความสามารถ</h3><p>ใช้แต้มบัญชาการพลิกเกม</p></a>
+        <a data-id="army-building" href="pages/army-building.html"><svg class="i done"><use href="#i-check-circle"></use></svg><h3>การจัดทัพ</h3><p>แต้ม Detachment Leader Enhancement</p></a>
+        <a data-id="game-modes" href="pages/game-modes.html"><svg class="i done"><use href="#i-check-circle"></use></svg><h3>รูปแบบการเล่น & ภารกิจ</h3><p>Combat Patrol ถึง Strike Force</p></a>
+        <a data-id="first-game" href="pages/first-game.html"><svg class="i done"><use href="#i-check-circle"></use></svg><h3>เกมแรกทีละขั้น</h3><p>ตั้งโต๊ะ วางกำลัง เล่นจนจบ</p></a>
+        <a data-id="hobby" href="pages/hobby.html"><svg class="i done"><use href="#i-check-circle"></use></svg><h3>ประกอบ & ทำสี</h3><p>เครื่องมือและขั้นตอนทำสีพื้นฐาน</p></a>
+        <a data-id="glossary" href="pages/glossary.html"><svg class="i done"><use href="#i-check-circle"></use></svg><h3>อภิธานศัพท์</h3><p>ค้นหาศัพท์พร้อมคำอ่าน</p></a>
+        <a data-id="quiz" href="pages/quiz.html"><svg class="i done"><use href="#i-check-circle"></use></svg><h3>แบบทดสอบ</h3><p>วัดความพร้อมก่อนลงสนาม</p></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3 ฝ่าย ============ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">ใครรบกับใคร</div>
+        <h2>สามขั้วอำนาจแห่งกาแล็กซี</h2>
+        <p>ทุกกองทัพในเกมแบ่งได้เป็น 3 กลุ่มใหญ่ ทุกฝ่ายรบกันเองได้หมด (แม้แต่พวกเดียวกัน)</p>
+      </div>
+      <div class="grid grid-3">
+        <a class="card img-card reveal" href="pages/factions.html#imperium">
+          <div class="img"><img src="images/factions/imperium/space-marines.webp" alt="Space Marine ของ Ultramarines" loading="lazy"></div>
+          <div class="body"><span class="chip chip-imperium">IMPERIUM</span><h3 class="mt-2">จักรวรรดิแห่งมนุษยชาติ</h3><p>อาณาจักรมนุษย์ที่ยิ่งใหญ่แต่ล้าหลังและโหดร้าย ปกป้องโดย Space Marines, กองทัพมนุษย์ และหุ่นรบยักษ์</p><span class="more">ดูทัพ Imperium <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
+        </a>
+        <a class="card img-card reveal" href="pages/factions.html#chaos">
+          <div class="img"><img src="images/factions/chaos/chaos-space-marines.webp" alt="Chaos Space Marine" loading="lazy" style="object-position:center 25%"></div>
+          <div class="body"><span class="chip chip-chaos">CHAOS</span><h3 class="mt-2">พลังแห่งความโกลาหล</h3><p>ผู้ทรยศและปีศาจที่รับใช้เทพแห่ง Chaos ทั้งสี่ ต้องการทำลายจักรวรรดิที่เคยรับใช้</p><span class="more">ดูทัพ Chaos <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
+        </a>
+        <a class="card img-card reveal" href="pages/factions.html#xenos">
+          <div class="img"><img src="images/factions/xenos/tyranids.webp" alt="ฝูง Tyranid" loading="lazy"></div>
+          <div class="body"><span class="chip chip-xenos">XENOS</span><h3 class="mt-2">เผ่าพันธุ์ต่างดาว</h3><p>ตั้งแต่ Orks ที่รักการต่อสู้ ไปจนถึงหุ่นโครงกระดูก Necron และฝูงสัตว์ประหลาด Tyranid</p><span class="more">ดูทัพ Xenos <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ โลกของ 40K ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">เจาะลึกเนื้อเรื่อง</div>
+        <h2>โลกของ 40K แบบละเอียด</h2>
+        <p>อ่านเนื้อเรื่องย่อแล้วอยากรู้ต่อ? เลือกหัวข้อได้เลย แต่ละหน้าแยกยุค 30K และ 40K ไว้ชัดเจน</p>
+      </div>
+      <div class="grid grid-3">
+        <a class="card img-card reveal" href="pages/lore-30k.html">
+          <div class="img"><img src="images/lore/30k/siege-of-terra.webp" alt="ยุค Great Crusade & Horus Heresy" loading="lazy"></div>
+          <div class="body"><span class="era era-30k">30K</span><h3 class="mt-2">ยุค Great Crusade & Horus Heresy</h3><p>ยุคที่จักรพรรดิยังเดินบนโลก และสงครามกลางเมืองที่เปลี่ยนทุกอย่าง</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
+        </a>
+        <a class="card img-card reveal" href="pages/primarchs.html">
+          <div class="img"><img src="images/lore/emperor-of-mankind.webp" alt="จักรพรรดิ & Primarch ทั้ง 20" loading="lazy"></div>
+          <div class="body"><span class="era era-30k">ตัวละคร</span><h3 class="mt-2">จักรพรรดิ & Primarch ทั้ง 20</h3><p>ชีวิตของจักรพรรดิและบุตรทั้ง 20 — ใครภักดี ใครทรยศ ใครยังอยู่</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
+        </a>
+        <a class="card img-card reveal" href="pages/lore-40k.html">
+          <div class="img"><img src="images/lore/fall-of-cadia.webp" alt="หมื่นปีหลัง Heresy" loading="lazy"></div>
+          <div class="body"><span class="era era-40k">40K</span><h3 class="mt-2">หมื่นปีหลัง Heresy</h3><p>ไทม์ไลน์ถึงการล่มสลายของ Cadia และสงครามล่าสุด</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
+        </a>
+        <a class="card img-card reveal" href="pages/compare-30k-40k.html">
+          <div class="img"><img src="images/lore/30k/primarchs-ullanor-horus-fulgrim.webp" alt="30K vs 40K" loading="lazy"></div>
+          <div class="body"><span class="era era-40k">เปรียบเทียบ</span><h3 class="mt-2">30K vs 40K</h3><p>อะไรเปลี่ยนไปบ้างในหมื่นปี พร้อมภาพเทียบทุก Legion</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
+        </a>
+        <a class="card img-card reveal" href="pages/gods.html">
+          <div class="img"><img src="images/gods/realm-of-chaos-map.webp" alt="เทพเจ้าแห่ง 40K" loading="lazy"></div>
+          <div class="body"><span class="era era-now">เทพ</span><h3 class="mt-2">เทพเจ้าแห่ง 40K</h3><p>Chaos Gods, God-Emperor, C'tan, เทพ Aeldari และ Orks</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
+        </a>
+        <a class="card img-card reveal" href="pages/faction-lore.html">
+          <div class="img"><img src="images/lore/xenos/craftworld-biel-tan.webp" alt="เนื้อเรื่องรายทัพ" loading="lazy"></div>
+          <div class="body"><span class="era era-now">41 ทัพ</span><h3 class="mt-2">เนื้อเรื่องรายทัพ</h3><p>ต้นกำเนิด วีรกรรม และเนื้อเรื่องล่าสุดของทุกทัพ</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ เกมหนึ่งเป็นยังไง ============ -->
+  <section class="section section-alt">
+    <div class="container split">
+      <figure class="figure reveal">
+        <img src="images/gameplay/table-event-ruins-terrain.webp" alt="ผู้เล่นกำลังเล่น 40K บนโต๊ะที่มีซากตึกเป็นฉาก" loading="lazy">
+        <figcaption>เกมที่งานอีเวนต์: ผู้เล่นยืนรอบโต๊ะ มีฉากซากตึกกั้นแนวยิง · ภาพ: Wikimedia Commons (CC)</figcaption>
+      </figure>
+      <div class="reveal">
+        <div class="eyebrow">ภาพรวม 1 เกม</div>
+        <h2>หนึ่งเกมเล่นยังไง?</h2>
+        <ol class="steps">
+          <li><strong>จัดทัพตามแต้ม</strong>ตกลงขนาดเกม เช่น 1,000 หรือ 2,000 แต้ม แล้วเลือกยูนิตให้ไม่เกินนั้น</li>
+          <li><strong>จัดโต๊ะ & เลือกภารกิจ</strong>วางฉาก กำหนด Objective และดูว่าแต่ละฝ่ายต้องทำอะไรเพื่อได้แต้ม</li>
+          <li><strong>วางกำลัง (Deploy)</strong>ผลัดกันวางยูนิตในเขตของตัวเอง</li>
+          <li><strong>เล่น 5 รอบ</strong>แต่ละรอบ ทั้งสองฝ่ายได้เล่นคนละ 1 เทิร์น แต่ละเทิร์นมี 5 เฟส</li>
+          <li><strong>นับแต้ม</strong>ใครได้ Victory Points มากกว่าชนะ (เต็ม 100 แต้มในเกมมาตรฐาน)</li>
+        </ol>
+        <a class="btn btn-ghost" href="pages/first-game.html">ดูตัวอย่างเกมแรกแบบละเอียด <svg class="i"><use href="#i-arrow-right"></use></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ เครื่องมือ ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">ลองเล่นได้ในเว็บ</div>
+        <h2>เครื่องมือช่วยเรียน</h2>
+      </div>
+      <div class="grid grid-3">
+        <a class="card reveal" href="pages/combat.html#simulator"><div class="card-icon"><svg class="i"><use href="#i-dice"></use></svg></div><h3>ตัวจำลองการโจมตี</h3><p>ใส่ค่าอาวุธและเป้าหมาย แล้วทอยเต๋าจำลองทีละขั้น พร้อมค่าเฉลี่ยที่คาดหวัง</p><span class="more">ลองเลย <svg class="i"><use href="#i-arrow-right"></use></svg></span></a>
+        <a class="card reveal" href="pages/basics.html#datasheet"><div class="card-icon red"><svg class="i"><use href="#i-scroll"></use></svg></div><h3>Datasheet แบบโต้ตอบ</h3><p>ชี้หรือแตะที่ค่าบนการ์ดยูนิต เพื่อดูว่าแต่ละตัวเลขหมายความว่าอะไร</p><span class="more">ลองเลย <svg class="i"><use href="#i-arrow-right"></use></svg></span></a>
+        <a class="card reveal" href="pages/quiz.html"><div class="card-icon blue"><svg class="i"><use href="#i-help"></use></svg></div><h3>แบบทดสอบ</h3><p>คำถามสั้น ๆ พร้อมเฉลยอธิบาย ช่วยเช็กว่าเข้าใจกติกาครบหรือยัง</p><span class="more">ทำแบบทดสอบ <svg class="i"><use href="#i-arrow-right"></use></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="cta reveal">
+        <div class="hero-bg"><img src="images/lore/armageddon-hive-cities-blood-angels.webp" alt="" loading="lazy"></div>
+        <div class="eyebrow">พร้อมแล้วหรือยัง?</div>
+        <h2>เริ่มจากหน้าแรกของเส้นทาง แล้วคุณจะเล่นเป็นภายในวันเดียว</h2>
+        <p>ไม่ต้องจำทุกอย่างในครั้งเดียว — ผู้เล่นทุกคนเรียนรู้ผ่านการเล่นจริง เปิดเว็บนี้ไว้ข้างโต๊ะแล้วค่อย ๆ ดูไปพร้อมกันได้เลย</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="pages/getting-started.html">ไปที่ "เริ่มต้นต้องมีอะไร" <svg class="i"><use href="#i-arrow-right"></use></svg></a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/layout.js?v=5"></script>
+<script src="js/main.js?v=5"></script>
+</body>
+</html>

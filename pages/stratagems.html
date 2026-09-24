@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stratagem & ความสามารถ | คู่มือ Warhammer 40K ฉบับมือใหม่</title>
+  <meta name="description" content="Command Points และ Core Stratagems ทั้งหมดของ Warhammer 40,000 11th Edition พร้อมคำอธิบายความสามารถหลัก (Core Abilities) ภาษาไทย">
+  <meta name="theme-color" content="#0d0e11">
+  <link rel="icon" href="../images/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Kanit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=5">
+</head>
+<body data-page="stratagems" data-root="../">
+<script src="../js/icons.js?v=5"></script>
+
+<main>
+  <header class="page-hero">
+    <div class="hero-bg"><img src="../images/factions/imperium/grey-knights.webp" alt=""></div>
+    <div class="container">
+      <nav class="breadcrumb" aria-label="breadcrumb"><a href="../index.html">หน้าแรก</a><svg class="i"><use href="#i-chev-right"></use></svg><span>กติกา</span><svg class="i"><use href="#i-chev-right"></use></svg><span>Stratagem & ความสามารถ</span></nav>
+      <h1>Stratagem และความสามารถหลัก</h1>
+      <p class="lead">ใช้แต้มบัญชาการ (CP) เพื่อพลิกสถานการณ์ในจังหวะสำคัญ และรู้จักความสามารถพื้นฐานที่เจอบน Datasheet ทุกทัพ</p>
+      <div class="page-meta"><span class="chip"><svg class="i"><use href="#i-clock"></use></svg> อ่าน ~10 นาที</span><span class="chip chip-gold">บทที่ 8</span><span class="chip chip-new">11th Edition</span></div>
+    </div>
+  </header>
+
+  <div class="container doc">
+    <aside class="toc" data-toc></aside>
+    <article class="doc-body">
+
+      <section id="what">
+        <h2><span class="num">01</span>Stratagem คืออะไร?</h2>
+        <p><span class="term">Stratagem <span class="th">(สแตรทาเจม — กลยุทธ์)</span></span> คือความสามารถพิเศษที่ใช้โดย<strong>จ่าย Command Points (CP)</strong> ส่วนใหญ่ราคา 1 CP บางอันราคา 2 CP บางอันมีโหมดจ่ายเพิ่มเพื่อผลที่แรงขึ้น</p>
+        <ul>
+          <li><strong>ได้ CP ยังไง:</strong> ต้น Command Phase ของทุกเทิร์น ทั้งสองผู้เล่นได้คนละ 1 CP (ในหนึ่งรอบจึงได้ 2 CP ต่อคน) และได้เพิ่มจากกฎบางอย่าง เช่น การทิ้งการ์ดภารกิจรอง</li>
+          <li><strong>มาจากไหน:</strong> <em>Core Stratagems</em> ทุกทัพใช้ได้ + Stratagem ของ <em>Detachment</em> ที่คุณเลือกตอนจัดทัพ</li>
+          <li>แต่ละ Stratagem บอก: <strong>ราคา CP</strong>, <strong>WHEN</strong> (ใช้เมื่อไหร่), <strong>TARGET</strong> (ใช้กับยูนิตไหน), <strong>EFFECT</strong> (ผล) และ <strong>RESTRICTIONS</strong> (ข้อจำกัด)</li>
+        </ul>
+        <div class="callout new"><svg class="i"><use href="#i-star"></use></svg><div><strong class="title">ข้อจำกัดสำคัญ 2 ข้อ</strong><ul>
+          <li>ใช้ Stratagem <strong>ชื่อเดียวกัน</strong>ได้ไม่เกิน <strong>1 ครั้งต่อเฟส</strong></li>
+          <li>ยูนิตหนึ่งถูกเลือกเป็นเป้าของ Stratagem ได้ไม่เกิน <strong>1 อันต่อเฟส</strong> <span class="chip chip-new">ใหม่ใน 11th</span> — เช่น ใช้ Heroic Intervention แล้วจะใช้ Command Re-roll ทอยชาร์จของยูนิตเดียวกันในเฟสนั้นไม่ได้</li>
+          <li>ยูนิตที่ขวัญแตก (Battle-shocked) ถูกเลือกด้วย Stratagem ของผู้เล่นตัวเองไม่ได้</li>
+        </ul></div></div>
+      </section>
+
+      <section id="core">
+        <h2><span class="num">02</span>Core Stratagems (ทุกทัพใช้ได้)</h2>
+        <div class="table-wrap"><table>
+          <thead><tr><th>ชื่อ</th><th class="center">CP</th><th>ใช้เมื่อ</th><th>ผล</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Command Re-roll</strong><br><span class="muted">คอมมานด์ รีโรล</span></td><td class="center"><span class="big-num">1</span></td><td>ทันทีหลังทอย Advance, ชาร์จ, ดาเมจ, Hazard, Hit, Save, Wound หรือทอยหาจำนวนการโจมตี</td><td>ทอยใหม่ 1 ลูก (ถ้าทอยหลายลูกพร้อมกันให้เลือก 1 ลูก — ยกเว้นทอยชาร์จต้องทอยใหม่ทั้งหมด)</td></tr>
+            <tr><td><strong>Epic Challenge</strong><br><span class="muted">เอปิก ชาเลนจ์</span></td><td class="center"><span class="big-num">1</span></td><td>เฟสต่อสู้ เมื่อยูนิต CHARACTER ถูกเลือกให้สู้</td><td>ตัวละคร 1 ตัวในยูนิตได้ [PRECISION] กับอาวุธประชิด (เล็งดวลตัวละครฝ่ายตรงข้าม)</td></tr>
+            <tr><td><strong>Insane Bravery</strong><br><span class="muted">อินเซน เบรฟเวอรี</span></td><td class="center"><span class="big-num">1</span></td><td>ช่วงทดสอบ Battle-shock ของคุณ ก่อนทอย</td><td>ผ่านการทดสอบอัตโนมัติ — <strong>ใช้ได้ครั้งเดียวต่อเกม</strong></td></tr>
+            <tr><td><strong>Explosives</strong><br><span class="muted">เอ็กซ์โพลซีฟส์ (เดิมชื่อ Grenades)</span></td><td class="center"><span class="big-num">1</span></td><td>เฟสยิงของคุณ ยูนิตคีย์เวิร์ด GRENADES/EXPLOSIVES ที่ไม่ติดพันและไม่ได้ Advance</td><td>เลือกศัตรูที่มองเห็นในระยะ 8" ทอย 6 ลูก ได้ 4+ ลูกละ 1 Mortal Wound</td></tr>
+            <tr><td><strong>Crushing Impact</strong><br><span class="muted">ครัชชิ่ง อิมแพ็กต์</span></td><td class="center"><span class="big-num">1</span></td><td>เฟสชาร์จของคุณ หลังยูนิต MONSTER/VEHICLE ชาร์จเสร็จ</td><td>ทอยลูกเต๋าเท่าค่า T ของโมเดลนั้น: ได้ 5+ ศัตรูเสีย 1 Mortal Wound (สูงสุด 6) · ได้ 1 ตัวเองเสีย 1 Mortal Wound</td></tr>
+            <tr><td><strong>Rapid Ingress</strong><br><span class="muted">แรพพิด อินเกรส</span></td><td class="center"><span class="big-num">1</span></td><td>ท้าย Movement Phase ของฝ่ายตรงข้าม (ใช้ในรอบแรกไม่ได้)</td><td>ส่งยูนิตจากกองหนุน (ไม่ใช่ AIRCRAFT) ลงสนามทันที</td></tr>
+            <tr><td><strong>Fire Overwatch</strong><br><span class="muted">ไฟร์ โอเวอร์วอทช์</span></td><td class="center"><span class="big-num">1</span></td><td>ท้าย Movement Phase ของฝ่ายตรงข้าม ยูนิตที่ไม่ติดพัน (ไม่ใช่ TITANIC)</td><td>ยิงแบบ <em>Snap Shooting</em>: เป้าที่มองเห็นในระยะ 24" 1 ยูนิต <strong>โดนเฉพาะทอยได้ 6 ดิบ</strong> ทอยซ้ำไม่ได้</td></tr>
+            <tr><td><strong>Smokescreen</strong><br><span class="muted">สโมคสกรีน</span></td><td class="center"><span class="big-num">1</span></td><td>ต้นเฟสยิงของฝ่ายตรงข้าม ยูนิตคีย์เวิร์ด SMOKE</td><td>ยูนิตนั้น และยูนิตที่ถูกมันบังสายตา ได้ที่กำบังจนจบเฟส</td></tr>
+            <tr><td><strong>Heroic Intervention</strong><br><span class="muted">ฮีโรอิก อินเตอร์เวนชัน</span></td><td class="center"><span class="big-num">1</span>+</td><td>ท้ายเฟสชาร์จของฝ่ายตรงข้าม ยูนิตที่ไม่ติดพันและอยู่ห่างศัตรูไม่เกิน 12" (VEHICLE ต้องเป็น CHARACTER/WALKER)</td><td>ชาร์จสวน: <strong>1 CP</strong> เลือกเป้าได้เฉพาะยูนิตที่เพิ่งชาร์จ · <strong>+1 CP</strong> ระยะชาร์จสูงสุด 6 แต่เลือกศัตรูใดก็ได้ในระยะ 6"</td></tr>
+            <tr><td><strong>Counteroffensive</strong><br><span class="muted">เคาน์เตอร์ออฟเฟนซีฟ</span></td><td class="center"><span class="big-num">2</span></td><td>เฟสต่อสู้ของฝ่ายตรงข้าม หลังศัตรูหนึ่งยูนิตโจมตีเสร็จ</td><td>ยูนิตคุณได้ Fights First และต้องเป็นยูนิตถัดไปที่ได้สู้</td></tr>
+          </tbody>
+        </table></div>
+        <div class="callout tip"><svg class="i"><use href="#i-bulb"></use></svg><div><strong class="title">Stratagem ที่มือใหม่ควรจำไว้ก่อน</strong><p><strong>Command Re-roll</strong> (แก้ทอยชี้ชะตา), <strong>Insane Bravery</strong> (กันยูนิตยึดจุดขวัญแตก), <strong>Fire Overwatch</strong> และ <strong>Heroic Intervention</strong> (ตอบโต้ตอนตาอีกฝ่าย) — อย่าลืมเก็บ CP ไว้ใช้ในตาของอีกฝ่ายด้วย</p></div></div>
+      </section>
+
+      <section id="core-abilities">
+        <h2><span class="num">03</span>Core Abilities: ความสามารถพื้นฐาน</h2>
+        <p>ความสามารถเหล่านี้เขียนบน Datasheet แค่ชื่อ ส่วนความหมายอยู่ในกฎหลัก ความสามารถของอาวุธจะอยู่ในวงเล็บเหลี่ยม เช่น <span class="kbd">[BLAST]</span> ถ้ามีคีย์เวิร์ดตามหลัง เช่น <span class="kbd">[LETHAL HITS: VEHICLE]</span> แปลว่าได้ผลกับเป้าที่มีคีย์เวิร์ดนั้นเท่านั้น</p>
+        <h3>ความสามารถของยูนิต</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>ชื่อ</th><th>ผล</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Deep Strike</strong> <span class="muted">ดีพ สไตรก์</span></td><td>เมื่อลงจากกองหนุน วางที่ใดในสนามก็ได้ที่ห่างศัตรูเกิน 8" (รวมเขตของศัตรู)</td></tr>
+            <tr><td><strong>Infiltrators</strong> <span class="muted">อินฟิลเทรเตอร์ส</span></td><td>ตอนวางกำลัง วางที่ใดก็ได้ที่ห่างเขตวางกำลังของศัตรูและยูนิตศัตรูเกิน 8"</td></tr>
+            <tr><td><strong>Scouts X"</strong> <span class="muted">สเกาท์ส</span></td><td>ก่อนเริ่มเกม เดินได้ X" (ต้องจบห่างศัตรูเกิน 8") หรือถ้าอยู่ในกองหนุน วางในเขตตัวเองก่อนเริ่มได้</td></tr>
+            <tr><td><strong>Stealth</strong> <span class="muted">สเตลธ์</span></td><td>ถ้าทุกโมเดลมีความสามารถนี้ ได้ที่กำบังจากการยิงเสมอ</td></tr>
+            <tr><td><strong>Lone Operative</strong> <span class="muted">โลน โอเปอเรทีฟ</span></td><td>ถ้าไม่ได้อยู่กับยูนิตอื่น ศัตรูมองเห็นได้เฉพาะเมื่ออยู่ในระยะ 12" (หรือตามตัวเลขที่ระบุ)</td></tr>
+            <tr><td><strong>Feel No Pain X+</strong> <span class="muted">ฟีล โน เพน</span></td><td>ทุกครั้งที่จะเสียแผล ทอย D6 ได้ X+ ไม่เสียแผลนั้น</td></tr>
+            <tr><td><strong>Fights First</strong> <span class="muted">ไฟต์ส เฟิร์สต์</span></td><td>ได้สู้ในช่วงแรกของเฟสต่อสู้ (ยูนิตที่ชาร์จสำเร็จได้ผลนี้ด้วย)</td></tr>
+            <tr><td><strong>Leader / Support</strong> <span class="muted">ลีดเดอร์ / ซัพพอร์ต</span></td><td>ตัวละครที่เข้าไปนำยูนิตบอดี้การ์ดได้ (ดูหน้าการจัดทัพ)</td></tr>
+            <tr><td><strong>Deadly Demise X</strong> <span class="muted">เด็ดลี ดีไมส์</span></td><td>เมื่อถูกทำลาย ทอย D6 ได้ 6 = ระเบิด ทุกยูนิตในระยะ 6" เสีย X Mortal Wounds</td></tr>
+            <tr><td><strong>Firing Deck X</strong> <span class="muted">ไฟริ่ง เด็ค</span></td><td>ยานยืมอาวุธของผู้โดยสารได้ X ชิ้นตอนยิง (แล้วผู้โดยสารยิงเองไม่ได้เทิร์นนั้น)</td></tr>
+            <tr><td><strong>Hover</strong> <span class="muted">โฮเวอร์</span> <span class="chip chip-new">ใหม่</span></td><td>เวลา Take to the Skies ไม่ต้องหักระยะ 2"</td></tr>
+            <tr><td><strong>Super-heavy Walker</strong></td><td>เดินข้ามโมเดล (ยกเว้น TITANIC) และฉากที่สูงไม่เกิน 4" ได้ เลือกทะลุฉาก Dense ได้แต่ทอย 1 = ขวัญแตก</td></tr>
+            <tr><td><strong>Damaged X</strong> <span class="muted">แดเมจด์</span></td><td>เมื่อแผลเหลือไม่เกิน X ทอยโดน −1</td></tr>
+          </tbody>
+        </table></div>
+        <h3>ความสามารถของอาวุธ</h3>
+        <div class="table-wrap"><table>
+          <thead><tr><th>ชื่อ</th><th>ผล</th></tr></thead>
+          <tbody>
+            <tr><td><strong>[ANTI-X Y+]</strong></td><td>ใส่เป้าที่มีคีย์เวิร์ด X ทอย Wound ได้ Y ดิบขึ้นไป = Critical Wound</td></tr>
+            <tr><td><strong>[ASSAULT]</strong></td><td>ยิงได้หลัง Advance (Assault Shooting)</td></tr>
+            <tr><td><strong>[BLAST]</strong> / <strong>[BLAST X]</strong></td><td>ได้การโจมตีเพิ่ม 1 (หรือ X) ต่อทุก 5 โมเดลในเป้าหมาย · ห้ามยิงเป้าที่ติดพัน</td></tr>
+            <tr><td><strong>[CLEAVE X]</strong></td><td>อาวุธประชิดที่เล็งเป้าเดียว ได้การโจมตีเพิ่ม X ต่อทุก 5 โมเดลของเป้า</td></tr>
+            <tr><td><strong>[CLOSE-QUARTERS]</strong> / <strong>[PISTOL]</strong></td><td>ยิงได้ขณะติดพัน (ใส่ศัตรูที่ติดพันอยู่) · สองคำนี้ความหมายเดียวกัน</td></tr>
+            <tr><td><strong>[DEVASTATING WOUNDS]</strong></td><td>Critical Wound → Mortal Wounds เท่าค่า D (ลงได้สูงสุด 1 โมเดลต่อครั้ง)</td></tr>
+            <tr><td><strong>[EXTRA ATTACKS]</strong></td><td>ใช้ตีเพิ่มนอกเหนือจากอาวุธประชิดหลัก</td></tr>
+            <tr><td><strong>[HAZARDOUS]</strong></td><td>หลังโจมตี ทอย Hazard ต่ออาวุธนี้ที่เลือกใช้</td></tr>
+            <tr><td><strong>[HEAVY]</strong></td><td>+1 ทอยโดน ถ้าไม่ติดพัน ไม่ได้ลงสนามเทิร์นนี้ และไม่มีโมเดลขยับเกิน 3"</td></tr>
+            <tr><td><strong>[IGNORES COVER]</strong></td><td>เป้าไม่ได้ที่กำบัง</td></tr>
+            <tr><td><strong>[INDIRECT FIRE]</strong></td><td>ยิงเป้าที่มองไม่เห็นได้ (Indirect Shooting) แต่มีโทษหนัก</td></tr>
+            <tr><td><strong>[LANCE]</strong></td><td>+1 ทอย Wound ถ้าชาร์จเทิร์นนี้</td></tr>
+            <tr><td><strong>[LETHAL HITS]</strong></td><td>Critical Hit เลือกให้ทำแผลอัตโนมัติได้ (เลือกไม่ใช้ก็ได้ ถ้าอยากลุ้น Critical Wound)</td></tr>
+            <tr><td><strong>[MELTA X]</strong></td><td>เป้าอยู่ในระยะครึ่งหนึ่ง ดาเมจ +X</td></tr>
+            <tr><td><strong>[ONE SHOT]</strong></td><td>ใช้ได้ครั้งเดียวต่อเกม</td></tr>
+            <tr><td><strong>[PRECISION]</strong></td><td>ลงดาเมจที่ตัวละครที่มองเห็นในยูนิตก่อนได้</td></tr>
+            <tr><td><strong>[PSYCHIC]</strong></td><td>อาวุธพลังจิต ไม่สนตัวปรับค่า BS/WS และทอยโดนได้</td></tr>
+            <tr><td><strong>[RAPID FIRE X]</strong></td><td>เป้าอยู่ในระยะครึ่งหนึ่ง ได้การโจมตีเพิ่ม X</td></tr>
+            <tr><td><strong>[SUSTAINED HITS X]</strong></td><td>Critical Hit ได้ Hit เพิ่ม X</td></tr>
+            <tr><td><strong>[TORRENT]</strong></td><td>โดนอัตโนมัติ</td></tr>
+            <tr><td><strong>[TWIN-LINKED]</strong></td><td>ทอย Wound ซ้ำได้</td></tr>
+          </tbody>
+        </table></div>
+        <div class="callout"><svg class="i"><use href="#i-info"></use></svg><div><p>ถ้าอาวุธมีความสามารถซ้ำกันหลายอัน (เช่น Sustained Hits 1 จากตัวเอง และ Sustained Hits 2 จากบัฟ) <strong>ไม่รวมกัน</strong> — เลือกใช้ได้แค่อันเดียว</p></div></div>
+      </section>
+
+      <section id="other">
+        <h2><span class="num">04</span>กฎประจำทัพ และ Detachment</h2>
+        <ul>
+          <li><strong>Army Rule / Faction Ability</strong> — กฎที่ทุกยูนิตในทัพได้ (เช่น ระบบ Waaagh! ของ Orks หรือ Reanimation ของ Necrons) ใช้ได้เมื่อ Army Faction ตรงกับคีย์เวิร์ดของยูนิต</li>
+          <li><strong>Detachment</strong> — ชุดกฎเสริมที่เลือกตอนจัดทัพ ให้ Detachment Rule, Stratagem เพิ่ม และ Enhancement (อุปกรณ์/ทักษะให้ตัวละคร)</li>
+          <li><strong>Aura</strong> — ความสามารถที่มีผลกับยูนิตในรัศมีที่กำหนด ยูนิตหนึ่งได้ผลจาก Aura ชื่อเดียวกันแค่ครั้งเดียว</li>
+        </ul>
+        <p>รายละเอียดการเลือก Detachment อยู่ในหน้า <a href="army-building.html">การจัดทัพ</a></p>
+        <div class="mark-read"><button class="btn btn-ghost btn-sm" data-mark-read></button></div>
+      </section>
+
+      <div data-page-nav></div>
+    </article>
+  </div>
+</main>
+
+<script src="../js/layout.js?v=5"></script>
+<script src="../js/main.js?v=5"></script>
+</body>
+</html>

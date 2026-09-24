@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>การจัดทัพ | คู่มือ Warhammer 40K ฉบับมือใหม่</title>
+  <meta name="description" content="วิธีจัดทัพ Warhammer 40,000 11th Edition: ขนาดเกม แต้ม Detachment Points Force Disposition Leader/Support และ Enhancement">
+  <meta name="theme-color" content="#0d0e11">
+  <link rel="icon" href="../images/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Kanit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=5">
+</head>
+<body data-page="army-building" data-root="../">
+<script src="../js/icons.js?v=5"></script>
+
+<main>
+  <header class="page-hero">
+    <div class="hero-bg"><img src="../images/lore/hero-ultramarines-vs-black-legion.webp" alt=""></div>
+    <div class="container">
+      <nav class="breadcrumb" aria-label="breadcrumb"><a href="../index.html">หน้าแรก</a><svg class="i"><use href="#i-chev-right"></use></svg><span>จัดทัพ & โหมด</span><svg class="i"><use href="#i-chev-right"></use></svg><span>การจัดทัพ</span></nav>
+      <h1>การจัดทัพ (Muster Armies)</h1>
+      <p class="lead">เลือกยูนิตอย่างไรให้ถูกกติกา: ขนาดเกม แต้ม Detachment ตัวละครผู้นำ และอัปเกรด — ทั้งหมดตามระบบใหม่ของ 11th Edition</p>
+      <div class="page-meta"><span class="chip"><svg class="i"><use href="#i-clock"></use></svg> อ่าน ~10 นาที</span><span class="chip chip-gold">บทที่ 9</span><span class="chip chip-new">ระบบใหม่ใน 11th</span></div>
+    </div>
+  </header>
+
+  <div class="container doc">
+    <aside class="toc" data-toc></aside>
+    <article class="doc-body">
+
+      <section id="points">
+        <h2><span class="num">01</span>ระบบแต้ม (Points)</h2>
+        <p>ทุกยูนิตมี<strong>ค่าแต้ม (points)</strong> ตามความเก่ง ผู้เล่นตกลงขนาดเกมก่อน แล้วเลือกยูนิตให้แต้มรวมไม่เกินกำหนด ทำให้ทั้งสองฝ่ายมีกำลังพอ ๆ กันแม้จะเป็นคนละทัพ</p>
+        <div class="callout"><svg class="i"><use href="#i-info"></use></svg><div><p>ค่าแต้มของยูนิตดูได้ใน<strong>แอป Warhammer 40,000</strong> และจะถูกปรับเป็นระยะเพื่อความสมดุล ใช้ค่าล่าสุดเสมอ แอปยังช่วยจัดรายชื่อกองทัพ (Army Roster) และเช็กว่าถูกกติกาให้อัตโนมัติ</p></div></div>
+      </section>
+
+      <section id="size">
+        <h2><span class="num">02</span>ขนาดเกม (Battle Size)</h2>
+        <div class="table-wrap"><table>
+          <thead><tr><th>ขนาด</th><th class="center">แต้มสูงสุด</th><th class="center">Detachment Points</th><th class="center">Enhancement สูงสุด</th><th class="center">ยูนิตชื่อซ้ำสูงสุด*</th><th>เวลาเล่นโดยประมาณ</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Incursion</strong><br><span class="muted">อินเคอร์ชัน</span></td><td class="center"><span class="big-num">1,000</span></td><td class="center">2 DP</td><td class="center">2</td><td class="center">2</td><td>1–2 ชั่วโมง</td></tr>
+            <tr><td><strong>Strike Force</strong><br><span class="muted">สไตรก์ ฟอร์ซ</span></td><td class="center"><span class="big-num">2,000</span></td><td class="center">3 DP</td><td class="center">4</td><td class="center">3</td><td>2–4 ชั่วโมง</td></tr>
+          </tbody>
+        </table></div>
+        <p class="muted" style="font-size:.9rem">* ยูนิต <strong>BATTLELINE</strong> และ <strong>DEDICATED TRANSPORT</strong> ใส่ได้เป็นสองเท่า ส่วน <strong>EPIC HERO</strong> (ตัวละครมีชื่อ) มีได้ชื่อละ 1 เสมอ · Strike Force คือขนาดมาตรฐานของทัวร์นาเมนต์ · มือใหม่แนะนำเริ่มที่ Combat Patrol หรือ Incursion</p>
+      </section>
+
+      <section id="steps">
+        <h2><span class="num">03</span>ขั้นตอนจัดทัพ</h2>
+        <ol class="steps">
+          <li><strong>เลือก Army Faction</strong>เลือกคีย์เวิร์ดฝ่าย 1 อัน เช่น ADEPTUS ASTARTES หรือ ORKS ยูนิตทุกตัวต้องอยู่ในฝ่ายนี้ (หรือเป็นยูนิตที่ฝ่ายนี้ใช้ได้)</li>
+          <li><strong>เลือกขนาดเกม</strong>ตกลงกับคู่ต่อสู้ (1,000 หรือ 2,000 แต้ม)</li>
+          <li><strong>เลือก Detachment</strong>ใช้ Detachment Points ซื้อ Detachment (รายละเอียดหัวข้อถัดไป)</li>
+          <li><strong>เลือกยูนิต</strong>ใส่ยูนิตและอุปกรณ์ บันทึกจำนวนโมเดลและแต้ม</li>
+          <li><strong>เลือก Warlord</strong>ตัวละคร (CHARACTER) 1 ตัวที่มีคีย์เวิร์ดตรงกับ Army Faction เป็นแม่ทัพ</li>
+          <li><strong>จับตัวละครเข้ายูนิต</strong>กำหนดว่า Leader/Support ตัวไหนนำยูนิตไหน — ทำ<strong>ตั้งแต่ตอนจัดทัพ</strong> เปลี่ยนตอนเล่นไม่ได้ <span class="chip chip-new">ใหม่</span></li>
+          <li><strong>เลือก Enhancement</strong>มอบอัปเกรดให้ยูนิต แล้วบวกแต้มเพิ่ม</li>
+          <li><strong>แสดงรายชื่อทัพให้คู่ต่อสู้ดู</strong>ก่อนเริ่มเกม</li>
+        </ol>
+      </section>
+
+      <section id="detachments">
+        <h2><span class="num">04</span>Detachment และ Detachment Points <span class="chip chip-new">ใหม่</span></h2>
+        <p><span class="term">Detachment <span class="th">(ดีแทชเมนต์)</span></span> คือ "ชุดกลยุทธ์" ของกองทัพ แต่ละอันให้ Detachment Rule, Stratagem และ Enhancement ในธีมเฉพาะ เช่น เน้นรถถัง เน้นบุกประชิด หรือเน้นหน่วยจู่โจม</p>
+        <ul>
+          <li>แต่ละ Detachment มีราคา <strong>1–3 DP</strong> (Detachment Points)</li>
+          <li>Strike Force มี <strong>3 DP</strong> → เลือกอันราคา 3 DP อันเดียว หรือผสมเช่น 1 + 2 หรือ 1 + 1 + 1 ก็ได้</li>
+          <li>Incursion มี <strong>2 DP</strong> แต่มีข้อยกเว้นให้เลือก Detachment ราคา 3 DP เป็นอันเดียวได้</li>
+          <li>เลือก Detachment เดิมซ้ำไม่ได้</li>
+          <li>Detachment ราคาถูกมักมีกฎเบากว่าและ Stratagem/Enhancement น้อยกว่า</li>
+        </ul>
+        <h3>Force Disposition (ฟอร์ซ ดิสโพซิชัน)</h3>
+        <p>ทุก Detachment ผูกกับ <strong>Force Disposition</strong> หนึ่งแบบ ซึ่งเป็นตัวกำหนดว่า<strong>คุณจะได้ภารกิจหลักแบบไหน</strong> ในเกม Matched Play มี 5 แบบ: <em>Take and Hold, Purge the Foe, Priority Assets, Reconnaissance, Disruption</em> — อธิบายในหน้า <a href="game-modes.html#dispositions">รูปแบบการเล่น & ภารกิจ</a></p>
+      </section>
+
+      <section id="leaders">
+        <h2><span class="num">05</span>Leader, Support และ Attached Unit</h2>
+        <p>ตัวละครหลายตัวมีความสามารถ <strong>Leader</strong> หรือ <strong>Support</strong> บน Datasheet ซึ่งบอกว่าเข้าไปนำยูนิตไหนได้ (เรียกยูนิตนั้นว่า <em>Bodyguard</em>) เมื่อรวมกันแล้วจะนับเป็น <strong>ยูนิตเดียว</strong> (Attached Unit)</p>
+        <div class="grid grid-2">
+          <div class="card"><h3><svg class="i"><use href="#i-crown"></use></svg> Leader</h3><p>ตัวละครผู้นำ จะเข้านำยูนิตหรือเดินเดี่ยวก็ได้</p></div>
+          <div class="card"><h3><svg class="i"><use href="#i-users"></use></svg> Support <span class="chip chip-new">ใหม่</span></h3><p>ตัวละครสนับสนุน <strong>ต้อง</strong>เข้าไปอยู่กับยูนิตบอดี้การ์ดเสมอ</p></div>
+        </div>
+        <ul class="mt-2">
+          <li>ยูนิตบอดี้การ์ดหนึ่งยูนิต มีได้ <strong>Leader 1 ตัว + Support 1 ตัว</strong></li>
+          <li>ตอนถูกยิง ใช้ค่า T ของ<strong>บอดี้การ์ด</strong> และตัวละครจะรับดาเมจ<strong>หลังสุด</strong> (ยกเว้นโดนอาวุธ [PRECISION])</li>
+          <li>ถ้าบอดี้การ์ดตายหมด ตัวละครยังใช้ความสามารถ "ขณะนำยูนิต" ของตัวเองต่อได้</li>
+          <li>Starting Strength ของ Attached Unit นับรวมตัวละครด้วย (เช่น กัปตัน 1 + ทหาร 5 = 6)</li>
+        </ul>
+      </section>
+
+      <section id="enhancements">
+        <h2><span class="num">06</span>Enhancement และ Upgrade</h2>
+        <p><span class="term">Enhancement <span class="th">(เอนฮานซ์เมนต์)</span></span> คืออาวุธวิเศษ ทักษะพิเศษ หรือประวัติเด่นที่มอบให้ยูนิต ได้จาก Detachment ที่เลือก และต้องจ่ายแต้มเพิ่ม</p>
+        <ul>
+          <li>ให้ได้เฉพาะยูนิต <strong>CHARACTER</strong> ที่ไม่ใช่ EPIC HERO</li>
+          <li>หนึ่งยูนิต (รวม Attached Unit) มี Enhancement ได้ <strong>1 อัน</strong> เท่านั้น</li>
+          <li>ห้ามมี Enhancement ชื่อซ้ำกันในกองทัพ และจำนวนรวมไม่เกินที่ขนาดเกมกำหนด</li>
+          <li><strong>Upgrade</strong> <span class="chip chip-new">ใหม่</span> — Enhancement ชนิดพิเศษที่ให้ยูนิตธรรมดา (ไม่ใช่ตัวละคร) ได้ และมีซ้ำได้ถึง 3 ยูนิต (จ่ายแต้มทุกครั้ง แต่นับโควตาแค่อันเดียว)</li>
+        </ul>
+      </section>
+
+      <section id="reserves">
+        <h2><span class="num">07</span>กองหนุนและยานขนส่ง</h2>
+        <ul>
+          <li>ยูนิตที่เริ่มในกองหนุน (Strategic Reserves) รวมกันไม่เกิน <strong>50% ของแต้มเกม</strong></li>
+          <li>AIRCRAFT ต้องเริ่มในกองหนุนเสมอ</li>
+          <li>ยูนิตเริ่มเกมโดยนั่งอยู่ในยาน TRANSPORT ได้ และ DEDICATED TRANSPORT ต้องมีคนนั่งตอนเริ่ม</li>
+        </ul>
+      </section>
+
+      <section id="tips">
+        <h2><span class="num">08</span>คำแนะนำจัดทัพแรก</h2>
+        <div class="grid grid-2">
+          <div class="card"><h3>✅ ควรทำ</h3><ul class="list-check">
+            <li>เริ่มจากโมเดลที่มีอยู่จริง ไม่ต้องไล่ตามลิสต์แรงในอินเทอร์เน็ต</li>
+            <li>มียูนิต "ยึดจุด" (OC สูง/ราคาถูก) อย่างน้อย 2–3 ยูนิต</li>
+            <li>มีอาวุธต่อต้านรถถัง (S สูง, AP สูง, D หลายแผล) และอาวุธยิงทหารราบ (ยิงเยอะ)</li>
+            <li>อ่าน Detachment ของทัพตัวเองให้เข้าใจสัก 1 อัน</li>
+          </ul></div>
+          <div class="card"><h3>⚠️ ควรเลี่ยง</h3><ul>
+            <li>ใส่ตัวละครเยอะเกินจนไม่มีทหารให้นำ</li>
+            <li>ทุ่มแต้มกับยูนิตเดียวมากเกินไป</li>
+            <li>เปลี่ยนทัพ/Detachment บ่อยก่อนจะเข้าใจอันแรก</li>
+            <li>ซื้อโมเดลเยอะก่อนได้ลองเล่นจริง</li>
+          </ul></div>
+        </div>
+        <div class="mark-read"><button class="btn btn-ghost btn-sm" data-mark-read></button></div>
+      </section>
+
+      <div data-page-nav></div>
+    </article>
+  </div>
+</main>
+
+<script src="../js/layout.js?v=5"></script>
+<script src="../js/main.js?v=5"></script>
+</body>
+</html>

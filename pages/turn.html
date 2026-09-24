@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ลำดับเทิร์น 5 เฟส | คู่มือ Warhammer 40K ฉบับมือใหม่</title>
+  <meta name="description" content="อธิบาย 5 เฟสในหนึ่งเทิร์นของ Warhammer 40,000 11th Edition: Command, Movement, Shooting, Charge และ Fight แบบละเอียด">
+  <meta name="theme-color" content="#0d0e11">
+  <link rel="icon" href="../images/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Kanit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=5">
+</head>
+<body data-page="turn" data-root="../">
+<script src="../js/icons.js?v=5"></script>
+
+<main>
+  <header class="page-hero">
+    <div class="hero-bg"><img src="../images/gameplay/table-ork-aircraft-over-ruins.webp" alt=""></div>
+    <div class="container">
+      <nav class="breadcrumb" aria-label="breadcrumb"><a href="../index.html">หน้าแรก</a><svg class="i"><use href="#i-chev-right"></use></svg><span>กติกา</span><svg class="i"><use href="#i-chev-right"></use></svg><span>ลำดับเทิร์น</span></nav>
+      <h1>หนึ่งเทิร์นมี 5 เฟส</h1>
+      <p class="lead">หัวใจของเกมคือลำดับนี้: <strong>สั่งการ → เคลื่อนที่ → ยิง → ชาร์จ → ต่อสู้</strong> จำลำดับนี้ได้ก็เล่นได้ครึ่งเกมแล้ว</p>
+      <div class="page-meta"><span class="chip"><svg class="i"><use href="#i-clock"></use></svg> อ่าน ~15 นาที</span><span class="chip chip-gold">บทที่ 5</span><span class="chip chip-new">11th Edition</span></div>
+    </div>
+  </header>
+
+  <div class="container doc">
+    <aside class="toc" data-toc></aside>
+    <article class="doc-body">
+
+      <section id="structure">
+        <h2><span class="num">01</span>โครงสร้างของเกม</h2>
+        <div class="grid grid-3">
+          <div class="card"><div class="card-icon"><svg class="i"><use href="#i-refresh"></use></svg></div><h3>Battle Round</h3><p><span class="muted">(แบทเทิล ราวด์ — รอบการรบ)</span> เกมมาตรฐานมี <strong>5 รอบ</strong> ในแต่ละรอบ ทั้งสองฝ่ายได้เล่นคนละ 1 เทิร์น</p></div>
+          <div class="card"><div class="card-icon red"><svg class="i"><use href="#i-users"></use></svg></div><h3>Turn</h3><p><span class="muted">(เทิร์น — ตาเล่น)</span> ผู้เล่นคนแรกเล่นให้จบเทิร์น แล้วอีกคนค่อยเล่น ใครได้เล่นก่อนภารกิจ (Mission) จะเป็นตัวกำหนด</p></div>
+          <div class="card"><div class="card-icon blue"><svg class="i"><use href="#i-layers"></use></svg></div><h3>Phase</h3><p><span class="muted">(เฟส — ช่วง)</span> แต่ละเทิร์นมี 5 เฟสเรียงกัน ก่อนและหลังมีช่วง Start/End of Turn สำหรับกฎที่ทำงานตอนต้น/ท้ายเทิร์น</p></div>
+        </div>
+        <div class="callout"><svg class="i"><use href="#i-info"></use></svg><div><strong class="title">Active Player กับ Opposing Player</strong><p>ผู้เล่นที่เป็นเจ้าของเทิร์นเรียกว่า <strong>Active Player</strong> (แอคทีฟ เพลเยอร์) อีกฝ่ายคือ <strong>Opposing Player</strong> ถ้ามีกฎของทั้งสองฝ่ายเกิดในจังหวะเดียวกัน Active Player ทำกฎของตัวเองก่อน (กฎบังคับก่อน แล้วกฎที่เลือกใช้) จากนั้นจึงถึงคิวอีกฝ่าย</p></div></div>
+      </section>
+
+      <section id="phases">
+        <h2><span class="num">02</span>5 เฟส แบบโต้ตอบ</h2>
+        <p>กดที่แต่ละเฟสเพื่อดูว่าเกิดอะไรขึ้นบ้าง</p>
+        <div data-phases>
+          <div class="phase-nav" role="tablist">
+            <button class="phase-btn" role="tab"><svg class="i"><use href="#i-crown"></use></svg>Command<small>สั่งการ</small></button>
+            <button class="phase-btn" role="tab"><svg class="i"><use href="#i-move"></use></svg>Movement<small>เคลื่อนที่</small></button>
+            <button class="phase-btn" role="tab"><svg class="i"><use href="#i-crosshair"></use></svg>Shooting<small>ยิง</small></button>
+            <button class="phase-btn" role="tab"><svg class="i"><use href="#i-bolt"></use></svg>Charge<small>ชาร์จ</small></button>
+            <button class="phase-btn" role="tab"><svg class="i"><use href="#i-swords"></use></svg>Fight<small>ต่อสู้</small></button>
+          </div>
+
+          <div class="phase-panel">
+            <h3>1. Command Phase <span class="muted" style="font-size:.9rem">(คอมมานด์ เฟส — เฟสสั่งการ)</span></h3>
+            <p>เตรียมตัวก่อนลงมือ ทำตามลำดับ:</p>
+            <ol class="steps">
+              <li><strong>Start of Command Phase</strong>กฎที่ทำงาน "ต้นเฟสสั่งการ" ทำตอนนี้</li>
+              <li><strong>ได้ Command Point</strong><em>ทั้งสองผู้เล่น</em>ได้คนละ 1 CP</li>
+              <li><strong>ทดสอบ Battle-shock</strong>ทอย 2D6 ให้ทุกยูนิตของคุณที่เหลือครึ่งกำลังหรือต่ำกว่า หรือขวัญแตกอยู่แล้ว (ได้ ≥ Ld = ผ่าน)</li>
+              <li><strong>Command Abilities</strong>ใช้ความสามารถและ Stratagem ที่ทำงานในเฟสนี้</li>
+              <li><strong>End of Command Phase</strong>ภารกิจบางแบบนับแต้มตอนนี้ (เช่น แต้มจากการยึด Objective) — และใน Matched Play แบบ Tactical คุณจะจั่วการ์ดภารกิจรอง (Secondary) ใหม่ในเฟสสั่งการนี้ด้วย</li>
+            </ol>
+          </div>
+
+          <div class="phase-panel">
+            <h3>2. Movement Phase <span class="muted" style="font-size:.9rem">(มูฟเมนต์ เฟส — เฟสเคลื่อนที่)</span></h3>
+            <p>เลือกยูนิตของคุณ<strong>ทีละยูนิต</strong> แล้วเลือกวิธีเคลื่อนที่ 1 แบบ จนครบทุกยูนิต (รวมยูนิตในกองหนุนและในยานด้วย — ถ้าไม่ทำอะไรคือ "อยู่กับที่")</p>
+            <div class="table-wrap"><table>
+              <thead><tr><th>แบบการเคลื่อนที่</th><th>ระยะ</th><th>เงื่อนไข / ผลที่ตามมา</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Remain Stationary</strong><br><span class="muted">อยู่กับที่</span></td><td>–</td><td>ไม่ขยับเลย (หมุนตัวก็ไม่ได้) บางอาวุธได้โบนัสเมื่ออยู่นิ่ง</td></tr>
+                <tr><td><strong>Normal Move</strong><br><span class="muted">เดินปกติ</span></td><td>M"</td><td>ต้องไม่ติดพัน และจบการเดินนอกระยะ Engagement ของศัตรู ทำอย่างอื่นต่อได้ตามปกติ</td></tr>
+                <tr><td><strong>Advance</strong><br><span class="muted">แอดวานซ์ — วิ่ง</span></td><td>M" + D6"</td><td>ห้ามชาร์จ ห้ามเริ่ม Action และยิงได้เฉพาะอาวุธ [ASSAULT]</td></tr>
+                <tr><td><strong>Fall Back</strong><br><span class="muted">ฟอลแบ็ก — ถอย</span></td><td>M"</td><td>ใช้เมื่อติดพันเท่านั้น หลังถอย<strong>ห้ามยิง ห้ามชาร์จ ห้ามเริ่ม Action</strong> เทิร์นนี้ มี 2 แบบ (ดูด้านล่าง)</td></tr>
+                <tr><td><strong>Disembark</strong><br><span class="muted">ลงจากยาน</span></td><td>วาง 3"/6"</td><td>ลงจากยานพาหนะ มีหลายรูปแบบ (ดูหัวข้อยานพาหนะ)</td></tr>
+                <tr><td><strong>Ingress</strong><br><span class="muted">อินเกรส — เข้าสนาม</span></td><td>วางลงสนาม</td><td>นำยูนิตจากกองหนุนลงสนาม (ตั้งแต่รอบที่ 2) ดูหัวข้อกองหนุน</td></tr>
+              </tbody>
+            </table></div>
+            <h4>การถอย (Fall Back) 2 แบบ</h4>
+            <ul>
+              <li><strong>Ordered Retreat</strong> (ถอยอย่างมีระเบียบ) — ใช้ได้ถ้ายูนิตไม่ได้ขวัญแตก เดิน M" ตามปกติ (ต้องเดินอ้อม ไม่ทะลุศัตรู)</li>
+              <li><strong>Desperate Escape</strong> (หนีตาย) — บังคับใช้ถ้าขวัญแตก เดินทะลุศัตรูได้ แต่<strong>ทุกโมเดลทอย Hazard</strong> (ทอย 1–2 เสีย 1 Mortal Wound) และถ้ายังไม่ขวัญแตกต้องทดสอบ Battle-shock ด้วย</li>
+            </ul>
+            <h4>สิ่งที่ต้องรู้เกี่ยวกับการเดิน</h4>
+            <ul>
+              <li>ขยับโมเดลเป็นเส้นตรงหลายช่วงได้ และ<strong>หมุนตัวฟรี</strong>ไม่เสียระยะ</li>
+              <li>เดินผ่านโมเดลฝ่ายเดียวกันได้ แต่<strong>ผ่านโมเดลศัตรูไม่ได้</strong> (ยกเว้นยาน/สัตว์ประหลาดเดินผ่านทหารราบศัตรูได้ตอน Normal/Advance)</li>
+              <li>ยูนิตที่ <strong>FLY</strong> เลือก "Take to the Skies" ได้: ระยะเดิน −2" แต่บินข้ามทุกโมเดลและทุกฉาก ไม่ต้องนับระยะแนวตั้ง</li>
+              <li>ปีนฉาก: นับระยะขึ้นและลงรวมในระยะเดินด้วย</li>
+            </ul>
+            <div class="callout new"><svg class="i"><use href="#i-star"></use></svg><div><strong class="title">ท้ายเฟส: ฝ่ายตรงข้ามตอบโต้ได้</strong><p>เมื่อจบ Movement Phase ผู้เล่นอีกฝ่ายใช้ Stratagem <strong>Fire Overwatch</strong> (ยิงสกัด โดนเฉพาะทอยได้ 6) หรือ <strong>Rapid Ingress</strong> (ส่งยูนิตจากกองหนุนลงสนามทันที) ได้ ใน 11th ย้ายการยิงสกัดมาไว้ท้ายเฟสนี้แทนการยิงตอนชาร์จ</p></div></div>
+          </div>
+
+          <div class="phase-panel">
+            <h3>3. Shooting Phase <span class="muted" style="font-size:.9rem">(ชูตติ้ง เฟส — เฟสยิง)</span></h3>
+            <p>เลือกยูนิตที่จะยิงทีละยูนิต เลือกเป้าหมายให้อาวุธแต่ละชิ้น (แยกเป้าหมายได้) แล้วทำตามลำดับการโจมตี <strong>Hit → Wound → Save → Damage</strong> (อธิบายในหน้า <a href="combat.html">การโจมตี</a>)</p>
+            <p>เป้าหมายต้อง: <strong>มองเห็นได้</strong>, <strong>อยู่ในระยะยิง</strong> และ<strong>ไม่ติดพันตะลุมบอน</strong> (ยกเว้นยาน/สัตว์ประหลาดที่ติดพัน ยิงใส่ได้แต่ทอยโดน −1)</p>
+            <div class="table-wrap"><table>
+              <thead><tr><th>รูปแบบการยิง</th><th>ใช้เมื่อ</th><th>ข้อจำกัด</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Normal Shooting</strong><br><span class="muted">ยิงปกติ</span></td><td>ไม่ติดพัน และไม่ได้ Advance</td><td>ยิงได้ทุกอาวุธระยะไกล</td></tr>
+                <tr><td><strong>Assault Shooting</strong><br><span class="muted">ยิงขณะวิ่ง</span></td><td>Advance มา และมีอาวุธ [ASSAULT]</td><td>ยิงได้เฉพาะอาวุธ [ASSAULT]</td></tr>
+                <tr><td><strong>Close-quarters Shooting</strong><br><span class="muted">ยิงระยะประชิด</span></td><td>ติดพันอยู่ และมีอาวุธ [PISTOL]/[CLOSE-QUARTERS] หรือเป็นยาน/สัตว์ประหลาด</td><td>ทหารทั่วไปยิงได้แค่ปืนพกใส่ศัตรูที่ติดพัน · ยาน/สัตว์ประหลาดยิงอาวุธอื่นได้แต่ทอยโดน −1</td></tr>
+                <tr><td><strong>Indirect Shooting</strong><br><span class="muted">ยิงวิถีโค้ง</span></td><td>ไม่ติดพัน ไม่ได้ Advance และมีอาวุธ [INDIRECT FIRE]</td><td>ยิงเป้าที่มองไม่เห็นได้ แต่เป้าได้ที่กำบัง ห้ามทอยซ้ำ และโดนเฉพาะ 6 ดิบ (ถ้าอยู่นิ่งและมีพวกเดียวกันมองเห็นเป้า โดนที่ 4+ ดิบ)</td></tr>
+              </tbody>
+            </table></div>
+            <div class="callout tip"><svg class="i"><use href="#i-bulb"></use></svg><div><p>ยูนิตที่ยิงแล้ว<strong>เริ่ม Action ไม่ได้</strong>ในเฟสนั้น และการยิงจะ "เผยตัว" — กฎซ่อนตัว (Hidden) ใช้ได้เฉพาะยูนิตที่ไม่ได้ยิงทั้งในเทิร์นนี้และเทิร์นก่อนหน้า ดังนั้นยิงแล้วจะซ่อนไม่ได้ตลอดเทิร์นของศัตรูที่ตามมาด้วย</p></div></div>
+          </div>
+
+          <div class="phase-panel">
+            <h3>4. Charge Phase <span class="muted" style="font-size:.9rem">(ชาร์จ เฟส — เฟสบุกประชิด)</span></h3>
+            <p>ยูนิตที่<strong>อยู่ห่างศัตรูไม่เกิน 12"</strong>, <strong>ไม่ติดพัน</strong> และ<strong>ไม่ได้ Advance หรือ Fall Back</strong> ในเทิร์นนี้ ประกาศชาร์จได้</p>
+            <ol class="steps">
+              <li><strong>ประกาศชาร์จ</strong>เลือกยูนิตหนึ่งที่จะชาร์จ</li>
+              <li><strong>ทอย 2D6</strong>ผลรวมคือระยะชาร์จสูงสุด (เช่น ได้ 7 = ชาร์จได้ไกล 7")</li>
+              <li><strong>เลือกเป้าหมาย</strong>เลือกศัตรูได้ 1 ยูนิตขึ้นไป ที่อยู่ในระยะ 12" <em>และ</em>ภายในระยะที่ทอยได้ <span class="chip chip-new">ใหม่: เลือกเป้าหลังทอย</span></li>
+              <li><strong>เคลื่อนที่ชาร์จ</strong>ทุกโมเดลต้องจบใกล้เป้าหมายขึ้น ถ้าเข้าไปห่าง ≤1" ได้ต้องเข้า ถ้าเข้าระยะ Engagement ได้ต้องเข้า สุดท้ายต้องติดพันกับ<strong>ทุก</strong>เป้าหมาย และห้ามติดพันกับศัตรูที่ไม่ใช่เป้าหมาย</li>
+              <li><strong>สำเร็จ = Fights First</strong>ยูนิตที่ชาร์จสำเร็จได้ "ต่อสู้ก่อน" ในเฟสต่อสู้ของเทิร์นนี้</li>
+            </ol>
+            <div class="callout warn"><svg class="i"><use href="#i-alert"></use></svg><div><p>ถ้าเคลื่อนที่ให้ครบเงื่อนไขไม่ได้ (เช่น ต้องอ้อมกำแพง) ถือว่าชาร์จไม่สำเร็จและยูนิตไม่ขยับ ทอยได้ 2 (ดับเบิล 1) ล้มเหลวเสมอ และถ้าไม่อยากไปเป้าหมายที่เอื้อมถึง ก็เลือกไม่ขยับได้</p></div></div>
+            <p><strong>ท้ายเฟส:</strong> ฝ่ายตรงข้ามใช้ Stratagem <strong>Heroic Intervention</strong> ชาร์จสวนได้ (1 CP ชาร์จใส่ยูนิตที่เพิ่งชาร์จเข้ามา หรือ +1 CP เพื่อชาร์จศัตรูใดก็ได้ในระยะ 6")</p>
+          </div>
+
+          <div class="phase-panel">
+            <h3>5. Fight Phase <span class="muted" style="font-size:.9rem">(ไฟต์ เฟส — เฟสต่อสู้)</span></h3>
+            <p>เฟสเดียวที่<strong>ทั้งสองผู้เล่นได้โจมตี</strong> ยูนิตที่ติดพันหรือชาร์จมาในเทิร์นนี้ <strong>ต้องต่อสู้</strong></p>
+            <ol class="steps">
+              <li><strong>Pile In (ไพล์ อิน — ขยับเข้าประชิด)</strong>ทุกยูนิตที่ติดพันหรือเพิ่งชาร์จ ขยับเข้าหาศัตรูได้สูงสุด 3" — Active Player ขยับครบทุกยูนิตก่อน แล้วอีกฝ่ายค่อยขยับ</li>
+              <li><strong>Fights First ก่อน</strong>ผลัดกันเลือกยูนิตที่มี Fights First (รวมยูนิตที่เพิ่งชาร์จ) มาสู้ทีละยูนิต <strong>เริ่มจาก Active Player</strong></li>
+              <li><strong>ที่เหลือผลัดกันสู้</strong>จากนั้นผลัดกันเลือกยูนิตที่เหลือมาสู้ ต่อเนื่องจากลำดับเดิม จนทุกยูนิตได้สู้</li>
+              <li><strong>Consolidate (คอนโซลิเดต — รวมกำลัง)</strong>ทุกยูนิตที่มีสิทธิ์สู้ในเฟสนี้ ขยับได้อีก 3" เพื่อเข้าหาศัตรูที่ติดพัน เข้าหาศัตรูใหม่ในระยะ 3" (ซึ่งจะทำให้ศัตรูนั้นได้สู้ด้วย) หรือเข้าหา Objective</li>
+            </ol>
+            <ul>
+              <li>โมเดลที่อยู่ในระยะ <strong>2"</strong> ของศัตรูเท่านั้นที่ตีได้ แต่ละโมเดลเลือกอาวุธประชิด 1 ชนิด (บวกอาวุธ [EXTRA ATTACKS] ถ้ามี)</li>
+              <li>ถ้ายูนิตถูกเลือกให้สู้แต่ไม่ได้ติดพันแล้ว (เช่น เป้าตายหมด) จะได้ <strong>Overrun Fight</strong> — Pile In เพิ่มอีกครั้งเพื่อหาเป้าใหม่ แล้วค่อยตี</li>
+            </ul>
+            <div class="callout new"><svg class="i"><use href="#i-star"></use></svg><div><p>ใน 11th ผู้ที่เลือกยูนิต Fights First ตัวแรกคือ <strong>Active Player</strong> ทำให้การชาร์จใส่ศัตรูที่มี Fights First ไม่เสียเปรียบเหมือนรุ่นก่อน</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="transports">
+        <h2><span class="num">03</span>ยานพาหนะขนส่ง (Transport)</h2>
+        <p>ยาน <span class="kbd">TRANSPORT</span> บรรทุกยูนิตได้ตามจำนวนที่ระบุบน Datasheet ยูนิตในยาน "ไม่อยู่บนสนาม" จึงถูกยิงไม่ได้และมองไม่เห็นอะไร</p>
+        <ul>
+          <li><strong>ขึ้นยาน (Embark):</strong> หลังเดิน Normal/Advance/Fall Back ถ้าทุกโมเดลอยู่ห่างยานไม่เกิน 3" ขึ้นได้ — แต่ยูนิตที่<strong>เพิ่งถูกวางลงสนามในเทิร์นนี้ขึ้นยานไม่ได้</strong></li>
+          <li><strong>Rapid Disembark:</strong> ยานขยับไปแล้ว → ลงมาวางห่างยานไม่เกิน 3" แต่ชาร์จไม่ได้เทิร์นนี้</li>
+          <li><strong>Tactical Disembark:</strong> ยานยังไม่ขยับ → ลงมาวางห่างไม่เกิน 3" แล้วเดิน Normal หรือ Advance ต่อได้เลย</li>
+          <li><strong>Combat Disembark:</strong> ลงแบบปกติไม่ได้เพราะโดนล้อม → วางในระยะ 6" (ติดพันกับศัตรูที่ล้อมยานได้) แต่ทอย Hazard ทุกโมเดล ขวัญแตก และชาร์จไม่ได้</li>
+          <li><strong>ยานถูกทำลาย:</strong> ผู้โดยสารต้อง Emergency Disembark วางใกล้ยานที่สุดในระยะ 6" ทอย Hazard ทุกโมเดล ขวัญแตก และชาร์จไม่ได้</li>
+          <li><span class="kbd">DEDICATED TRANSPORT</span> ต้องมียูนิตนั่งอยู่ตอนเริ่มเกม ไม่อย่างนั้นถูกนำออก</li>
+        </ul>
+      </section>
+
+      <section id="reserves">
+        <h2><span class="num">04</span>กองหนุน (Strategic Reserves) & Deep Strike</h2>
+        <p>ก่อนเกม คุณเก็บยูนิตไว้นอกสนามเป็น <span class="term">Strategic Reserves <span class="th">(สแตรทีจิก รีเสิร์ฟส์)</span></span> ได้ มูลค่ารวมไม่เกิน<strong>ครึ่งหนึ่งของแต้มทั้งหมด</strong> แล้วค่อยส่งลงสนามภายหลังด้วย <strong>Ingress Move</strong></p>
+        <ul>
+          <li>ลงสนามได้ตั้งแต่ <strong>รอบที่ 2</strong> เป็นต้นไป (ยกเว้นมีกฎพิเศษ)</li>
+          <li>วางให้ทั้งยูนิตอยู่ในระยะ <strong>6" จากขอบสนาม</strong> และห่างศัตรูทุกยูนิต <strong>มากกว่า 8"</strong> — ก่อนรอบที่ 3 ห้ามวางในเขตวางกำลังของฝ่ายตรงข้าม</li>
+          <li>ยูนิตที่มีความสามารถ <strong>Deep Strike</strong> (ดีพ สไตรก์ — วาร์ป/กระโดดร่มลงมา) วางที่ไหนในสนามก็ได้ ขอแค่ห่างศัตรูเกิน 8"</li>
+          <li>หลัง Ingress แล้ว <strong>ห้ามเคลื่อนที่แบบอื่นอีก</strong>จนถึงเฟสชาร์จ (แต่ยิงได้ และชาร์จได้ — ต้องทอยได้ 9 ขึ้นไปเพราะอยู่ห่างเกิน 8")</li>
+          <li>ถ้าจบรอบที่ 3 แล้วยูนิตยังไม่ลงสนาม ยูนิตนั้น<strong>ถูกทำลาย</strong></li>
+        </ul>
+      </section>
+
+      <section id="actions">
+        <h2><span class="num">05</span>Actions (แอคชั่น)</h2>
+        <p>ภารกิจบางแบบให้ยูนิตทำ <strong>Action</strong> เช่น สำรวจ วางสัญญาณ หรือทำลายเป้าหมาย เพื่อได้แต้ม ยูนิตจะ<strong>เริ่ม Action ไม่ได้</strong>ถ้า:</p>
+        <div class="grid grid-2">
+          <ul class="list-check">
+            <li>ไม่ได้อยู่บนสนาม หรือเป็น AIRCRAFT/FORTIFICATION</li>
+            <li>ขวัญแตก หรือมีค่า OC เป็น 0/–</li>
+            <li>ติดพันอยู่ (ยกเว้น TITANIC)</li>
+          </ul>
+          <ul class="list-check">
+            <li>Advance หรือ Fall Back ในเทิร์นนี้</li>
+            <li>เริ่ม Action อื่นไปแล้วในเทิร์นนี้</li>
+            <li>ยิงไปแล้วในเฟสนั้น</li>
+          </ul>
+        </div>
+        <p>เมื่อเริ่ม Action แล้ว ยูนิตนั้น<strong>ยิงไม่ได้และชาร์จไม่ได้</strong>จนจบเทิร์น และถ้าขยับ (ยกเว้น Pile In/Consolidate) Action จะไม่สำเร็จ</p>
+      </section>
+
+      <section id="cheatsheet">
+        <h2><span class="num">06</span>สรุปหนึ่งหน้า (Cheat Sheet)</h2>
+        <div class="table-wrap"><table>
+          <thead><tr><th>เฟส</th><th>คุณทำ</th><th>อีกฝ่ายตอบโต้ได้</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Command</strong></td><td>ได้ CP (ทั้งคู่ +1), ทดสอบขวัญ, ใช้ความสามารถ</td><td>–</td></tr>
+            <tr><td><strong>Movement</strong></td><td>เดิน / วิ่ง / ถอย / ลงยาน / ส่งกองหนุนลงสนาม</td><td>ท้ายเฟส: Fire Overwatch, Rapid Ingress</td></tr>
+            <tr><td><strong>Shooting</strong></td><td>ยิงทีละยูนิต</td><td>ต้นเฟส: Smokescreen</td></tr>
+            <tr><td><strong>Charge</strong></td><td>ทอย 2D6 แล้วชาร์จ</td><td>ท้ายเฟส: Heroic Intervention</td></tr>
+            <tr><td><strong>Fight</strong></td><td>Pile In → ผลัดกันสู้ → Consolidate</td><td>ได้สู้ด้วย · Counteroffensive</td></tr>
+          </tbody>
+        </table></div>
+        <div class="mark-read"><button class="btn btn-ghost btn-sm" data-mark-read></button></div>
+      </section>
+
+      <div data-page-nav></div>
+    </article>
+  </div>
+</main>
+
+<script src="../js/layout.js?v=5"></script>
+<script src="../js/main.js?v=5"></script>
+</body>
+</html>

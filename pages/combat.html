@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>การโจมตี & ทอยเต๋า | คู่มือ Warhammer 40K ฉบับมือใหม่</title>
+  <meta name="description" content="ลำดับการโจมตีของ Warhammer 40,000 11th Edition: Hit, Wound, Save, Damage พร้อมตาราง Wound และตัวจำลองการทอยเต๋า">
+  <meta name="theme-color" content="#0d0e11">
+  <link rel="icon" href="../images/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Kanit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=5">
+</head>
+<body data-page="combat" data-root="../">
+<script src="../js/icons.js?v=5"></script>
+
+<main>
+  <header class="page-hero">
+    <div class="hero-bg"><img src="../images/lore/blood-angels-chaplain-armageddon.webp" alt=""></div>
+    <div class="container">
+      <nav class="breadcrumb" aria-label="breadcrumb"><a href="../index.html">หน้าแรก</a><svg class="i"><use href="#i-chev-right"></use></svg><span>กติกา</span><svg class="i"><use href="#i-chev-right"></use></svg><span>การโจมตี</span></nav>
+      <h1>การโจมตี: Hit → Wound → Save → Damage</h1>
+      <p class="lead">ทุกการยิงและการฟันในเกมใช้ลำดับ 4 ขั้นเดียวกัน เข้าใจหน้านี้ = เข้าใจการต่อสู้ทั้งเกม พร้อมตัวจำลองให้ลองทอยเอง</p>
+      <div class="page-meta"><span class="chip"><svg class="i"><use href="#i-clock"></use></svg> อ่าน ~12 นาที</span><span class="chip chip-gold">บทที่ 6</span><span class="chip chip-new">11th Edition</span></div>
+    </div>
+  </header>
+
+  <div class="container doc">
+    <aside class="toc" data-toc></aside>
+    <article class="doc-body">
+
+      <section id="overview">
+        <h2><span class="num">00</span>ภาพรวมก่อนเริ่ม</h2>
+        <p>เมื่อยูนิตถูกเลือกให้ยิงหรือต่อสู้:</p>
+        <ol>
+          <li><strong>เลือกอาวุธ</strong> — ตอนยิงเลือกอาวุธระยะไกลได้หลายชิ้นต่อโมเดล ตอนต่อสู้เลือกอาวุธประชิดได้ 1 ชนิด</li>
+          <li><strong>เลือกเป้าหมาย</strong> — อาวุธแต่ละชิ้นเลือกเป้าหมายต่างกันได้ ประกาศให้ครบก่อนทอย</li>
+          <li><strong>รวมการโจมตีที่เหมือนกัน</strong> — อาวุธที่มีค่า BS/WS, S, AP, D และความสามารถเหมือนกันทุกอย่าง ทอยรวมเป็นกองเดียว (เช่น ปืน 5 กระบอก A2 = ทอย 10 ลูกพร้อมกัน)</li>
+          <li><strong>ทอยตาม 4 ขั้น</strong> ด้านล่าง ทีละกอง</li>
+        </ol>
+        <div class="grid grid-4">
+          <div class="card card-step"><span class="step-n">1</span><div class="card-icon"><svg class="i"><use href="#i-target"></use></svg></div><h3>Hit</h3><p>โดนไหม? เทียบกับ BS/WS</p></div>
+          <div class="card card-step"><span class="step-n">2</span><div class="card-icon red"><svg class="i"><use href="#i-sword"></use></svg></div><h3>Wound</h3><p>ทะลุความอึดไหม? S เทียบ T</p></div>
+          <div class="card card-step"><span class="step-n">3</span><div class="card-icon blue"><svg class="i"><use href="#i-shield"></use></svg></div><h3>Save</h3><p>เกราะกันได้ไหม? ฝ่ายรับทอย</p></div>
+          <div class="card card-step"><span class="step-n">4</span><div class="card-icon green"><svg class="i"><use href="#i-skull"></use></svg></div><h3>Damage</h3><p>ลดแผลตามค่า D</p></div>
+        </div>
+      </section>
+
+      <section id="hit">
+        <h2><span class="num">01</span>Hit Roll — ทอยเพื่อยิง/ฟันให้โดน</h2>
+        <p>ทอย D6 หนึ่งลูกต่อหนึ่งการโจมตี ผลที่ได้ <strong>เท่ากับหรือมากกว่า</strong> ค่า <strong>BS</strong> (อาวุธยิง) หรือ <strong>WS</strong> (อาวุธประชิด) = โดน</p>
+        <ul>
+          <li><strong>1 ดิบ พลาดเสมอ</strong> — ไม่ว่าจะมีโบนัสแค่ไหน</li>
+          <li><strong>6 ดิบ = Critical Hit</strong> (คริติคอล ฮิต) โดนเสมอ และเปิดใช้ความสามารถพิเศษ เช่น <em>Sustained Hits</em> (ได้ Hit เพิ่ม) หรือ <em>Lethal Hits</em> (เลือกให้ทำแผลอัตโนมัติ)</li>
+          <li>ตัวปรับค่าทอยโดนรวมกันได้ไม่เกิน <strong>±1</strong></li>
+          <li><strong>ที่กำบัง (Cover)</strong> ทำให้ค่า BS ของผู้ยิงแย่ลง 1 เช่น 3+ กลายเป็น 4+ <span class="chip chip-new">ใหม่ใน 11th</span></li>
+          <li>อาวุธ <strong>[TORRENT]</strong> (เช่น ปืนไฟ) โดนอัตโนมัติ ไม่ต้องทอย (และไม่นับเป็น Critical)</li>
+        </ul>
+      </section>
+
+      <section id="wound">
+        <h2><span class="num">02</span>Wound Roll — ทอยเพื่อทำแผล</h2>
+        <p>ทอยหนึ่งลูกต่อหนึ่ง Hit เทียบ <strong>Strength (S)</strong> ของอาวุธกับ <strong>Toughness (T)</strong> ของเป้าหมาย:</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>S ของอาวุธ เทียบกับ T ของเป้า</th><th class="center">ต้องทอยได้</th><th>ตัวอย่าง</th></tr></thead>
+          <tbody>
+            <tr><td>S <strong>มากกว่าหรือเท่ากับ 2 เท่า</strong>ของ T</td><td class="center"><span class="big-num">2+</span></td><td>S8 vs T4</td></tr>
+            <tr><td>S <strong>มากกว่า</strong> T</td><td class="center"><span class="big-num">3+</span></td><td>S5 vs T4</td></tr>
+            <tr><td>S <strong>เท่ากับ</strong> T</td><td class="center"><span class="big-num">4+</span></td><td>S4 vs T4</td></tr>
+            <tr><td>S <strong>น้อยกว่า</strong> T</td><td class="center"><span class="big-num">5+</span></td><td>S4 vs T5</td></tr>
+            <tr><td>S <strong>น้อยกว่าหรือเท่ากับครึ่งหนึ่ง</strong>ของ T</td><td class="center"><span class="big-num">6+</span></td><td>S4 vs T8</td></tr>
+          </tbody>
+        </table></div>
+        <div class="tool" id="wound-calc">
+          <div class="tool-head"><div class="card-icon"><svg class="i"><use href="#i-calc"></use></svg></div><h3>ตัวช่วยคำนวณ Wound</h3></div>
+          <div class="form-grid" style="grid-template-columns:repeat(2,minmax(0,160px))">
+            <div class="field"><label for="wc-s">Strength (S) ของอาวุธ</label><input id="wc-s" type="number" min="1" max="30" value="4"></div>
+            <div class="field"><label for="wc-t">Toughness (T) ของเป้า</label><input id="wc-t" type="number" min="1" max="30" value="4"></div>
+          </div>
+          <div class="flex mt-2" id="wc-out"></div>
+        </div>
+        <ul>
+          <li><strong>1 ดิบพลาดเสมอ, 6 ดิบ = Critical Wound</strong> ทำให้ความสามารถอย่าง <em>Devastating Wounds</em> ทำงาน</li>
+          <li>อาวุธ <strong>[ANTI-X Y+]</strong> เช่น Anti-Vehicle 4+ — เมื่อยิงใส่เป้าที่มีคีย์เวิร์ดนั้น ทอยได้ 4 ดิบขึ้นไปนับเป็น Critical Wound</li>
+          <li>ถ้ายูนิตมีหลายค่า T ให้ใช้ค่า T <strong>สูงสุด</strong> (ยูนิตที่มีตัวละครมานำ ใช้ค่า T ของ "บอดี้การ์ด")</li>
+        </ul>
+      </section>
+
+      <section id="save">
+        <h2><span class="num">03</span>Save Roll — ฝ่ายรับทอยเกราะ</h2>
+        <p>ฝ่ายที่ถูกโจมตีทอย D6 หนึ่งลูกต่อหนึ่ง Wound โดย <strong>นำค่า AP ของอาวุธมาหักจากผลทอย</strong> แล้วเทียบกับ Sv:</p>
+        <div class="callout"><svg class="i"><use href="#i-calc"></use></svg><div><p><strong>ตัวอย่าง:</strong> เกราะ Sv 3+ ถูกยิงด้วย AP −1 → ทอยได้ 3 กลายเป็น 2 = ไม่ผ่าน (เท่ากับว่าต้องทอยได้ 4+) · AP −2 → ต้องได้ 5+ · AP −4 ขึ้นไป → เกราะ 3+ ใช้ไม่ได้เลย</p></div></div>
+        <ul>
+          <li><strong>1 ดิบ ไม่ผ่านเสมอ</strong></li>
+          <li><span class="term">Invulnerable Save <span class="th">(อินวัลเนอเรเบิล เซฟ)</span></span> คือเซฟพิเศษที่ <strong>AP ลดไม่ได้</strong> ใน 11th ไม่ต้องเลือกเอง — ถ้าทอยได้ถึงค่า Invulnerable ก็กันได้ ถ้าไม่ถึงค่อยเช็กกับเกราะปกติ <span class="chip chip-new">ใหม่ใน 11th</span></li>
+        </ul>
+        <h3>ระบบใหม่: แบ่งกลุ่มแล้วใช้ลูกเต๋าจากน้อยไปมาก</h3>
+        <p>ใน 11th ฝ่ายรับ<strong>ทอยเซฟทุกลูกพร้อมกัน</strong> แล้วจัดการดังนี้:</p>
+        <ol class="steps">
+          <li><strong>แบ่งกลุ่ม</strong>ตัวละคร (CHARACTER) ตัวละกลุ่ม ส่วนโมเดลอื่นจัดกลุ่มตามค่า W, Sv และ InSv ที่เหมือนกัน</li>
+          <li><strong>เรียงลำดับกลุ่ม</strong>ฝ่ายรับเลือกลำดับเอง แต่ต้อง: กลุ่มที่มีโมเดลบาดเจ็บอยู่ก่อน, ตัวละครอยู่หลังสุดเสมอ</li>
+          <li><strong>ทอยเซฟทั้งหมด</strong>แล้วเรียงผลจาก<strong>น้อยไปมาก</strong></li>
+          <li><strong>จับคู่</strong>ใช้ลูกเต๋าที่ค่าน้อยที่สุดกับกลุ่มแรกก่อน ถ้ากลุ่มแรกตายหมด ลูกเต๋าที่เหลือไปกลุ่มถัดไป</li>
+        </ol>
+        <div class="callout tip"><svg class="i"><use href="#i-bulb"></use></svg><div><p>ผลคือ ตัวละครที่อยู่ในยูนิตปลอดภัยขึ้น เพราะลูกเต๋าค่าน้อย (ที่เซฟไม่ผ่าน) จะถูกใช้กับลูกน้องก่อน และการเล่นเร็วขึ้นมาก ส่วนอาวุธ <strong>[PRECISION]</strong> สามารถเลือกยิงกลุ่มตัวละครก่อนได้</p></div></div>
+      </section>
+
+      <section id="damage">
+        <h2><span class="num">04</span>Damage — ลดแผล</h2>
+        <ul>
+          <li>แต่ละการโจมตีที่เซฟไม่ผ่าน ทำให้โมเดลเสียแผล (Wounds) เท่ากับค่า <strong>D</strong> ของอาวุธ ถ้าเป็นค่าสุ่ม (เช่น D6) ทอยทีละครั้ง</li>
+          <li>ต้องลงดาเมจให้โมเดลที่<strong>บาดเจ็บอยู่แล้ว</strong>ก่อน</li>
+          <li>แผลเหลือ 0 = โมเดลถูกทำลาย <strong>ดาเมจที่เกินไม่ทะลุไปโมเดลตัวถัดไป</strong> (เช่น D3 ใส่ทหาร W1 ทำลายได้ตัวเดียว)</li>
+          <li><strong>Feel No Pain X+</strong> — ทุกครั้งที่จะเสียแผล 1 แผล ทอย D6 ได้ X ขึ้นไปไม่เสียแผลนั้น</li>
+        </ul>
+        <h3>Mortal Wounds (มอร์ทัล วูนด์)</h3>
+        <p>ดาเมจพิเศษที่<strong>ไม่ต้องทอยเซฟเลย</strong> ลงทีละ 1 แผล และ<strong>ทะลุไปโมเดลถัดไปได้</strong> (ยกเว้น Mortal Wounds จาก Devastating Wounds ที่ทำลายได้สูงสุด 1 โมเดลต่อ 1 Critical) เกิดจาก Stratagem บางอย่าง, Hazard roll, พลังจิต หรือความสามารถพิเศษ</p>
+        <div class="callout"><svg class="i"><use href="#i-info"></use></svg><div><strong class="title">Hazard Roll (แฮซาร์ด โรล)</strong><p>อาวุธ <strong>[HAZARDOUS]</strong> (เช่น ปืนพลาสมา) และการหนีตาย/ลงจากยานฉุกเฉิน บังคับให้ทอย Hazard: ทอย D6 ได้ 1–2 = ยูนิตตัวเองเสีย <strong>1 Mortal Wound</strong> (หรือ 3 ถ้าทุกโมเดลในยูนิตเป็น MONSTER/VEHICLE)</p></div></div>
+      </section>
+
+      <section id="example">
+        <h2><span class="num">05</span>ตัวอย่างเต็ม ๆ หนึ่งครั้ง</h2>
+        <p>ทหาร 5 นายถือ <strong>Bolt rifle</strong> (A2, BS 3+, S4, AP −1, D1) ยิงใส่ทหารมนุษย์ 10 นาย (T3, Sv 5+, W1) ที่ยืนกลางแจ้ง</p>
+        <ol class="steps">
+          <li><strong>Hit:</strong> 5 × 2 = ทอย 10 ลูก ต้องได้ 3+ → สมมติโดน 7 ลูก</li>
+          <li><strong>Wound:</strong> S4 &gt; T3 → ต้องได้ 3+ → ทอย 7 ลูก สมมติสำเร็จ 5 ลูก</li>
+          <li><strong>Save:</strong> ฝ่ายรับทอย 5 ลูก เกราะ 5+ กับ AP −1 → ต้องได้ 6 → สมมติผ่าน 1 ลูก ไม่ผ่าน 4</li>
+          <li><strong>Damage:</strong> 4 × D1 = ทหารตาย 4 นาย</li>
+        </ol>
+        <p>ทหารเหลือ 6 นาย (ยังไม่ถึงครึ่ง จึงยังไม่ต้องทดสอบขวัญในเทิร์นหน้า ถ้าเหลือ 5 นายเมื่อไหร่ต้องทดสอบ)</p>
+      </section>
+
+      <section id="simulator">
+        <h2><span class="num">06</span>ตัวจำลองการโจมตี</h2>
+        <p>ลองใส่ค่าอาวุธและเป้าหมาย แล้วกด "ทอยเต๋า" ระบบจะทอยให้ทีละขั้นตามกฎ 11th และจำลองอีก 3,000 ครั้งเพื่อหาค่าเฉลี่ย</p>
+        <div class="flex" style="margin-bottom:14px">
+          <span class="muted" style="font-size:.9rem">ตัวอย่างสำเร็จรูป:</span>
+          <button class="btn btn-ghost btn-sm" data-preset="bolter" type="button">ปืนไรเฟิลยิงทหารมนุษย์</button>
+          <button class="btn btn-ghost btn-sm" data-preset="lascannon" type="button">ปืนต่อต้านรถถังยิงรถถัง</button>
+          <button class="btn btn-ghost btn-sm" data-preset="choppa" type="button">Orks ฟันใส่ทหารเกราะหนัก</button>
+          <button class="btn btn-ghost btn-sm" data-preset="custodes" type="button">ยิงเป้าที่มี Invulnerable Save</button>
+        </div>
+        <form class="tool" id="sim">
+          <div class="tool-head"><div class="card-icon"><svg class="i"><use href="#i-dice"></use></svg></div><h3>ผู้โจมตี</h3></div>
+          <div class="form-grid">
+            <div class="field"><label>จำนวนโมเดลที่โจมตี</label><input name="models" type="number" min="1" max="40" value="5"></div>
+            <div class="field"><label>A (Attacks) ต่อโมเดล</label><input name="A" type="number" min="1" max="20" value="2"></div>
+            <div class="field"><label>BS / WS</label><select name="BS"><option value="2">2+</option><option value="3" selected>3+</option><option value="4">4+</option><option value="5">5+</option><option value="6">6+</option></select></div>
+            <div class="field"><label>S (Strength)</label><input name="S" type="number" min="1" max="30" value="4"></div>
+            <div class="field"><label>AP</label><select name="AP"><option value="0">0</option><option value="-1" selected>-1</option><option value="-2">-2</option><option value="-3">-3</option><option value="-4">-4</option><option value="-5">-5</option></select></div>
+            <div class="field"><label>D (Damage)</label><select name="D"><option>1</option><option>2</option><option>3</option><option>D3</option><option>D6</option><option>D6+1</option></select></div>
+          </div>
+          <div class="checks">
+            <label class="check"><input type="checkbox" name="cover"> เป้าอยู่ในที่กำบัง (BS แย่ลง 1)</label>
+            <label class="check"><input type="checkbox" name="heavy"> [HEAVY] อยู่นิ่ง (+1 ทอยโดน)</label>
+            <label class="check"><input type="checkbox" name="torrent"> [TORRENT] โดนอัตโนมัติ</label>
+            <label class="check"><input type="checkbox" name="rrHit"> ทอยซ้ำ Hit ที่พลาด</label>
+            <label class="check"><input type="checkbox" name="rrWound"> ทอยซ้ำ Wound ที่พลาด (Twin-linked)</label>
+            <label class="check"><input type="checkbox" name="sustained"> [SUSTAINED HITS 1]</label>
+            <label class="check"><input type="checkbox" name="lethal"> [LETHAL HITS]</label>
+            <label class="check"><input type="checkbox" name="dev"> [DEVASTATING WOUNDS]</label>
+            <label class="check"><input type="checkbox" name="anti"> [ANTI-X 4+] เป้ามีคีย์เวิร์ดตรง</label>
+          </div>
+          <div class="tool-head mt-2"><div class="card-icon red"><svg class="i"><use href="#i-shield"></use></svg></div><h3>เป้าหมาย</h3></div>
+          <div class="form-grid">
+            <div class="field"><label>T (Toughness)</label><input name="T" type="number" min="1" max="30" value="3"></div>
+            <div class="field"><label>Sv (Save)</label><select name="Sv"><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option><option value="5" selected>5+</option><option value="6">6+</option><option value="7">ไม่มี</option></select></div>
+            <div class="field"><label>Invulnerable Save</label><select name="Inv"><option value="0" selected>ไม่มี</option><option value="3">3+</option><option value="4">4+</option><option value="5">5+</option><option value="6">6+</option></select></div>
+            <div class="field"><label>W ต่อโมเดล</label><input name="W" type="number" min="1" max="30" value="1"></div>
+            <div class="field"><label>จำนวนโมเดลในยูนิต</label><input name="N" type="number" min="1" max="40" value="10"></div>
+            <div class="field"><label>Feel No Pain</label><select name="FNP"><option value="0" selected>ไม่มี</option><option value="4">4+</option><option value="5">5+</option><option value="6">6+</option></select></div>
+          </div>
+          <div class="tool-actions"><button class="btn btn-primary" type="submit"><svg class="i"><use href="#i-dice"></use></svg> ทอยเต๋า!</button></div>
+          <div class="result" id="sim-result" aria-live="polite"></div>
+        </form>
+        <p class="muted" style="font-size:.88rem">ตัวจำลองนี้ย่อกฎให้ง่ายเพื่อการเรียน (เป้าหมายเป็นกลุ่มเดียวที่ค่าเท่ากันทั้งยูนิต ไม่มีตัวละคร และไม่รวมกฎพิเศษของทัพ) ลูกเต๋าสีทอง = Critical, สีเทา = ไม่สำเร็จ, ↻ = ลูกที่ทอยซ้ำ</p>
+      </section>
+
+      <section id="abilities">
+        <h2><span class="num">07</span>ความสามารถของอาวุธที่เจอบ่อย</h2>
+        <div class="table-wrap"><table>
+          <thead><tr><th>ความสามารถ</th><th>ผล</th></tr></thead>
+          <tbody>
+            <tr><td><strong>[RAPID FIRE X]</strong></td><td>ยิงในระยะครึ่งหนึ่งของระยะยิง ได้การโจมตีเพิ่ม X</td></tr>
+            <tr><td><strong>[ASSAULT]</strong></td><td>ยิงได้แม้ Advance มา</td></tr>
+            <tr><td><strong>[HEAVY]</strong></td><td>+1 ทอยโดน ถ้าไม่ติดพัน ไม่ได้ถูกวางลงสนามเทิร์นนี้ และไม่มีโมเดลในยูนิตขยับเกิน 3"</td></tr>
+            <tr><td><strong>[BLAST]</strong></td><td>ได้การโจมตีเพิ่ม 1 ต่อทุก ๆ 5 โมเดลในยูนิตเป้าหมาย · ยิงใส่ยูนิตที่ติดพันไม่ได้</td></tr>
+            <tr><td><strong>[TORRENT]</strong></td><td>โดนอัตโนมัติ</td></tr>
+            <tr><td><strong>[MELTA X]</strong></td><td>ในระยะครึ่งหนึ่ง ดาเมจ +X</td></tr>
+            <tr><td><strong>[LANCE]</strong></td><td>+1 ทอย Wound ถ้ายูนิตชาร์จในเทิร์นนี้</td></tr>
+            <tr><td><strong>[TWIN-LINKED]</strong></td><td>ทอย Wound ซ้ำได้</td></tr>
+            <tr><td><strong>[SUSTAINED HITS X]</strong></td><td>Critical Hit ได้ Hit เพิ่ม X</td></tr>
+            <tr><td><strong>[LETHAL HITS]</strong></td><td>Critical Hit เลือกให้ทำแผลอัตโนมัติได้</td></tr>
+            <tr><td><strong>[DEVASTATING WOUNDS]</strong></td><td>Critical Wound กลายเป็น Mortal Wounds เท่ากับค่า D (ไม่ต้องเซฟ)</td></tr>
+            <tr><td><strong>[ANTI-X Y+]</strong></td><td>ใส่เป้าที่มีคีย์เวิร์ด X ทอย Wound ได้ Y ดิบขึ้นไป = Critical Wound</td></tr>
+            <tr><td><strong>[PRECISION]</strong></td><td>เลือกลงดาเมจที่ตัวละครที่มองเห็นในยูนิตก่อนได้</td></tr>
+            <tr><td><strong>[IGNORES COVER]</strong></td><td>เป้าหมายไม่ได้ประโยชน์จากที่กำบัง</td></tr>
+            <tr><td><strong>[HAZARDOUS]</strong></td><td>หลังโจมตี ทอย Hazard ตามจำนวนอาวุธนี้ที่ใช้</td></tr>
+            <tr><td><strong>[CLEAVE X]</strong> <span class="chip chip-new">ใหม่</span></td><td>อาวุธประชิดที่ตีเป้าเดียว ได้การโจมตีเพิ่ม X ต่อทุก 5 โมเดลของเป้า</td></tr>
+            <tr><td><strong>[PSYCHIC]</strong></td><td>เลือกไม่สนตัวปรับค่า BS/WS และทอยโดนได้</td></tr>
+          </tbody>
+        </table></div>
+        <p>ดูความสามารถทั้งหมดได้ในหน้า <a href="stratagems.html#core-abilities">Stratagem & ความสามารถ</a></p>
+        <div class="mark-read"><button class="btn btn-ghost btn-sm" data-mark-read></button></div>
+      </section>
+
+      <div data-page-nav></div>
+    </article>
+  </div>
+</main>
+
+<script src="../js/layout.js?v=5"></script>
+<script src="../js/main.js?v=5"></script>
+<script src="../js/combat.js?v=5"></script>
+</body>
+</html>

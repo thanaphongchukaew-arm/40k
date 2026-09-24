@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ทัพทั้งหมด | คู่มือ Warhammer 40K ฉบับมือใหม่</title>
+  <meta name="description" content="รู้จักทุกกองทัพใน Warhammer 40,000: Imperium, Chaos และ Xenos พร้อมสไตล์การเล่น ความยาก และจุดเด่น">
+  <meta name="theme-color" content="#0d0e11">
+  <link rel="icon" href="../images/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Kanit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=5">
+</head>
+<body data-page="factions" data-root="../">
+<script src="../js/icons.js?v=5"></script>
+
+<main>
+  <header class="page-hero">
+    <div class="hero-bg"><img src="../images/factions/chaos/chaos-daemons.webp" alt=""></div>
+    <div class="container">
+      <nav class="breadcrumb" aria-label="breadcrumb"><a href="../index.html">หน้าแรก</a><svg class="i"><use href="#i-chev-right"></use></svg><span>โลกของ 40K</span><svg class="i"><use href="#i-chev-right"></use></svg><span>ทัพทั้งหมด</span></nav>
+      <h1>ทัพทั้งหมดใน Warhammer 40K</h1>
+      <p class="lead">คลิกที่การ์ดเพื่อดูเนื้อเรื่อง สไตล์การเล่น จุดเด่น และข้อควรรู้ของแต่ละทัพ ใช้ตัวกรองหรือค้นหาชื่อ (ไทย/อังกฤษ) ได้</p>
+      <div class="page-meta"><span class="chip chip-gold">บทที่ 3</span><span class="chip chip-imperium">Imperium 14</span><span class="chip chip-chaos">Chaos 7</span><span class="chip chip-xenos">Xenos 8</span></div>
+    </div>
+  </header>
+
+  <section class="section-sm">
+    <div class="container">
+      <div class="grid grid-3" style="margin-bottom:36px">
+        <div class="card"><div class="card-icon blue"><svg class="i"><use href="#i-shield"></use></svg></div><h3>Imperium <span class="muted" style="font-size:.9rem">(อิมพีเรียม)</span></h3><p>กองกำลังของจักรวรรดิมนุษย์ ตั้งแต่ทหารธรรมดาถึงหุ่นรบยักษ์ ในเกมสามารถรวมบางหน่วยจากหลายสังกัดได้ภายใต้กฎการจัดทัพ</p></div>
+        <div class="card"><div class="card-icon red"><svg class="i"><use href="#i-skull"></use></svg></div><h3>Chaos <span class="muted" style="font-size:.9rem">(เคออส)</span></h3><p>ผู้ทรยศและปีศาจที่รับใช้เทพแห่ง Chaos ทั้งสี่ ได้พลังมหาศาลแลกกับความบ้าคลั่งและการกลายพันธุ์</p></div>
+        <div class="card"><div class="card-icon green"><svg class="i"><use href="#i-planet"></use></svg></div><h3>Xenos <span class="muted" style="font-size:.9rem">(ซีนอส)</span></h3><p>เผ่าพันธุ์ต่างดาวที่มีเป้าหมายของตัวเอง ไม่มีใครเป็นพันธมิตรกันจริง ๆ แต่ละทัพเล่นแตกต่างกันมาก</p></div>
+      </div>
+
+      <div class="filter-bar">
+        <div class="tabs" role="tablist" aria-label="กรองตามฝ่าย" style="margin:0">
+          <button class="tab active" data-filter="all">ทั้งหมด</button>
+          <button class="tab" data-filter="imperium">Imperium</button>
+          <button class="tab" data-filter="chaos">Chaos</button>
+          <button class="tab" data-filter="xenos">Xenos</button>
+        </div>
+        <label class="search"><span class="visually-hidden">ค้นหาทัพ</span><svg class="i"><use href="#i-search"></use></svg><input id="faction-search" type="search" placeholder="ค้นหา เช่น ออร์ค, Necron, หุ่นยักษ์..."></label>
+      </div>
+
+      <div data-group id="imperium">
+        <h2 class="flex"><span class="chip chip-imperium">IMPERIUM</span> ทัพของจักรวรรดิ</h2>
+        <div class="faction-grid" id="grid-imperium"></div>
+      </div>
+
+      <div data-group class="mt-4">
+        <h2 class="flex"><span class="chip chip-imperium">SPACE MARINES</span> Chapter ยอดนิยม</h2>
+        <p class="muted" style="max-width:760px">Chapter เหล่านี้เล่นด้วยกฎของ <strong>Space Marines</strong> เป็นหลัก แต่มียูนิต ตัวละคร และกฎพิเศษเพิ่มเติมเป็นของตัวเอง (ผ่านหนังสือเสริม/Detachment) จึงแยกให้ดูง่ายขึ้น</p>
+        <div class="faction-grid" id="grid-chapters"></div>
+      </div>
+
+      <div data-group id="chaos" class="mt-4">
+        <h2 class="flex"><span class="chip chip-chaos">CHAOS</span> ทัพของ Chaos</h2>
+        <div class="faction-grid" id="grid-chaos"></div>
+      </div>
+
+      <div data-group id="xenos" class="mt-4">
+        <h2 class="flex"><span class="chip chip-xenos">XENOS</span> ทัพต่างดาว</h2>
+        <div class="faction-grid" id="grid-xenos"></div>
+      </div>
+
+      <p class="empty" id="no-result" hidden>ไม่พบทัพที่ตรงกับคำค้นหา ลองพิมพ์คำอื่นดูนะ</p>
+
+      <div class="callout mt-4"><svg class="i"><use href="#i-info"></use></svg><div><strong class="title">ความยากและจำนวนโมเดลคือภาพรวมโดยประมาณ</strong><p>ประเมินจากมุมมองของผู้เล่นมือใหม่ในภาพกว้าง พลังของแต่ละทัพเปลี่ยนไปตามการอัปเดตกติกา (Balance Dataslate) และ Codex ใหม่ ทุกทัพเล่นสนุกและชนะได้ถ้าเข้าใจมัน</p></div></div>
+
+      <div class="doc-body" style="max-width:none">
+        <div class="mark-read"><button class="btn btn-ghost btn-sm" data-mark-read></button></div>
+        <div data-page-nav></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="modal" id="faction-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-box">
+    <button class="modal-close" aria-label="ปิด"><svg class="i"><use href="#i-x"></use></svg></button>
+    <div class="modal-content" style="display:contents"></div>
+  </div>
+</div>
+
+<script src="../js/layout.js?v=5"></script>
+<script src="../js/main.js?v=5"></script>
+<script src="../js/factions-data.js?v=5"></script>
+<script src="../js/factions.js?v=5"></script>
+</body>
+</html>
