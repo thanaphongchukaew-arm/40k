@@ -12,13 +12,13 @@
     { id: 'home', file: 'index.html', title: 'หน้าแรก', icon: 'home', desc: 'ภาพรวมและเส้นทางการเรียน' },
     { id: 'getting-started', file: 'pages/getting-started.html', title: 'เริ่มต้นต้องมีอะไร', icon: 'box', desc: 'อุปกรณ์ ชุดเริ่มต้น และการเลือกทัพ' },
     { id: 'lore', file: 'pages/lore.html', title: 'เนื้อเรื่องย่อ', icon: 'book', desc: 'ภาพรวมจักรวาลแห่ง 41st Millennium' },
-    { id: 'lore-30k', file: 'pages/lore-30k.html', title: 'ยุค 30K: Horus Heresy', icon: 'scroll', desc: 'Great Crusade และ Legion สมัยยังภักดี' },
+    { id: 'gods', file: 'pages/gods.html', title: 'เทพเจ้าทุกองค์', icon: 'star', desc: 'Chaos, Aeldari, Ork, C\'tan และอื่น ๆ' },
     { id: 'primarchs', file: 'pages/primarchs.html', title: 'จักรพรรดิ & Primarch ทั้ง 20', icon: 'crown', desc: 'ต้นกำเนิด การทรยศ และสถานะปัจจุบัน' },
+    { id: 'lore-30k', file: 'pages/lore-30k.html', title: 'ยุค 30K: Horus Heresy', icon: 'scroll', desc: 'Great Crusade และ Legion สมัยยังภักดี' },
     { id: 'lore-40k', file: 'pages/lore-40k.html', title: 'ยุค 40K–42K', icon: 'clock', desc: 'หมื่นปีแห่งความมืดจนถึงวันนี้' },
     { id: 'compare', file: 'pages/compare-30k-40k.html', title: 'เปรียบเทียบ 30K vs 40K', icon: 'layers', desc: 'อะไรเปลี่ยนไปบ้างในหมื่นปี' },
-    { id: 'gods', file: 'pages/gods.html', title: 'เทพเจ้าทุกองค์', icon: 'star', desc: 'Chaos, Aeldari, Ork, C\'tan และอื่น ๆ' },
-    { id: 'factions', file: 'pages/factions.html', title: 'ทัพทั้งหมด', icon: 'shield', desc: 'รู้จักทุกฝ่ายและสไตล์การเล่น' },
     { id: 'faction-lore', file: 'pages/faction-lore.html', title: 'เนื้อเรื่องรายทัพ', icon: 'book', desc: 'ต้นกำเนิดและวีรกรรมของทุกทัพ' },
+    { id: 'factions', file: 'pages/factions.html', title: 'ทัพทั้งหมด', icon: 'shield', desc: 'รู้จักทุกฝ่ายและสไตล์การเล่น' },
     { id: 'basics', file: 'pages/basics.html', title: 'พื้นฐาน & Datasheet', icon: 'scroll', desc: 'ลูกเต๋า ระยะ ค่าสถานะ คีย์เวิร์ด' },
     { id: 'turn', file: 'pages/turn.html', title: 'ลำดับเทิร์น 5 เฟส', icon: 'clock', desc: 'Command → Movement → Shooting → Charge → Fight' },
     { id: 'combat', file: 'pages/combat.html', title: 'การโจมตี & ทอยเต๋า', icon: 'dice', desc: 'Hit → Wound → Save → Damage + ตัวจำลอง' },
@@ -39,7 +39,7 @@
 
   const MENU = [
     { label: 'เริ่มต้น', items: ['getting-started', 'first-game', 'quiz'] },
-    { label: 'โลกของ 40K', items: ['lore', 'lore-30k', 'primarchs', 'lore-40k', 'compare', 'gods', 'faction-lore', 'factions'] },
+    { label: 'โลกของ 40K', items: ['lore', 'gods', 'primarchs', 'lore-30k', 'lore-40k', 'compare', 'faction-lore', 'factions'] },
     { label: 'กติกา', items: ['basics', 'turn', 'combat', 'terrain', 'stratagems'] },
     { label: 'จัดทัพ & โหมด', items: ['army-building', 'game-modes'] },
     { label: 'งานอดิเรก', items: ['hobby', 'glossary'] }
@@ -105,7 +105,7 @@
     '<div class="container"><div class="footer-grid">' +
       '<div><a class="brand" href="' + root + 'index.html"><span class="brand-mark">' + ic('emblem') + '</span><span>คู่มือ 40K ฉบับมือใหม่</span></a>' +
       '<p class="mt-2">เว็บสรุปกติกาและเนื้อเรื่อง Warhammer 40,000 ภาษาไทย สำหรับคนที่เพิ่งเริ่ม อ้างอิงกติกา 11th Edition (เปิดตัว มิ.ย. 2026)</p></div>' +
-      '<div><h4>เริ่มต้น & โลกของ 40K</h4><ul>' + col(['getting-started', 'lore', 'lore-30k', 'primarchs', 'lore-40k', 'gods', 'factions', 'first-game']) + '</ul></div>' +
+      '<div><h4>เริ่มต้น & โลกของ 40K</h4><ul>' + col(['getting-started', 'lore', 'gods', 'primarchs', 'lore-30k', 'lore-40k', 'factions', 'first-game']) + '</ul></div>' +
       '<div><h4>กติกา</h4><ul>' + col(['basics', 'turn', 'combat', 'terrain', 'stratagems']) + '</ul></div>' +
       '<div><h4>อื่น ๆ</h4><ul>' + col(['army-building', 'game-modes', 'hobby', 'glossary', 'quiz']) +
       '<li><a href="' + root + 'pages/credits.html">แหล่งอ้างอิง & เครดิตรูป</a></li></ul></div>' +
