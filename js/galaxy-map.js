@@ -170,7 +170,7 @@
 
   /* ---------- ค้นหา / กรอง / แบ่งหน้า ---------- */
   let st = 'all', seg = 'all', lore = 'all', shown = PAGE;
-  const input = document.getElementById('gm-search'), more = document.getElementById('gm-more'), count = document.getElementById('gm-count');
+  const input = document.getElementById('gm-search'), more = document.getElementById('gm-more'), count = document.getElementById('gm-count'), all = document.getElementById('gm-all');
   const counts = {}; P.forEach(p => { counts[p.st] = (counts[p.st] || 0) + 1; });
   document.querySelectorAll('.gm-legend [data-st]').forEach(b => { const n = b.dataset.st === 'all' ? P.length : (counts[b.dataset.st] || 0); b.insertAdjacentHTML('beforeend', ' <em>' + n + '</em>'); });
   const filter = () => {
@@ -180,7 +180,8 @@
     let n = 0;
     items.forEach(li => { const ok = hit.has(li.dataset.id); li.hidden = !ok || n >= shown; if (ok) n++; });
     count.textContent = 'พบ ' + hit.size.toLocaleString() + ' จาก ' + P.length.toLocaleString() + ' ดวง';
-    more.hidden = hit.size <= shown;
+    more.hidden = all.hidden = hit.size <= shown;
+    all.textContent = 'แสดงทั้งหมด (' + hit.size + ' ดวง)';
     more.textContent = 'แสดงเพิ่มอีก ' + Math.min(PAGE, hit.size - shown) + ' ดวง (เหลือ ' + (hit.size - shown) + ')';
   };
   const reset = () => { shown = PAGE; filter(); };
@@ -193,6 +194,7 @@
   document.getElementById('gm-seg').addEventListener('change', e => { seg = e.target.value; reset(); });
   document.getElementById('gm-lore').addEventListener('change', e => { lore = e.target.value; reset(); });
   more.addEventListener('click', () => { shown += PAGE; filter(); });
+  all.addEventListener('click', () => { shown = Infinity; filter(); });
 
   apply(); filter();
   /* เปิดดาวจากลิงก์ #p-ชื่อดาว (เช่นจากการค้นหาทั้งเว็บ) */

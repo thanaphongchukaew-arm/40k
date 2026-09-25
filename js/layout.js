@@ -17,6 +17,7 @@
     { id: 'lore-ancient', file: 'pages/lore-ancient.html', title: 'ยุคโบราณ: ก่อนจักรวรรดิ', icon: 'clock', desc: 'Old Ones, War in Heaven, Dark Age of Technology' },
     { id: 'gods', file: 'pages/gods.html', title: 'เทพเจ้าทุกองค์', icon: 'star', desc: 'Chaos, Aeldari, Ork, C\'tan และอื่น ๆ' },
     { id: 'warp', file: 'pages/warp.html', title: 'Warp และกลไกของจักรวาล', icon: 'planet', desc: 'Navigator, Astropath, Psyker และ Great Rift' },
+    { id: 'realms', file: 'pages/realms.html', title: 'ภายใน Warp และมิติอื่น', icon: 'planet', desc: 'Realm of Chaos, Webway, Commorragh, Eye of Terror' },
     { id: 'primarchs', file: 'pages/primarchs.html', title: 'จักรพรรดิ & Primarch ทั้ง 20', icon: 'crown', desc: 'ต้นกำเนิด การทรยศ และสถานะปัจจุบัน' },
     { id: 'primarch-relations', file: 'pages/primarch-relations.html', title: 'ความสัมพันธ์ของ Primarch', icon: 'users', desc: 'ใครรักใคร ใครเกลียดใคร ทุกคู่' },
     { id: 'lore-30k', file: 'pages/lore-30k.html', title: 'ยุค 30K: Horus Heresy', icon: 'scroll', desc: 'Great Crusade และ Legion สมัยยังภักดี' },
@@ -62,7 +63,7 @@
       ['ช่วยเลือกและทบทวน', ['finder', 'quiz']] ] },
     { label: 'เนื้อเรื่อง', secs: [
       ['ไทม์ไลน์ตามยุค', ['lore', 'lore-ancient', 'lore-30k', 'lore-40k', 'compare']],
-      ['กลไกของจักรวาล', ['gods', 'warp', 'galaxy-map', 'organizations']] ] },
+      ['กลไกของจักรวาล', ['gods', 'warp', 'realms', 'galaxy-map', 'organizations']] ] },
     { label: 'ทัพ & ตัวละคร', secs: [
       ['ทัพและเผ่าพันธุ์', ['faction-lore', 'space-marines', 'xenos-races']],
       ['บุคคลสำคัญ', ['primarchs', 'primarch-relations', 'characters', 'ranks', 'honours']] ] },

@@ -1660,7 +1660,8 @@ span.gm-thumb { border-radius: 50%; width: 56px; height: 56px; margin: 4px; }
 .gm-item small { font-size: .72rem; color: var(--muted); }
 .gm-item p { margin: 2px 0 0; font-size: .82rem; line-height: 1.5; color: var(--text-soft); }
 .gm-rank { font-family: var(--font-mono); font-size: .7rem; color: var(--gold-soft); }
-.gm-more { display: block; margin: 6px auto 0; }
+.gm-more-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 6px; }
+.gm-more { display: block; margin: 0; }
 .gm-more[hidden] { display: none; }
 .status.st-erased { color: #b8bec9; border-color: rgba(184,190,201,.4); border-style: dashed; }
 /* galaxy map: ซูมลึก (สูงสุด 30×) */
@@ -1669,3 +1670,29 @@ span.gm-thumb { border-radius: 50%; width: 56px; height: 56px; margin: 4px; }
 .gmap.zoomed3 .gm-svg .gm-stars { opacity: .25; }
 .gmap.zoomed3 .gm-svg .gm-region { opacity: 0; }
 .gmap.zoomed3 .gm-pin span { opacity: 1; transform: none; }
+
+/* ภายใน Warp และมิติอื่น (realms.html) */
+.rl-layers { display: grid; gap: 6px; margin: 18px 0 22px; }
+.rl-layer { display: block; padding: 12px 16px; border-radius: 12px; border: 1px solid var(--border); color: var(--text); text-decoration: none; background: var(--surface); transition: transform .2s, border-color .2s; }
+.rl-layer:hover { transform: translateX(4px); border-color: var(--gold); }
+.rl-layer b { display: block; font-family: var(--font-head); font-weight: 500; color: var(--heading); }
+.rl-layer span { font-size: .88rem; color: var(--text-soft); }
+.rl-layer.l0 { border-left: 4px solid #5aa8ff; }
+.rl-layer.l1 { border-left: 4px solid #5ff2c9; margin-left: 4%; }
+.rl-layer.l2 { border-left: 4px solid #a98bff; margin-left: 8%; }
+.rl-layer.l3 { border-left: 4px solid #c04dff; margin-left: 12%; }
+.rl-layer.l4 { border-left: 4px solid #e2474f; margin-left: 16%; background: linear-gradient(90deg, rgba(192,52,60,.14), var(--surface)); }
+@media (max-width: 600px) { .rl-layer.l1, .rl-layer.l2, .rl-layer.l3, .rl-layer.l4 { margin-left: 0; } }
+.rl-danger { display: inline-flex; gap: 3px; vertical-align: middle; }
+.rl-danger i { width: 10px; height: 10px; border-radius: 3px; background: var(--border-strong); display: block; }
+.rl-danger[data-lv="1"] i:nth-child(-n+1), .rl-danger[data-lv="2"] i:nth-child(-n+2) { background: #4fbf82; }
+.rl-danger[data-lv="3"] i:nth-child(-n+3) { background: #f0c040; }
+.rl-danger[data-lv="4"] i:nth-child(-n+4) { background: #ff8a3d; }
+.rl-danger[data-lv="5"] i:nth-child(-n+5) { background: #e2474f; }
+.card h3 .rl-danger { margin-left: 6px; }
+.rl-path { list-style: none; counter-reset: rl; padding: 0; margin: 12px 0 20px; display: grid; gap: 10px; }
+.rl-path li { counter-increment: rl; position: relative; padding: 12px 14px 12px 52px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); color: var(--text-soft); }
+.rl-path li::before { content: counter(rl); position: absolute; left: 14px; top: 12px; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font: 600 .85rem/1 var(--font-head); background: var(--gold-dim); color: var(--gold); border: 1px solid rgba(var(--gold-rgb), .3); }
+.rl-path li b { display: block; color: var(--heading); font-family: var(--font-head); font-weight: 500; margin-bottom: 2px; }
+.rl-cardimg { height: 170px; width: 100%; object-fit: cover; border-radius: 10px; margin-bottom: 12px; }
+.rl-table td:first-child { min-width: 150px; }

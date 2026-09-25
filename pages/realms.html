@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ภายใน Warp และมิติอื่น | คู่มือ Warhammer 40K ฉบับมือใหม่</title>
+  <meta name="description" content="เจาะลึกข้างใน Warp และมิติอื่นของ Warhammer 40K: Realm of Chaos อาณาจักรของเทพทั้งสี่ ปีศาจและสิ่งมีชีวิตใน Warp, Webway, Commorragh, Black Library, Eye of Terror, Daemon World, Space Hulk หน้าตาเป็นอย่างไร เข้าไปได้อย่างไร ได้อะไร และอันตรายแค่ไหน">
+  <meta name="theme-color" content="#0d0e11">
+  <link rel="icon" href="../images/icons/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="apple-touch-icon" href="../images/icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Kanit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=18">
+</head>
+<body data-page="realms" data-root="../">
+<script src="../js/icons.js?v=17"></script>
+
+<main>
+  <header class="page-hero">
+    <div class="hero-bg"><img src="../images/realms/realm-of-chaos.webp" alt=""></div>
+    <div class="container">
+      <nav class="breadcrumb" aria-label="breadcrumb"><a href="../index.html">หน้าแรก</a><svg class="i "><use href="#i-chev-right"></use></svg><span>เนื้อเรื่อง</span><svg class="i "><use href="#i-chev-right"></use></svg><span>ภายใน Warp และมิติอื่น</span></nav>
+      <h1>ภายใน Warp และมิติอื่น</h1>
+      <p class="lead">ข้างในทะเลแห่งวิญญาณมีอะไร อาณาจักรของเทพ Chaos หน้าตาเป็นอย่างไร อุโมงค์ Webway และนครมืด Commorragh ซ่อนอยู่ตรงไหน — ใครเข้าไปได้ เข้าไปเพื่ออะไร และต้องจ่ายด้วยอะไร</p>
+      <div class="page-meta"><span class="chip"><svg class="i "><use href="#i-planet"></use></svg> มิติคู่ขนานของ 40K</span><span class="chip"><svg class="i "><use href="#i-book"></use></svg> อ่านราว 25 นาที</span></div>
+    </div>
+  </header>
+
+  <div class="container doc">
+    <aside class="toc" data-toc></aside>
+    <article class="doc-body">
+
+      <section id="overview">
+        <h2><span class="num">00</span>แผนผังมิติในจักรวาล 40K</h2>
+        <p>จักรวาล 40K ไม่ได้มีแค่อวกาศที่เรามองเห็น ใต้ "ม่าน" ของความเป็นจริงยังมีมิติซ้อนกันหลายชั้น หน้านี้พาเข้าไปดู <strong>ข้างใน</strong> แต่ละชั้น ส่วนพื้นฐานของ Warp (การเดินทาง, Navigator, Astropath, Psyker) อยู่ที่หน้า <a href="warp.html">Warp และกลไกของจักรวาล</a></p>
+        <div class="rl-layers" role="list" aria-label="ชั้นของมิติ จากโลกจริงลงไปถึงใจกลาง Chaos">
+          <a role="listitem" class="rl-layer l0" href="#where-meet"><b>Realspace (Materium)</b><span>โลกจริง ดาว ยาน และสิ่งมีชีวิต · จุดที่ม่านบางคือ Warp Rift, Eye of Terror, Daemon World</span></a>
+          <a role="listitem" class="rl-layer l1" href="#webway"><b>Webway (Labyrinth Dimension)</b><span>อุโมงค์ที่ Old Ones สร้างไว้ "ระหว่าง" โลกจริงกับ Warp · ที่ตั้งของ Commorragh และ Black Library</span></a>
+          <a role="listitem" class="rl-layer l2" href="#warp-inside"><b>Warp / Immaterium (Sea of Souls)</b><span>ทะเลพลังจิตที่เกิดจากอารมณ์ของสิ่งมีชีวิต · เส้นทางของยาน · ที่อยู่ของสิ่งมีชีวิตใน Warp</span></a>
+          <a role="listitem" class="rl-layer l3" href="#formless"><b>Formless Wastes</b><span>ดินแดนไร้รูปทรงที่ไม่มีเทพองค์ใดครอง · อาณาเขตเล็ก ๆ ของ Daemon Prince</span></a>
+          <a role="listitem" class="rl-layer l4" href="#realm-of-chaos"><b>Realm of Chaos</b><span>ใจกลางที่เทพทั้งสี่แบ่งกันครอง: Khorne · Tzeentch · Nurgle · Slaanesh</span></a>
+        </div>
+        <div class="callout info"><svg class="i "><use href="#i-info"></use></svg><div><p><strong>อ่านอย่างไรให้เข้าใจ:</strong> ข้อมูลเรื่องข้างใน Warp ในเนื้อเรื่องส่วนใหญ่มาจาก "คำบอกเล่าของผู้รอดชีวิต" คัมภีร์ต้องห้าม และตำนานของ Aeldari แม้แต่ตัวเนื้อเรื่องเองก็บอกว่า <em>ไม่มีใครเห็นภาพเดียวกันสองครั้ง</em> เพราะ Warp เปลี่ยนรูปตามจิตของผู้มอง หน้านี้จึงบอกไว้ว่าข้อมูลส่วนไหนเป็นตำนานหรือคำเล่าลือ</p></div></div>
+      </section>
+
+      <section id="warp-inside">
+        <h2><span class="num">01</span>Warp จากข้างใน: ทะเลแห่งวิญญาณ</h2>
+        <div class="era-block"><div class="media"><figure style="margin:0"><img src="../images/realms/realm-of-chaos.webp" alt="ภาพภายใน Realm of Chaos" loading="lazy" data-zoom><figcaption>ภาพภายใน Warp / Realm of Chaos</figcaption></figure>
+          <div><div class="facts"><div class="fact"><small>ชื่ออื่น</small><b>Immaterium, Empyrean, Aether, Sea of Souls</b></div><div class="fact"><small>ทำจาก</small><b>พลังจิตและอารมณ์ล้วน ๆ</b></div><div class="fact"><small>กฎฟิสิกส์</small><b>ใช้ไม่ได้ เวลาไม่คงที่</b></div></div>
+          <p><strong>Warp</strong> คือมิติของพลังจิตที่ซ้อนอยู่ใต้จักรวาลจริง ทุกความคิดและอารมณ์ของสิ่งมีชีวิตที่มีจิตสำนึกทิ้ง "รอยประทับ" ไว้ในนั้น (ยกเว้น Necron และ C'tan ที่ไม่มีวิญญาณ) รอยของคนคนเดียวแทบไม่มีผล แต่เมื่อเผ่าพันธุ์หลายพันล้านชีวิตรู้สึกเหมือนกัน รอยเหล่านั้นก็รวมเป็นกระแส พายุ หรือสิ่งมีชีวิตขึ้นมาได้</p>
+          <p class="mb-0">เนื้อเรื่องบอกว่า Warp อาจ <em>ไม่ได้วุ่นวายมาแต่แรก</em> แต่ถูกทำให้เป็นแบบนี้ด้วยสงคราม ความทุกข์ และความเกลียดชังในโลกจริง Warp จึงเป็น "เงาสะท้อนด้านมืด" ของกาแล็กซี</p></div></div></div>
+
+        <h3>หน้าตาข้างในเป็นอย่างไร</h3>
+        <p>Warp ไม่มีรูปทรงตายตัว คนเห็นแตกต่างกันตามจิตใจของตัวเอง แต่คำบอกเล่าที่ตรงกันมักพูดถึงสิ่งเหล่านี้:</p>
+        <div class="grid grid-2">
+          <div class="card"><h3>กระแสน้ำและพายุ</h3><p>Warp ไหลเป็นกระแสเหมือนมหาสมุทร ยานจึง "ล่องไปตามกระแส" โดยมี Navigator มองหาทาง มีเส้นทางที่ไหลนิ่งและทำแผนที่ไว้แล้ว (Warp channel) ซึ่งการเดินเรือส่วนใหญ่ของจักรวรรดิใช้เส้นทางเหล่านี้</p></div>
+          <div class="card"><h3>เวลาไม่เท่ากัน</h3><p>คนบนยานรู้สึกว่าผ่านไปไม่กี่ชั่วโมง แต่โลกจริงอาจผ่านไปหลายวันหรือหลายสัปดาห์ ตัวอย่างในเนื้อเรื่อง: กระโดด 100 ปีแสง ลูกเรือรู้สึกราว 2.5–9.5 ชั่วโมง แต่โลกจริงผ่านไป 3 วันถึง 3 สัปดาห์ และบางครั้งยานโผล่ออกมา <em>ก่อน</em> ที่จะออกเดินทางด้วยซ้ำ</p></div>
+          <div class="card"><h3>ม่านบาง (A Thin Veil)</h3><p>บางพื้นที่ในโลกจริง ม่านกั้นระหว่างมิติบางลง อาจเกิดจากการตายหมู่ อารมณ์รุนแรง การทดลองในยุค Dark Age of Technology หรือพิธีของลัทธิ คนในพื้นที่จะได้ยินเสียงกระซิบ เห็นเงาวูบ ฝันร้าย นาฬิกาเดินถอยหลัง อุณหภูมิตกฮวบ และเครื่องสแกนอ่านค่าขัดกันเอง</p></div>
+          <div class="card"><h3>ทะเลแห่งวิญญาณ</h3><p>"วิญญาณ" ในจักรวาล 40K คือภาพสะท้อนของตัวตน ความทรงจำ และอารมณ์ของคนใน Warp เมื่อคนตาย วิญญาณจะไหลลงไปในนั้น วิญญาณของ Aeldari ถูก Slaanesh ดูดกินทันที ส่วนผู้บูชา Chaos ถูกเทพของตนกลืนรวมไว้ตลอดกาล</p></div>
+        </div>
+        <figure class="figure"><img src="../images/realms/aetheric.webp" alt="แผนภาพ Ætheric Dominions ทั้งแปด" loading="lazy" data-zoom style="max-height:420px;margin:0 auto"><figcaption>แผนภาพ Ætheric Dominions ทั้งแปดของ Warp</figcaption></figure>
+        <h3>Ætheric Dominions: แปดด้านของ Chaos</h3>
+        <p>เนื้อเรื่องแบ่ง Warp เป็น 8 "Ætheric Dominion" ตามลักษณะของ Chaos บางด้านมีเทพองค์ใหญ่เป็นตัวแทน:</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Dominion</th><th>ความหมาย</th></tr></thead>
+          <tbody>
+            <tr><td>Encroaching Ruin</td><td>Chaos บริสุทธิ์ที่อยากทำลายทุกระเบียบ (Chaos Undivided)</td></tr>
+            <tr><td>Formless Distortion</td><td>การเปลี่ยนรูปไม่สิ้นสุด ปีศาจที่เป็นก้อนเนื้อไร้รูป</td></tr>
+            <tr><td>Heedless Slaughter</td><td>ความบ้าคลั่งแห่งการรบและการฆ่า</td></tr>
+            <tr><td>Putrid Corruption</td><td>ความเน่าเปื่อยและโรคภัย</td></tr>
+            <tr><td>Ravenous Dissolution</td><td>ความหิวโหยที่กลืนกินทุกอย่าง</td></tr>
+            <tr><td>Malevolent Artifice</td><td>เล่ห์กลและการวางแผนร้าย</td></tr>
+            <tr><td>Infernal Tempest</td><td>พายุเพลิงและพลังทำลายล้างของ Warp</td></tr>
+            <tr><td>Rapturous Sensation</td><td>ความหฤหรรษ์และความหลงใหลเกินขอบเขต</td></tr>
+          </tbody></table></div>
+      </section>
+
+      <section id="formless">
+        <h2><span class="num">02</span>Formless Wastes: ดินแดนไร้รูปทรง</h2>
+        <div class="era-block"><div class="media"><figure style="margin:0"><img src="../images/realms/fury.webp" alt="Chaos Fury" loading="lazy" data-zoom><figcaption>Chaos Fury — ปีศาจไร้สังกัดที่ล่าเหยื่อใน Formless Wastes</figcaption></figure>
+          <div><div class="facts"><div class="fact"><small>ชื่ออื่น</small><b>Chaotic Abyss, Land of Lost Souls</b></div><div class="fact"><small>ผู้ปกครอง</small><b>ไม่มีเทพองค์ใดครอง</b></div><div class="fact"><small>ผู้ล่า</small><b>Furies</b></div></div>
+          <p>พื้นที่ส่วนใหญ่ของ Warp ที่เทพทั้งสี่ยังไม่ได้ยึดครอง ภูมิประเทศก่อตัวและพังทลายตลอดเวลาตามกระแสความคิดของสิ่งมีชีวิตทั้งกาแล็กซี มี <strong>แม่น้ำยางมะตอยไหลผ่านป่าที่กลายเป็นหิน ใต้ท้องฟ้าสีแดงเลือด</strong> บันไดยักษ์ไต่ขึ้นฟ้าแล้ววนกลับมาหาตัวเองไม่รู้จบ ปราสาทกระดูก ป้อมที่ทำจากของเหลวปีศาจ และเสาเพลิงบนขอบฟ้า</p>
+          <p class="mb-0">กล่าวกันว่า <strong>ทุกความฝัน ฝันร้าย และนิมิต</strong> ที่สิ่งมีชีวิตในกาแล็กซีเคยมี ล้วนมีภาพสะท้อนอยู่ที่นี่</p></div></div></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>อาณาเขตของ Daemon Prince</h3><p>Greater Daemon และ Daemon Prince ที่มีพลังพอจะ "ตรึง" พื้นที่รอบตัวให้นิ่ง จะสร้างเกาะเล็ก ๆ ของตัวเองไว้ในนี้ บางแห่งอยู่ได้ชั่วพริบตา บางแห่งเก่าแก่พอ ๆ กับเทพ</p></div>
+          <div class="card"><h3>Furies</h3><p>ปีศาจไร้สังกัดที่คอยจ้องเหยื่อทั้งมนุษย์และปีศาจที่หลงเข้ามา และมักกัดกินปีศาจเล็ก ๆ ที่ Daemon Prince สร้างขึ้น</p></div>
+          <div class="card"><h3>Forge of Souls</h3><p>โรงหล่อปีศาจอันมืดมิดที่ตั้งอยู่ใน Formless Wastes เนื้อเรื่องยังเชื่อว่าเทพ Chaos รองบางองค์ก็มีอาณาเขตอยู่ในดินแดนนี้</p></div>
+        </div>
+      </section>
+
+      <section id="realm-of-chaos">
+        <h2><span class="num">03</span>Realm of Chaos และ "Great Game"</h2>
+        <div class="era-block"><div class="media"><figure style="margin:0"><img src="../images/realms/realm-map.webp" alt="แผนที่ Realm of Chaos" loading="lazy" data-zoom><figcaption>แผนที่ Realm of Chaos (ภาพประกอบจากหนังสือกติกา) — ตำแหน่งอาณาจักรเปลี่ยนไปตามพลังของเทพแต่ละองค์</figcaption></figure>
+          <div><p>ใจกลางของ Warp คือ <strong>Realm of Chaos</strong> ที่เทพทั้งสี่แบ่งกันครอง เทพกับอาณาจักรของตนเป็นสิ่งเดียวกัน เพราะทำจากพลังของ Warp เหมือนกัน เทพองค์ไหนได้พลังจากโลกจริงมาก อาณาจักรก็ขยายกว้างขึ้น:</p>
+          <ul><li><strong>Khorne:</strong> Blood God's Domain (Realm of Brass and Blood) สร้างจากความโกรธและการนองเลือด</li>
+          <li><strong>Tzeentch:</strong> Realm of the Sorcerer เวทมนตร์และพลังจิตที่เปลี่ยนรูปไม่หยุด</li>
+          <li><strong>Nurgle:</strong> Land of the Plaguelord (Garden of Nurgle) ความตาย ความเน่า และการเกิดใหม่</li>
+          <li><strong>Slaanesh:</strong> Dark Prince's Realm สวรรค์แห่งการยั่วยวนและความเกินพอดี</li></ul>
+          <p class="mb-0">เทพแต่ละองค์มี "ร่าง" ที่สะท้อนตัวตนของตนสถิตอยู่ใจกลางอาณาจักร คอยเฝ้าดูว่ามีใครบุกรุกหรือมีโอกาสใหม่ ๆ ใน Warp หรือไม่</p></div></div></div>
+        <div class="callout warn"><svg class="i "><use href="#i-alert"></use></svg><div><strong class="title">The Great Game: สงครามที่ไม่มีวันจบ</strong><p>เทพทั้งสี่ต้องการครองจักรวาลแต่เพียงผู้เดียว จึงสู้กันใน Warp ตลอดกาล เมื่อองค์ไหนแข็งแกร่งเกินไป องค์อื่นจะรวมหัวกันดึงลงมา วนเป็นวัฏจักรไม่สิ้นสุด เนื้อเรื่องบอกว่าถ้าเกมนี้หยุดลง Warp จะนิ่งสนิทเหมือนก่อนมีสิ่งมีชีวิต สงครามของผู้ติดตามในโลกจริงก็คือเกมเดียวกันนี้ (ดูเทพแต่ละองค์ที่ <a href="gods.html">เทพเจ้าแห่ง 40K</a>)</p></div></div>
+      </section>
+
+      <section id="khorne">
+        <h2><span class="num">04</span>Blood God's Domain: อาณาจักรเลือดและทองเหลืองของ Khorne</h2>
+        <div class="era-block"><div class="media"><figure style="margin:0"><img src="../images/realms/khorne-throne.webp" alt="Khorne บนบัลลังก์" loading="lazy" data-zoom><figcaption>Khorne บนบัลลังก์ทองเหลืองเหนือภูเขากะโหลก</figcaption></figure>
+          <div><div class="facts"><div class="fact"><small>ผู้ปกครอง</small><b>Khorne เทพแห่งเลือด</b></div><div class="fact"><small>ผู้เฝ้า</small><b>Bloodthirster, Flesh Hound, Bloodletter</b></div><div class="fact"><small>อันตราย</small><b><span class="rl-danger" data-lv="5" aria-label="อันตราย 5 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></b></div></div>
+          <p>Khorne ถูกบรรยายเป็นร่างยักษ์สูงหลายร้อยฟุต หน้าเหมือนสุนัขดุร้าย สวมหมวกประดับกะโหลกของกษัตริย์ผู้พิชิต เกราะทองเหลืองและเหล็กดำซ้อนกันเป็นชั้น เขานั่งบนบัลลังก์ทองเหลืองแกะสลักบนยอดภูเขากะโหลก ซึ่งกองขึ้นจากหัวของแชมเปี้ยนของตนและศัตรูที่พวกเขาสังหาร</p>
+          <p class="mb-0">อาณาจักรนี้แทบไม่มีอะไรนอกจากสนามรบ นักรบของ Khorne ฆ่ากันเองไม่หยุด เพราะเลือดทุกหยดคือเครื่องบูชา</p></div></div></div>
+        <h3>ข้างในมีอะไร (จากขอบเข้าสู่ใจกลาง)</h3>
+        <ol class="rl-path">
+          <li><b>Khorne's Rage — วงแหวนภูเขาไฟ</b> ภูเขาไฟสูงหลายร้อยกิโลเมตรล้อมขอบอาณาจักร พ่นควันดำและทองเหลืองหลอมละลายเป็นกำแพงที่มองไม่ทะลุ ในเมฆเถ้ามีพายุเลือดและสายฟ้าสีแดง ใครบุกเข้ามา หินและทองเหลืองจะลุกขึ้นเป็นปีศาจทุบผู้บุกรุก แล้วกองลงนิ่งเมื่อหมดหน้าที่</li>
+          <li><b>Daemon Forges — โรงหลอมอาวุธ</b> ที่เชิงภูเขาไฟ ปีศาจเตาหลอมตีขวาน ดาบ ค้อน เกราะ และชิ้นส่วนของ Daemon Engine ป้อนสงครามของ Khorne ภูเขาไฟอาจระเบิดท่วมโรงหลอมได้ทุกเมื่อ ซึ่ง Khorne ไม่สนใจ</li>
+          <li><b>Blood Pits — บ่อเลือด</b> หลุมยักษ์ที่พลังของ Warp มารวมตัวจนกัดลึกลงในพื้นดิน Khorne สั่งให้บริวารเก็บเลือดจากโลกจริงมาเติม และจากบ่อเหล่านี้ปีศาจตัวใหม่จะผุดขึ้นมาแทนตัวที่ตายไป</li>
+          <li><b>Rivers of Blood — แม่น้ำเลือด</b> แม่น้ำกว้างหลายกิโลเมตรที่เลือดเดือดพล่าน เลือดเกือบทุกหยดที่หลั่งเพื่อ Khorne ในโลกจริงไหลมาที่นี่ ไอเลือดลอยคลุมเป็นหมอกแดง</li>
+          <li><b>Lake of Slaughter — ทะเลสาบแห่งการสังหาร</b> แม่น้ำเลือดนับพันสายตกจากหน้าผาสูงหลายกิโลเมตรลงสู่ทะเลสาบที่ใหญ่กว่ามหาสมุทรใด ๆ ในโลกจริง มีสัตว์ประหลาดทองเหลืองและกระดูกแหวกว่าย Bloodthirster สู้กับมังกรที่ทำจากเลือด และคลื่นบนผิวน้ำก่อตัวเป็นนักรบที่ปะทะกันเอง</li>
+          <li><b>Brass Citadel — ป้อมทองเหลือง</b> อีกฝั่งของทะเลสาบคือทุ่งกะโหลกยาวหลายกิโลเมตร ก่อนถึงกำแพงดำของป้อม ปีศาจยามเฝ้าบนกำแพง Flesh Hound นับพันลาดตระเวน และ Bloodthirster ชั้นยอดบินวนอยู่เหนือป้อม</li>
+          <li><b>Throne of Skulls — บัลลังก์กะโหลก</b> ใจกลางป้อม เลยบันได Bastion Stair และเสาเหล็กทั้งแปด Khorne นั่งบัญชาการ Blood Legion จากที่นี่ ทุกชัยชนะทำให้เขากระหายมากขึ้น แชมเปี้ยนที่ล้มเหลวจะถูกรีดเลือดเติมลงแม่น้ำ</li>
+        </ol>
+        <div class="grid grid-2">
+          <figure class="figure" style="margin:0"><img src="../images/realms/brass-citadel.webp" alt="Brass Citadel" loading="lazy" data-zoom><figcaption>Brass Citadel ป้อมของ Khorne</figcaption></figure>
+          <figure class="figure" style="margin:0"><img src="../images/realms/khorne-domain.webp" alt="Blood God's Domain" loading="lazy" data-zoom style="max-height:360px;margin:0 auto"><figcaption>Blood God's Domain (Realm of Brass and Blood)</figcaption></figure>
+        </div>
+      </section>
+
+      <section id="tzeentch">
+        <h2><span class="num">05</span>Crystal Labyrinth: เขาวงกตคริสตัลของ Tzeentch</h2>
+        <div class="era-block"><div class="media"><figure style="margin:0"><img src="../images/realms/crystal-labyrinth.webp" alt="Crystal Labyrinth" loading="lazy" data-zoom><figcaption>Crystal Labyrinth และ Impossible Fortress</figcaption></figure>
+          <div><div class="facts"><div class="fact"><small>ผู้ปกครอง</small><b>Tzeentch ผู้เปลี่ยนแปลงวิถี</b></div><div class="fact"><small>ผู้เฝ้า</small><b>ตัวเขาวงกตเอง + Lord of Change</b></div><div class="fact"><small>อันตราย</small><b><span class="rl-danger" data-lv="5" aria-label="อันตราย 5 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></b></div></div>
+          <p>Tzeentch ได้พลังจากความหวัง ความทะเยอทะยาน และความปรารถนาจะเปลี่ยนแปลงของทุกชีวิต อาณาจักร <strong>Realm of the Sorcerer</strong> ของเขาเปลี่ยนแปลงตลอดเวลาจนแทบไม่มีใครเข้าใจ ผู้มาเยือนส่วนใหญ่ <strong>เสียสติอย่างรวดเร็ว</strong> คนที่จิตแข็งมากอาจเข้าใจได้แค่ "หนึ่งด้าน" ของดินแดนที่มีนับไม่ถ้วนด้าน</p>
+          <p class="mb-0">คำบอกเล่าที่ตรงกันพูดถึง <strong>เขาวงกตคริสตัลขนาดมหึมา</strong> ตั้งบนที่ราบสูงสีรุ้งที่เงาวับเหมือนโอปอล ทางเดินปรากฏ ละลาย รวม แยก และเปลี่ยนทิศเองตลอดเวลา มีเพียง Lord of Change กับคนที่บ้าไปแล้วเท่านั้นที่หาทางได้ เขาวงกตจึงไม่ต้องมียามเฝ้า</p></div></div></div>
+        <div class="grid grid-2">
+          <div class="card"><h3>คริสตัลที่ฉายภาพจิตใจ</h3><p>คนที่จ้องเข้าไปในผนังคริสตัลจะเห็นความกลัว ความหวัง ความฝัน อดีตทั้งจริงและไม่จริง และอนาคตที่อาจเกิดขึ้น มีเรื่องเล่าถึงผู้รอดชีวิตคนหนึ่งที่เห็นภาพตัวเองกลายเป็นก้อนเนื้อหนวดยุ่บยั่บ พอละสายตาได้ก็พบว่าเวลาผ่านไปหลายวัน และร่างของเขากลายเป็น <strong>Chaos Spawn</strong> จริง ๆ บันทึกของจักรวรรดิระบุว่าผู้รอดชีวิตทั้งสามรายในเรื่องนี้ฆ่าตัวตาย เสียสติ และถูก Inquisition ประหาร ตามลำดับ</p></div>
+          <div class="card"><h3>เวลาที่บิดเบี้ยว</h3><p>จ้องคริสตัลไม่กี่นาที โลกจริงอาจผ่านไปเป็นปี สองคนเข้าไปพร้อมกัน คนหนึ่งออกมาแล้วบอกว่าผ่านไปหลายปี อีกคนหายไปหลายศตวรรษแต่สาบานว่าไปแค่ไม่กี่นาที หลายคนเพลินจนตายเพราะขาดน้ำ บางคนเดินวนอยู่หลายปีโดยไม่กินไม่นอน</p></div>
+          <div class="card"><h3>Guardian of the Maze และประตูทั้งเก้า <span class="chip">ตำนาน</span></h3><p>ตำนานเล่าถึงเส้นทางสู่ "ความรู้ไม่สิ้นสุด" ที่ต้องผ่านประตูโค้งสีทอง 9 บาน ห่อด้วยไฟ Warp สีฟ้าและชมพู ผู้เฝ้าประตูปรากฏเป็น <strong>ปากยักษ์ลอยอยู่เหนือทั้งเก้าประตูพร้อมกัน</strong> และถามปริศนาจาก <em>999 ปริศนาของ Tzaratxoth</em> ตอบผิดแม้ข้อเดียว จะต้องเดินหลงในเขาวงกตไปชั่วนิรันดร์</p></div>
+          <div class="card"><h3>Impossible Fortress และห้องสมุดลับ</h3><p>ใจกลางเขาวงกต (ถ้าคำว่า "ใจกลาง" ใช้กับที่นี่ได้) คือป้อมคริสตัลที่ยอดหอผุดขึ้นเอง มีหอไฟสีฟ้าและชมพู ประตูเปิดช้า ๆ แล้วงับปิดเหมือนปากสัตว์ร้ายก่อนหายไป เล่ากันว่าข้างในมี <strong>Hidden Library</strong> ที่เก็บความรู้ทุกอย่างที่เคยถูกบันทึก ทั้งเรื่องที่เขียนแล้วและยังไม่ได้เขียน รวมถึงอนาคตที่เป็นไปได้ทุกแบบ มีปีศาจ Horror เป็นบรรณารักษ์</p></div>
+        </div>
+        <figure class="figure"><img src="../images/realms/impossible-fortress.webp" alt="Impossible Fortress" loading="lazy" data-zoom style="max-height:460px;margin:0 auto"><figcaption>Impossible Fortress ใจกลางอาณาจักรของ Tzeentch</figcaption></figure>
+      </section>
+
+      <section id="nurgle">
+        <h2><span class="num">06</span>Garden of Nurgle: สวนแห่งความเน่าเปื่อย</h2>
+        <div class="era-block"><div class="media"><figure style="margin:0"><img src="../images/realms/garden-of-nurgle.webp" alt="Garden of Nurgle" loading="lazy" data-zoom><figcaption>Land of the Plaguelord หรือ Garden of Nurgle</figcaption></figure>
+          <div><div class="facts"><div class="fact"><small>ผู้ปกครอง</small><b>Nurgle "ปู่" แห่งโรคระบาด</b></div><div class="fact"><small>ผู้เฝ้า</small><b>Plaguebearer, Nurgling, Rot Fly</b></div><div class="fact"><small>อันตราย</small><b><span class="rl-danger" data-lv="5" aria-label="อันตราย 5 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></b></div></div>
+          <p>Nurgle ไม่ใช่เทพที่เศร้าหมอง แต่เป็น <strong>เทพแห่งชีวิตและเสียงหัวเราะ</strong> ในแบบของเขา เพราะจากความตายและการเน่าเปื่อย เชื้อโรค แมลง และสัตว์กินซากจะเกิดใหม่เสมอ อาณาจักรของเขาจึงเป็น "สวน" ที่เน่าและงอกไปพร้อมกัน ต้นไม้ผุพัง ดอกเห็ดราบาน ฝูงแมลงวันหึ่งไม่หยุด</p>
+          <p class="mb-0">ต่างจากเทพองค์อื่นที่นั่งอยู่แต่บนบัลลังก์ Nurgle ชอบ <strong>เดินเล่นในสวน</strong> พูดคุยกับปีศาจของตน และหยุดดูโรคใหม่กัดกินเชลย</p></div></div></div>
+        <h3>จุดสำคัญในสวน</h3>
+        <div class="grid grid-2">
+          <div class="card"><h3>Mansion of the Plague Lord</h3><p>คฤหาสน์ผุพังใจกลางสวน ปล่องไฟนับร้อยพ่น "ควัน" ที่จริงคือแมลงวันนับล้าน ท่อน้ำทิ้งคายด้วง หนอน และตะขาบประหลาด ต้นไม้กระดูกรอบบ้านออกผลที่เน่าตั้งแต่ยังไม่สุก Nurgle มักนั่งเก้าอี้ยักษ์ข้างประตู ชวนแขกเข้าไปเล่าเรื่องและดื่มของแปลก ๆ ด้วยกัน</p></div>
+          <div class="card"><h3>ห้องใต้หลังคาและครัว</h3><p>ห้องใต้หลังคาเก็บ "ตัวอย่าง" ผลงานของเขา Plaguebearer นับซ้ำไปมาไม่รู้จบ มีโหลอวัยวะของเหยื่อโรคระบาดจากทุกกาลเวลา และวิญญาณที่ถูกขังในขวดแก้วให้ค่อย ๆ มอดดับ ห้องครัวมีส่วนผสมเน่าเสียทุกชนิดที่นึกออก</p></div>
+          <div class="card"><h3>Isha เทพีที่ถูกขัง <span class="chip">ตำนาน Aeldari</span></h3><p>ตามตำนานของ craftworld แห่งหนึ่ง Isha เทพีแห่งการเยียวยาของ Aeldari ไม่ได้ถูก Slaanesh กลืน แต่ถูก Nurgle ชิงตัวมา และขังไว้ในกรงสนิมข้างหม้อต้มโรค Nurgle บังคับให้นางดื่มโรคใหม่ทุกครั้งเพื่อดูว่าร้ายแรงแค่ไหน Isha หายเองได้ และแอบกระซิบวิธีรักษาโรคเหล่านั้นออกไปให้มนุษย์ในโลกจริง</p></div>
+          <div class="card"><h3>Death Beds, Poxyards และทุ่งดอกระฆัง</h3><p><strong>Death Beds</strong> คือบ่อโคลนที่ขังผู้บุกรุก ใครเล่าเรื่องโลกภายนอกได้สนุก จะถูกดึงขึ้นมาเป็น "ภาชนะ" ของโรคใหม่แล้วส่งกลับไปแพร่ในโลกนั้น <strong>Poxyards</strong> คือลานทดลองโรค ส่วน <strong>Deathbell Lily</strong> คือทุ่งดอกไม้ที่บานและดังกริ๊งทุกครั้งที่มีคนตายด้วยโรคของ Nurgle</p></div>
+        </div>
+        <div class="callout"><svg class="i "><use href="#i-book"></use></svg><div><strong class="title">เรื่องเล่า: ผู้หยั่งรู้แห่ง Lugganath บุกสวน</strong><p>Seer กลุ่มหนึ่งจาก craftworld Lugganath ถอดจิตเข้าสู่สวนของ Nurgle เพื่อตามหา Isha หวังยุติโรคระบาดบน craftworld พวกเขาฝ่าพืชพรรณเข้าไปได้ง่ายในตอนแรก แต่แมลงวันในสวนกระซิบเตือน Nurgle ฝูง Plaguebearer ผุดขึ้นจากโคลนไม่หยุด การรบกินเวลาหลายวัน ขณะเดียวกันร่างจริงของพวกเขาในโลกจริงก็เริ่มชักกระตุกและติดโรคที่ตั้งใจจะมารักษานั่นเอง</p></div></div>
+        <figure class="figure"><img src="../images/realms/nurgle-mansion.webp" alt="คฤหาสน์ของ Nurgle" loading="lazy" data-zoom><figcaption>Nurgle ในคฤหาสน์ของเขา</figcaption></figure>
+      </section>
+
+      <section id="slaanesh">
+        <h2><span class="num">07</span>Dark Prince's Realm: วงแหวนแห่งการยั่วยวนของ Slaanesh</h2>
+        <div class="era-block"><div class="media"><figure style="margin:0"><img src="../images/realms/palace-of-slaanesh.webp" alt="Palace of Pleasure" loading="lazy" data-zoom><figcaption>ผู้มาเยือนเดินเข้าหา Palace of Pleasure ของ Slaanesh</figcaption></figure>
+          <div><div class="facts"><div class="fact"><small>ผู้ปกครอง</small><b>Slaanesh เจ้าชายแห่งความหฤหรรษ์</b></div><div class="fact"><small>ผู้เฝ้า</small><b>แทบไม่มี (ใช้การล่อลวงแทน)</b></div><div class="fact"><small>อันตราย</small><b><span class="rl-danger" data-lv="5" aria-label="อันตราย 5 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></b></div></div>
+          <p>Slaanesh เป็นเทพองค์ที่อายุน้อยที่สุด เกิดจากความเสื่อมทรามของอาณาจักร Aeldari โบราณ อาณาจักรของ Slaanesh ไม่มีกำแพงหรือกองทัพเฝ้า แต่เป็น <strong>วงแหวนหกชั้น</strong> ที่แต่ละชั้นล่อลวงผู้มาเยือนด้วยความปรารถนาต่างกัน ส่วนใหญ่ติดกับดักตั้งแต่ชั้นแรก ๆ</p>
+          <p class="mb-0">รายละเอียดชั้นต่าง ๆ มาจาก <em>คำสารภาพของพระคาร์ดินัลนอกรีต</em> ที่ Ecclesiarchy ใช้เป็นเรื่องเตือนใจ เนื้อเรื่องเองก็บอกว่า "จะจริงหรือเป็นแค่อาการเพ้อ ก็ไม่สำคัญ"</p></div></div></div>
+        <ol class="rl-path">
+          <li><b>Excess of Riches — ความมั่งคั่ง</b> ท้องฟ้าเต็มไปด้วยเพชรที่ดูเหมือนเอื้อมคว้าได้ ผู้คนปีนต้นไม้ทองคำสูงขึ้นเรื่อย ๆ จนลืมตัว</li>
+          <li><b>Excess of Sustenance — การกินดื่ม</b> ทะเลสาบไวน์ชั้นเลิศกว้างสุดตา คนส่วนใหญ่คุกเข่าดื่มจนเมาแล้วจมหายไป เกาะสีซีดกลางทะเลสาบที่แท้คือร่างยักษ์ที่หมอบอยู่</li>
+          <li><b>Excess of Bodily Delights — ความสุขทางกาย</b> ทุ่งหญ้าสีทองและกระโจมที่ทอจากเส้นใยแห่งความฝัน สะท้อนความปรารถนาลึก ๆ ของผู้มอง</li>
+          <li><b>Excess of Adoration — การถูกยกย่อง</b> ชั้นของผู้ที่โหยหาเกียรติและเสียงชื่นชม ประสบการณ์ของแต่ละคนไม่เหมือนกัน</li>
+          <li><b>Excess of Achievement — ความสำเร็จ</b> ป่าใหญ่ที่ดูสงบแต่เป็นกับดัก Slaanesh กระซิบให้กำลังใจความทะนงตน เหมือนที่เคยกระซิบกับ Primarch ผู้ทรยศ</li>
+          <li><b>Excess of Repose — การพักผ่อน</b> ชั้นสุดท้ายมอบ "ความสงบ" ให้ผู้ที่เหนื่อยล้า ใครต้านทานได้ถึงตรงนี้ก็นับเป็นตำนานแล้ว</li>
+          <li><b>Palace of Pleasure — วังแห่งความหฤหรรษ์</b> ไม่มีกำแพงหรือทหาร มีเพียงรูปปั้นหินอ่อนและต้นไม้ที่งดงามไร้ที่ติ เมื่อผู้บุกรุกยังงงอยู่ อากาศจะนิ่ง เสียงประสานที่มองไม่เห็นดังขึ้น แล้วเทพก็ก้าวออกมาจากวัง</li>
+        </ol>
+        <div class="callout warn"><svg class="i "><use href="#i-alert"></use></svg><div><strong class="title">ทำไม Aeldari กลัว Slaanesh ที่สุด</strong><p>Aeldari เรียก Slaanesh ว่า <strong>"She Who Thirsts"</strong> เพราะวิญญาณของ Aeldari ทุกตนถูก Slaanesh รอกลืนหลังความตาย Craftworld Aeldari จึงเก็บวิญญาณไว้ใน Spirit Stone ส่วน Drukhari ยืดชีวิตด้วยการดูดความทุกข์ของผู้อื่น (ดู <a href="#commorragh">Commorragh</a>)</p></div></div>
+      </section>
+
+      <section id="creatures">
+        <h2><span class="num">08</span>สิ่งมีชีวิตใน Warp</h2>
+        <div class="era-block"><div class="media"><figure style="margin:0"><img src="../images/realms/daemons.webp" alt="ปีศาจของเทพทั้งสี่" loading="lazy" data-zoom><figcaption>ปีศาจของ Khorne, Tzeentch, Nurgle และ Slaanesh</figcaption></figure>
+          <div><p><strong>ปีศาจ (Daemon)</strong> คือผู้อาศัยส่วนใหญ่ของ Warp เกิดเมื่อเทพ Chaos แบ่งพลังของตนส่วนหนึ่งออกมาสร้างตัวตนใหม่ที่มีความคิดและบุคลิกเป็นของตัวเอง เทพจะเรียกพลังคืนเมื่อไรก็ได้ ปีศาจจึงไม่กล้าขัดคำสั่งตรง ๆ</p>
+          <p>ปีศาจไม่มีร่างกายจริง ร่างที่เห็นคือพลัง Warp ที่ขึ้นรูปตามลักษณะของเทพผู้สร้าง การ "ฆ่า" ปีศาจในโลกจริงแค่ขับมันกลับเข้า Warp ตำนานบอกว่ามันจะกลับมาไม่ได้จนกว่าจะครบ <strong>พันปีกับอีกหนึ่งวัน</strong> แต่ไม่มีใครพิสูจน์ได้ เพราะเวลาใน Warp ไม่มีความหมาย</p>
+          <p class="mb-0">การทำลายปีศาจให้สิ้นซากจริง ๆ (<strong>True Death</strong>) ยากมาก และมักต้องใช้วัตถุศักดิ์สิทธิ์หรือพลังจิตระดับพิเศษ</p></div></div></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>ประเภท</th><th>คืออะไร</th><th>ตัวอย่าง</th></tr></thead>
+          <tbody>
+            <tr><td>Greater Daemon</td><td>ปีศาจชั้นสูงสุด เป็นผู้คุมอาณาจักรของเทพ และมักนำการบุกโลกจริง บางตนแทบจะเป็นร่างอวตารของเทพ ผู้บูชาทั่วไปเรียกออกมาเองไม่ได้</td><td>Bloodthirster, Lord of Change, Great Unclean One, Keeper of Secrets</td></tr>
+            <tr><td>Daemon Prince</td><td>มนุษย์หรือแชมเปี้ยนที่ได้รับรางวัลสูงสุดจากเทพ กลายเป็นปีศาจอมตะ</td><td>Angron, Mortarion, Magnus, Fulgrim (Daemon Primarch)</td></tr>
+            <tr><td>Herald</td><td>ปีศาจที่เทพโปรดปรานเป็นพิเศษ เป็นหัวหน้าของปีศาจชั้นล่าง</td><td>Herald of Khorne / Tzeentch / Nurgle / Slaanesh</td></tr>
+            <tr><td>Lesser Daemon</td><td>ทหารราบของกองทัพปีศาจ คือพวกที่มักตอบรับพิธีอัญเชิญของลัทธิ</td><td>Bloodletter, Horror, Plaguebearer, Daemonette, Nurgling</td></tr>
+            <tr><td>ปีศาจไร้สังกัด</td><td>ไม่ขึ้นกับเทพองค์ใดโดยตรง แต่ยังรับใช้ Chaos โดยรวม</td><td>Fury, Astral Spectre, Dispayre, Warp Predator, Soul Grinder</td></tr>
+          </tbody></table></div>
+        <h3>สิ่งมีชีวิตอื่นที่ไม่ใช่ปีศาจของเทพ</h3>
+        <div class="grid grid-2">
+          <div class="card"><img src="../images/realms/enslaver.webp" alt="Enslaver" loading="lazy" data-zoom class="rl-cardimg"><h3>Enslaver <span class="rl-danger" data-lv="5" aria-label="อันตราย 5 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></h3><p>สิ่งมีชีวิตพื้นเมืองของ Warp รูปร่างคล้ายลูกผสมระหว่างแมงกะพรุนกับแมงมุม เกิดจากฝันร้ายของสิ่งมีชีวิต และว่ายหาเหยื่อใน Warp เหมือนฉลาม มันควบคุมจิตของ Psyker ให้กลายเป็น "ประตูมีชีวิต" เพื่อให้พวกของมันตามเข้ามาในโลกจริง จากนั้นก็ควบคุมคนธรรมดาได้ด้วย ควบคุมได้แม้แต่ Tyranid และปีศาจ เชื่อกันว่ามีแค่ Necron ที่ภูมิคุ้มกัน เมื่อหลายล้านปีก่อน "Enslaver Plague" เป็นส่วนหนึ่งของเหตุที่ทำให้อารยธรรม Old Ones ล่มสลาย</p></div>
+          <div class="card"><img src="../images/realms/psychneuein.webp" alt="Psychneuein" loading="lazy" data-zoom class="rl-cardimg"><h3>Psychneuein <span class="rl-danger" data-lv="4" aria-label="อันตราย 4 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></h3><p>แมลงจาก Warp ที่หน้าตาเหมือนตัวต่อยักษ์ ยาวราว 2.5 เมตร ถูกดึงดูดด้วยคลื่นจิตของ Psyker ที่ไม่มีการป้องกัน บาดเจ็บหนัก หรือเพิ่งตื่นพลัง มันวางไข่ในสมองของ Psyker ให้ตัวอ่อนเติบโต สำหรับคนธรรมดามันก็ยังเป็นสัตว์ร้ายมีพิษ พบรังของมันในส่วนลึกของ Webway ด้วย ซึ่งอาจเป็นถิ่นกำเนิดของมัน</p></div>
+        </div>
+        <h3>ปีศาจเข้ามาในโลกจริงได้อย่างไร</h3>
+        <div class="grid grid-3">
+          <div class="card"><h3>ผ่านรอยแยก (Warp Rift)</h3><p>ต้องมีรูรั่วระหว่างมิติ ตั้งแต่ม่านบาง ๆ ไปจนถึงแผลใหญ่อย่าง Eye of Terror ที่ปล่อยทั้งกองทัพออกมาได้ รอยแยกอาจเกิดเอง หรือถูกสร้างด้วยพิธีกรรม</p></div>
+          <div class="card"><h3>สิงร่าง (Possession)</h3><p>ปีศาจแทรกพลังของตนเข้าสู่จิตของ Psyker ผ่านความฝันและนิมิต จนร่างถูกบิดเป็นแบบที่ปีศาจต้องการ Psyker ที่ไม่ได้ฝึกจึงเป็นสิ่งที่จักรวรรดิกลัวที่สุด</p></div>
+          <div class="card"><h3>ถูกผูกมัด (Bound)</h3><p>พิธีเวทบังคับปีศาจให้รับใช้ได้ เช่น ขังไว้ในอาวุธ (Daemon Weapon) หรือในร่างมนุษย์ (Daemonhost) ที่ Inquisitor สายหัวรุนแรงใช้ แต่ปีศาจที่ถูกผูกจะแค้นและพยายามกลืนวิญญาณผู้ใช้เสมอ</p></div>
+        </div>
+        <div class="callout info"><svg class="i "><use href="#i-info"></use></svg><div><p><strong>ชื่อแท้ (True Name):</strong> ปีศาจทุกตนซ่อนชื่อจริงไว้ ใครรู้ชื่อแท้จะมีอำนาจเหนือมัน ปีศาจจึงใช้ชื่อเล่นหรือฉายาแทน แม้แต่กับปีศาจด้วยกันเอง</p></div></div>
+      </section>
+
+      <section id="webway">
+        <h2><span class="num">09</span>Webway: มิติเขาวงกตระหว่างโลกจริงกับ Warp</h2>
+        <div class="era-block"><div class="media"><figure style="margin:0"><img src="../images/realms/webway.webp" alt="ทางเดินใน Webway" loading="lazy" data-zoom><figcaption>ทางเดินใน Webway ที่มีรูปปั้น Phoenix Lord ขนาบสองข้าง</figcaption></figure>
+          <div><div class="facts"><div class="fact"><small>ชื่ออื่น</small><b>Labyrinth Dimension</b></div><div class="fact"><small>ผู้สร้าง</small><b>Old Ones (หลายล้านปีก่อน)</b></div><div class="fact"><small>ผู้ใช้ปัจจุบัน</small><b>Aeldari, Drukhari, Harlequins</b></div><div class="fact"><small>อันตราย (เส้นทางที่ยังดี)</small><b><span class="rl-danger" data-lv="2" aria-label="อันตราย 2 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></b></div></div>
+          <p><strong>Webway</strong> คือโครงข่ายอุโมงค์ข้ามมิติที่ Old Ones "แบ่งกั้น" ออกมาจาก Warp เมื่อหลายล้านปีก่อน มันไม่ได้อยู่ในโลกจริงและไม่ได้อยู่ใน Warp แต่อยู่ "ระหว่าง" ทั้งสอง เนื้อเรื่องเปรียบว่าเหมือน <em>ผิวของสระน้ำนิ่งสีดำ</em> หรือ <em>ผ้าไหมบาง ๆ ที่คลุมสิ่งสกปรกไว้</em></p>
+          <p class="mb-0">คนที่เห็นบรรยายว่ามันเหมือนหลอดเลือดแดงและเส้นเลือดฝอยที่ซับซ้อน หรืออุโมงค์เรืองแสงที่ถักทอกันเป็นเขาวงกต Old Ones สร้างไว้เพื่อเดินทางไปยังดาวนับไม่ถ้วนโดยไม่ต้องเสี่ยงกับ Warp แล้วสอนวิธีใช้ให้ Aeldari</p></div></div></div>
+        <div class="grid grid-2">
+          <div class="card"><h3>โครงสร้าง</h3><p>Webway คือเครือข่าย "ประตู" (Webway Gate) ที่เชื่อมจุดตายตัวในโลกจริง มีตั้งแต่ประตูเล็กให้คนเดินผ่าน ไปจนถึงประตูยักษ์ที่ craftworld ทั้งลำผ่านได้ อุโมงค์หลักใหญ่พอให้ยานรบผ่าน แต่ส่วนใหญ่ผ่านได้แค่ทหารเดินเท้าหรือยานเล็ก เทคโนโลยีสร้างประตูสูญหายไปแล้ว ประตูที่ยังใช้ได้จึงเป็นสมบัติล้ำค่าของ Aeldari</p></div>
+          <div class="card"><h3>สภาพปัจจุบัน: แตกร้าว</h3><p>หลัง Fall of the Aeldari เส้นทางจำนวนมากฉีกขาด บางสายเป็นทางตัน บางสายไปสู่ที่ร้างหรือที่ปีศาจยึดไปแล้ว ประตูเหล่านั้นถูกผนึกด้วยอักขระพลังจิต เมื่อ <strong>Great Rift</strong> เปิด (Aeldari เรียกว่า <em>Dathedian</em>) เส้นทางหลักอีกหลายสายแตก บางส่วนกลายเป็นเกาะโดดเดี่ยว ประตูบางบานถูก Realm of Chaos กลืนเข้าไป</p></div>
+          <div class="card"><h3>ทางลับของ Harlequins</h3><p>เล่ากันว่ามีเส้นทางลับที่ทะลุผ่านเวลาและความเป็นจริง ซึ่งมีแต่ Harlequins ที่รู้ พวกเขาใช้ทางเหล่านี้ซุ่มโจมตีศัตรูจากทิศที่ไม่มีใครคาด และยังมี <strong>Atlas Infernal</strong> แผนที่ Webway โบราณที่ทำจากผิวหนังของ Sister of Silence ผู้หนึ่ง เส้นเลือดบนหน้ากระดาษจัดเรียงตัวเองใหม่เพื่อชี้ทางไปยังจุดหมายได้</p></div>
+          <div class="card"><h3>ประตู Dolmen ของ Necron</h3><p>Necron ไม่มี Psyker จึงเดินทางผ่าน Warp ไม่ได้ พวกมันใช้ <strong>Dolmen Gate</strong> ซึ่งเป็นประตูหินมีชีวิต เจาะเข้าไปใน Webway ด้วยความช่วยเหลือของ C'tan <em>Nyadra'zatha</em> แต่ประตูเหล่านี้ไม่เสถียร และ Webway ดูเหมือนจะรับรู้ได้ว่าถูกเจาะ จึงพยายามปิดกั้นส่วนที่ถูกบุกรุก</p></div>
+        </div>
+        <div class="era-block b40"><div class="media"><figure style="margin:0"><img src="../images/realms/webway-war.webp" alt="Legio Custodes ในสงคราม Webway" loading="lazy" data-zoom><figcaption>Legio Custodes สู้ใน Webway ใต้พระราชวังบน Terra</figcaption></figure>
+          <div><h3>Imperial Webway Project: ความฝันที่พังทลายของจักรพรรดิ</h3>
+          <p>ในยุค Unification Wars จักรพรรดิพบประตูสู่ Webway ใต้ทะเลทรายในทวีปเอเชียบน Terra พร้อมแกนของอุปกรณ์ขยายพลังจิตที่ต่อมากลายเป็น <strong>Golden Throne</strong> พระองค์ให้ Tech-priest หลายหมื่นคนดัดแปลงมันอย่างลับ ๆ อยู่หลายร้อยปี เป้าหมายคือ "Great Work" ที่จะเปิด Webway ให้มนุษย์ใช้ เดินทางทันทีโดยไม่ต้องพึ่ง Navigator และ Astropath อีก</p>
+          <p class="mb-0">แต่ข้อความเตือนทางจิตของ <strong>Magnus the Red</strong> ที่ทะลุโล่ของพระราชวังมาเตือนเรื่องการทรยศของ Horus ได้ทำให้โล่ป้องกันรอบประตู Webway ของ Terra ฉีกขาด ปีศาจทะลักเข้ามาในอุโมงค์ Legio Custodes และ Sisters of Silence ต้องสละชีวิตจำนวนมากใน <strong>War Within the Webway</strong> เพื่อกันไม่ให้ปีศาจทะลุถึง Terra จักรพรรดิต้องประทับบน Golden Throne เพื่อค้ำโล่ไว้ด้วยพลังของพระองค์เอง</p></div></div></div>
+        <figure class="figure"><img src="../images/realms/throne-webway.webp" alt="จักรพรรดิบน Golden Throne" loading="lazy" data-zoom><figcaption>จักรพรรดิบน Golden Throne ที่เป็นทั้งเครื่องค้ำชีวิตและประตู Webway ของ Terra — อ่านต่อที่ <a href="primarchs/emperor.html">จักรพรรดิแห่งมนุษยชาติ</a></figcaption></figure>
+      </section>
+
+      <section id="commorragh">
+        <h2><span class="num">10</span>Commorragh: นครมืดใน Webway</h2>
+        <div class="era-block"><div class="media"><figure style="margin:0"><img src="../images/realms/commorragh.webp" alt="Commorragh มองจากด้านบน" loading="lazy" data-zoom><figcaption>Commorragh นครมืด มองจากด้านบน</figcaption></figure>
+          <div><div class="facts"><div class="fact"><small>ผู้ปกครอง</small><b>Asdrubael Vect (Kabal of the Black Heart)</b></div><div class="fact"><small>ประชากร</small><b>มากกว่าทั้งระบบดาว</b></div><div class="fact"><small>อันตราย (สำหรับคนนอก)</small><b><span class="rl-danger" data-lv="5" aria-label="อันตราย 5 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></b></div></div>
+          <p><strong>Commorragh</strong> คือนคร-รัฐมหึมาของ <a href="lore/drukhari.html">Drukhari</a> ที่ซ่อนอยู่ลึกใน Webway คนนอกหาไม่เจอ เนื้อเรื่องเปรียบว่ามันใหญ่กว่าเมืองใหญ่ที่สุดในโลกจริง เหมือนภูเขาเทียบกับจอมปลวก ขนาดของมันเป็นไปไม่ได้ถ้าวัดด้วยวิธีปกติ แท้จริงคือกลุ่มนครและอาณาเขตบริวารที่เชื่อมกันด้วยประตูมิตินับไม่ถ้วน</p>
+          <p class="mb-0">เดิมเป็นเมืองท่าที่สำคัญที่สุดใน Webway ของอาณาจักร Aeldari และอยู่นอกอำนาจของสภาปกครอง จึงดึงดูดพวกที่อยากซ่อนการกระทำของตน เมื่อ Slaanesh ถือกำเนิด ชาวเมืองรอดจากการถูกกลืนในทันที แต่วิญญาณก็ยังค่อย ๆ รั่วไหลไปหา "She Who Thirsts" พวกเขาพบว่าการ <strong>ดูดกินความเจ็บปวดของผู้อื่น</strong> ช่วยประทังวิญญาณและทำให้ไม่แก่ Drukhari จึงถือกำเนิดขึ้น</p></div></div></div>
+        <h3>ภูมิศาสตร์ของนครมืด</h3>
+        <div class="grid grid-2">
+          <div class="card"><h3>Ilmaea: ดวงอาทิตย์ที่ถูกขโมยมา</h3><p>เหนือยอดหอคอยคือ <strong>ดวงอาทิตย์ดำ</strong> ดาวใกล้ดับที่ Aeldari โบราณจับมาขังไว้ในมิติย่อยเพื่อเป็นแหล่งพลังงาน บางครั้งเปลวสุริยะแลบเข้ามาในเมือง สะท้อนกระจกนับพันล้านบาน แต่ชาวเมืองแทบไม่สนใจ</p></div>
+          <div class="card"><h3>Low Commorragh</h3><p>ย่านการค้าโบราณรอบหอคอยกลางที่พังเพราะสงครามกลางเมือง เต็มไปด้วยซากปรักหักพังและท่าเรือแลกเปลี่ยน แออัดจนเดินได้หลายเดือนโดยไม่เห็นดวงอาทิตย์สักดวง ในสุสานใต้ดินมีสัตว์ที่ใหญ่และน่ากลัวกว่า Drukhari ซุ่มอยู่</p></div>
+          <div class="card"><h3>High Commorragh</h3><p>ย่านชั้นบนของ Kabal ชั้นสูง ตึกระฟ้าหมุนเกลียวสูงจนสุดสายตา รูปปั้น Archon สูงพันฟุตที่ยังสร้างไม่เสร็จ ทาสถูกแขวนบนใยเกือบล่องหนเพื่อแกะสลักหน้านายของตน มีฝนเลือดหยดลงจากยอดตึก และบนฟ้าคือถิ่นของ Scourge กับนักขับ Jetbike ที่ล่ากันเป็นกีฬา</p></div>
+          <div class="card"><h3>สนามของ Wych Cult</h3><p>สนามประลองหลายชั้นที่ทาสและนักรบนับพันตายอย่างโหดร้ายเพื่อให้ผู้ชม "ดื่มกิน" ความเจ็บปวด ผู้ปกครองรู้ดีว่าถ้าไม่มีการแสดงเหล่านี้ สังคม Drukhari จะล่มสลาย ชาวเมืองเรียกสิ่งนี้ว่า <em>Lith'antu Khlavh</em> "มีดที่ยั้งดาบ"</p></div>
+          <div class="card"><h3>โลกใต้ดินของ Haemonculi</h3><p>ใต้นครเป็นอาณาเขตของ Haemonculi นักทรมานโบราณที่ต้องทรมานผู้อื่นทุกวันเพื่อมีชีวิตอยู่ พวกเขาเจาะหอคอยกลับหัวเป็นห้องแล็บ ขายบริการดัดแปลงร่างกาย กลั่นยา และน้ำยาความงาม</p></div>
+          <div class="card"><h3>Khaine's Gate: ประตูที่ห้ามเปิด</h3><p>ลึกลงไปใน Undercore มีประตูเหล็กกลมยักษ์ สลักอักขระป้องกันและพันด้วยโซ่ starsteel ปิดตายมาตั้งแต่ Fall หลังประตูคือ <strong>รอยฉีกสู่ Warp ที่เย็บปิดไม่ได้</strong> ถ้าวันหนึ่งประตูถูกเปิด ปีศาจจะบุกเข้ามากลืนวิญญาณชาว Commorragh ทั้งนคร</p></div>
+        </div>
+        <figure class="figure"><img src="../images/realms/port-lost-souls.webp" alt="Port of Lost Souls" loading="lazy" data-zoom><figcaption>Port of Lost Souls ประตูสู่นครมืด สำหรับผู้มาเยือนที่โชคดีและผู้ถูกสาป</figcaption></figure>
+        <p>ยังมีย่านประหลาดอีกมาก เช่น สะพานกระดูกข้าม <em>Rift of Dead Hope</em> สู่ Pale Fortress, <em>City of Titans</em> ที่รูปปั้นยักษ์แสดงฉากลอบสังหารซ้ำไปมา และ <em>Aelindrach</em> นครที่ "จมลงไปในเงา" และอยู่หลายมิติพร้อมกัน ซึ่งเป็นรังของ Mandrake</p>
+      </section>
+
+      <section id="black-library">
+        <h2><span class="num">11</span>Black Library: ห้องสมุดต้องห้ามแห่ง Chaos</h2>
+        <div class="era-block"><div class="media"><figure style="margin:0"><img src="../images/realms/cegorach.webp" alt="Cegorach และ Harlequins" loading="lazy" data-zoom><figcaption>Cegorach เทพผู้หัวเราะ มองดู Harlequins ลูกของเขา</figcaption></figure>
+          <div><div class="facts"><div class="fact"><small>ผู้สร้าง</small><b>Cegorach เทพผู้หัวเราะ</b></div><div class="fact"><small>ผู้ดูแล</small><b>Black Council, Guardian-Scribe, Harlequins</b></div><div class="fact"><small>ที่ตั้ง</small><b>เคลื่อนที่ไปมาใน Webway (เป็นความลับ)</b></div></div>
+          <p><strong>Black Library</strong> คือ craftworld "มืด" ที่ล่องไปเรื่อย ๆ ใน Webway เส้นทางของมันเป็นความลับที่มีแค่ Harlequins กับ Black Council (สภา Farseer ที่ฉลาดที่สุดจากทุก craftworld) เท่านั้นที่รู้ มันถูกห่อด้วยม่านพลังจิตที่แทบเจาะไม่ได้ ซ่อนตัวจากการตรวจจับทางจิตและขับไล่สิ่งมีชีวิตจาก Warp</p>
+          <p class="mb-0">ข้างในคือ <strong>ความรู้เรื่อง Chaos ทั้งหมดที่ Aeldari รวบรวมไว้</strong> และความรู้ใหม่ที่เผ่าพันธุ์ไหนค้นพบก็ถูกนำมาเก็บไว้ที่นี่ด้วย รวมถึงสำเนาหนึ่งของ <em>Book of Magnus</em></p></div></div></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>หน้าตาข้างใน</h3><p>ยานขนาดมหึมาที่ดูไหม้เกรียมเป็นคริสตัล ภายในจงใจสร้างเป็นเขาวงกต มี "ห้องฟอง" เก็บโลงสถิตที่บรรจุคัมภีร์และสิ่งของอันตรายห้อยอยู่ตามโครงสร้าง และหอคอย เสา และป้อมอีกนับไม่ถ้วน</p></div>
+          <div class="card"><h3>Wraith Tower</h3><p>ส่วนที่เก็บบันทึกเรื่องความสัมพันธ์ระหว่างมนุษยชาติกับ Chaos รวมถึงความรู้ของผู้ทรยศแห่งจักรวรรดิ</p></div>
+          <div class="card"><h3>บทสุดท้ายของ Cegorach</h3><p>ใจกลางห้องสมุดมีห้องแสงเงิน บนแท่นมีหนังสือคริสตัลที่เชื่อว่าบันทึกคำของ Cegorach ถูกล่ามด้วยโซ่แสงมาตั้งแต่ Fall เมื่อ Great Rift เปิด โซ่แสงดับลงและหนังสือเปิดออก ข้างในคือ "บทสุดท้าย" การแสดงระดับกาแล็กซีที่อาจเปลี่ยนชะตาของ Aeldari</p></div>
+        </div>
+      </section>
+
+      <section id="where-meet">
+        <h2><span class="num">12</span>ที่ที่ Warp ทะลักเข้าสู่โลกจริง</h2>
+        <p>บางพื้นที่ในกาแล็กซี Warp กับโลกจริงผสมกันจนแยกไม่ออก นี่คือดินแดนที่ "อยู่ทั้งสองมิติพร้อมกัน"</p>
+        <div class="era-block"><div class="media"><figure style="margin:0"><img src="../images/realms/eye-from-cadia.webp" alt="Eye of Terror มองจาก Cadia" loading="lazy" data-zoom><figcaption>Eye of Terror มองจากพื้นผิวดาว Cadia</figcaption></figure>
+          <div><h3>ภายใน Eye of Terror</h3><div class="facts"><div class="fact"><small>ขนาด</small><b>ราว 20,000 ปีแสง</b></div><div class="fact"><small>เกิดจาก</small><b>การถือกำเนิดของ Slaanesh</b></div><div class="fact"><small>อันตราย</small><b><span class="rl-danger" data-lv="5" aria-label="อันตราย 5 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></b></div></div>
+          <p>Eye of Terror เป็นทั้งพายุ Warp ถาวรและรอยแยกที่ใหญ่ที่สุดในกาแล็กซี ข้างในมี <strong>ความเป็นจริงของมันเอง</strong> เวลาไร้ความหมาย สสาร ความคิด และพลังงานผสมกันจนแยกไม่ออก ดาวข้างในกลายเป็น <strong>Daemon World</strong> ที่แต่ละดวงมีกฎฟิสิกส์ของตัวเองตามเทพที่ผู้อาศัยบูชา ใจกลางคือ <strong>byssos</strong> รูในผืนความเป็นจริงที่พลัง Chaos ดิบ ๆ ไหลทะลักออกมา</p>
+          <p class="mb-0">บังคับทิศยานในนี้แทบไม่ได้ ยานที่เข้าใกล้อาจติดวังวนเวลาและถูกพาไปอดีต อนาคต หรือค้างอยู่ตลอดกาล กองทัพ Chaos จึงแค่ "ปล่อย" ยานเข้ากระแส Warp แล้วให้เทพพาไป การโจมตีของพวกมันเลยสุ่มและคาดเดาไม่ได้</p></div></div></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>Crone Worlds</h3><p>ดาวบ้านเกิดดั้งเดิมของอาณาจักร Aeldari ที่ถูก Eye of Terror กลืนตอน Slaanesh ถือกำเนิด ตั้งชื่อตาม Morai-Heg เทพีแห่งโชคชะตา ปัจจุบันเป็นดินแดนของ Chaos ที่ยังมีวิญญาณ Aeldari โบราณติดค้างและโหยหาความตาย แต่ก็เป็น <strong>แหล่งเดียวของ Spirit Stone ใหม่</strong> Aeldari ที่กล้าไปเก็บจำนวนมากไม่ได้กลับมา</p></div>
+          <div class="card"><h3>ที่หลบภัยของผู้ทรยศ</h3><p>Legion ผู้ทรยศหนีเข้ามาหลังยุค Horus Heresy และใช้ที่นี่เป็นฐานมากว่าหมื่นปี คนที่อยู่ข้างในถูก Chaos กัดกร่อนจนร่างกายสะท้อนตัวตนภายใน เช่น Death Guard ที่บูชา Nurgle มีร่างบวมเน่าเต็มไปด้วยโรค</p></div>
+          <div class="card"><h3>Cadian Gate</h3><p>ทางเข้า-ออกที่ "เสถียร" ที่สุด ความเสถียรนี้มาจาก <strong>Cadian Pylon</strong> เทคโนโลยี Necron อายุหลายล้านปีที่สร้างเพื่อตัดโลกจริงออกจาก Warp เมื่อ Cadia แตกในปี 999.M41 ประตูนี้ก็พังตามไปด้วย</p></div>
+        </div>
+        <figure class="figure"><img src="../images/realms/eye-strongholds.webp" alt="ที่มั่นของปีศาจใน Eye of Terror" loading="lazy" data-zoom><figcaption>แผนที่ที่มั่นของปีศาจภายใน Eye of Terror</figcaption></figure>
+
+        <div class="era-block"><div class="media"><figure style="margin:0"><img src="../images/realms/daemon-world.webp" alt="Daemon World" loading="lazy" data-zoom><figcaption>ยานของจักรวรรดิกำลังเข้าสู่ชั้นบรรยากาศของ Daemon World</figcaption></figure>
+          <div><h3>Daemon World: ดาวที่ Warp ยึดไปแล้ว</h3>
+          <p>ดาวที่ติดอยู่ในรอยแยกนานจนถูก Warp ครอบงำทั้งดวง ไม่ได้ขึ้นกับกฎธรรมชาติอีกต่อไป แต่ขึ้นกับความต้องการของ <strong>Daemon Prince</strong> ผู้ปกครอง และจิตใต้สำนึกรวมของผู้อาศัย ปีศาจเดินทางจาก Warp มาที่ดาวเหล่านี้ได้โดยไม่มีอะไรกั้น เทพทั้งสี่จึงแย่งดาวกันไม่หยุด สงครามบนดาวบางดวงยืดเยื้อหลายร้อยปี</p>
+          <p>รายงานของ Inquisition ที่มีน้อยมากเล่าว่า <strong>หินมีเลือดไหลหรือกรีดร้องเมื่อถูกหยิบ</strong> ผู้รอดชีวิตถูกปีศาจไล่ล่าบนภูมิประเทศที่เปลี่ยนไปเรื่อย ๆ ต้องเผชิญความกลัวที่สุดของตัวเอง และบางเรื่องเล่าว่ามีคนต้อง <strong>ประกอบร่างตัวเองใหม่ทุกเช้า</strong> ก่อนลุกจากที่นอน และ "ค่าผ่านทาง" แรกของการรอดชีวิตมักเป็นวิญญาณส่วนหนึ่งของตัวเอง</p>
+          <p class="mb-0">Daemon World ส่วนใหญ่อยู่ใน Eye of Terror ดวงที่พบในเขตจักรวรรดิจะถูก Inquisition กักกันอย่างเข้มงวด ตัวอย่างที่มีชื่อ: <strong>Sortiarius (Planet of the Sorcerers)</strong> ดาวของ Thousand Sons ที่ Magnus ย้ายนคร Tizca มาไว้หลังการเผา Prospero</p></div></div></div>
+        <div class="grid grid-2">
+          <figure class="figure" style="margin:0"><img src="../images/realms/hell-awakened.webp" alt="ดาวกำลังกลายเป็น Daemon World" loading="lazy" data-zoom><figcaption>ดาวดวงหนึ่งกำลังกลายเป็น Daemon World หลังถูกรอยแยกกลืน</figcaption></figure>
+          <figure class="figure" style="margin:0"><img src="../images/realms/sortiarius.webp" alt="พื้นผิว Planet of the Sorcerers" loading="lazy" data-zoom><figcaption>พื้นผิวที่ถูกบิดเบือนของ Planet of the Sorcerers</figcaption></figure>
+        </div>
+
+        <h3>รอยแยกและพายุ Warp อื่น ๆ</h3>
+        <div class="grid grid-2">
+          <div class="card"><img src="../images/realms/screaming-vortex.webp" alt="แผนที่ Screaming Vortex" loading="lazy" data-zoom class="rl-cardimg"><h3>Screaming Vortex</h3><p>พายุ Warp และรอยแยกถาวรระหว่าง Calixis Sector กับ Koronus Expanse เล็กกว่า Eye of Terror แต่รุนแรงไม่แพ้กัน พื้นที่ใหญ่กว่า sector ทั่วไปถูกตัดขาดจากโลกจริง มี Daemon World จำนวนมากและกลุ่มโจร Chaos แย่งชิงกัน (ภาพ: แผนที่ที่สาวกของเทพมืดวาดไว้)</p></div>
+          <div class="card"><img src="../images/realms/hadex.webp" alt="Hadex Anomaly" loading="lazy" data-zoom class="rl-cardimg" style="object-position:center 35%"><h3>Hadex Anomaly</h3><p>รอยแยกด้านเวลาใน Jericho Reach ปัจจุบันเป็นปลายด้านตะวันออกของ Great Rift มัน "เต้น" เหมือนหัวใจ ขยายและหดกลืนทั้งระบบดาวทุกไม่กี่สิบปี แสงสีแดงของมันถูกเห็นทั่ว Ultima Segmentum <strong>ในทันที</strong> ขัดกับกฎฟิสิกส์ บนดาวในแสงนั้น กลางวันกลางคืนยาวไม่เท่ากัน เงาบอกเหตุการณ์ในอนาคต และยานบางลำโผล่ออกมาก่อนวันที่ออกเดินทาง</p></div>
+          <div class="card"><img src="../images/realms/warpstorm.webp" alt="พายุ Warp" loading="lazy" data-zoom class="rl-cardimg"><h3>Warp Storm</h3><p>ส่วนของ Warp ที่ปั่นป่วนจนกลายเป็นพายุ กินเวลาได้ตั้งแต่ไม่กี่สัปดาห์ถึงหลายศตวรรษ ตัดขาดการเดินทางและการสื่อสารของทั้ง sector ยานที่ติดพายุอาจถูกพัดไปโผล่ไกลหลายพันปีแสง หรือติดอยู่ใน Warp จน Gellar Field พัง</p></div>
+          <div class="card"><img src="../images/realms/warp-rift.webp" alt="Warp Rift" loading="lazy" data-zoom class="rl-cardimg"><h3>Warp Rift และ Ruinstorm</h3><p>รอยแยกอาจเป็นวังวนพลังจิต ประตูไฟสีเขียว เมฆเงาทึบ หรือทะเลสาบหนองเดือด ในยุค Horus Heresy <strong>Lorgar</strong> สร้าง <strong>Ruinstorm</strong> พายุ Warp ยักษ์ที่ Erebus จุดชนวนในยุทธการ Calth เพื่อแยกกองทัพฝ่ายภักดีออกจากกัน ส่วน <strong>Great Rift</strong> ในปัจจุบันผ่ากาแล็กซีเป็นสองส่วน</p></div>
+        </div>
+        <figure class="figure"><img src="../images/realms/warp-storms-map.webp" alt="แผนที่พายุ Warp ที่รู้จัก" loading="lazy" data-zoom><figcaption>แผนที่พายุ Warp ที่รู้จักในกาแล็กซี — ดูตำแหน่งแบบโต้ตอบได้ที่ <a href="galaxy-map.html">แผนที่กาแล็กซี</a></figcaption></figure>
+      </section>
+
+      <section id="pocket">
+        <h2><span class="num">13</span>มิติกระเป๋าและของที่ลอยออกมาจาก Warp</h2>
+        <div class="grid grid-2">
+          <div class="card"><img src="../images/realms/space-hulk.webp" alt="Space Hulk" loading="lazy" data-zoom class="rl-cardimg"><h3>Space Hulk <span class="rl-danger" data-lv="4" aria-label="อันตราย 4 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></h3><p>ซากยานหลายลำที่ติดกันเป็นก้อนยักษ์ บางก้อนใหญ่จนมีบรรยากาศและแรงโน้มถ่วงของตัวเอง มัน <strong>หลุดเข้าออก Warp แบบสุ่ม</strong> อาจพา Ork, Genestealer หรือ Chaos Space Marine ที่หลับในสถิตไปโผล่ใกล้ดาวที่ไม่ทันตั้งตัว ข้างในอาจมีเทคโนโลยีจากยุค Dark Age of Technology ที่ Adeptus Mechanicus ต้องการมาก จักรวรรดิจึงส่ง Space Marine (มักเป็นหน่วย Terminator) เข้าไปกวาดล้าง หลาย hulk เป็นรังของ Genestealer</p></div>
+          <div class="card"><h3>Tesseract Labyrinth</h3><p>กล่องลูกบาศก์ขนาดเท่ากำปั้นของ Necron ที่แท้คือ <strong>ประตูสู่มิติกระเป๋าที่เป็นคุก</strong> ใช้คณิตศาสตร์หลายมิติและเทคโนโลยีเฟสขังศัตรูไว้ข้างใน ไม่มีทางหนีออกมาได้ Necron เคยใช้ขัง C'tan Shard และ Overlord บางคนพกเข้าสนามรบเพื่อขังศัตรูที่ยุ่งยาก หรือในยามวิกฤตก็ปล่อย C'tan Shard ออกมาใส่ศัตรู แต่เสี่ยงมากว่าจะจับกลับไม่ได้</p></div>
+          <div class="card"><h3>Warp Gate</h3><p>จุดในอวกาศที่เชื่อมกับอีกจุดด้วยอุโมงค์ผ่าน Warp ที่ไม่โดนความปั่นป่วนของ Warp จึงเดินทางได้ในเวลาที่แน่นอนและปลอดภัย ยังไม่มีใครรู้ว่ามันเกิดเองหรือมีคนสร้าง บางแห่งมีโครงสร้างเครื่องจักรล้อมไว้ บางแห่งก็เป็นแค่หลุมดำในอวกาศ</p></div>
+          <div class="card"><h3>Warp Portal</h3><p>จุดที่ Warp กับโลกจริงบรรจบเป็นทางเข้า-ออกที่เสถียร เข้าไปได้โดยไม่ต้องใช้ Warp Drive แต่ไม่มีอุโมงค์ ยานจะถูกโยนลงกระแส Warp ตรง ๆ ถ้าไม่มี Gellar Field ก็อยู่รอดได้ไม่นาน</p></div>
+        </div>
+      </section>
+
+      <section id="how-enter">
+        <h2><span class="num">14</span>เข้าไปได้อย่างไร</h2>
+        <div class="table-wrap"><table class="rl-table">
+          <thead><tr><th>วิธี</th><th>ไปที่ไหน</th><th>ใครใช้</th><th>ความเสี่ยง</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Warp Drive + Gellar Field + Navigator</strong></td><td>Warp (ผ่านแล้วออก)</td><td>จักรวรรดิ, Chaos, โจรสลัด</td><td>Gellar Field คือ "ฟองอากาศของโลกจริง" รอบยาน ถ้าพัง ปีศาจจะบุกเข้ายาน <span class="rl-danger" data-lv="3" aria-label="3 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></td></tr>
+            <tr><td><strong>Webway Gate</strong></td><td>Webway</td><td>Aeldari, Drukhari, Harlequins</td><td>ปลอดภัยถ้าอยู่บนเส้นทางที่ดี แต่หลายสายพังหรือถูกปีศาจยึด <span class="rl-danger" data-lv="2" aria-label="2 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></td></tr>
+            <tr><td><strong>Dolmen Gate</strong></td><td>เจาะเข้า Webway</td><td>Necron</td><td>ไม่เสถียร Webway พยายามปิดตัวเองหนี <span class="rl-danger" data-lv="3" aria-label="3 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></td></tr>
+            <tr><td><strong>Warp Gate / Warp Portal</strong></td><td>อุโมงค์ใน Warp / Warp ตรง ๆ</td><td>ผู้ที่รู้ตำแหน่ง, xenos บางเผ่า</td><td>Gate ปลอดภัย แต่ Portal โยนยานลงกระแสตรง ๆ <span class="rl-danger" data-lv="3" aria-label="3 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></td></tr>
+            <tr><td><strong>ถอดจิต (Astral projection)</strong></td><td>Realm of Chaos</td><td>Farseer, Psyker ระดับสูง</td><td>ร่างจริงในโลกจริงได้รับผลตามไปด้วย เช่น Seer แห่ง Lugganath <span class="rl-danger" data-lv="5" aria-label="5 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></td></tr>
+            <tr><td><strong>ผ่านรอยแยก (Eye of Terror, Maelstrom)</strong></td><td>ดินแดนที่ Warp กับโลกจริงผสมกัน</td><td>Legion ผู้ทรยศ, โจรสลัด, ผู้หลบหนี</td><td>บังคับยานไม่ได้ อาจติดวังวนเวลา <span class="rl-danger" data-lv="5" aria-label="5 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></td></tr>
+            <tr><td><strong>ความตาย</strong></td><td>Sea of Souls</td><td>ทุกคนที่มีวิญญาณ</td><td>วิญญาณไหลเข้า Warp ผู้บูชา Chaos ถูกเทพกลืน Aeldari ถูก Slaanesh ดูดกิน</td></tr>
+            <tr><td><strong>ถูกพายุ Warp กลืน</strong></td><td>Warp / Daemon World</td><td>ไม่มีใครตั้งใจ</td><td>ทั้งดาวอาจกลายเป็น Daemon World <span class="rl-danger" data-lv="5" aria-label="5 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></td></tr>
+          </tbody></table></div>
+        <figure class="figure"><img src="../images/realms/marine-in-warp.webp" alt="Space Marine ท่ามกลาง Warp" loading="lazy" data-zoom style="max-height:460px;margin:0 auto"><figcaption>Space Marine คนเดียวท่ามกลางความบ้าคลั่งของ Warp — สิ่งที่เกิดขึ้นเมื่อไม่มีอะไรปกป้อง</figcaption></figure>
+      </section>
+
+      <section id="why">
+        <h2><span class="num">15</span>เข้าไปเพื่ออะไร ได้อะไร และต้องจ่ายอะไร</h2>
+        <div class="grid grid-2">
+          <div class="card"><h3>การเดินทางเร็วกว่าแสง</h3><p>จักรวรรดิทั้งจักรวรรดิพึ่ง Warp ในการขนส่ง ถ้าไม่มี Warp ดาวต่าง ๆ จะถูกตัดขาดจากกัน <em>ราคา:</em> ยานที่หายไปใน Warp นับไม่ถ้วน และต้องพึ่งแสง Astronomican ที่แลกด้วยชีวิต Psyker</p></div>
+          <div class="card"><h3>การสื่อสาร</h3><p>Astropath ส่งข้อความผ่าน Warp เป็นวิธีเดียวที่ส่งข่าวข้ามดาวได้เร็ว <em>ราคา:</em> ข้อความถูกตีความผิดบ่อย และพายุ Warp ตัดขาดการสื่อสารได้ทั้ง sector</p></div>
+          <div class="card"><h3>พลังจิตและเวทมนตร์</h3><p>Psyker ดึงพลังจาก Warp ส่วนพ่อมดของ Tzeentch ใช้เวทที่ทรงพลังที่สุดในจักรวาล <em>ราคา:</em> ทุกครั้งที่ใช้คือการเปิดประตูให้ปีศาจ</p></div>
+          <div class="card"><h3>ความรู้ต้องห้าม</h3><p>Black Library และ Hidden Library ของ Tzeentch เก็บความรู้ที่หาจากที่อื่นไม่ได้ <em>ราคา:</em> สติ วิญญาณ หรือการเดินหลงในเขาวงกตไปชั่วนิรันดร์</p></div>
+          <div class="card"><h3>อาวุธและเครื่องจักรปีศาจ</h3><p>ปีศาจที่ถูกขังในอาวุธ (Daemon Weapon) หรือยานรบ (Daemon Engine) ให้พลังเหนือธรรมชาติ <em>ราคา:</em> ปีศาจพยายามกลืนวิญญาณผู้ใช้อยู่เสมอ</p></div>
+          <div class="card"><h3>ความเป็นอมตะ</h3><p>แชมเปี้ยนของ Chaos หวังจะได้เป็น Daemon Prince ส่วน Drukhari ใน Commorragh ไม่แก่ตราบที่ยังได้กินความเจ็บปวดของผู้อื่น <em>ราคา:</em> คนส่วนใหญ่กลายเป็น Chaos Spawn ก่อน และ Drukhari ต้องทรมานผู้อื่นไปตลอดกาล</p></div>
+        </div>
+        <figure class="figure"><img src="../images/realms/grey-knights-daemons.webp" alt="Grey Knights ปะทะปีศาจ" loading="lazy" data-zoom style="max-height:460px;margin:0 auto"><figcaption>Grey Knights ผู้เชี่ยวชาญการปราบปีศาจของจักรวรรดิ ปะทะกองทัพปีศาจ — ดู <a href="lore/grey-knights.html">Grey Knights</a></figcaption></figure>
+      </section>
+
+      <section id="danger">
+        <h2><span class="num">16</span>ระดับอันตรายโดยสรุป</h2>
+        <p>ตารางนี้ <strong>ผู้เขียนประเมินเอง</strong> จากเนื้อหาข้างบน เพื่อให้เปรียบเทียบง่าย ไม่ใช่ค่าที่ระบุในหนังสือ</p>
+        <div class="table-wrap"><table class="rl-table">
+          <thead><tr><th>สถานที่</th><th>ระดับ</th><th>อันตรายหลัก</th></tr></thead>
+          <tbody>
+            <tr><td><a href="#webway">Webway (เส้นทางที่ยังดี)</a></td><td><span class="rl-danger" data-lv="2" aria-label="2 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></td><td>หลงทาง, ทางตัน, Drukhari, รัง Psychneuein</td></tr>
+            <tr><td><a href="#warp-inside">Warp (บนยานที่มี Gellar Field)</a></td><td><span class="rl-danger" data-lv="3" aria-label="3 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></td><td>เวลาคลาดเคลื่อน, หลงทาง, Gellar Field พัง</td></tr>
+            <tr><td><a href="#pocket">Space Hulk</a></td><td><span class="rl-danger" data-lv="4" aria-label="4 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></td><td>Genestealer, Ork, Chaos และการหลุดเข้า Warp แบบสุ่ม</td></tr>
+            <tr><td><a href="#commorragh">Commorragh (สำหรับคนนอก)</a></td><td><span class="rl-danger" data-lv="5" aria-label="5 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></td><td>ถูกจับเป็นทาส ถูกทรมานไปชั่วชีวิต</td></tr>
+            <tr><td><a href="#where-meet">Eye of Terror / Daemon World</a></td><td><span class="rl-danger" data-lv="5" aria-label="5 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></td><td>ปีศาจ, การกลายพันธุ์, กฎฟิสิกส์พัง, สูญเสียวิญญาณ</td></tr>
+            <tr><td><a href="#realm-of-chaos">อาณาจักรของเทพทั้งสี่</a></td><td><span class="rl-danger" data-lv="5" aria-label="5 จาก 5"><i></i><i></i><i></i><i></i><i></i></span></td><td>แทบไม่มีใครกลับออกมา ผู้ที่รอดมักเสียสติ</td></tr>
+          </tbody></table></div>
+        <div class="callout"><svg class="i "><use href="#i-book"></use></svg><div><strong class="title">แหล่งข้อมูลและความถูกต้อง</strong><p>เนื้อหาเรียบเรียงจากบทความใน <a href="https://warhammer40k.fandom.com/wiki/Immaterium" target="_blank" rel="noopener">Warhammer 40k Wiki</a> (Immaterium, Realm of Chaos, Chaos Daemons, Webway, Commorragh, Black Library, Eye of Terror, Daemon World, Space Hulk, Enslaver, Psychneuein, Tesseract Labyrinth, Dolmen Gate, Screaming Vortex, Hadex Anomaly, Ruinstorm) ซึ่งอ้างอิงหนังสือ Codex และนิยายของ Games Workshop เนื้อเรื่องบางส่วนต่างกันไปตามฉบับของหนังสือ ส่วนที่เป็นตำนานหรือคำเล่าลือในเนื้อเรื่องมีป้ายกำกับไว้ ภาพทั้งหมดเป็นลิขสิทธิ์ของ Games Workshop ดูรายการที่ <a href="credits.html#realms">เครดิตภาพ</a></p></div></div>
+        <p>อ่านต่อ: <a class="btn btn-ghost btn-sm" href="warp.html">Warp และกลไกของจักรวาล</a> <a class="btn btn-ghost btn-sm" href="gods.html">เทพเจ้าแห่ง 40K</a> <a class="btn btn-ghost btn-sm" href="lore/chaos-daemons.html">Chaos Daemons</a> <a class="btn btn-ghost btn-sm" href="lore/drukhari.html">Drukhari</a> <a class="btn btn-ghost btn-sm" href="lore/harlequins.html">Harlequins</a></p>
+      </section>
+
+      <div class="mark-read"><button class="btn btn-ghost btn-sm" data-mark-read></button></div>
+      <div data-page-nav></div>
+    </article>
+  </div>
+</main>
+
+<script src="../js/layout.js?v=17"></script>
+<script src="../js/main.js?v=17"></script>
+</body>
+</html>
