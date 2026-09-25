@@ -6,6 +6,8 @@
   const body = document.body;
   const root = body.dataset.root || './';
   const current = body.dataset.page || 'home';
+  /* เปิดโหมดอนิเมชันตั้งแต่ก่อนวาดหน้าจอ (fx.js โหลดตามมาทีหลัง) — ไม่เปิดถ้าผู้ใช้ขอลดการเคลื่อนไหว */
+  if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) document.documentElement.classList.add('fx-ready');
 
   /* ลำดับการเรียน (ใช้ทำปุ่มก่อนหน้า/ถัดไป และเมนู) */
   const PAGES = [
@@ -257,6 +259,13 @@
     links.push(...sheet.querySelectorAll('a'));
     window.addEventListener('scroll', spy, { passive: true }); spy();
   }
+
+  /* ---------- Web Animation (js/fx.js) ---------- */
+  (function () {
+    const me = document.querySelector('script[src*="layout.js"]'), v = me ? (me.src.split('?')[1] || '') : '';
+    const fx = document.createElement('script'); fx.src = root + 'js/fx.js' + (v ? '?' + v : ''); fx.defer = true;
+    document.head.appendChild(fx);
+  })();
 
   /* ---------- Scroll: progress bar + to-top ---------- */
   const bar = header.querySelector('.read-progress');

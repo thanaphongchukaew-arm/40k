@@ -108,7 +108,7 @@
 
   function render() {
     const q = input.value;
-    if (!window.SEARCH_INDEX) { list.innerHTML = '<li class="search-empty">กำลังโหลดดัชนี…</li>'; return; }
+    if (!window.SEARCH_INDEX) { list.innerHTML = '<li class="search-empty loading">กำลังโหลดดัชนี…</li>'; return; }
     if (!norm(q)) { list.innerHTML = '<li class="search-empty">เริ่มพิมพ์เพื่อค้นหาจากทั้ง ' + window.SEARCH_INDEX.length + ' หัวข้อในเว็บ</li>'; count.textContent = ''; return; }
     let r = search(window.SEARCH_INDEX, q, 400);
     if (cat !== 'ทั้งหมด') r = r.filter(e => e[3] === cat);
