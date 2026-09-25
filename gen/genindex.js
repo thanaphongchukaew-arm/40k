@@ -41,6 +41,10 @@ const itemCat = p => ({ 'pages/characters.html': 'ตัวละคร', 'pages
     if (f === 'pages/glossary.html') OLD.filter(e => e[0].startsWith('pages/glossary.html?q=')).forEach(e => out.push(e));
   }
   await b.close();
+  /* ดาวในแผนที่กาแล็กซี: รายการแสดงทีละหน้า จึงสร้างจากข้อมูลโดยตรง */
+  require(ROOT + '/js/planets-data.js');
+  (window.PLANETS || []).forEach(p => out.push(['pages/galaxy-map.html#p-' + p.id, p.name + (p.th ? ' (' + p.th + ')' : ''), 'แผนที่กาแล็กซี', 'โลกของ 40K',
+    [p.sum, p.sector, p.aff].filter(Boolean).join(' · ').replace(/\s+/g, ' ').slice(0, 400)]));
   /* เก็บรายการเดิมที่ยังใช้ได้: ลิงก์ที่ JS เปิดจาก hash (เช่น factions.html#orks) หรือ anchor ที่ยังมีอยู่ในหน้า */
   const have = new Set(out.map(e => e[0]));
   OLD.forEach(e => {

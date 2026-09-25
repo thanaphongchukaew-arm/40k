@@ -1623,3 +1623,49 @@ a .chip:hover, .chip:hover { transform: translateY(-1px); }
   .hero h1 span, .page-hero h1 { -webkit-text-fill-color: currentColor; background: none; }
   .fx-tilting { transform: none !important; }
 }
+
+/* ===== แผนที่กาแล็กซี v2: ดาว ~1,000 ดวง ===== */
+.gm-selects { display: flex; flex-wrap: wrap; gap: 10px; }
+.gm-selects label { display: flex; align-items: center; gap: 6px; font-size: .85rem; color: var(--muted); }
+.gm-selects select { background: var(--surface-2); color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 6px 8px; font: inherit; font-size: .88rem; }
+.gm-legend .chip em { font-style: normal; font-size: .72rem; opacity: .7; margin-left: 2px; }
+.dot.unknown, .gm-pin.st-unknown i { background: #6b7280; } .gm-pin.st-unknown { color: #9aa1ad; }
+.gm-pin.mid i { width: 10px; height: 10px; animation: none; }
+.gm-pin.minor i { width: 7px; height: 7px; animation: none; box-shadow: 0 0 0 2px rgba(255,255,255,.12), 0 0 8px currentColor; }
+.gm-pin.region i { border-radius: 3px; }
+.gm-pin.minor span, .gm-pin.mid span { font-size: 11px; }
+.gmap.zoomed .gm-pin.minor span { opacity: 0; }
+.gmap.zoomed .gm-pin.minor:hover span, .gmap.zoomed2 .gm-pin.minor span, .gm-pin.minor.active span { opacity: 1; transform: none; }
+.gm-pin.dim { opacity: .08; }
+.gm-fig { margin: 0; position: relative; }
+.gm-fig img { width: 100%; height: 200px; object-fit: cover; display: block; cursor: zoom-in; background: #05060b; }
+.gm-fig figcaption, .gm-noimg small { display: block; font-size: .72rem; color: var(--muted); padding: 4px 18px 0; }
+.gm-noimg { display: grid; place-items: center; padding: 22px 0 6px; background: radial-gradient(circle at 50% 40%, #151827, #05060b); }
+.gm-art { display: inline-block; border-radius: 50%; box-shadow: inset -8px -6px 16px rgba(0,0,0,.55), 0 0 12px rgba(255,255,255,.08); flex: none; }
+.gm-art-lg { width: 130px; height: 130px; }
+.gm-tags { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; } .gm-tags .chip { font-size: .72rem; padding: 2px 8px; }
+.gm-sum { font-size: .93rem; line-height: 1.7; color: var(--text); }
+.gm-fact { font-size: .85rem; color: var(--gold-soft); display: flex; gap: 6px; align-items: flex-start; }
+.gm-small { font-size: .78rem; display: flex; gap: 6px; align-items: flex-start; margin: 10px 0; }
+.gm-events li { margin-bottom: 6px; line-height: 1.6; }
+.gm-list { list-style: none; padding: 0; margin: 14px 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 10px; }
+.gm-list li { margin: 0; }
+.gm-item { width: 100%; display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 12px; align-items: start; text-align: left; padding: 10px; border-radius: 12px; border: 1px solid var(--border); background: var(--surface); color: inherit; cursor: pointer; font: inherit; height: 100%; }
+.gm-item:hover { border-color: rgba(var(--gold-rgb), .55); background: var(--surface-2); }
+.gm-thumb { width: 64px; height: 64px; border-radius: 10px; object-fit: cover; background: #05060b; }
+span.gm-thumb { border-radius: 50%; width: 56px; height: 56px; margin: 4px; }
+.gm-item-body { min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.gm-item h3 { margin: 0; font-size: 1rem; line-height: 1.3; } .gm-item h3 .th { font-family: var(--font-body); font-weight: 400; font-size: .78rem; color: var(--muted); }
+.gm-item .status { align-self: flex-start; font-size: .7rem; padding: 2px 8px; border-radius: 6px; }
+.gm-item small { font-size: .72rem; color: var(--muted); }
+.gm-item p { margin: 2px 0 0; font-size: .82rem; line-height: 1.5; color: var(--text-soft); }
+.gm-rank { font-family: var(--font-mono); font-size: .7rem; color: var(--gold-soft); }
+.gm-more { display: block; margin: 6px auto 0; }
+.gm-more[hidden] { display: none; }
+.status.st-erased { color: #b8bec9; border-color: rgba(184,190,201,.4); border-style: dashed; }
+/* galaxy map: ซูมลึก (สูงสุด 30×) */
+.gm-zlevel { font: 600 11px/1 var(--font-head); color: #fff; text-align: center; padding: 5px 0; border-radius: 8px; background: rgba(5,6,11,.75); border: 1px solid rgba(255,255,255,.18); min-width: 38px; }
+.gm-svg .gm-stars, .gm-svg .gm-region { transition: opacity .3s; }
+.gmap.zoomed3 .gm-svg .gm-stars { opacity: .25; }
+.gmap.zoomed3 .gm-svg .gm-region { opacity: 0; }
+.gmap.zoomed3 .gm-pin span { opacity: 1; transform: none; }
