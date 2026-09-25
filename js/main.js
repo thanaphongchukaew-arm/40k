@@ -328,3 +328,27 @@
   });
   document.addEventListener('scroll', () => { if (hzFor) { hzFor = null; hz.hidden = true; } }, true);
 })();
+
+/* แผนภาพ X-ray อวัยวะเสริม: ชี้/แตะหมายเลขหรือแถวตาราง เพื่อไฮไลต์และแสดงคำอธิบาย */
+(function () {
+  const wrap = document.querySelector('[data-xray]'); if (!wrap) return;
+  const sec = wrap.closest('section') || document, card = wrap.querySelector('.xr-card');
+  const rows = [...sec.querySelectorAll('tr[data-o]')], dots = [...wrap.querySelectorAll('.xr-o')];
+  const def = card.innerHTML; let pinned = null;
+  const show = id => {
+    dots.forEach(d => d.classList.toggle('on', d.dataset.o === id)); rows.forEach(r => r.classList.toggle('on', r.dataset.o === id));
+    wrap.classList.toggle('hl', !!id);
+    const r = rows.find(x => x.dataset.o === id);
+    if (!r) { card.innerHTML = def; return; }
+    const c = r.cells, name = c[1].querySelector('strong'), th = c[1].querySelector('small');
+    card.innerHTML = '<small>อวัยวะลำดับที่ ' + c[0].textContent + (c.length > 3 ? ' · ฝังอายุ ' + c[2].textContent + ' ปี' : ' · เฉพาะ Primaris') + '</small><b>' + name.textContent + (th ? ' — ' + th.textContent : '') + '</b><p>' + c[c.length - 1].textContent + '</p>';
+  };
+  const bind = (el) => {
+    el.addEventListener('mouseenter', () => show(el.dataset.o));
+    el.addEventListener('mouseleave', () => show(pinned));
+    el.addEventListener('focus', () => show(el.dataset.o));
+    el.addEventListener('click', () => { pinned = pinned === el.dataset.o ? null : el.dataset.o; show(pinned); });
+    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); } });
+  };
+  dots.forEach(bind); rows.forEach(bind);
+})();
