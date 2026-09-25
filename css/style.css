@@ -1513,8 +1513,8 @@ body.ab-modal-open { overflow: hidden; }
 @media (max-width: 1100px) { .nav-direct .nav-link { justify-content: flex-start; } }
 /* แถบเมนูมี 6 หัวข้อ: จอกลางย่อช่องไฟและซ่อนข้อความรองให้พอดี ไม่ล้นจอ */
 @media (min-width: 1101px) {
-  .site-header .container { gap: 12px; }
-  .nav-link { padding: 8px 9px; font-size: .92rem; }
+  .site-header .container { gap: 8px; }
+  .nav-link { padding: 8px 7px; font-size: .92rem; }
   .search-btn span, .search-btn kbd { display: none; }
 }
 @media (min-width: 1101px) and (max-width: 1260px) {
@@ -1524,8 +1524,8 @@ body.ab-modal-open { overflow: hidden; }
   html[data-fs="1"] .brand > span:not(.brand-mark), html[data-fs="2"] .brand > span:not(.brand-mark) { display: none; }
 }
 @media (min-width: 1101px) and (max-width: 1200px) {
-  html[data-fs="2"] .nav-link { padding: 8px 6px; gap: 4px; }
-  html[data-fs="2"] .site-header .container { gap: 8px; }
+  html[data-fs="1"] .nav-link, html[data-fs="2"] .nav-link { padding: 8px 4px; gap: 3px; }
+  html[data-fs="1"] .site-header .container, html[data-fs="2"] .site-header .container { gap: 6px; }
 }
 
 /* ===== เมนูหลักแบบแบ่งหัวข้อ 2 คอลัมน์ ===== */

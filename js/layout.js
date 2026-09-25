@@ -68,7 +68,7 @@
     { label: 'กติกา & จัดทัพ', secs: [
       ['กติกาการเล่น', ['basics', 'turn', 'combat', 'terrain', 'stratagems']],
       ['จัดทัพและรูปแบบเกม', ['army-building', 'game-modes', 'cheat-sheet']] ] },
-    { label: 'เครื่องมือ', secs: [
+    { label: 'ทดลองเล่น & อ้างอิง', secs: [
       ['ลองเล่น', ['army-builder', 'tabletop']],
       ['อ้างอิง', ['glossary', 'novels']] ] }
   ];
