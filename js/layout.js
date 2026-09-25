@@ -53,13 +53,26 @@
   const href = p => root + p.file;
   const ic = (n, c) => '<svg class="i ' + (c || '') + '" aria-hidden="true"><use href="#i-' + n + '"></use></svg>';
 
+  /* เมนูหลัก: จัดเป็นกลุ่มตามลำดับการเรียน แต่ละกลุ่มแบ่งหัวข้อย่อย (sec) — link = ลิงก์ตรงไม่มีเมนูย่อย */
   const MENU = [
-    { label: 'เริ่มต้น', items: ['getting-started', 'factions', 'finder', 'first-game', 'hobby', 'quiz'] },
-    { label: 'โลกของ 40K', items: ['lore', 'lore-ancient', 'gods', 'warp', 'primarchs', 'primarch-relations', 'lore-30k', 'lore-40k', 'compare', 'faction-lore', 'xenos-races'] },
-    { label: 'สารานุกรม', items: ['characters', 'space-marines', 'codex-astartes', 'ranks', 'honours', 'galaxy-map', 'organizations', 'novels', 'glossary'] },
-    { label: 'กติกา', items: ['basics', 'turn', 'combat', 'terrain', 'stratagems', 'cheat-sheet'] },
-    { label: 'จัดทัพ & เครื่องมือ', items: ['army-building', 'game-modes', 'army-builder', 'tabletop'] }
+    { label: 'เริ่มต้น', secs: [
+      ['เริ่มจากศูนย์', ['getting-started', 'factions', 'first-game', 'hobby']],
+      ['ช่วยเลือกและทบทวน', ['finder', 'quiz']] ] },
+    { label: 'เนื้อเรื่อง', secs: [
+      ['ไทม์ไลน์ตามยุค', ['lore', 'lore-ancient', 'lore-30k', 'lore-40k', 'compare']],
+      ['กลไกของจักรวาล', ['gods', 'warp', 'galaxy-map', 'organizations']] ] },
+    { label: 'ทัพ & ตัวละคร', secs: [
+      ['ทัพและเผ่าพันธุ์', ['faction-lore', 'space-marines', 'xenos-races']],
+      ['บุคคลสำคัญ', ['primarchs', 'primarch-relations', 'characters', 'ranks', 'honours']] ] },
+    { link: 'codex-astartes' },
+    { label: 'กติกา & จัดทัพ', secs: [
+      ['กติกาการเล่น', ['basics', 'turn', 'combat', 'terrain', 'stratagems']],
+      ['จัดทัพและรูปแบบเกม', ['army-building', 'game-modes', 'cheat-sheet']] ] },
+    { label: 'เครื่องมือ', secs: [
+      ['ลองเล่น', ['army-builder', 'tabletop']],
+      ['อ้างอิง', ['glossary', 'novels']] ] }
   ];
+  MENU.forEach(g => { if (g.secs) g.items = g.secs.reduce((a, s) => a.concat(s[1]), []); });
 
 
   /* ---------- ธีมและขนาดตัวอักษร ---------- */
@@ -93,14 +106,21 @@
 
   /* ---------- Header ---------- */
   const navHTML = MENU.map((g, gi) => {
+    if (g.link) {
+      const p = byId(g.link);
+      return '<div class="nav-item nav-direct"><a class="nav-link' + (g.link === current ? ' is-active' : '') + '" href="' + href(p) + '"' + (g.link === current ? ' aria-current="page"' : '') + ' title="' + p.desc + '">' + ic(p.icon) + p.title + '</a></div>';
+    }
     const active = g.items.includes(current);
-    const links = g.items.map(id => {
+    const link = id => {
       const p = byId(id);
       return '<a href="' + href(p) + '"' + (id === current ? ' aria-current="page"' : '') + '>' + ic(p.icon) +
         '<span>' + p.title + '<small>' + p.desc + '</small></span></a>';
-    }).join('');
+    };
+    const cols = g.secs.map(sc => '<div class="dd-col"><div class="dd-h">' + sc[0] + '</div>' + sc[1].map(link).join('') + '</div>').join('');
+    /* กลุ่มริมซ้าย/ขวาเปิดชิดขอบด้านนั้น กันเมนูล้นจอ */
+    const edge = gi >= MENU.length - 2 ? ' dd-right' : gi < 2 ? ' dd-left' : '';
     return '<div class="nav-item"><button class="nav-link' + (active ? ' is-active' : '') + '" aria-expanded="false" aria-controls="dd' + gi + '">' +
-      g.label + ic('chev-down', 'chev') + '</button><div class="dropdown" id="dd' + gi + '">' + links + '</div></div>';
+      g.label + ic('chev-down', 'chev') + '</button><div class="dropdown dd-cols' + edge + '" id="dd' + gi + '">' + cols + '</div></div>';
   }).join('');
 
   const header = document.createElement('header');
