@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ทดลองจัดทีม | คู่มือ Warhammer 40K ฉบับมือใหม่</title>
+  <meta name="description" content="เครื่องมือทดลองจัดทัพ Warhammer 40,000: เลือกทัพ ขนาดเกม ใส่ยูนิตและตัวละคร แล้วตรวจกติกาการจัดทัพเบื้องต้น">
+  <meta name="theme-color" content="#0d0e11">
+  <link rel="icon" href="../images/icons/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="apple-touch-icon" href="../images/icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Kanit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=13">
+</head>
+<body data-page="army-builder" data-root="../">
+<script src="../js/icons.js?v=13"></script>
+
+<main>
+  <header class="page-hero">
+    <div class="hero-bg"><img src="../images/gameplay/table-event-ruins-terrain.webp" alt=""></div>
+    <div class="container">
+      <nav class="breadcrumb" aria-label="breadcrumb"><a href="../index.html">หน้าแรก</a><svg class="i "><use href="#i-chev-right"></use></svg><span>จัดทัพ & เครื่องมือ</span><svg class="i "><use href="#i-chev-right"></use></svg><span>ทดลองจัดทีม</span></nav>
+      <h1>ทดลองจัดทีม</h1>
+      <p class="lead">เลือกทัพและขนาดเกม ใส่ยูนิตกับตัวละคร แล้วดูว่าจัดถูกกติกาหรือยัง</p>
+      <div class="page-meta"><span class="chip"><svg class="i "><use href="#i-calc"></use></svg> ตรวจกติกาอัตโนมัติ</span></div>
+    </div>
+  </header>
+
+  <div class="container doc">
+    
+    <article class="doc-body" style="grid-column:1/-1;max-width:none">
+
+      <section id="builder">
+        <h2><span class="num">01</span>ทดลองจัดทีม</h2>
+        <div class="callout warn"><svg class="i "><use href="#i-alert"></use></svg><div><strong class="title">แต้มในหน้านี้เป็นค่าประมาณ</strong><p>แต้มของยูนิตเปลี่ยนตามเอกสารปรับสมดุลของ Games Workshop เป็นระยะ ตัวเลขในหน้านี้ใช้เพื่อ<strong>ฝึกคิดและลองจัดทัพ</strong>เท่านั้น แก้ตัวเลขได้เองในตาราง และเมื่อจะเล่นจริงให้จัดทัพในแอป Warhammer 40,000 ที่มีแต้มล่าสุด</p></div></div>
+        <div class="ab" id="ab-app">
+          <div class="ab-top">
+            <label class="ab-field"><span>ทัพ</span><select id="ab-faction" aria-label="เลือกทัพ"></select></label>
+            <fieldset class="ab-field ab-sizes"><legend>ขนาดเกม</legend>
+              <label><input type="radio" name="ab-size" value="incursion"> Incursion · 1,000 แต้ม</label>
+              <label><input type="radio" name="ab-size" value="strike"> Strike Force · 2,000 แต้ม</label></fieldset>
+            <div class="ab-faction-card" id="ab-faction-card"></div>
+          </div>
+          <div class="ab-grid">
+            <div class="ab-col">
+              <h3><svg class="i "><use href="#i-list"></use></svg> ยูนิตที่เลือกได้</h3>
+              <div class="tabs ab-roles" id="ab-roles"><button type="button" class="tab active" data-role="all">ทั้งหมด</button><button type="button" class="tab" data-role="char">ตัวละคร</button><button type="button" class="tab" data-role="line">Battleline</button><button type="button" class="tab" data-role="inf">ทหารราบ</button><button type="button" class="tab" data-role="veh">ยานพาหนะ</button><button type="button" class="tab" data-role="mon">หุ่น/สัตว์ยักษ์</button><button type="button" class="tab" data-role="trans">ยานขนส่ง</button></div>
+              <ul class="ab-catalog" id="ab-catalog"></ul>
+            </div>
+            <div class="ab-col">
+              <h3><svg class="i "><use href="#i-shield"></use></svg> กองทัพของคุณ</h3>
+              <div class="ab-summary"><div><small>แต้มรวม</small><b id="ab-total">0 / 2000</b></div><div><small>Enhancement</small><b id="ab-enh">0 / 4</b></div></div>
+              <div class="progress-line"><i id="ab-bar"></i></div>
+              <div class="table-wrap"><table class="ab-table no-stack"><thead><tr><th>ยูนิต</th><th class="center">จำนวน</th><th class="center">แต้ม/ยูนิต</th><th class="center">รวม</th><th class="center">แม่ทัพ</th><th class="center">Enh.</th><th></th></tr></thead><tbody id="ab-roster"></tbody></table></div>
+              <ul class="ab-check" id="ab-check" aria-live="polite"></ul>
+              <div class="flex" style="gap:8px;flex-wrap:wrap"><button type="button" class="btn btn-primary btn-sm" id="ab-copy"><svg class="i "><use href="#i-scroll"></use></svg> คัดลอกรายชื่อทัพ</button><button type="button" class="btn btn-ghost btn-sm" id="ab-print"><svg class="i "><use href="#i-box"></use></svg> พิมพ์</button><button type="button" class="btn btn-ghost btn-sm" id="ab-clear"><svg class="i "><use href="#i-refresh"></use></svg> ล้างทั้งหมด</button><span id="ab-copy-msg" class="muted"></span></div>
+              <textarea id="ab-text" hidden rows="8" style="width:100%;margin-top:10px" aria-label="รายชื่อทัพสำหรับคัดลอก"></textarea>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="rules">
+        <h2><span class="num">02</span>สิ่งที่หน้านี้ตรวจให้</h2>
+        <ul>
+          <li><strong>แต้มรวม</strong> ต้องไม่เกินขนาดเกม (Incursion 1,000 / Strike Force 2,000)</li>
+          <li><strong>จำนวนยูนิตซ้ำ</strong> — ยูนิตเดียวกันใส่ได้ 2 (Incursion) หรือ 3 (Strike Force) ส่วน Battleline และยานขนส่งได้สองเท่า</li>
+          <li><strong>Epic Hero</strong> (ตัวละครมีชื่อ) มีได้ชื่อละ 1 และใส่ Enhancement ไม่ได้</li>
+          <li><strong>แม่ทัพ (Warlord)</strong> ต้องเป็นตัวละคร</li>
+          <li><strong>Enhancement</strong> — Incursion ได้ 2 ชิ้น, Strike Force ได้ 4 ชิ้น</li>
+        </ul>
+        <p>กติกาที่ยังไม่ได้ตรวจในหน้านี้ เช่น การเลือก Detachment และการผูกตัวละครกับหน่วยคุ้มกัน อ่านได้ที่ <a href="army-building.html">การจัดทัพ</a></p>
+        <p class="muted" style="font-size:.9rem">รายชื่อทัพจะถูกบันทึกไว้ในเบราว์เซอร์ของคุณ ทัพแต่ละฝ่ายบันทึกแยกกัน</p>
+      </section>
+      <div class="mark-read"><button class="btn btn-ghost btn-sm" data-mark-read></button></div>
+
+      <div data-page-nav></div>
+    </article>
+  </div>
+</main>
+
+<script src="../js/layout.js?v=13"></script>
+<script src="../js/main.js?v=13"></script>
+<script src="../js/factions-data.js?v=13"></script>
+<script src="../js/army-data.js?v=13"></script>
+<script src="../js/army-builder.js?v=13"></script>
+</body>
+</html>

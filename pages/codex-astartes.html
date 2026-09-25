@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Codex Astartes — คัมภีร์ของ Space Marine | คู่มือ Warhammer 40K ฉบับมือใหม่</title>
+  <meta name="description" content="Codex Astartes ฉบับละเอียด: คืออะไร ใครเขียน เขียนทำไม และกฎทั้ง 52 ข้อ ตั้งแต่การแบ่ง Legion เป็น Chapter พันธุกรรม โครงสร้างกองร้อย ยุทธวิธี เครื่องหมาย จนถึงฉบับแก้ไขยุค Era Indomitus พร้อมเหตุการณ์ตัวอย่างจากนิยายและเกม">
+  <meta name="theme-color" content="#0d0e11">
+  <link rel="icon" href="../images/icons/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="apple-touch-icon" href="../images/icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Kanit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=13">
+</head>
+<body data-page="codex-astartes" data-root="../">
+<script src="../js/icons.js?v=13"></script>
+
+<main>
+  <header class="page-hero">
+    <div class="hero-bg"><img src="../images/codex/codex-tome.webp" alt=""></div>
+    <div class="container">
+      <nav class="breadcrumb" aria-label="breadcrumb"><a href="../index.html">หน้าแรก</a><svg class="i "><use href="#i-chev-right"></use></svg><a href="lore.html">โลกของ 40K</a><svg class="i "><use href="#i-chev-right"></use></svg><span>Codex Astartes</span></nav>
+      <h1>Codex Astartes <span style="font-size:.5em;color:var(--muted);font-weight:500">(โคเด็กซ์ แอสตาร์เตส)</span></h1>
+      <p class="lead">คัมภีร์ศักดิ์สิทธิ์ที่กำหนดทุกอย่างของ Space Marine — ตั้งแต่จำนวนทหาร สีบนไหล่ ไปจนถึงวิธีบุกดาวทั้งดวง อ่านครบทั้ง 52 ข้อ พร้อมเหตุการณ์จริงในเนื้อเรื่อง</p>
+      <div class="page-meta"><span class="chip chip-imperium">Imperium</span><span class="chip"><svg class="i "><use href="#i-scroll"></use></svg> 52 ข้อ · 8 ภาค</span><span class="chip"><svg class="i "><use href="#i-book"></use></svg> อ่านราว 45 นาที</span></div>
+    </div>
+  </header>
+
+  <div class="container doc">
+    <aside class="toc" data-toc></aside>
+    <article class="doc-body">
+
+      <section id="what">
+        <h2><span class="num">00</span>Codex Astartes คืออะไร</h2>
+        <div class="ca-intro">
+          <figure class="ca-intro-fig"><img src="../images/codex/guilliman-sketch.webp" alt="ภาพร่างของ Roboute Guilliman ผู้เขียน Codex Astartes" loading="lazy" data-zoom><figcaption>Roboute Guilliman — Primarch ของ Ultramarines และผู้เขียน Codex Astartes</figcaption></figure>
+          <div>
+            <p class="ca-dropcap"><strong>Codex Astartes</strong> คือหนังสือตำราการทหารขนาดมหึมาที่ <strong>Roboute Guilliman</strong> (โรบูท กิลลิมัน) Primarch แห่ง Ultramarines เขียนขึ้นหลังสงคราม <a href="lore-30k.html">Horus Heresy</a> ในต้นสหัสวรรษที่ 31 เนื้อหากำหนด <strong>โครงสร้างกองทัพ ยุทธวิธีการรบ การสรรหาทหาร เครื่องหมายบนชุดเกราะ และหลักศีลธรรม</strong> ของ Space Marine ทุก Chapter</p>
+            <p><strong>ทำไมต้องเขียน —</strong> สงคราม Horus Heresy พิสูจน์ว่า Legion ที่มีทหารนับแสนภายใต้ผู้นำคนเดียวนั้นอันตรายเกินไป เมื่อ Horus ทรยศ ครึ่งหนึ่งของ Space Marine ทั้งหมดก็ทรยศตาม กิลลิมันจึงเขียน Codex เพื่อให้ <em>"ไม่มีใครคนเดียวจะคุมพลังของ Legion ทั้งหมดได้อีก"</em> และเพื่อซ่อมจุดอ่อนทางพันธุกรรมที่ Chaos ใช้ล่อลวงทหาร</p>
+            <p><strong>ทำไมสำคัญ —</strong> Codex คือเหตุผลที่ Space Marine ในยุค 40K มีหน้าตาอย่างที่เห็น: Chapter ละ 1,000 นาย แบ่ง 10 กองร้อย มีสีประจำกองร้อยบนขอบไหล่ และมีหน่วย Tactical–Assault–Devastator Space Marine ถือว่ามันเป็น <strong>คัมภีร์ศักดิ์สิทธิ์</strong> ที่ได้รับพรจากจักรพรรดิ และใช้เป็นไม้บรรทัดวัดความถูกต้องของทุกการตัดสินใจในสนามรบ</p>
+          </div>
+        </div>
+        <div class="facts ca-facts">
+          <div class="fact"><small>ผู้เขียน</small><b>Roboute Guilliman</b></div>
+          <div class="fact"><small>เขียนเมื่อ</small><b>หลัง Horus Heresy (ต้น M31)</b></div>
+          <div class="fact"><small>ผลที่ใหญ่ที่สุด</small><b>Second Founding (~021.M31)</b></div>
+          <div class="fact"><small>ฉบับเก่าที่สุดที่เหลือ</small><b>Apocrypha of Skaros</b></div>
+          <div class="fact"><small>แก้ไขครั้งล่าสุด</small><b>โดยกิลลิมันเอง หลังฟื้นคืนชีพ (ยุค M42)</b></div>
+          <div class="fact"><small>ผู้ใช้</small><b>Space Marine ส่วนใหญ่ ("Codex Chapter")</b></div>
+        </div>
+        <div class="callout info"><svg class="i "><use href="#i-info"></use></svg><div><strong class="title">อย่าสับสนกับ "Codex" ในเกม</strong><p>ในเกมโต๊ะ คำว่า <em>Codex</em> คือหนังสือกติกาของแต่ละทัพ (เช่น Codex: Space Marines) ส่วน <strong>Codex Astartes</strong> คือคัมภีร์ในเนื้อเรื่องที่กิลลิมันเขียน — ชื่อหนังสือกติกาของ Space Marine ก็มาจากคัมภีร์เล่มนี้นี่เอง</p></div></div>
+      </section>
+
+      <section id="history">
+        <h2><span class="num">01</span>ประวัติการเขียนคัมภีร์</h2>
+        <p>Codex ไม่ได้เกิดขึ้นในวันเดียว แต่สะสมจากบทเรียนนองเลือดตลอดสงคราม และถูกแก้ไขต่อมาอีกหมื่นปี</p>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-date">ยุค Great Crusade</div><h3>Legion ขยายตัวจนใหญ่เกินควบคุม</h3><p>แต่ละ Legion มีทหารหลายหมื่นถึงกว่าแสนนาย ขึ้นตรงต่อ Primarch คนเดียว การสรรหาทหารเร่งรีบจนตรวจคัดพันธุกรรมไม่ละเอียด</p></div>
+          <div class="tl-item red"><div class="tl-date">ระหว่าง Heresy — Battle of Calth</div><h3>ต้นแบบความคิด: จ่า Aeonid Thiel</h3><p>หลัง Word Bearers ลอบโจมตีดาว Calth ทหาร Ultramarines ที่เหลือแตกเป็นหน่วยเล็ก ๆ รบใต้ดิน จ่า Thiel ตั้งหน่วยอิสระ "Red Marked" ตามล่าผู้ทรยศ รายงานของเขาทำให้กิลลิมันฉีกตำราเดิมทิ้ง แล้วประกาศว่า Ultramarines จะไม่ใช่ "ฝูงชนใต้ขุนศึก" อีกต่อไป แต่เป็น "ทหารหลายแสนนายที่หนุนกันและกัน"</p>
+            <button type="button" class="btn btn-ghost btn-sm btn-event" data-event="ev-thiel"><svg class="i "><use href="#i-book"></use></svg> ดูเหตุการณ์ตัวอย่าง</button></div>
+          <div class="tl-item"><div class="tl-date">หลัง Siege of Terra (014.M31)</div><h3>Great Scouring และยุค Reformation</h3><p>Legion ภักดีไล่ล่าผู้ทรยศจนหนีเข้า Eye of Terror กิลลิมันในฐานะ Lord Commander of the Imperium ปฏิรูปจักรวรรดิเกือบคนเดียว — แยกกองทัพมนุษย์เป็นทัพบก (Astra Militarum) กับทัพเรือ และเขียน Codex Astartes สำหรับ Space Marine</p></div>
+          <div class="tl-item red"><div class="tl-date">~021.M31</div><h3>Second Founding — Legion ถูกแบ่ง</h3><p>7 ปีหลังการตายของ Horus Legion ภักดีทั้ง 9 ถูกแบ่งเป็น Chapter ละ 1,000 นาย เกิดการทะเลาะรุนแรงระหว่าง Primarch</p></div>
+          <div class="tl-item"><div class="tl-date">M31–M41</div><h3>หมื่นปีแห่งการตีความ</h3><p>ต้นฉบับสมบูรณ์สูญหาย เหลือสำเนาหลายฉบับ เก่าที่สุดคือ <em>Apocrypha of Skaros</em> นักการทหารหลายร้อยคนเขียนคำอธิบายเพิ่ม จน Codex ปลายยุค M41 กลายเป็น "ตำราที่รวมประสบการณ์ของนักยุทธศาสตร์หลายร้อยคน"</p></div>
+          <div class="tl-item red"><div class="tl-date">~999.M41 → M42</div><h3>กิลลิมันฟื้นคืนชีพและแก้ไข Codex</h3><p>หลัง Cadia ล่มสลายและเกิด Great Rift กิลลิมันกลับมา ปรับปรุง Codex ให้รองรับ Primaris Space Marines และการรบยุคใหม่ (รายละเอียดในข้อ 39)</p></div>
+        </div>
+        <template id="ev-thiel">
+          <img src="../images/codex/thiel.webp" alt="จ่า Aeonid Thiel แห่ง Ultramarines">
+          <span class="ev-when">Battle of Calth · ยุค Horus Heresy (M31)</span>
+          <h3>Aeonid Thiel — จ่าหมวกแดงผู้เปลี่ยนความคิดของ Primarch</h3>
+          <p>ก่อน Calth จ่า Aeonid Thiel แห่งกองร้อยที่ 135 ถูกลงโทษเพราะแอบคิดแผน "ถ้าต้องรบกับ Space Marine ด้วยกันเอง" — สิ่งที่ตอนนั้นไม่มีใครคิดว่าจะเกิดขึ้น หมวกของเขาถูกทาสีแดงเป็นสัญลักษณ์ว่ารอการพิจารณาโทษ</p>
+          <p>เมื่อ Word Bearers ลอบโจมตี Calth แผนที่เคยถูกลงโทษกลับช่วยชีวิตพี่น้อง Thiel รบบนเรือธง Macragge's Honour ช่วย First Chapter Master Gage และตั้งหน่วยเล็กอิสระชื่อ <strong>Red Marked</strong> ไล่ล่าผู้ทรยศในอุโมงค์ใต้ดิน ผู้นำหน่วยใหม่ทุกคนถูกทาหมวกสีแดงตาม Thiel</p>
+          <p>เมื่อรายงานต่อกิลลิมัน Primarch ฉีกเอกสารตำราเก่าของตัวเองทิ้งต่อหน้า และประกาศแนวคิดที่ต่อมากลายเป็นหัวใจของ Codex: หน่วยเล็กที่คล่องตัว ทำงานอิสระ แต่หนุนกันเป็นระบบ</p>
+          <p class="ev-src">ที่มา: นิยาย <em>Know No Fear</em> และเรื่องสั้น <em>Rules of Engagement</em> (ชุด The Horus Heresy)</p>
+        </template>
+      </section>
+
+      <div class="callout warn"><svg class="i "><use href="#i-alert"></use></svg><div><strong class="title">ทำไมเป็น 52 ข้อ?</strong><p>ในเนื้อเรื่อง Codex Astartes เป็นตำราหลายเล่มที่ไม่มีการนับข้ออย่างเป็นทางการ และต้นฉบับสมบูรณ์สูญหายไปแล้ว เว็บนี้รวบรวมทุกบทบัญญัติที่ปรากฏในหนังสือทางการ (Codex, Index Astartes, Insignium Astartes) และนิยาย Black Library แล้วเรียบเรียงเป็น 52 ข้อใน 8 ภาคเพื่อให้อ่านง่าย — หมายเลขข้อจึงเป็นของเว็บนี้ ไม่ใช่เลขข้อในเนื้อเรื่อง</p></div></div>
+      <section id="part1">
+        <h2><span class="num">02</span>ภาค 1 · หลักการสูงสุด (ข้อ 1–5)</h2>
+        <p class="ca-part-lead">กฎกลุ่มนี้คือเหตุผลที่ Codex ถูกเขียนขึ้น — ป้องกันไม่ให้เกิด Horus คนที่สอง</p>
+
+        <article class="rule" id="r1">
+          <div class="rule-num">1</div>
+          <div class="rule-body">
+            <h3>ห้ามผู้ใดคุมพลังของ Legion ทั้งหมดอีก — แบ่ง Legion เป็น Chapter</h3>
+            <p class="rule-law">Legion ทุก Legion ต้องถูกแบ่งเป็นหน่วยย่อยอิสระที่เรียกว่า Chapter แต่ละ Chapter มีนักรบประมาณ 1,000 นาย</p>
+            <p>ก่อน Heresy แต่ละ Legion มีทหารนับหมื่นถึงกว่า 100,000 นาย Codex ใช้คำว่า "Chapter" ซึ่งเดิมเป็นหน่วยย่อยราว 1,000 นายภายใน Legion มาเป็นหน่วยมาตรฐานใหม่ นี่คือกฎที่ "ยาวนานและถกเถียงกันมากที่สุด" ของ Codex</p>
+            <figure class="rule-fig"><img src="../images/codex/second-founding.webp" alt="Space Marines ยืนเรียงแถวในยุค Second Founding" loading="lazy" data-zoom><figcaption>ยุค Second Founding — Legion กลายเป็น Chapter นับร้อย</figcaption></figure>
+            <div class="rule-foot"><span class="chip">ผล: Second Founding (~021.M31)</span><button type="button" class="btn btn-primary btn-sm btn-event" data-event="ev-dorn"><svg class="i "><use href="#i-book"></use></svg> ดูเหตุการณ์ตัวอย่าง</button></div>
+          </div>
+        </article>
+        <template id="ev-dorn">
+          <img src="../images/primarchs/rogal-dorn-30k.webp" alt="Rogal Dorn Primarch แห่ง Imperial Fists">
+          <span class="ev-when">การประชุมหลัง Horus Heresy · ต้น M31</span>
+          <h3>Dorn ปะทะ Guilliman — จักรวรรดิเกือบเกิดสงครามกลางเมืองอีกครั้ง</h3>
+          <p>Rogal Dorn Primarch แห่ง Imperial Fists ผู้ป้องกันพระราชวังบน Terra <strong>ปฏิเสธไม่ยอมแบ่ง Legion</strong> เขาเรียกกิลลิมันว่า "คนขี้ขลาด" ส่วนกิลลิมันกล่าวหา Dorn ว่านอกรีตและไม่จงรักภักดีต่อจักรพรรดิ</p>
+          <p>Primarch ที่เหลือแตกเป็นสองฝ่าย: <strong>Leman Russ</strong> (Space Wolves) และ <strong>Vulkan</strong> (Salamanders) เข้าข้าง Dorn ขณะที่ <strong>Jaghatai Khan</strong> (White Scars) และ <strong>Corvus Corax</strong> (Raven Guard) สนับสนุนกิลลิมัน</p>
+          <p>ท้ายที่สุด Primarch เกือบทุกคนยอมรับความจำเป็น Imperial Fists ถูกแบ่งเป็นหลาย Chapter — ผู้ที่ยึดตาม Codex ได้แก่ Crimson Fists ส่วนนักรบที่คลั่งศรัทธาที่สุดติดตาม <strong>Sigismund</strong> ไปตั้ง <strong>Black Templars</strong> และออกทำสงครามครูเสดที่ยาวนานที่สุดในประวัติศาสตร์เพื่อพิสูจน์ความภักดี</p>
+          <p class="ev-src">ที่มา: Index Astartes (Black Templars), Codex: Black Templars (4th Edition)</p>
+        </template>
+
+        <article class="rule" id="r2">
+          <div class="rule-num">2</div>
+          <div class="rule-body">
+            <h3>Chapter หนึ่งสืบชื่อ Legion — ที่เหลือต้องมีชื่อ ตรา และบ้านใหม่</h3>
+            <p class="rule-law">ในแต่ละ Legion ให้ Chapter เดียวเก็บชื่อ ตรา สี และดาวบ้านเกิดเดิม Chapter อื่นที่แยกออกมา (Successor Chapter) ต้องมีชื่อ ตรา และป้อมปราการหรือดาวบ้านเกิดของตัวเอง</p>
+            <p>เพราะเหตุนี้ปัจจุบันจึงยังมี "Ultramarines", "Imperial Fists" ฯลฯ อยู่ ขณะที่ Chapter ลูกหลานมีชื่อใหม่ เช่น Novamarines, Crimson Fists, Flesh Tearers Chapter ที่สืบชื่อเดิมได้รับเกียรติพิเศษเหนือ Chapter พี่น้องอยู่บ้าง และเป็น Chapter เดียวที่ Primarch ยังคุมได้โดยตรง</p>
+            <p>Ultramarines เป็น Legion ที่ใหญ่ที่สุด จึงถูกแบ่งมากที่สุด Chapter ลูกเหล่านี้เรียกว่า <strong>Primogenitors</strong> ("บุตรคนแรก") ทุกวันนี้เชื่อว่ามากกว่า 1 ใน 3 ของ Chapter ทั้งหมดสืบเชื้อสายจาก Ultramarines</p>
+            <div class="ca-badges"><figure><img src="../images/codex/novamarines.webp" alt="ตรา Novamarines" loading="lazy" data-zoom><figcaption>Novamarines</figcaption></figure><figure><img src="../images/codex/red-scorpions.webp" alt="ตรา Red Scorpions" loading="lazy" data-zoom><figcaption>Red Scorpions</figcaption></figure><figure><img src="../images/codex/genesis.webp" alt="ตรา Genesis Chapter" loading="lazy" data-zoom><figcaption>Genesis Chapter</figcaption></figure><figure><img src="../images/codex/crimson-fists.webp" alt="ตรา Crimson Fists" loading="lazy" data-zoom><figcaption>Crimson Fists</figcaption></figure></div>
+            <div class="rule-foot"><span class="chip">Successor / Primogenitor Chapters</span><button type="button" class="btn btn-primary btn-sm btn-event" data-event="ev-skaros"><svg class="i "><use href="#i-book"></use></svg> ดูเหตุการณ์ตัวอย่าง</button></div>
+          </div>
+        </article>
+        <template id="ev-skaros">
+          <img src="../images/codex/apocrypha.webp" alt="สัญลักษณ์ Adeptus Astartes">
+          <span class="ev-when">บันทึกใน Apocrypha of Skaros</span>
+          <h3>บุตร 23 คนของ Ultramarines — รายชื่อที่หายไป</h3>
+          <p>สำเนา Codex ที่เก่าที่สุดที่ยังเหลืออยู่ ชื่อ <em>Apocrypha of Skaros</em> บันทึกว่า Legion Ultramarines ถูกแบ่งเป็น Chapter ใหม่ถึง <strong>23 Chapter</strong> แต่ "ไม่ได้ระบุชื่อไว้ทั้งหมด" จนทุกวันนี้นักประวัติศาสตร์ของจักรวรรดิก็ยังเถียงกันว่า Chapter ไหนบ้างเป็น Second Founding ตัวจริง (บางแหล่งนับรวม Ultramarines เองเป็น 24)</p>
+          <p>บันทึกเดียวกันยังระบุว่า Space Wolves ถูกแบ่งเป็น 2 Chapter คือ Space Wolves เองและ Wolf Brothers — ขัดกับความเชื่อทั่วไปว่า Space Wolves ไม่เคยถูกแบ่งเลย และไม่มีสำเนาไหนบันทึก Successor ของ Salamanders ใน Second Founding</p>
+          <p class="ev-src">ที่มา: Index Astartes I "Codex Astartes: The Holy Tome of the Space Marines", Codex: Space Marines (5th Edition)</p>
+        </template>
+
+        <article class="rule" id="r3">
+          <div class="rule-num">3</div>
+          <div class="rule-body">
+            <h3>Chapter ต้องพึ่งตัวเองทุกด้าน</h3>
+            <p class="rule-law">แต่ละ Chapter ต้องรับผิดชอบการสรรหา การฝึก และยุทโธปกรณ์ของตัวเอง และมีฐานเป็นดาวบ้านเกิด ป้อมปราการ (Fortress-Monastery) หรือกองเรือ</p>
+            <p>Chapter จึงเป็นกองทัพขนาดเล็กที่สมบูรณ์ในตัว — มีเรือรบ รถถัง โรงซ่อม ข้ารับใช้ (Chapter Serf) และดาวสรรหาทหาร แม้มีเพียง 1,000 นาย แต่พลังรบเทียบได้กับทหารมนุษย์อย่างน้อยสิบเท่าของจำนวนนั้น บาง Chapter ไม่มีดาวเลยและอาศัยบนกองเรือตลอดไป (Fleet-based Chapter)</p>
+            <figure class="rule-fig"><img src="../images/codex/fortress-monastery.webp" alt="Fortress-Monastery ของ Space Marine" loading="lazy" data-zoom><figcaption>Fortress-Monastery — ทั้งค่ายทหาร วัด และคลังพันธุกรรมของ Chapter</figcaption></figure>
+            <div class="rule-foot"><span class="chip">ดาวบ้านเกิด · ป้อม · กองเรือ</span></div>
+          </div>
+        </article>
+
+        <article class="rule" id="r4">
+          <div class="rule-num">4</div>
+          <div class="rule-body">
+            <h3>Chapter Master ขึ้นตรงต่อจักรพรรดิเท่านั้น</h3>
+            <p class="rule-law">Chapter Master รับคำสั่งจากจักรพรรดิ (ผ่าน High Lords of Terra) เท่านั้น ไม่ขึ้นกับ Primarch ของ Legion เดิม — ยกเว้น Chapter ที่สืบชื่อ Legion</p>
+            <p>ผลคือ Chapter Master มีฐานะเท่าเทียมผู้ว่าการดาว (Planetary Governor) หลายคนปกครองทั้งดาวและระบบดาวรอบข้าง ในทางปฏิบัติจักรวรรดิต้อง "ขอร้อง" ไม่ใช่ "สั่ง" ให้ Chapter ไปรบ และ Chapter Master เป็นผู้เลือกว่าจะตอบรับคำร้องใด แม้ในสนามรบที่มีหลาย Chapter ก็ไม่มีใครบังคับใครได้ ต้องยอมทำงานร่วมกันเอง</p>
+            <p>อำนาจนี้มาพร้อมอันตราย — Codex เตือนว่าความหยิ่งผยองคือสิ่งที่ทำให้ผู้พิทักษ์มนุษย์เริ่มคิดว่าตนควรเป็นผู้ปกครองแทน</p>
+            <figure class="rule-fig"><img src="../images/units/chapter-master.webp" alt="Chapter Master ของ Ultramarines บนบัลลังก์" loading="lazy" data-zoom><figcaption>Chapter Master — ผู้นำทหาร 1,000 นายและผู้ปกครองดาว</figcaption></figure>
+            <div class="rule-foot"><span class="chip">ขึ้นตรง: High Lords of Terra / Administratum</span></div>
+          </div>
+        </article>
+
+        <article class="rule" id="r5">
+          <div class="rule-num">5</div>
+          <div class="rule-body">
+            <h3>การตั้ง Chapter ใหม่ต้องมาจากคำสั่งสูงสุดเท่านั้น</h3>
+            <p class="rule-law">มีเพียงจักรพรรดิ ผ่านสภา High Lords of Terra ที่สั่งให้ก่อตั้ง Chapter ใหม่ได้ (เรียกว่า "Founding")</p>
+            <p>Chapter ใหม่ไม่ได้ถูกสร้างทีละ Chapter แต่เป็นชุดพร้อมกันเรียกว่า Founding ต้องวางแผนนานหลายสิบถึงหลายร้อยปี Adeptus Mechanicus ต้องเพาะพันธุกรรม ดาว Forge World ต้องผลิตอาวุธ เรือ และเกราะ ต้องหาดาวบ้านเกิดที่คนมีพันธุกรรมบริสุทธิ์ และสร้างป้อมปราการ กว่า Chapter ใหม่จะพร้อมรบอาจใช้เวลาอย่างน้อยหนึ่งศตวรรษ ตลอดหมื่นปีมี Founding เกิดขึ้นราว 26 ครั้งหลัง First Founding</p>
+            <figure class="rule-fig"><img src="../images/codex/primaris-mars.webp" alt="Belisarius Cawl และกิลลิมันดูแลการสร้าง Primaris Marines ใต้ดาว Mars" loading="lazy" data-zoom><figcaption>Ultima Founding — Founding ล่าสุดที่กิลลิมันสั่งการเอง</figcaption></figure>
+            <div class="rule-foot"><span class="chip">Founding ล่าสุด: Ultima Founding</span><button type="button" class="btn btn-primary btn-sm btn-event" data-event="ev-ultima"><svg class="i "><use href="#i-book"></use></svg> ดูเหตุการณ์ตัวอย่าง</button></div>
+          </div>
+        </article>
+        <template id="ev-ultima">
+          <img src="../images/codex/primaris-mars.webp" alt="Primaris Space Marines ถูกสร้างใต้ดาว Mars">
+          <span class="ev-when">~999.M41 · หลัง Fall of Cadia</span>
+          <h3>Ultima Founding — แผนสำรองหมื่นปีของกิลลิมัน</h3>
+          <p>ก่อนถูกทำร้ายจนต้องเข้า Stasis เมื่อหมื่นปีก่อน กิลลิมันสั่งให้ Archmagos <strong>Belisarius Cawl</strong> พัฒนานักรบรุ่นใหม่ที่ตัวใหญ่ แข็งแรง และตอบสนองเร็วกว่าเดิม มีอวัยวะพันธุกรรมเพิ่มอีก 3 ชิ้น — <strong>Primaris Space Marines</strong></p>
+          <p>เมื่อกิลลิมันฟื้นคืนชีพในฐานะ Lord Commander of the Imperium เขาใช้อำนาจสูงสุดสั่ง Founding ใหม่ทั้งหมด: บาง Chapter ใหม่ประกอบด้วย Primaris ล้วน เช่น Rift Stalkers และ Silver Templars อีกส่วนถูกส่งไปเสริม Chapter เก่าที่เสียหายหนัก เช่น Crimson Fists บนดาว Rynn's World ที่ได้พบ "พี่น้อง" บางคนที่เคยเห็น Rogal Dorn ด้วยตาตัวเองมาแล้ว</p>
+          <p class="ev-src">ที่มา: Codex: Space Marines (8th Edition), Dark Imperium</p>
+        </template>
+      </section>
+
+      <section id="part2">
+        <h2><span class="num">03</span>ภาค 2 · พันธุกรรมและการสรรหา (ข้อ 6–10)</h2>
+        <p class="ca-part-lead">Heresy เผยว่าพันธุกรรม (Gene-seed) ของบาง Legion มีจุดอ่อนที่ Chaos ใช้ประโยชน์ได้ กิลลิมันจึงวางกฎเข้มงวดเรื่อง "การสร้างมนุษย์เหนือมนุษย์"</p>
+
+        <article class="rule" id="r6">
+          <div class="rule-num">6</div>
+          <div class="rule-body">
+            <h3>สร้าง Space Marine อย่างช้าและรอบคอบ</h3>
+            <p class="rule-law">นับจากนี้ Space Marine ต้องถูกสร้างและฝึกอย่างช้า ๆ ภายในระยะเวลาที่ควบคุม ห้ามเร่งเพาะพันธุกรรม</p>
+            <p>ยุค Great Crusade ความต้องการทหารสูงมากจนบาง Legion ตรวจพันธุกรรมและคัดผู้สมัครไม่เข้มงวด กิลลิมันเชื่อว่าความบกพร่องที่สะสมนี้ทำให้ Chaos ล่อลวงทหารของ Horus ได้ง่าย Codex จึงกำหนดให้อวัยวะที่เพาะเลี้ยงทุกชิ้นต้องผ่านการทดสอบความบริสุทธิ์ขั้นสูงสุด</p>
+            <figure class="rule-fig"><img src="../images/codex/gene-seed.webp" alt="แผนภาพอวัยวะที่ปลูกถ่ายให้ Space Marine" loading="lazy" data-zoom><figcaption>อวัยวะที่ปลูกถ่ายให้ Space Marine — ทุกชิ้นต้องบริสุทธิ์</figcaption></figure>
+            <div class="rule-foot"><span class="chip">บทเรียนจาก Great Crusade</span><button type="button" class="btn btn-primary btn-sm btn-event" data-event="ev-cursed"><svg class="i "><use href="#i-book"></use></svg> ดูเหตุการณ์ตัวอย่าง</button></div>
+          </div>
+        </article>
+        <template id="ev-cursed">
+          <img src="../images/codex/cursed-founding.webp" alt="ภาพประกอบ Cursed Founding">
+          <span class="ev-when">991.M35 · ก่อนยุค Age of Apostasy</span>
+          <h3>The Cursed Founding — เมื่อพยายาม "ปรับปรุง" พันธุกรรม</h3>
+          <p>Founding ครั้งที่ 21 เป็น Founding ที่ใหญ่ที่สุดตั้งแต่ Second Founding Genetor ของ Mechanicus ทดลองโครงการลับ <em>"Homo Sapiens Novus"</em> เพื่อแก้จุดบกพร่องใน Gene-seed และสร้างนักรบที่ใกล้เคียง Primarch</p>
+          <p>ผลคือหายนะ: Chapter จำนวนมากกลายพันธุ์ — <strong>Flame Falcons</strong> ร่างลุกเป็นไฟและถูก Grey Knights กวาดล้าง <strong>Blood Gorgons</strong> ถูกประกาศเป็นกบฏภายใน 60 ปี <strong>Black Dragons</strong> งอกกระดูกเป็นใบมีด ส่วน <strong>Lamenters</strong> และ <strong>Minotaurs</strong> รอดมาได้แต่ถูกมองด้วยความสงสัยตลอดไป — เครื่องยืนยันว่าทำไม Codex จึงห้ามเร่งหรือดัดแปลงพันธุกรรม</p>
+          <p class="ev-src">ที่มา: Codex: Space Marines (3rd–5th Edition), Index Astartes</p>
+        </template>
+
+        <article class="rule" id="r7">
+          <div class="rule-num">7</div>
+          <div class="rule-body">
+            <h3>ส่ง "ส่วย Gene-seed" ให้ Terra ตรวจสอบ</h3>
+            <p class="rule-law">Adeptus Terra ต้องตั้งคลังพันธุกรรมเพื่อผลิตและเก็บ Gene-seed ที่ส่งมาเป็นส่วย Chapter ใหม่ต้องส่ง Gene-seed ส่วนหนึ่ง (ราว 5%) ให้ Adeptus Terra และ Mechanicus ตรวจ</p>
+            <p>คลังนี้เป็นแหล่งพันธุกรรมสำหรับ Founding ต่อไป และเป็น "สายจูง" สุดท้าย — การคุม Gene-seed ทำให้ <strong>มนุษย์ธรรมดา</strong> ไม่ใช่ Space Marine ยังคงเป็นผู้ปกครองที่แท้จริงของจักรวรรดิ เพราะมีเพียงพวกเขาที่สร้างหรือยุบกองทัพ Space Marine ได้</p>
+            <figure class="rule-fig"><img src="../images/codex/badab.webp" alt="สงคราม Badab" loading="lazy" data-zoom><figcaption>สงคราม Badab — ผลของการเลิกส่งส่วย Gene-seed</figcaption></figure>
+            <div class="rule-foot"><span class="chip">ผู้ตรวจ: Adeptus Terra · Adeptus Mechanicus</span><button type="button" class="btn btn-primary btn-sm btn-event" data-event="ev-badab"><svg class="i "><use href="#i-book"></use></svg> ดูเหตุการณ์ตัวอย่าง</button></div>
+          </div>
+        </article>
+        <template id="ev-badab">
+          <img src="../images/characters/huron-blackheart.webp" alt="Huron Blackheart อดีต Lufgt Huron">
+          <span class="ev-when">901–913.M41 · Badab War</span>
+          <h3>ทรราชแห่ง Badab — Chapter ที่แอบโตเกินกฎ</h3>
+          <p><strong>Lufgt Huron</strong> Chapter Master ของ <strong>Astral Claws</strong> ผู้ได้รับหน้าที่ปกป้องเขต Maelstrom ขอกำลังเสริมจาก Terra ซ้ำแล้วซ้ำอีกแต่ถูกปฏิเสธ เขาจึงเริ่ม <strong>ส่งส่วย Gene-seed น้อยลงเรื่อย ๆ จนแทบไม่ส่ง</strong></p>
+          <p>การสืบสวนภายหลังพบว่า Apothecarion ของ Astral Claws ลักลอบทดลอง <strong>เพาะพันธุกรรมแบบเร่ง</strong> จน Chapter มีทหารราว <strong>3,500 นาย</strong> — ผิดทั้งข้อ 1, 6 และ 7 ของ Codex Huron ตั้งตนเป็น "Tyrant of Badab" ชักชวนอีกหลาย Chapter ก่อกบฏ นำไปสู่สงครามกลางเมือง Space Marine ที่ยาว 12 ปี</p>
+          <p>สุดท้าย Astral Claws พ่ายแพ้และหนีไปรับใช้ Chaos กลายเป็นโจรอวกาศ <strong>Red Corsairs</strong> ภายใต้ชื่อใหม่ของ Huron: <em>Huron Blackheart</em></p>
+          <p class="ev-src">ที่มา: Imperial Armour Volume Nine & Ten: The Badab War (Forge World)</p>
+        </template>
+
+        <article class="rule" id="r8">
+          <div class="rule-num">8</div>
+          <div class="rule-body">
+            <h3>แยกสายพันธุกรรม ห้ามแลกเปลี่ยน และผนึกพันธุกรรมผู้ทรยศ</h3>
+            <p class="rule-law">พันธุกรรมของแต่ละ Legion ต้องแยกเก็บไม่ให้ปนกัน พันธุกรรมของ Legion ทรยศต้องถูกผนึกด้วยระบบ Stasis ที่ล็อกด้วยเวลา และห้าม Chapter แบ่ง Gene-seed ให้กัน — Chapter ต้องพึ่ง Gene-seed ที่ได้จากร่างทหารของตัวเองเท่านั้น</p>
+            <p>ทุก Space Marine มีต่อม <strong>Progenoid</strong> 2 ต่อมที่เก็บพันธุกรรมไว้ เมื่อเขาตาย Apothecary ต้องเก็บต่อมนี้กลับไปสร้างนักรบรุ่นต่อไป — นี่คือเหตุผลที่ Apothecary ได้รับความเคารพสูงและต้องเสี่ยงชีวิตเก็บ Gene-seed กลางสนามรบ ในยุคนั้นหลายคนเชื่อว่าพันธุกรรมของผู้ทรยศถูกทำลายไปแล้ว</p>
+            <figure class="rule-fig"><img src="../images/units/apothecary.webp" alt="Apothecary ผู้เก็บ Gene-seed" loading="lazy" data-zoom><figcaption>Apothecary — ผู้รักษาและเก็บ Gene-seed ของพี่น้องที่เสียชีวิต</figcaption></figure>
+            <div class="rule-foot"><span class="chip">ห้ามแลก Gene-seed ข้าม Chapter</span><button type="button" class="btn btn-primary btn-sm btn-event" data-event="ev-wolfbro"><svg class="i "><use href="#i-book"></use></svg> ดูเหตุการณ์ตัวอย่าง</button></div>
+          </div>
+        </article>
+        <template id="ev-wolfbro">
+          <img src="../images/codex/wolf-brothers.webp" alt="ชุดเกราะของ Wolf Brothers">
+          <span class="ev-when">Second Founding → ต้น M31</span>
+          <h3>Wolf Brothers — Chapter ที่ถูกยุบเพราะพันธุกรรมไม่เสถียร</h3>
+          <p>Space Wolves ตั้ง Successor Chapter เพียงหนึ่งเดียวชื่อ <strong>Wolf Brothers</strong> มอบกองเรือ คลังอาวุธ และนักบวชให้ครึ่งหนึ่ง หวังให้เป็นจุดเริ่มต้นของอาณาจักร "บุตรแห่ง Russ"</p>
+          <p>แต่พันธุกรรมของ Space Wolves (Canis Helix) ไม่เสถียร เมื่ออยู่ห่างจากดาว Fenris ทหาร Wolf Brothers กลายพันธุ์เป็น <strong>Wulfen</strong> จำนวนมาก <strong>Ordo Astartes</strong> แห่ง Inquisition จึงสั่งยุบ Chapter ทำลาย Gene-seed ทั้งหมด และให้ทหารเลือกระหว่าง "ตายในสนามรบอย่างมีเกียรติ" หรือ "ถูกประหาร" ทหารจำนวนมากหายตัวไปก่อนคำสั่งจะเสร็จสิ้น</p>
+          <p>นับจากนั้น Space Wolves ไม่มี Successor อีกเลยจนถึง Ultima Founding ในยุค M42</p>
+          <p class="ev-src">ที่มา: Codex: Space Wolves (5th Edition), นิยาย <em>Battle of the Fang</em></p>
+        </template>
+
+        <article class="rule" id="r9">
+          <div class="rule-num">9</div>
+          <div class="rule-body">
+            <h3>คัดผู้สมัครด้วยการทดสอบที่โหดที่สุด</h3>
+            <p class="rule-law">เด็กหนุ่มที่จะเป็น Space Marine ต้องผ่านการทดสอบความเหมาะสม และรับเฉพาะผู้มีจิตใจแข็งแกร่งที่สุดเท่านั้น</p>
+            <p>ผู้สมัคร (Aspirant) ส่วนใหญ่มาจากดาวเถื่อน (Feral World) ดาวยุคศักดินา หรือแก๊งในเมืองรังผึ้ง (Hive World) ที่โหดร้าย แต่ละ Chapter มีบททดสอบของตัวเอง เช่น ดวลเลือด ล่าสัตว์ร้าย เอาชีวิตรอดในป่า หรือทดสอบความรู้จักตนเอง ผู้ผ่านกลายเป็น <strong>Neophyte</strong> และแทบไม่ได้กลับไปพบครอบครัวอีก ผู้ที่ล้มเหลวระหว่างฝึกมักถูกล้างความจำไปเป็น <strong>Chapter Serf</strong> (ข้ารับใช้) หรือ Servitor</p>
+            <p>Apothecary และ Chaplain คอยเฝ้าดูดาวสรรหาทหารจากระยะไกล เพื่อรักษาความบริสุทธิ์ทางพันธุกรรมและจิตวิญญาณของประชากร</p>
+            <figure class="rule-fig"><img src="../images/codex/chapter-serf.webp" alt="Chapter Serf ข้ารับใช้ของ Chapter" loading="lazy" data-zoom><figcaption>Chapter Serf — ชะตาของผู้ที่ไปไม่ถึงฝั่ง</figcaption></figure>
+            <div class="rule-foot"><span class="chip">Aspirant → Neophyte → Battle-Brother</span></div>
+          </div>
+        </article>
+
+        <article class="rule" id="r10">
+          <div class="rule-num">10</div>
+          <div class="rule-body">
+            <h3>เส้นทางชีวิตทหาร: ไต่จากกองร้อยที่ 10 ถึงกองร้อยที่ 1</h3>
+            <p class="rule-law">ทหารทุกนายเริ่มจาก Scout ในกองร้อยที่ 10 แล้วเลื่อนผ่านหน่วย Devastator → Assault → Tactical และถ้าเก่งพอจะได้เป็นทหารผ่านศึกของกองร้อยที่ 1</p>
+            <div class="ca-path">
+              <div><b>Scout</b><small>กองร้อย 10 · เรียนลาดตระเวนและซุ่ม</small></div>
+              <div><b>Devastator</b><small>กองร้อย 9 · ได้ใส่ Power Armour ครั้งแรก ช่วยพลปืนหนัก</small></div>
+              <div><b>Assault</b><small>กองร้อย 8 · เรียนการรบประชิดตัว</small></div>
+              <div><b>Tactical</b><small>กองร้อย 7–6 แล้วเข้า Battle Company · ทำได้ทุกอย่าง</small></div>
+              <div><b>Veteran</b><small>กองร้อย 1 · ได้สิทธิ์สวม Terminator</small></div>
+            </div>
+            <p>Codex ถือว่าหน่วย Tactical ต้อง "ผ่านทุกบทบาทมาก่อน" จึงเป็นทหารที่รอบรู้ที่สุด สถานะ Veteran ไม่ได้วัดจากอายุงาน แต่วัดจาก "เลือดที่เสีย ความสยดสยองที่ฝ่าฟัน และวีรกรรมที่ทำ" (หลาย Chapter ปรับลำดับนี้ต่างกันไป)</p>
+            <div class="rule-foot"><span class="chip">เส้นทางมาตรฐานตาม Codex</span><button type="button" class="btn btn-primary btn-sm btn-event" data-event="ev-telion"><svg class="i "><use href="#i-book"></use></svg> ดูเหตุการณ์ตัวอย่าง</button></div>
+          </div>
+        </article>
+        <template id="ev-telion">
+          <img src="../images/codex/telion.webp" alt="จ่า Torias Telion แห่ง Ultramarines">
+          <span class="ev-when">ปลาย M41 · Ultramarines กองร้อยที่ 10</span>
+          <h3>Torias Telion — ครูของกัปตันถึง 4 คน</h3>
+          <p>Codex กำหนดให้หน่วย Scout นำโดยจ่าทหารผ่านศึกที่มีประสบการณ์สูงเท่านั้น <strong>Torias Telion</strong> คือตัวอย่างที่ดีที่สุด เขาได้สิทธิ์เข้า Honour Guard ของ Chapter Master หลายครั้ง แต่ <strong>เลือกอยู่กับ Scout ของกองร้อยที่ 10</strong> เพื่อสร้างนักรบรุ่นต่อไป — กัปตัน Ultramarines ที่ยังรับราชการอยู่ถึง 4 คนยกความสำเร็จให้คำสอนของเขา</p>
+          <p>Telion เป็นพลแม่นปืนในตำนาน ในศึก Siege of Pallia เขายิงผู้บัญชาการ T'au และ Ethereal ด้วยกระสุนเพียงสองนัดจากระยะไกลเกินขีดจำกัดของปืน และต่อมาได้ปราบ Carnifex ในตำนาน <strong>Old One Eye</strong> บนดาว Calth ด้วยการยิงเข้าเบ้าตาที่บาดเจ็บ</p>
+          <p class="ev-src">ที่มา: Codex: Space Marines (5th Edition), นิยาย <em>Calgar's Fury</em></p>
+        </template>
+      </section>
+
+      <section id="part3">
+        <h2><span class="num">04</span>ภาค 3 · โครงสร้าง Chapter (ข้อ 11–20)</h2>
+        <p class="ca-part-lead">ส่วนที่มีชื่อเสียงที่สุดของ Codex — "สูตร" 10 กองร้อย × 100 นาย ที่ Chapter ส่วนใหญ่ใช้มาหมื่นปี</p>
+        <figure class="figure ca-wide"><img src="../images/codex/codex-org.webp" alt="แผนผังโครงสร้าง Chapter ตาม Codex Astartes" loading="lazy" data-zoom><figcaption>แผนผังโครงสร้าง Chapter ตาม Codex (ก่อนการแก้ไขยุค Era Indomitus) — กดเพื่อขยาย</figcaption></figure>
+
+        <div class="table-wrap"><table>
+          <thead><tr><th>กองร้อย</th><th>ประเภท</th><th>ประกอบด้วย (Codex ดั้งเดิม)</th><th>ตำแหน่งพิเศษของกัปตัน*</th></tr></thead>
+          <tbody>
+            <tr><td><b>1</b></td><td>Veteran Company</td><td>ทหารผ่านศึก / Terminator · Land Raider · Venerable Dreadnought</td><td>—</td></tr>
+            <tr><td><b>2</b></td><td>Battle Company</td><td>Tactical 6 · Assault 2 · Devastator 2</td><td>Master of the Watch</td></tr>
+            <tr><td><b>3</b></td><td>Battle Company</td><td>Tactical 6 · Assault 2 · Devastator 2</td><td>Master of the Arsenal</td></tr>
+            <tr><td><b>4</b></td><td>Battle Company</td><td>Tactical 6 · Assault 2 · Devastator 2</td><td>Master of the Fleet</td></tr>
+            <tr><td><b>5</b></td><td>Battle Company</td><td>Tactical 6 · Assault 2 · Devastator 2</td><td>Master of the Marches</td></tr>
+            <tr><td><b>6</b></td><td>Reserve (Tactical)</td><td>Tactical 10 (ฝึกใช้มอเตอร์ไซค์)</td><td>Master of the Rites</td></tr>
+            <tr><td><b>7</b></td><td>Reserve (Tactical)</td><td>Tactical 10 (ฝึกใช้ Land Speeder)</td><td>Chief Victualler</td></tr>
+            <tr><td><b>8</b></td><td>Reserve (Assault)</td><td>Assault 10</td><td>Lord Executioner</td></tr>
+            <tr><td><b>9</b></td><td>Reserve (Devastator)</td><td>Devastator 10</td><td>Master of Relics</td></tr>
+            <tr><td><b>10</b></td><td>Scout Company</td><td>Scout (จำนวนไม่ตายตัว)</td><td>Master of Recruits</td></tr>
+          </tbody>
+        </table></div>
+        <p class="muted" style="font-size:.9rem">* ตำแหน่งพิเศษตามธรรมเนียมของ Chapter ที่ทำตาม Codex (ยึดตาม Ultramarines) แต่ละ Chapter อาจสลับกองร้อยต่างกันได้ ส่วน Master of the Watch มักเป็นกัปตันกองร้อยที่ 2 แม้หน้าที่ประจำป้อมจะหมุนเวียนกันไป</p>
+
+        <article class="rule" id="r11">
+          <div class="rule-num">11</div>
+          <div class="rule-body">
+            <h3>10 กองร้อย กองละ 100 นาย — กองร้อยที่ 1 คือทหารผ่านศึก</h3>
+            <p class="rule-law">Chapter แบ่งเป็น 10 กองร้อย กองละ 100 นาย (10 หน่วย หน่วยละ 10 นาย) กองร้อยที่ 1 ประกอบด้วยทหารผ่านศึกเท่านั้น และมีเพียงกองร้อยที่ 1 ที่ใช้ชุดเกราะ Terminator ของ Chapter ได้</p>
+            <p>ชุด Terminator (Tactical Dreadnought Armour) เป็นโบราณวัตถุที่สร้างใหม่ไม่ได้ ทนทานจนว่ากันว่าเดินในเตาปฏิกรณ์พลาสมาได้ ผู้สวมได้รับตรา <strong>Crux Terminatus</strong> บนไหล่ซ้าย ซึ่งเชื่อกันว่ามีเศษชุดเกราะที่จักรพรรดิสวมในวันสู้กับ Horus อยู่ข้างใน กองร้อยที่ 1 แทบไม่เคยออกรบพร้อมกันทั้งกอง มักแยกหน่วยไปเสริม Battle Company</p>
+            <div class="ca-two"><figure class="rule-fig"><img src="../images/codex/macragge-1st.webp" alt="Terminator กองร้อยที่ 1 ของ Ultramarines ที่ Macragge" loading="lazy" data-zoom><figcaption>Terminator กองร้อยที่ 1 ของ Ultramarines</figcaption></figure><figure class="rule-fig"><img src="../images/codex/crux.webp" alt="ตรา Crux Terminatus" loading="lazy" data-zoom><figcaption>Crux Terminatus</figcaption></figure></div>
+            <div class="rule-foot"><span class="chip">Veteran = หมวกขาว</span><button type="button" class="btn btn-primary btn-sm btn-event" data-event="ev-macragge"><svg class="i "><use href="#i-book"></use></svg> ดูเหตุการณ์ตัวอย่าง</button></div>
+          </div>
+        </article>
+        <template id="ev-macragge">
+          <img src="../images/codex/macragge-1st.webp" alt="Terminator กองร้อยที่ 1 ของ Ultramarines ในศึก Macragge">
+          <span class="ev-when">745.M41 · Battle of Macragge (First Tyrannic War)</span>
+          <h3>การยืนหยัดครั้งสุดท้ายของกองร้อยที่ 1</h3>
+          <p>เมื่อ Hive Fleet Behemoth บุก Macragge ดาวบ้านเกิดของ Ultramarines Marneus Calgar มอบหมายให้ <strong>ทหารผ่านศึกกองร้อยที่ 1</strong> ป้องกันป้อมขั้วโลก (Polar Fortresses) ซึ่งเป็นที่ตั้งปืนเลเซอร์ป้องกันดาว ถ้าป้อมแตก ดาวจะไม่มีปืนป้องกันเหลือเลย</p>
+          <p>Tyranids ยิงยานสปอร์นับพันลงใส่ป้อม ขณะที่ Calgar นำกองเรือไล่ตามยานแม่ของศัตรู เมื่อกองร้อยที่ 3 ฝ่าเข้าไปถึงห้อง Penitorium ชั้นล่างได้ในที่สุด พวกเขาพบซากศัตรูกองสูงหกชั้นรอบประตู และภายในห้องมี <strong>Terminator ยืนล้อมวงหันหลังชนกันจนตัวตาย</strong> — กองร้อยที่ 1 ของ Ultramarines ถูกทำลายจนคนสุดท้าย</p>
+          <p>ป้อมไม่แตก ดาวรอด ชื่อของพวกเขาถูกรำลึกทุกปีในเทศกาล Feast of Days และ Chapter ใช้เวลาหลายปีกว่าจะสร้างกองร้อยที่ 1 ขึ้นใหม่ได้</p>
+          <p class="ev-src">ที่มา: Codex: Ultramarines (2nd Edition), Codex: Space Marines (5th–8th Edition)</p>
+        </template>
+
+        <article class="rule" id="r12">
+          <div class="rule-num">12</div>
+          <div class="rule-body">
+            <h3>กองร้อยรบหลัก (Battle Companies) 2–5</h3>
+            <p class="rule-law">กองร้อยที่ 2, 3, 4 และ 5 มีโครงสร้างเหมือนกัน: หน่วย Tactical 6 หน่วย Assault 2 และ Devastator 2 หน่วย</p>
+            <p>กองร้อยเหล่านี้แบกรับภาระการรบส่วนใหญ่ของ Chapter ใช้รถ Rhino และ Razorback เป็นพาหนะ มี Dreadnought ยิงสนับสนุน หน่วย Assault อาจเปลี่ยนเป็นมอเตอร์ไซค์หรือ Land Speeder ได้ และบางครั้งมีหน่วยบัญชาการ (Command Squad) ของทหารผ่านศึกคอยคุ้มกันนายทหาร กองกำลังที่ส่งออกรบส่วนใหญ่สร้างขึ้นรอบกองร้อยรบหนึ่งกอง แล้วเสริมด้วยหน่วยจากกองร้อยอื่น</p>
+            <figure class="rule-fig"><img src="../images/codex/guardians-temple.webp" alt="กองร้อยที่ 2 ของ Ultramarines Guardians of the Temple" loading="lazy" data-zoom><figcaption>กองร้อยที่ 2 ของ Ultramarines "Guardians of the Temple" — ตัวอย่างกองร้อยตาม Codex</figcaption></figure>
+            <div class="rule-foot"><span class="chip">6 Tactical · 2 Assault · 2 Devastator</span><button type="button" class="btn btn-primary btn-sm btn-event" data-event="ev-armageddon"><svg class="i "><use href="#i-book"></use></svg> ดูเหตุการณ์ตัวอย่าง</button></div>
+          </div>
+        </article>
+        <template id="ev-armageddon">
+          <img src="../images/lore/40k/third-war-armageddon.webp" alt="สงคราม Armageddon ครั้งที่ 3">
+          <span class="ev-when">998.M41 · Third War for Armageddon</span>
+          <h3>หลายกองร้อยรบลงสนามพร้อมกัน</h3>
+          <p>ปกติ Codex แนะนำให้ส่งกำลังเพียงไม่กี่หน่วยที่ออกแบบให้เหมาะกับภารกิจ แต่เมื่อ Ork Warlord <strong>Ghazghkull Thraka</strong> บุก Armageddon เป็นครั้งที่สาม High Lords ตัดสินว่า WAAAGH! นี้ต้องถูกหยุดให้ได้ก่อนลามเข้าใจกลางจักรวรรดิ</p>
+          <p>Chapter ในตำนานอย่าง <strong>Blood Angels</strong>, <strong>Salamanders</strong> และ <strong>Black Templars</strong> จึงส่ง <strong>กองร้อยรบเต็มกองหลายกอง</strong> ลงสนาม — ความยาวนานและดุเดือดของสงครามทำให้คำว่า "Armageddon" กลายเป็นคำหมายถึง "สงครามเต็มรูปแบบ" ในวัฒนธรรมของ Ork</p>
+          <p class="ev-src">ที่มา: Codex: Armageddon, Codex: Space Marines</p>
+        </template>
+
+        <article class="rule" id="r13">
+          <div class="rule-num">13</div>
+          <div class="rule-body">
+            <h3>กองร้อยสำรอง (Reserve Companies) 6–9</h3>
+            <p class="rule-law">กองร้อยที่ 6 และ 7 เป็นหน่วย Tactical ล้วน กองร้อยที่ 8 เป็น Assault ล้วน และกองร้อยที่ 9 เป็น Devastator ล้วน</p>
+            <p>หน้าที่หลักคือเติมกำลังให้กองร้อยรบเมื่อมีผู้เสียชีวิต และเป็นกองหนุนที่ผู้บัญชาการส่งไปอุดจุดอ่อนหรือเจาะแนวศัตรู กองร้อยที่ 6 ฝึกใช้มอเตอร์ไซค์ทั้งกอง กองร้อยที่ 7 ฝึกขับ Land Speeder กองร้อยที่ 8 ใช้บุกประชิดตัวและยกพลขึ้นบก ส่วนกองร้อยที่ 9 มีอาวุธหนักที่สุดใน Chapter ใช้ป้องกันแนวและยิงระยะไกล Dreadnought มักอยู่แค่ในกองร้อยที่ 9</p>
+            <figure class="rule-fig"><img src="../images/units/devastator.webp" alt="หน่วย Devastator ของ Ultramarines" loading="lazy" data-zoom><figcaption>หน่วย Devastator — ทหารกองร้อยที่ 9</figcaption></figure>
+            <div class="rule-foot"><span class="chip">ทหารไต่จากกองร้อย 9 → 6</span><button type="button" class="btn btn-primary btn-sm btn-event" data-event="ev-poles"><svg class="i "><use href="#i-book"></use></svg> ดูเหตุการณ์ตัวอย่าง</button></div>
+          </div>
+        </article>
+        <template id="ev-poles">
+          <img src="../images/codex/calgar-behemoth.webp" alt="Marneus Calgar นำ Ultramarines ป้องกัน Macragge">
+          <span class="ev-when">745.M41 · Battle of Macragge</span>
+          <h3>กองร้อยที่ 3 และ 7 ลงไปช่วยป้อมขั้วโลก</h3>
+          <p>ระหว่างศึก Macragge การติดต่อกับป้อมขั้วโลกขาดหาย Calgar จึงใช้ "กองหนุน" ตามแบบ Codex ส่ง <strong>กองร้อยที่ 3 (กองร้อยรบ)</strong> และ <strong>กองร้อยที่ 7 (กองร้อยสำรอง)</strong> ล่วงหน้าด้วยเรือ Strike Cruiser ความเร็วสูง ทิ้งตัวลงด้วย Drop Pod ตามด้วยยาน Thunderhawk ขนหน่วยสนับสนุน</p>
+          <p>ภาพที่รออยู่ข้างล่างคือความโกลาหลที่ไม่น่าเชื่อ ทั้งสองกองร้อยสูญเสียอย่างหนัก แต่ช่วยรักษาป้อมทางใต้ไว้ได้ และกองร้อยที่ 3 คือผู้ที่พบร่างของกองร้อยที่ 1 ที่ยืนหยัดจนตัวตาย</p>
+          <p class="ev-src">ที่มา: Codex: Ultramarines (2nd Edition), Battle of Macragge</p>
+        </template>
+
+        <article class="rule" id="r14">
+          <div class="rule-num">14</div>
+          <div class="rule-body">
+            <h3>กองร้อยที่ 10 — กองร้อยลาดตระเวน (Scout Company)</h3>
+            <p class="rule-law">กองร้อยที่ 10 ประกอบด้วยหน่วย Scout ล้วน และไม่กำหนดขนาดตายตัว เพราะจำนวนผู้สมัครที่ผ่านการคัดเลือกไม่แน่นอน</p>
+            <p>Scout คือ Neophyte ที่การผ่าตัด การฝึก และการปลูกฝังวัฒนธรรม Chapter ยังไม่เสร็จ สวมเกราะเบา ทำหน้าที่ลาดตระเวน ซุ่มโจมตี และก่อวินาศกรรม หน่วย Scout มีจ่าทหารผ่านศึก 1 นายกับ Scout 4–9 นาย และ <strong>ไม่ใช้รถ Rhino หรือ Razorback</strong> ในฉบับแก้ไขยุคปัจจุบัน กองร้อยที่ 10 ยังมีหน่วย Vanguard ของ Primaris ประจำอีก 10 หน่วย</p>
+            <figure class="rule-fig"><img src="../images/codex/neophyte.webp" alt="Scout ของ Dark Angels" loading="lazy" data-zoom><figcaption>Scout Marines — ทหารฝึกหัดของกองร้อยที่ 10</figcaption></figure>
+            <div class="rule-foot"><span class="chip">หัวหน้ากองร้อย: Master of Recruits</span></div>
+          </div>
+        </article>
+
+        <article class="rule" id="r15">
+          <div class="rule-num">15</div>
+          <div class="rule-body">
+            <h3>หน่วยละ 10 นาย แยกเป็น "Combat Squad" 5 นายได้</h3>
+            <p class="rule-law">หน่วยทุกประเภท (ยกเว้น Scout) มี 10 นาย นำโดยจ่า และแบ่งเป็นสองหน่วยย่อย (Combat Squad) หน่วยละ 5 นายในการรบได้</p>
+            <ul>
+              <li><strong>Tactical Squad</strong> — จ่า 1 + ทหาร 9 · ปืน Bolter 7 กระบอก อีก 2 นายถืออาวุธหนัก 1 (เช่น Missile Launcher, Heavy Bolter) และอาวุธพิเศษ 1 (เช่น Flamer, Meltagun) — หน่วยที่ยืดหยุ่นที่สุด</li>
+              <li><strong>Assault Squad</strong> — จ่า 1 + ทหาร 9 ใส่ Jump Pack ถือ Bolt Pistol กับ Chainsword มือละอย่าง 2 นายอาจถือ Plasma Pistol</li>
+              <li><strong>Devastator Squad</strong> — จ่า 1 + ทหาร 9 ถืออาวุธหนักได้สูงสุด 4 กระบอก ที่เหลือถือ Bolter คอยชี้เป้าและส่งกระสุน</li>
+              <li><strong>Veteran</strong> — Terminator, Sternguard (เชี่ยวชาญการยิง กระสุนพิเศษ) หรือ Vanguard (เชี่ยวชาญประชิดตัว มักใช้ Jump Pack)</li>
+            </ul>
+            <figure class="rule-fig"><img src="../images/units/intercessor.webp" alt="Intercessor ทหารหลักยุคใหม่" loading="lazy" data-zoom><figcaption>ยุคปัจจุบัน Intercessor ของ Primaris รับบทหน่วยหลักแทน Tactical</figcaption></figure>
+            <div class="rule-foot"><span class="chip">ฉบับใหม่: หน่วยละ 5 นายได้สูงสุด 20 หน่วยต่อกองร้อย</span></div>
+          </div>
+        </article>
+
+        <article class="rule" id="r16">
+          <div class="rule-num">16</div>
+          <div class="rule-body">
+            <h3>ทุกกองร้อยมีกัปตัน นักบวช หมอ ผู้ถือธง และแชมเปียน</h3>
+            <p class="rule-law">นอกจากทหาร 100 นาย แต่ละกองร้อยมีกัปตัน (Captain), Chaplain, Apothecary และผู้ถือธง (Standard Bearer / Ancient) และให้ "นักรบที่เก่งที่สุดในกองร้อย" ได้รับแต่งตั้งเป็น Champion</p>
+            <blockquote class="ca-quote">"ในแต่ละกองร้อย นักรบที่เก่งกาจที่สุดจงได้รับการเจิมเป็น Champion เขาจะถืออาวุธและเกราะฝีมือเยี่ยม และปกป้องกัปตันจากอันตรายทั้งปวง แม้ต้องแลกด้วยชีวิต"<cite>— คำสอนของกิลลิมันใน Apocrypha of Skaros</cite></blockquote>
+            <blockquote class="ca-quote">"กัปตันนำจากแนวหน้า ด้วยแบบอย่างของเขา ทหารจะรู้ว่าการเป็น Adeptus Astartes คืออะไร … การมาของเขาคือสัญญาณแห่งการช่วยเหลือของผู้ภักดี และลางร้ายของผู้ทรยศทุกคน"<cite>— Apocrypha of Skaros</cite></blockquote>
+            <div class="ca-two"><figure class="rule-fig"><img src="../images/codex/chapter-command.webp" alt="สัญลักษณ์กองบัญชาการ" loading="lazy" data-zoom><figcaption>สัญลักษณ์หัวกะโหลกของหน่วยบัญชาการ</figcaption></figure><figure class="rule-fig"><img src="../images/units/company-champion.webp" alt="Company Champion" loading="lazy" data-zoom><figcaption>Company Champion</figcaption></figure></div>
+            <div class="rule-foot"><span class="chip">ยุคใหม่: เพิ่ม Lieutenant กองร้อยละ 2 นาย</span></div>
+          </div>
+        </article>
+
+        <article class="rule" id="r17">
+          <div class="rule-num">17</div>
+          <div class="rule-body">
+            <h3>กองบัญชาการและผู้เชี่ยวชาญนอกกองร้อย</h3>
+            <p class="rule-law">นอกโครงสร้างกองร้อย แต่ละ Chapter มีคลังอาวุธ (Armoury) ของ Techmarine หอ Librarius ของ Librarian กองเรือ และ Chapter Master พร้อมกองบัญชาการ ข้ารับใช้ และ Servitor</p>
+            <div class="ca-grid">
+              <div><b>Chapter Master</b><small>ผู้นำสูงสุด อาจมี Honour Guard นอกทะเบียนกองร้อย</small></div>
+              <div><b>Librarius</b><small>หัวหน้า: Chief Librarian · ผู้ใช้พลังจิต</small></div>
+              <div><b>Reclusiam</b><small>หัวหน้า: Master of Sanctity / Reclusiarch · Chaplain</small></div>
+              <div><b>Apothecarion</b><small>หัวหน้า: Chief Apothecary · แพทย์และคลัง Gene-seed</small></div>
+              <div><b>Armoury</b><small>หัวหน้า: Master of the Forge · Techmarine และรถรบ</small></div>
+              <div><b>Chapter Fleet</b><small>ผู้บัญชาการ: Master of the Fleet (กัปตัน)</small></div>
+            </div>
+            <p>Codex บรรยายตำแหน่งกองบัญชาการไว้มาก แต่มีเพียงผู้ที่มีบทบาทรบจริงเท่านั้นที่ออกสนาม งานธุรการ เช่น การส่งเสบียง ส่วนใหญ่ทำโดยข้ารับใช้มนุษย์ (Chapter Serf) ตำแหน่งอื่นที่ปรากฏในเนื้อเรื่อง เช่น Lord of the Household และ Secretarius ของ Chapter Master</p>
+            <div class="ca-two"><figure class="rule-fig"><img src="../images/codex/librarius.webp" alt="Librarian ของ Ultramarines" loading="lazy" data-zoom><figcaption>Librarian — สมาชิกของ Librarius</figcaption></figure><figure class="rule-fig"><img src="../images/codex/armoury.webp" alt="Techmarine ผู้ดูแลคลังอาวุธ" loading="lazy" data-zoom><figcaption>Techmarine — ผู้ดูแล Armoury</figcaption></figure></div>
+            <div class="rule-foot"><span class="chip">ดูบทบาทแต่ละตำแหน่งได้ที่ <a href="lore/space-marines.html#units">หน่วยและบทบาทของ Space Marines</a></span><button type="button" class="btn btn-primary btn-sm btn-event" data-event="ev-aloysius"><svg class="i "><use href="#i-book"></use></svg> ดูเหตุการณ์ตัวอย่าง</button></div>
+          </div>
+        </article>
+        <template id="ev-aloysius">
+          <img src="../images/codex/honour-guard.webp" alt="Honour Guard ของ Ultramarines">
+          <span class="ev-when">745.M41 · Cold Steel Ridge, Macragge</span>
+          <h3>Brother Aloysius — องครักษ์ผู้แลกชีวิตให้ Chapter Master</h3>
+          <p>บนสันเขา Cold Steel Ridge Tyranid ตัวใหม่ที่ Hive Mind สร้างขึ้นเพื่อสู้กับ Calgar โดยเฉพาะ — <strong>Swarmlord</strong> — วางกับดักซ้อนหลายชั้นจนแนวป้องกันแตก และพุ่งเข้าโจมตี Marneus Calgar จนบาดเจ็บสาหัส</p>
+          <p><strong>Brother Aloysius</strong> ผู้บัญชาการ Honour Guard ยืนหยัด <strong>ต้าน Swarmlord และองครักษ์ของมันเพียงลำพัง</strong> เพื่อซื้อเวลาให้ยาน Thunderhawk ลงจอดรับ Calgar ขึ้นยาน Aloysius ล้มลง แต่ Chapter Master รอดชีวิตกลับไปนำกองเรือทำลาย Hive Fleet ได้ — ตรงตามหน้าที่ของ Honour Guard ที่ Codex กำหนด</p>
+          <p class="ev-src">ที่มา: Codex: Tyranids (5th Edition), Battle of Macragge</p>
+        </template>
+
+        <article class="rule" id="r18">
+          <div class="rule-num">18</div>
+          <div class="rule-body">
+            <h3>กัปตันทุกคนมี "หน้าที่ประจำ Chapter" เพิ่มอีกตำแหน่ง</h3>
+            <p class="rule-law">นอกจากนำกองร้อยแล้ว กัปตันแต่ละคนต้องรับผิดชอบงานหนึ่งด้านของ Chapter หรือดาวบ้านเกิดด้วย</p>
+            <div class="table-wrap"><table>
+              <thead><tr><th>ตำแหน่ง</th><th>หน้าที่</th><th>ตัวอย่างใน Ultramarines</th></tr></thead>
+              <tbody>
+                <tr><td><b>Master of the Watch</b></td><td>ผู้พิทักษ์ป้อมปราการและดาวบ้านเกิดเมื่อ Chapter Master ไม่อยู่</td><td>Cato Sicarius (กองร้อย 2)</td></tr>
+                <tr><td><b>Master of the Arsenal</b></td><td>ดูแลคลังอาวุธและกระสุนของ Chapter</td><td>Mikael Fabian (กองร้อย 3)</td></tr>
+                <tr><td><b>Master of the Fleet</b></td><td>แม่ทัพเรือ สั่งการเรือธงและกองเรือทั้งหมด</td><td>Captain Idaeus</td></tr>
+                <tr><td><b>Master of the Marches</b></td><td>วางแผนการกระจายกำลังทั้ง Chapter — Chapter Master ปรึกษาก่อนทำสงคราม</td><td>Galenus</td></tr>
+                <tr><td><b>Master of the Rites</b></td><td>ดูแลพิธีกรรมสำคัญของ Chapter</td><td>Maximus Epathus → Ferren Areios (กองร้อย 6)</td></tr>
+                <tr><td><b>Chief Victualler</b></td><td>ดูแลเสบียง อาหาร และความต้องการของทหารและข้ารับใช้</td><td>(กองร้อย 7)</td></tr>
+                <tr><td><b>Lord Executioner</b></td><td>ผู้นำกองร้อยจู่โจม นักฆ่าเลือดเย็นที่น่ากลัวที่สุด</td><td>Numitor (กองร้อย 8)</td></tr>
+                <tr><td><b>Master of Relics</b></td><td>ผู้นำกองร้อยอาวุธหนักและผู้ดูแลโบราณวัตถุ</td><td>(กองร้อย 9)</td></tr>
+                <tr><td><b>Master of Recruits</b></td><td>ฝึก Neophyte ทั้งหมดและนำกองร้อย Scout</td><td>(กองร้อย 10)</td></tr>
+              </tbody>
+            </table></div>
+            <div class="rule-foot"><span class="chip">ตำแหน่งเสริมอื่น: Lord of the Household, Secretarius</span><button type="button" class="btn btn-primary btn-sm btn-event" data-event="ev-sicarius"><svg class="i "><use href="#i-book"></use></svg> ดูเหตุการณ์ตัวอย่าง</button></div>
+          </div>
+        </article>
+        <template id="ev-sicarius">
+          <img src="../images/characters/cato-sicarius.webp" alt="Cato Sicarius กัปตันกองร้อยที่ 2 ของ Ultramarines">
+          <span class="ev-when">ปลาย M41</span>
+          <h3>Cato Sicarius — Master of the Watch ผู้บังคับใช้ Codex</h3>
+          <p>กัปตันกองร้อยที่ 2 ของ Ultramarines ("Guardians of the Temple") ดำรงตำแหน่ง <strong>Master of the Watch</strong> ผู้พิทักษ์ป้อมบน Macragge เมื่อ Chapter Master ไม่อยู่</p>
+          <p>นอกจากนั้น Sicarius ยังมีหน้าที่ <strong>ดำเนินคดีกับพี่น้องที่ละเมิดกฎศักดิ์สิทธิ์ของ Codex Astartes</strong> — งานที่หลายคนคิดว่าไม่เหมาะกับนักรบใจร้อนอย่างเขา แต่ Sicarius ทำด้วยความกระตือรือร้นเกือบคลั่ง แสดงให้เห็นว่าตำแหน่งพิเศษของกัปตันไม่ใช่แค่ชื่อ แต่เป็นงานจริงที่หนักพอ ๆ กับการนำทัพ</p>
+          <p class="ev-src">ที่มา: Codex: Space Marines (5th Edition)</p>
+        </template>
+
+        <article class="rule" id="r19">
+          <div class="rule-num">19</div>
+          <div class="rule-body">
+            <h3>คลังรถรบ: ยานพาหนะคือสมาชิกของ Chapter</h3>
+            <p class="rule-law">ทุกกองร้อย (ยกเว้น Scout) มีรถ Rhino และ Razorback ของตัวเอง ยานรบอื่นเป็นของกลางที่ Armoury ดูแลและจัดสรรให้กัปตันตามภารกิจ Dreadnought ยังคงเป็นสมาชิกของกองร้อยเดิม</p>
+            <p>กองร้อยที่ 1 มี Land Raider ประจำ รถที่ถูกยืมไปจะติดเครื่องหมายของกองร้อยนั้น รถรบทุกคันได้รับ <strong>ชื่อที่สื่อถึงการปกป้องพี่น้อง</strong> ตั้งแต่วันที่สร้าง และวีรกรรมของมันถูกเฉลิมฉลองไม่ต่างจากวีรบุรุษที่เป็นคน ส่วน Dreadnought — นักรบที่บาดเจ็บปางตายในโลงเหล็ก — มีเกียรติประวัติสลักบนตัวถัง และถือเป็นประวัติศาสตร์ที่มีชีวิตของกองร้อย</p>
+            <blockquote class="ca-quote">"ดังที่เจ้าคืออัศวินผู้รับใช้จักรพรรดิ Rhino ก็คืออาชาของเจ้า จงให้เกียรติมัน เคารพมัน ดูแลให้มันได้สิ่งที่ต้องการ แล้วมันจะรับใช้เจ้าอย่างดีในทุกสมรภูมิ"<cite>— Apocrypha of Skaros</cite></blockquote>
+            <blockquote class="ca-quote">"จงทำให้คุณธรรมของ Predator เป็นของเจ้า ให้ความแน่วแน่ของเจ้าแข็งดั่งตัวถังของมัน … การรบเคียงข้าง Predator คือการรบเคียงข้างผู้พิทักษ์ที่ได้รับเกียรติสูงสุดคนหนึ่งของมนุษยชาติ"<cite>— Apocrypha of Skaros</cite></blockquote>
+            <div class="ca-two"><figure class="rule-fig"><img src="../images/codex/um-rhino.webp" alt="Rhino ของ Ultramarines กองร้อยที่ 2" loading="lazy" data-zoom><figcaption>Rhino คันที่ 5 ของกองร้อยที่ 2 (สังกัดหน่วย Tactical ที่ 4)</figcaption></figure><figure class="rule-fig"><img src="../images/codex/predator.webp" alt="รถถัง Predator" loading="lazy" data-zoom><figcaption>รถถัง Predator</figcaption></figure></div>
+          </div>
+        </article>
+
+        <article class="rule" id="r20">
+          <div class="rule-num">20</div>
+          <div class="rule-body">
+            <h3>กองเรือของ Chapter — มีไว้บุกดาว ไม่ใช่แข่งกับทัพเรือ</h3>
+            <p class="rule-law">ทุก Chapter มีกองเรือรบของตัวเองได้ แต่ตามข้อจำกัดหลัง Heresy กองเรือต้องเน้นการขนส่งภายในระบบดาวและการบุกดาว ส่วนการรบทางเรือขนาดใหญ่เป็นหน้าที่ของ Imperial Navy</p>
+            <ul>
+              <li><strong>Battle Barge</strong> — เรือใหญ่ที่สุดเทียบเรือประจัญบาน Chapter ที่ทรงพลังมีแค่ 2–3 ลำ มักเป็นเรือธง</li>
+              <li><strong>Strike Cruiser</strong> — เรือเร็วขนทหารได้ทั้งกองร้อย ใช้บ่อยที่สุด</li>
+              <li><strong>เรือคุ้มกัน / Rapid Strike Vessel</strong> — เรือเล็กข้ามดาวได้ ใช้ลาดตระเวนและส่งหน่วยเล็กแทรกซึม</li>
+            </ul>
+            <p>ในโรงเก็บของเรือคือ Drop Pod ตอร์ปิโดบุกเรือ ยาน Thunderhawk และเครื่องบินรบ บาง Chapter เช่น Black Templars อาศัยบนกองเรือทั้งหมดและมักละเลยข้อจำกัดนี้ จนเกิดความขัดแย้งทางการเมืองกับทัพเรือ</p>
+            <div class="ca-two"><figure class="rule-fig"><img src="../images/codex/battle-barge.webp" alt="Battle Barge ของ Imperial Fists" loading="lazy" data-zoom><figcaption>Battle Barge</figcaption></figure><figure class="rule-fig"><img src="../images/codex/strike-cruiser.webp" alt="Strike Cruiser" loading="lazy" data-zoom><figcaption>Strike Cruiser</figcaption></figure></div>
+            <div class="rule-foot"><span class="chip">Battle Barge · Strike Cruiser · Escort</span><button type="button" class="btn btn-primary btn-sm btn-event" data-event="ev-circe"><svg class="i "><use href="#i-book"></use></svg> ดูเหตุการณ์ตัวอย่าง</button></div>
+          </div>
+        </article>
+        <template id="ev-circe">
+          <img src="../images/lore/40k/battle-of-macragge.webp" alt="ศึก Macragge">
+          <span class="ev-when">745.M41 · ศึกในอวกาศเหนือ Macragge</span>
+          <h3>Calgar บัญชาการกองเรือทั้งที่บาดเจ็บ</h3>
+          <p>หลังถูกหามขึ้นเรือ Battle Barge <strong>Octavius</strong> Marneus Calgar ปฏิเสธการรักษาทุกอย่างยกเว้นที่จำเป็นที่สุด แล้วนำกองเรือ Ultramarines โจมตียานชีวภาพของ Hive Fleet Behemoth ที่แยกตัวออกมาทีละลำ</p>
+          <p>Calgar ไล่ตามกองเรือ Tyranids ไปจนถึงดาววงแหวน <strong>Circe</strong> ขอบระบบดาว ที่นั่นกองเรือเสริมของ Imperial Navy มาถึง และเรือประจัญบานลำหนึ่งพุ่งเข้ากลางฝูงแล้วระเบิดเครื่องยนต์ Warp ดึง Hive Fleet เกือบทั้งหมดลงสู่ความว่างเปล่า — ตัวอย่างที่ Chapter Fleet กับทัพเรือต้องทำงานคู่กันตามที่ Codex วางไว้</p>
+          <p class="ev-src">ที่มา: Battle of Macragge — Codex: Ultramarines (2nd Edition)</p>
+        </template>
+      </section>
+
+      <section id="part4">
+        <h2><span class="num">05</span>ภาค 4 · ยุทธวิธีการรบ (ข้อ 21–28)</h2>
+        <p class="ca-part-lead">Codex สอนว่า Space Marine คือกองกำลัง "จู่โจมรวดเร็ว" ไม่ใช่กองทัพที่นั่งรบยืดเยื้อ — ความเร็ว ความประหลาดใจ และการรบแบบผสมผสานคือหัวใจ</p>
+
+        <article class="rule" id="r21">
+          <div class="rule-num">21</div>
+          <div class="rule-body">
+            <h3>ส่งกำลังที่ "พอดีกับภารกิจ" ไม่ใช่ทั้งกองร้อย</h3>
+            <p class="rule-law">แทบไม่เคยส่งกองร้อยเต็มลงรบ ให้จัดกำลังเฉพาะกิจจากหน่วยต่าง ๆ ให้เหมาะกับภารกิจ นำโดย Captain, Lieutenant, จ่าอาวุโส, Chaplain หรือ Librarian</p>
+            <p>กำลังเฉพาะกิจทั่วไปอาจมีเพียง 3–4 หน่วยพร้อมยานรบและ Dreadnought ภารกิจใหญ่อาจใช้ 200–300 นาย ส่วนการรวม <strong>ทั้ง Chapter</strong> ในที่เดียวเกิดขึ้นนานหลายศตวรรษครั้ง — ต้องเป็นภัยที่อาจฉีกจักรวรรดิเป็นชิ้น ๆ ได้ และนำโดย Chapter Master ด้วยตัวเอง เช่น สงคราม Tyrannic Wars หรือ Macharian Heresy</p>
+            <figure class="rule-fig"><img src="../images/codex/deployments.webp" alt="แผนที่การกระจายกำลังของ Space Marines" loading="lazy" data-zoom><figcaption>หน่วยของ Chapter หนึ่งอาจกระจายอยู่ห่างกันหลายพันปีแสง</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="rule" id="r22">
+          <div class="rule-num">22</div>
+          <div class="rule-body">
+            <h3>การบุกดาวและการจู่โจมจากฟ้า (Drop Assault)</h3>
+            <p class="rule-law">ภารกิจต้นแบบของ Space Marine คือการบุกดาว: กองเรือกวาดเรือศัตรูและทำลายปืนป้องกันวงโคจร แล้วส่งกำลังลงกลางใจศัตรูอย่างรวดเร็วด้วย Drop Pod และ Thunderhawk</p>
+            <p>ความสำเร็จขึ้นกับ <strong>จังหวะและพิกัด</strong> — ถ้าลงถูกที่ Drop Pod คืออาวุธสร้างความหวาดกลัวขั้นสุด ถ้าพลาด Pod จะถูกยิงทีละลำ Codex แนะนำให้ผสม Drop Pod กับการส่งทหารทางอากาศ และต้องมีเครื่องบินคุ้มกันท้องฟ้าเสมอ หลาย WAAAGH! ของ Ork หยุดชะงักเพราะ Warboss และองครักษ์ถูกกำจัดด้วยการจู่โจมจากฟ้าครั้งเดียว</p>
+            <div class="ca-two"><figure class="rule-fig"><img src="../images/codex/drop-pod.webp" alt="Drop Pod" loading="lazy" data-zoom><figcaption>Drop Pod — ทิ้งตัวจากวงโคจร</figcaption></figure><figure class="rule-fig"><img src="../images/codex/thunderhawk.webp" alt="Thunderhawk Gunship" loading="lazy" data-zoom><figcaption>Thunderhawk Gunship</figcaption></figure></div>
+            <div class="rule-foot"><span class="chip">ความเร็ว + ความประหลาดใจ</span><button type="button" class="btn btn-primary btn-sm btn-event" data-event="ev-ixx"><svg class="i "><use href="#i-book"></use></svg> ดูเหตุการณ์ตัวอย่าง</button></div>
+          </div>
+        </article>
+        <template id="ev-ixx">
+          <img src="../images/codex/drop-pod.webp" alt="Drop Pod ของ Space Marine">
+          <span class="ev-when">บันทึกใน Codex: Space Marines</span>
+          <h3>ปืนเลเซอร์แห่ง Ixx และการช่วยผู้ว่าการ Dhrax</h3>
+          <p><strong>Ixx:</strong> ดาวนี้มีปืนเลเซอร์ป้องกันทรงพลังจนทำลายกองเรือใดก็ได้ที่เข้าวงโคจร แต่ Space Marine ใช้การจู่โจมแบบผ่าตัด (Surgical Drop Assault) ลงไปทำลายฐานปืนจากภาคพื้น เปิดทางให้ทั้งดาวถูกบุกได้</p>
+          <p><strong>Dhrax:</strong> เมื่อกองทัพกบฏล้อมวังของผู้ว่าการดาว Astra Militarum เคลื่อนกำลังไม่ทัน กองกำลังรักษาการณ์ของ Ultramarines จึงตกลงมาจากฟ้าเพื่อปกป้องผู้ว่าการไว้ได้ — สองตัวอย่างที่ Codex ใช้สอนเรื่องความเร็วและการเลือกเป้าหมาย</p>
+          <p class="ev-src">ที่มา: Codex: Space Marines (8th Edition) — ส่วน Drop Assaults</p>
+        </template>
+
+        <article class="rule" id="r23">
+          <div class="rule-num">23</div>
+          <div class="rule-body">
+            <h3>การรบแบบผสมผสาน: Tactical · Assault · Devastator</h3>
+            <p class="rule-law">หน่วยทั้งสามแบบถูกออกแบบให้หนุนกันและกัน — ยิงกด เข้าประชิด และยิงสนับสนุนหนักพร้อมกันอย่างประสานงาน</p>
+            <blockquote class="ca-quote">"ข้าจะเล่าถึงนักรบ Tactical รากฐานของ Chapter และแบบอย่างของพี่น้อง … อาวุธที่แท้จริงของเขาคือความกล้า ไหวพริบ และความทุ่มเทต่อพี่น้อง ในการป้องกัน เขาจะมั่นคงดั่งภูผา ในการบุก เขาจะฟาดฟันด้วยความพิโรธของจักรพรรดิผู้เป็นอมตะ"<cite>— Apocrypha of Skaros</cite></blockquote>
+            <blockquote class="ca-quote">"นักรบ Assault จะลงมาจากฟ้าดั่งเทวทูตแห่งการพิพากษา ให้ Jump Pack เป็นปีก และเสียงเครื่องยนต์เป็นบทเพลงแห่งการแก้แค้น … เขาจะเป็นนักล่าขุนศึกและผู้สังหารกษัตริย์"<cite>— Apocrypha of Skaros</cite></blockquote>
+            <blockquote class="ca-quote">"ระยะของ Devastator จะไร้ขีดจำกัด สัมผัสของเขาจะไร้ความปรานี … ที่ใดเขายืน ที่นั่นคือป้อมปราการแห่งความชอบธรรม ทุกคนจะกลัวเขา และเขาจะไม่กลัวผู้ใด"<cite>— Apocrypha of Skaros</cite></blockquote>
+            <blockquote class="ca-quote">"จงใช้หน่วยมอเตอร์ไซค์ดั่งใบมีด … ความเร็วไร้ทิศทางไม่มีค่า เช่นเดียวกับอาวุธที่ไม่เล็ง ความเร็วคือข้อได้เปรียบ ความประหลาดใจคืออาวุธที่ร้ายแรงที่สุด"<cite>— Apocrypha of Skaros</cite></blockquote>
+            <figure class="rule-fig"><img src="../images/codex/macragge-battle.webp" alt="Ultramarines รุกคืบแบบยุทธวิธี" loading="lazy" data-zoom><figcaption>การรุกคืบของหน่วย Tactical ที่ได้รับการยิงสนับสนุน</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="rule" id="r24">
+          <div class="rule-num">24</div>
+          <div class="rule-body">
+            <h3>การปิดล้อม: อ้อมผ่าน หรือเจาะอย่างเป็นขั้นตอน</h3>
+            <p class="rule-law">เมื่อการเคลื่อนที่ชะงักและจู่โจมเร็วไม่ได้ Codex ให้สองทางเลือก: อ้อมพื้นที่ที่ป้องกันหนาแน่นไป หรือปิดล้อมมัน — แต่ไม่ใช่การปิดล้อมยืดเยื้อหลายสิบปีแบบ Astra Militarum</p>
+            <p>การปิดล้อมแบบ Space Marine คือชุดการโจมตีที่ออกแบบไว้ล่วงหน้า: หยั่งเชิงแนวป้องกัน ล่อความสนใจ แล้วเจาะแนวหรือยึดเป้าหมายสำคัญ ใช้ยานเฉพาะทาง เช่น รถถัง <strong>Vindicator</strong> และ <strong>Ironclad Dreadnought</strong> Imperial Fists คือผู้เชี่ยวชาญด้านนี้ที่สุด</p>
+            <figure class="rule-fig"><img src="../images/codex/vindicator.webp" alt="รถถัง Vindicator" loading="lazy" data-zoom><figcaption>Vindicator — รถถังทลายป้อม</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="rule" id="r25">
+          <div class="rule-num">25</div>
+          <div class="rule-body">
+            <h3>การลอบโจมตีและสงครามเงา</h3>
+            <p class="rule-law">Space Marine ต้องใช้ความประหลาดใจ ไม่ว่าด้วยความเร็วหรือการพรางตัว — ซุ่มยิงจากจุดสูง ทิ้งตัวเงียบ ๆ แล้วโจมตีพร้อมกันในเสี้ยววินาที</p>
+            <p>หน่วยสไนเปอร์ซ่อนตัวในจุดคุมพื้นที่ Scout ใส่ผ้าคลุมพราง (Cameleoline) หน่วย Reiver ทิ้งตัวด้วยร่มชูชีพ แล้วเมื่อสัญญาณมา ทุกหน่วยโจมตีพร้อมกันก่อนตามด้วย Rhino หรือ Drop Pod — Codex ถือเป็น "ตัวอย่างสมบูรณ์ของการรบผสมผสาน" <strong>Raven Guard</strong> คือ Chapter ที่เก่งที่สุดในเรื่องนี้ ส่วนในยุคใหม่ Primaris ทุกคนต้องเรียนวิชา <strong>Vanguard</strong> (Eliminator, Infiltrator, Incursor, Reiver, Suppressor) ขณะอยู่กองร้อยที่ 10</p>
+            <figure class="rule-fig"><img src="../images/codex/raven-guard-charge.webp" alt="Raven Guard บุกโจมตี" loading="lazy" data-zoom><figcaption>Raven Guard — ปรมาจารย์แห่งการลอบโจมตี</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="rule" id="r26">
+          <div class="rule-num">26</div>
+          <div class="rule-body">
+            <h3>หัวหอกยานเกราะ (Anvil Strike Force)</h3>
+            <p class="rule-law">เมื่อศัตรูหรือภูมิประเทศต้องการ Chapter สามารถรวมรถรบทั้งคลังเป็นกองยานเกราะ นำโดยกัปตันบน Land Raider — กฎการตั้ง "Anvil Strike Force" มีมาตั้งแต่ Codex ฉบับแรก</p>
+            <p>Chapter <strong>Aurora</strong> ขึ้นชื่อเรื่องหัวหอก Land Raider ที่มี Land Speeder คอยกดศัตรู ส่วนจ่า Antaro Chronus ของ Ultramarines ได้รับการยกย่องจากการใช้เครื่องบินสนับสนุนและทหารยึดพื้นที่ที่รถถังตีได้ ในยุคใหม่รถถังลอยตัว Repulsor เพิ่มพลังให้ยานเกราะของ Space Marine อีกขั้น</p>
+            <figure class="rule-fig"><img src="../images/codex/land-raider.webp" alt="Land Raider" loading="lazy" data-zoom><figcaption>Land Raider — รถถังหนักที่กัปตันใช้นำหัวหอก</figcaption></figure>
+            <div class="rule-foot"><span class="chip">Land Raider · Predator · Repulsor</span><button type="button" class="btn btn-primary btn-sm btn-event" data-event="ev-dauuk"><svg class="i "><use href="#i-book"></use></svg> ดูเหตุการณ์ตัวอย่าง</button></div>
+          </div>
+        </article>
+        <template id="ev-dauuk">
+          <img src="../images/codex/predator.webp" alt="รถถัง Predator">
+          <span class="ev-when">Halo Stars · Warren Worlds</span>
+          <h3>กัปตัน Dauuk และรถถังที่อยู่ในที่ที่คนอยู่ไม่ได้</h3>
+          <p>ในเขต Halo Stars กัปตัน <strong>Dauuk</strong> แห่ง <strong>Iron Hands</strong> นำกองยานเกราะเข้าสู่ Warren Worlds — ดาวที่เต็มไปด้วยรังพิษของลัทธิ Heretek และสัตว์กลจักรที่มีความคิด</p>
+          <p>รถถัง Predator ของเขาไล่ล่าเครื่องจักรปีศาจและผู้บูชา Chaos ท่ามกลางอากาศพิษที่ <strong>ไม่มี Space Marine คนไหนอยู่รอดได้นาน แม้แต่ Iron Hands</strong> แต่ยานเกราะทนได้ และกวาดล้างดาวทั้งดวงได้ในเวลาไม่ถึงหนึ่งสัปดาห์ — เหตุผลที่ Codex เก็บกฎ Anvil Strike Force ไว้</p>
+          <p class="ev-src">ที่มา: Codex: Space Marines (8th Edition) — ส่วน Anvil Strike Force</p>
+        </template>
+
+        <article class="rule" id="r27">
+          <div class="rule-num">27</div>
+          <div class="rule-body">
+            <h3>กองกำลัง Terminator สำหรับสมรภูมิแคบและอันตรายที่สุด</h3>
+            <p class="rule-law">ปกติ Terminator ถูกแบ่งไปเสริมกองร้อยรบ แต่ในยามจำเป็น Chapter อาจรวม Terminator ส่วนใหญ่ (หรือทั้งหมด) เป็นกองกำลังเดียว</p>
+            <p>ใช้ในการรบประชิดในพื้นที่แคบ เช่น กวาดล้างเอเลียนใน <strong>Space Hulk</strong> (ซากยานยักษ์ลอยในอวกาศ) บุกใจกลางป้อมพวกนอกรีต หรือขึ้นยึดเครื่องจักรสงครามขนาดยักษ์ Codex เตือนว่าความเสี่ยงสูงมาก เพราะชุด Terminator ทุกชุดสร้างใหม่ไม่ได้ ถ้ากองกำลังนี้ถูกทำลาย Chapter อาจไม่มีวันฟื้น</p>
+            <figure class="rule-fig"><img src="../images/codex/sin-damnation.webp" alt="Space Hulk Sin of Damnation" loading="lazy" data-zoom><figcaption>Space Hulk "Sin of Damnation"</figcaption></figure>
+            <div class="rule-foot"><span class="chip">Space Hulk · Boarding Action</span><button type="button" class="btn btn-primary btn-sm btn-event" data-event="ev-hulk"><svg class="i "><use href="#i-book"></use></svg> ดูเหตุการณ์ตัวอย่าง</button></div>
+          </div>
+        </article>
+        <template id="ev-hulk">
+          <img src="../images/codex/sin-damnation.webp" alt="Space Hulk Sin of Damnation">
+          <span class="ev-when">996.M40 และ 589.M41</span>
+          <h3>Sin of Damnation — Terminator 80 นาย ปะทะ Genestealer 40,000 ตัว</h3>
+          <p>ครั้งแรกในปี 996.M40 Blood Angels บุก Space Hulk ลำหนึ่งในระบบ Secoris แต่ต้องเจอคลื่น Genestealer ที่ไม่มีวันหมด การรบกลายเป็นหายนะ — <strong>ทั้ง Chapter เหลือรอดเพียง 50 นาย</strong></p>
+          <p>600 ปีต่อมา (589.M41) Blood Angels กลับไปอีกครั้ง คราวนี้ทำตามแบบ Codex: กัปตันกองร้อยที่ 1 <strong>Michaelus Raphael</strong> นำ <strong>Terminator 80 นาย</strong> บุกเข้าไป สังหาร Genestealer กว่า <strong>40,000 ตัว</strong> และยึดยานได้สำเร็จ เหตุการณ์นี้คือพื้นเรื่องของบอร์ดเกมชื่อดัง <em>Space Hulk</em></p>
+          <p class="ev-src">ที่มา: Space Hulk (บอร์ดเกม), Codex: Blood Angels</p>
+        </template>
+
+        <article class="rule" id="r28">
+          <div class="rule-num">28</div>
+          <div class="rule-body">
+            <h3>ผู้บัญชาการต้องเป็นนักยุทธศาสตร์ ไม่ใช่แค่นักรบ</h3>
+            <p class="rule-law">Chapter Master ต้องไม่ใช่เพียงนักรบที่เก่งที่สุด แต่ต้องเป็นนักวางแผนชั้นยอดที่ยึดคำสอนของ Codex — รักษาชีวิตพี่น้องที่มีค่าไว้ แต่ต้องทำภารกิจให้สำเร็จและรักษาเกียรติของ Chapter</p>
+            <blockquote class="ca-quote">"ในฐานะผู้บัญชาการ เครื่องมือของเจ้ามีมากมาย แต่ผู้มีปัญญารู้ว่าชัยชนะได้มาด้วยเลือดเนื้อ ไม่ใช่เครื่องจักร เลือดเนื้อเรียนรู้ได้ เครื่องจักรต้องถูกสั่งตลอดไป … เมื่อวันมืดมิดที่สุดและชัยชนะไม่แน่นอน อย่ามองหาเครื่องจักร แต่จงมองหาพี่น้องของเจ้า พวกเขาจะเดินฝ่าไฟเพียงคำเดียวจากปากเจ้า"<cite>— Apocrypha of Skaros</cite></blockquote>
+            <p>Codex ยังบรรยายการรบจริงในประวัติศาสตร์พร้อมวิจารณ์การตัดสินใจของผู้บัญชาการ เพื่อให้รุ่นหลังเรียนรู้ บางส่วนดู "จุกจิกเกินกว่าจะเป็นงานของ Primarch" แต่ทั้งหมดคือความพยายามให้ทุกการตัดสินใจมีหลักการ</p>
+            <figure class="rule-fig"><img src="../images/primarchs/roboute-guilliman-30k.webp" alt="Roboute Guilliman ยุค 30K" loading="lazy" data-zoom><figcaption>กิลลิมัน — Primarch ที่เชื่อในระบบมากกว่าอัจฉริยะเฉพาะตัว</figcaption></figure>
+          </div>
+        </article>
+      </section>
+
+      <section id="part5">
+        <h2><span class="num">06</span>ภาค 5 · เครื่องหมายและตราประจำหน่วย (ข้อ 29–34)</h2>
+        <p class="ca-part-lead">เมื่อมองชุดเกราะของ Space Marine คนหนึ่ง คุณจะรู้ได้ทันทีว่าเขาอยู่ Chapter ไหน กองร้อยไหน หน่วยประเภทใด และมียศอะไร — ทั้งหมดเพราะ Codex</p>
+        <figure class="figure ca-wide"><img src="../images/codex/heraldry-indomitus.webp" alt="ระบบเครื่องหมายตาม Codex Astartes ยุค Era Indomitus" loading="lazy" data-zoom><figcaption>ระบบเครื่องหมายตาม Codex ยุค Era Indomitus (ตัวอย่าง Ultramarines) — กดเพื่อขยาย</figcaption></figure>
+
+        <article class="rule" id="r29">
+          <div class="rule-num">29</div>
+          <div class="rule-body">
+            <h3>ไหล่ซ้าย = ตรา Chapter · ไหล่ขวา = เครื่องหมายหน่วย</h3>
+            <p class="rule-law">Space Marine ต้องแสดงตรา Chapter บนเกราะไหล่ซ้าย และเครื่องหมายหน่วยบนเกราะไหล่ขวา ส่วนผู้สวม Terminator ให้ใส่ Crux Terminatus บนไหล่ซ้าย และย้ายตรา Chapter ไปไหล่ขวา</p>
+            <p>เกราะรุ่นเก่าบางรุ่นอาจแสดงเครื่องหมายหน่วยบนสนับเข่าหรือรวมไว้ในตรา Chapter แทน Codex ยังแนะนำรูปแบบย่อยอีกมาก</p>
+            <figure class="rule-fig"><img src="../images/codex/severian.webp" alt="ทหาร Severian ของ Ultramarines กองร้อยที่ 3" loading="lazy" data-zoom><figcaption>Brother Severian กองร้อยที่ 3 หน่วย Tactical ที่ 2 — สังเกตตราแคมเปญบนสนับแข้งซ้าย</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="rule" id="r30">
+          <div class="rule-num">30</div>
+          <div class="rule-body">
+            <h3>สีประจำกองร้อย 10 สี</h3>
+            <p class="rule-law">แต่ละกองร้อยมีสีประจำ แสดงบนขอบเกราะไหล่ (หรือนกอินทรีบนอก ปลอกปืน สนับเข่า หมวก)</p>
+            <div class="ca-colors">
+              <div><i style="background:#e9e9e9"></i><b>1</b><small>ขาว / เงิน · หมวกทาสีกองร้อยด้วย</small></div>
+              <div><i style="background:#e6b422"></i><b>2</b><small>เหลือง / ทอง</small></div>
+              <div><i style="background:#c0343c"></i><b>3</b><small>แดง</small></div>
+              <div><i style="background:#2f8f4e"></i><b>4</b><small>เขียว</small></div>
+              <div><i style="background:#111;border:1px solid #555"></i><b>5</b><small>ดำ</small></div>
+              <div><i style="background:#e0782b"></i><b>6</b><small>ส้ม</small></div>
+              <div><i style="background:#7b3fa0"></i><b>7</b><small>ม่วง</small></div>
+              <div><i style="background:#8a8f98"></i><b>8</b><small>เทา</small></div>
+              <div><i style="background:#2f62c9"></i><b>9</b><small>น้ำเงิน</small></div>
+              <div><i style="background:#f4f4f4;opacity:.45"></i><b>10</b><small>ขาว (ตามทฤษฎี) · Scout ไม่แสดงสี</small></div>
+            </div>
+            <figure class="rule-fig"><img src="../images/codex/company-colours.webp" alt="สีประจำกองร้อยตาม Codex บนชุดเกราะ" loading="lazy" data-zoom><figcaption>สีประจำกองร้อยตาม Codex เมื่อทาบนชุดเกราะ</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="rule" id="r31">
+          <div class="rule-num">31</div>
+          <div class="rule-body">
+            <h3>สัญลักษณ์ประเภทหน่วยและหมายเลขหน่วย</h3>
+            <p class="rule-law">เครื่องหมายบนไหล่ขวาบอกประเภทหน่วยและหมายเลขหน่วยในกองร้อย</p>
+            <div class="table-wrap"><table>
+              <thead><tr><th>ประเภท (ชื่อยุคใหม่)</th><th>ชื่อยุคเดิม</th><th>สัญลักษณ์</th></tr></thead>
+              <tbody>
+                <tr><td>Battleline</td><td>Tactical</td><td>ลูกศรชี้ขึ้น</td></tr>
+                <tr><td>Close Support</td><td>Assault</td><td>ลูกศรไขว้ / ลูกศรสี่ทิศชี้ออก</td></tr>
+                <tr><td>Fire Support</td><td>Devastator</td><td>รูปตัว V คว่ำ (บั้ง)</td></tr>
+                <tr><td>Veteran</td><td>Veteran</td><td>กางเขนแบบ Maltese (Crux)</td></tr>
+                <tr><td>Command</td><td>Command</td><td>หัวกะโหลก</td></tr>
+              </tbody>
+            </table></div>
+            <div class="ca-two"><figure class="rule-fig"><img src="../images/codex/vehicle-specialty.webp" alt="สัญลักษณ์ประเภทหน่วย" loading="lazy" data-zoom><figcaption>Tactical · Assault · Devastator · Veteran · Command</figcaption></figure><figure class="rule-fig"><img src="../images/codex/um-heraldry.webp" alt="ตัวอย่างเครื่องหมายไหล่ของ Ultramarines" loading="lazy" data-zoom><figcaption>ตัวอย่างไหล่ของแต่ละกองร้อยและหน่วย</figcaption></figure></div>
+          </div>
+        </article>
+
+        <article class="rule" id="r32">
+          <div class="rule-num">32</div>
+          <div class="rule-body">
+            <h3>สีหมวกบอกยศ: แดง = จ่า · ขาว = ทหารผ่านศึก</h3>
+            <p class="rule-law">หมวกสีแดงสงวนไว้สำหรับจ่า หมวกสีขาวหรือลายช่อชัยพฤกษ์คือทหารผ่านศึก จ่าอาวุโส (Veteran Sergeant) ใช้หมวกแดงพร้อมแถบขาวกลางหมวก ตรายศของจ่าคือหัวกะโหลกสีแดง</p>
+            <p>จ่าถือธงหน่วยที่มีตรา Chapter หมายเลขหน่วย และหัวกะโหลกแดง ส่วนการติดธงหลัง (Back Banner) เป็นดุลยพินิจของจ่าเอง</p>
+            <figure class="rule-fig"><img src="../images/codex/vet-sergeant.webp" alt="หมวกทหารผ่านศึกและจ่าอาวุโส" loading="lazy" data-zoom><figcaption>ซ้าย: ทหารผ่านศึก (หมวกขาว) · ขวา: จ่าอาวุโส (หมวกแดงแถบขาว)</figcaption></figure>
+            <div class="rule-foot"><span class="chip">ที่มาของหมวกแดง</span><button type="button" class="btn btn-primary btn-sm btn-event" data-event="ev-thiel"><svg class="i "><use href="#i-book"></use></svg> ดูเหตุการณ์ตัวอย่าง</button></div>
+          </div>
+        </article>
+
+        <article class="rule" id="r33">
+          <div class="rule-num">33</div>
+          <div class="rule-body">
+            <h3>สีเกราะของผู้เชี่ยวชาญ</h3>
+            <p class="rule-law">ผู้เชี่ยวชาญสวมเกราะสีเฉพาะไม่ว่าอยู่ Chapter ใด เพื่อให้พี่น้องจำได้ทันที (ยังติดตรา Chapter ตามปกติ)</p>
+            <div class="ca-grid">
+              <div><i class="ca-dot" style="background:#2f62c9"></i><b>Librarian</b><small>น้ำเงิน — ปัจจุบันหลาย Chapter เลิกใช้แล้ว</small></div>
+              <div><i class="ca-dot" style="background:#111;border:1px solid #666"></i><b>Chaplain</b><small>ดำทั้งชุด</small></div>
+              <div><i class="ca-dot" style="background:#c0343c"></i><b>Techmarine</b><small>แดง (ตามธรรมเนียม)</small></div>
+              <div><i class="ca-dot" style="background:#eee"></i><b>Apothecary</b><small>ขาว (ตามธรรมเนียม)</small></div>
+            </div>
+            <p>Ultramarines เป็นตัวอย่างที่ Techmarine และ Apothecary ใช้สี Chapter เป็นหลักแต่ตกแต่งด้วยแดงหรือขาวมาก ส่วนกัปตันใช้ตรากองร้อย อาจเพิ่มตราประจำตัว</p>
+            <div class="ca-two"><figure class="rule-fig"><img src="../images/codex/reclusiam.webp" alt="Chaplain เกราะดำ" loading="lazy" data-zoom><figcaption>Chaplain — เกราะดำ</figcaption></figure><figure class="rule-fig"><img src="../images/units/techmarine.webp" alt="Techmarine เกราะแดง" loading="lazy" data-zoom><figcaption>Techmarine — เกราะแดง</figcaption></figure></div>
+          </div>
+        </article>
+
+        <article class="rule" id="r34">
+          <div class="rule-num">34</div>
+          <div class="rule-body">
+            <h3>เครื่องหมายยานรบ ตราแคมเปญ และการเปลี่ยนตราเพื่อหลอกศัตรู</h3>
+            <p class="rule-law">ยานรบต้องทาสี Chapter พร้อมเครื่องหมายหน่วย กองร้อย และหมายเลขประจำ เมื่อรบร่วมกับกองกำลังอื่นของจักรวรรดิ ผู้บัญชาการจะเลือกสัญลักษณ์ง่าย ๆ เป็น "ตราแคมเปญ" ติดทุกหน่วย — และ Codex แนะนำให้ Chapter เปลี่ยนเครื่องหมายเป็นครั้งคราวเพื่อสับสนหน่วยข่าวกรองของศัตรู</p>
+            <p>ตราแคมเปญมักทาบนตัวรถและสนับแข้งของทหาร หลังจบแคมเปญบางคนเก็บไว้บนเกราะถาวรเพื่อรำลึกวีรกรรมหรือผู้เสียชีวิต ลูกเรือรถถังแสดงหมายเลขรถในวงกลมบนไหล่ขวา ยานโบราณอาจมีคติพจน์และตราเกียรติยศของตัวเอง</p>
+            <figure class="rule-fig"><img src="../images/codex/army-badges.webp" alt="ตัวอย่างตราแคมเปญ" loading="lazy" data-zoom><figcaption>ตัวอย่างตราแคมเปญ (Army Badges)</figcaption></figure>
+            <div class="ca-two"><figure class="rule-fig"><img src="../images/codex/vehicle-company.webp" alt="เครื่องหมายกองร้อยบนยานรบ" loading="lazy" data-zoom><figcaption>เครื่องหมายกองร้อยบนยาน (1–10)</figcaption></figure><figure class="rule-fig"><img src="../images/codex/campaign-badges.webp" alt="ตราแคมเปญบนยาน" loading="lazy" data-zoom><figcaption>ตราแคมเปญ</figcaption></figure></div>
+          </div>
+        </article>
+      </section>
+
+      <section id="part6">
+        <h2><span class="num">07</span>ภาค 6 · ศีลธรรมและจิตวิญญาณนักรบ (ข้อ 35–36)</h2>
+        <p class="ca-part-lead">Codex ไม่ได้มีแค่ตารางและแผนผัง แต่วางอุดมคติว่า Space Marine "ควรประพฤติตนอย่างไร"</p>
+
+        <article class="rule" id="r35">
+          <div class="rule-num">35</div>
+          <div class="rule-body">
+            <h3>รู้หน้าที่ และปฏิบัติเหนือสิ่งอื่นใด</h3>
+            <blockquote class="ca-quote ca-quote-big">"จงรู้หน้าที่ของเจ้า และปฏิบัติมันเหนือสิ่งอื่นใด"<cite>— Codex Astartes บทที่ 4 วรรคที่ 1</cite></blockquote>
+            <blockquote class="ca-quote">"จงไตร่ตรองความยิ่งใหญ่ของหน้าที่เมื่อมีเวลา แต่เมื่อถึงเวลาต้องลงมือ จงทำโดยไม่ลังเล"<cite>— จาก "Legio Astartes Daily Rites"</cite></blockquote>
+            <blockquote class="ca-quote">"นักรบผู้ทำด้วยเกียรติจะไม่มีวันล้มเหลว หน้าที่ของเขาคือเกียรติ แม้ความตายของเขา — ถ้ามีเกียรติ — ก็คือรางวัล ไม่ใช่ความล้มเหลว เพราะมันมาจากการทำหน้าที่ จงแสวงหาเกียรติในทุกการกระทำ แล้วเจ้าจะไม่รู้จักความกลัว"<cite>— Roboute Guilliman</cite></blockquote>
+            <p>ประโยค "And They Shall Know No Fear" ที่กลายเป็นคำขวัญของ Space Marine ก็ถูกบันทึกไว้ในบทนำของ Apocrypha of Skaros ผ่านถ้อยคำของจักรพรรดิเอง</p>
+          </div>
+        </article>
+
+        <article class="rule" id="r36">
+          <div class="rule-num">36</div>
+          <div class="rule-body">
+            <h3>เป็นผู้พิทักษ์มนุษยชาติ ไม่ใช่ผู้ปกครอง</h3>
+            <blockquote class="ca-quote">"พวกเขาจะบริสุทธิ์ในใจและแข็งแกร่งในกาย ไม่แปดเปื้อนด้วยความสงสัย ไม่มัวหมองด้วยการยกตน พวกเขาจะเป็นดวงดาวสว่างบนฟากฟ้าแห่งสงคราม เทวทูตแห่งความตายที่ปีกอันว่องไวนำความพินาศสู่ศัตรูของมนุษย์"<cite>— Roboute Guilliman</cite></blockquote>
+            <blockquote class="ca-quote">"จงให้พวกเขาก้าวข้ามกาแล็กซีดั่งเทพในยุคโบราณ ปกป้องมนุษยชาติจากการทำลายล้างของจักรวาลที่ไม่แยแส"<cite>— Apocrypha of Skaros</cite></blockquote>
+            <p>Codex เตือนว่าพลังของ Space Marine นำไปสู่ความหยิ่งผยอง และความหยิ่งผยองทำให้ผู้พิทักษ์เริ่มคิดว่า "ตนควรปกครองมนุษย์แทน" — บทเรียนตรงจาก Horus และต่อมาคือ Lufgt Huron แห่ง Badab</p>
+            <figure class="rule-fig"><img src="../images/primarchs/roboute-guilliman-now.webp" alt="Roboute Guilliman ยุคปัจจุบัน" loading="lazy" data-zoom><figcaption>กิลลิมันยุคปัจจุบัน — ผู้พิทักษ์ที่ต้องแบกรับการปกครองจักรวรรดิโดยไม่เต็มใจ</figcaption></figure>
+          </div>
+        </article>
+      </section>
+
+      <section id="part7">
+        <h2><span class="num">08</span>ภาค 7 · การตีความและการแก้ไข (ข้อ 37–39)</h2>
+        <p class="ca-part-lead">Codex ไม่ได้ถูกบังคับใช้แบบตายตัว — และแม้แต่ผู้เขียนเองก็กลับมาแก้ไขมัน</p>
+
+        <article class="rule" id="r37">
+          <div class="rule-num">37</div>
+          <div class="rule-body">
+            <h3>ทำตาม "จิตวิญญาณ" แม้ไม่ทำตาม "ตัวอักษร"</h3>
+            <p class="rule-law">Chapter ส่วนใหญ่ยึดตามหลักการของ Codex แม้บางส่วนจะปรับรายละเอียดตามวัฒนธรรมและพันธุกรรม Adeptus Terra ไม่เคยบังคับใช้ Codex แบบเด็ดขาด (และอาจทำไม่ได้ด้วย)</p>
+            <p>Chapter แบ่งเป็น 3 กลุ่ม: <strong>(1) ลูกหลานของ Ultramarines</strong> ทำตาม Codex อย่างเคร่งครัด <strong>(2) ลูกหลานของ Primarch อื่น</strong> ที่ทำตามเท่าที่พันธุกรรมยอม เช่น White Scars, Imperial Fists, Iron Hands, Raven Guard <strong>(3) กลุ่มนอกแบบ</strong> ที่ใช้โครงสร้างของตัวเอง เช่น Space Wolves และ Black Templars การละเมิด Codex ภายใน Chapter ที่เคร่งครัดอาจถูกลงโทษรุนแรง</p>
+            <figure class="rule-fig"><img src="../images/characters/uriel-ventris.webp" alt="Uriel Ventris กัปตันกองร้อยที่ 4 ของ Ultramarines" loading="lazy" data-zoom><figcaption>Uriel Ventris — กัปตันผู้คิดนอกกรอบ Codex</figcaption></figure>
+            <div class="rule-foot"><span class="chip">Codex-compliant vs Non-compliant</span><button type="button" class="btn btn-primary btn-sm btn-event" data-event="ev-uriel"><svg class="i "><use href="#i-book"></use></svg> ดูเหตุการณ์ตัวอย่าง</button></div>
+          </div>
+        </article>
+        <template id="ev-uriel">
+          <img src="../images/characters/uriel-ventris.webp" alt="Uriel Ventris">
+          <span class="ev-when">ปลาย M41 · สงคราม Tarsis Ultra</span>
+          <h3>Uriel Ventris — ถูกเนรเทศเพราะละเมิด Codex</h3>
+          <p>Uriel Ventris เรียนการคิดนอกกรอบ Codex จากอาจารย์ของเขา กัปตัน Idaeus ในศึก <strong>Tarsis Ultra</strong> เขาบุกเข้าไปสังหาร <strong>Norn-Queen</strong> ผู้ควบคุมฝูง Tyranids ร่วมกับ Kill Team ของ Deathwatch — ชัยชนะที่ช่วยทั้งดาวไว้</p>
+          <p>แต่การทำเช่นนั้นหมายถึง <strong>ทิ้งทหารของตัวเอง</strong> เมื่อกลับ Macragge จ่า Learchus รายงานการละเมิด Codex นี้ต่อผู้นำ Chapter Uriel รอดจากโทษประหาร แต่ Marneus Calgar ให้เขาและเพื่อนสนิท Pasanius รับ <strong>"Death Oath"</strong> ออกตามหา "สถานที่แห่งเหล็กดำ" จนต้องไปถึงดาวปีศาจ Medrengard ของ Iron Warriors ก่อนจะกลับมาได้รับตำแหน่งคืน</p>
+          <p class="ev-src">ที่มา: นิยายชุด Uriel Ventris โดย Graham McNeill (<em>Warriors of Ultramar</em>, <em>Dead Sky, Black Sun</em>)</p>
+        </template>
+
+        <article class="rule" id="r38">
+          <div class="rule-num">38</div>
+          <div class="rule-body">
+            <h3>ข้อยกเว้นที่มีชื่อเสียง — Chapter ที่ไม่ทำตาม Codex</h3>
+            <p class="rule-law">บาง Chapter ได้รับการยอมรับให้ใช้โครงสร้างของตนเอง แม้จะละเมิดกฎพื้นฐานอย่างข้อ 1 ก็ตาม</p>
+            <div class="table-wrap"><table>
+              <thead><tr><th>Chapter</th><th>ต่างจาก Codex อย่างไร</th></tr></thead>
+              <tbody>
+                <tr><td><a href="lore/space-wolves.html"><b>Space Wolves</b></a></td><td>ไม่เคยยอมรับ Codex เลย แบ่งเป็น 12–13 Great Company แทน 10 กองร้อย จัดทหารตามอายุ (Blood Claws → Grey Hunters → Long Fangs) และเชื่อกันว่ามีทหารเกิน 1,000 นาย</td></tr>
+                <tr><td><a href="lore/black-templars.html"><b>Black Templars</b></a></td><td>Sigismund ปฏิเสธ Codex ตั้งแต่แรก แบ่งเป็นกองครูเสดหลายกอง ไม่มีกองร้อย Scout (Neophyte ฝึกในหน่วยเดียวกับรุ่นพี่) Inquisition ลือว่ามีทหารราว 6,000 นาย</td></tr>
+                <tr><td><a href="lore/dark-angels.html"><b>Dark Angels</b></a></td><td>ใช้ชื่อตำแหน่งจาก Order of Caliban กองร้อยที่ 1 (Deathwing) เป็น Terminator ทั้งหมด กองร้อยที่ 2 (Ravenwing) เป็นหน่วยเร็วทั้งหมด</td></tr>
+                <tr><td><a href="lore/blood-angels.html"><b>Blood Angels</b></a></td><td>จัดตาม Codex เป็นหลัก แต่ต้องมี Sanguinary Priest แทน Apothecary และ Death Company สำหรับผู้คลั่ง Black Rage</td></tr>
+                <tr><td><a href="lore/deathwatch.html"><b>Deathwatch</b></a></td><td>ไม่มีกองร้อยหรือหน่วยตายตัว หน่วยเดียวที่สำคัญคือ Kill Team ที่จัดตามภารกิจ</td></tr>
+                <tr><td><a href="lore/grey-knights.html"><b>Grey Knights</b></a></td><td>ทุกนายเป็นผู้ใช้พลังจิต แบ่งเป็น Brotherhood 8 กอง ขึ้นกับ Ordo Malleus</td></tr>
+              </tbody>
+            </table></div>
+            <figure class="rule-fig"><img src="../images/codex/sigismund.webp" alt="Sigismund Emperor's Champion" loading="lazy" data-zoom><figcaption>Sigismund — High Marshal คนแรกของ Black Templars</figcaption></figure>
+            <div class="rule-foot"><span class="chip">Space Wolves · Black Templars · Grey Knights ละเมิดขีดจำกัด 1,000 นาย</span><button type="button" class="btn btn-primary btn-sm btn-event" data-event="ev-sigismund"><svg class="i "><use href="#i-book"></use></svg> ดูเหตุการณ์ตัวอย่าง</button></div>
+          </div>
+        </article>
+        <template id="ev-sigismund">
+          <img src="../images/codex/sigismund.webp" alt="Sigismund">
+          <span class="ev-when">Second Founding → 781.M31</span>
+          <h3>Sigismund — ครูเสดหมื่นปีเพื่อพิสูจน์ความภักดี</h3>
+          <p>หลังการทะเลาะระหว่าง Dorn กับกิลลิมัน <strong>Sigismund</strong> อดีต First Captain ของ Imperial Fists มองว่า Codex คือ <strong>การดูหมิ่นคำสอนของ Rogal Dorn</strong> เขานำนักรบที่คลั่งศรัทธาที่สุดสวมเกราะดำ-ขาวตามแบบชุดของเขา ตั้ง <strong>Black Templars</strong> แล้วออกเดินทางไปรบในห้วงอวกาศทันที</p>
+          <p>ครูเสดนี้ดำเนินมาหมื่นปีโดยไม่เคยหยุด Sigismund นำ Chapter หลายศตวรรษจนอายุเกินพันปี และตายในการดวลกับ <strong>Abaddon</strong> ระหว่าง Black Crusade ครั้งแรก (781.M31) — แต่ก่อนตาย เขาฝังดาบดำลึกเข้าในร่างของ Despoiler</p>
+          <p class="ev-src">ที่มา: Codex: Black Templars (4th Edition), Index Astartes</p>
+        </template>
+
+        <article class="rule" id="r39">
+          <div class="rule-num">39</div>
+          <div class="rule-body">
+            <h3>Codex ฉบับแก้ไขยุค Era Indomitus</h3>
+            <p class="rule-law">หลังฟื้นคืนชีพ กิลลิมันปรับปรุง Codex เพื่อรองรับ Primaris Space Marines และสงครามยุคใหม่ แต่ยังคงหัวใจ 1,000 นาย 10 กองร้อยไว้</p>
+            <ul>
+              <li><strong>ประเภทหน่วยใหม่:</strong> Battleline, Close Support, Fire Support, Veteran และ Command (แทนการแบ่งแค่ Tactical/Assault/Devastator)</li>
+              <li><strong>ผู้นำเพิ่ม:</strong> กองร้อยละ 1 กัปตัน + 2 Lieutenant ที่นำ "ครึ่งกองร้อย" (Demi-company)</li>
+              <li><strong>หน่วยเล็กลง:</strong> กองร้อยอาจมีได้ถึง 20 หน่วย หน่วยละ 5 นาย</li>
+              <li><strong>เสริมกำลังชั่วคราว:</strong> ย้ายหน่วยจากกองร้อยสำรองไปเสริมกองร้อยรบได้ ทำให้กองร้อยมีเกิน 100 นายชั่วคราว</li>
+              <li><strong>กองร้อยที่ 10:</strong> นอกจาก Scout ยังมีหน่วย Vanguard ประจำ 10 หน่วย และไม่กำหนดขนาด</li>
+              <li><strong>ทหารยืดหยุ่นขึ้น:</strong> ทหารในหน่วยเดียวกันอาจแยกไปขับ Invictor Warsuit, Rhino หรือเป็น Aggressor ตามภารกิจ</li>
+            </ul>
+            <figure class="figure ca-wide"><img src="../images/codex/org-indomitus.webp" alt="โครงสร้าง Chapter ยุค Era Indomitus" loading="lazy" data-zoom><figcaption>โครงสร้าง Chapter ฉบับแก้ไขยุค Era Indomitus — กดเพื่อขยาย</figcaption></figure>
+            <div class="rule-foot"><span class="chip">Primaris · Greyshields · Unnumbered Sons</span><button type="button" class="btn btn-primary btn-sm btn-event" data-event="ev-emissaries"><svg class="i "><use href="#i-book"></use></svg> ดูเหตุการณ์ตัวอย่าง</button></div>
+          </div>
+        </article>
+        <template id="ev-emissaries">
+          <img src="../images/codex/emissaries.webp" alt="Custodes แห่ง Emissaries Imperatus">
+          <span class="ev-when">Indomitus Crusade · ต้น M42</span>
+          <h3>"ของขวัญจากพระหัตถ์จักรพรรดิ" — เมื่อ Chapter เก่าไม่ยอมรับ Primaris</h3>
+          <p>เมื่อกิลลิมันนำ Primaris มาเสริม Chapter เก่า Chapter Master หลายคนต้อนรับ แต่หลายคนระแวงอย่างรุนแรง — ทหารที่ "ไม่เคยผ่านกองร้อย Scout หรือ Devastator" สร้างโดยนักบวชเครื่องจักรที่ "พยายามทำดีกว่างานของจักรพรรดิ" ดูเหมือนขัดกับหลัก Codex ข้อ 6 และ 10 โดยตรง</p>
+          <p>Shield Host ของ Adeptus Custodes ชื่อ <strong>Emissaries Imperatus</strong> จึงก้าวออกมาประกาศว่า Primaris คือ <strong>พระประสงค์ของจักรพรรดิ</strong> และเดินทางไปกับครูเสดในฐานะ "Heralds of the Golden Throne" หลายคนขี่ Vertus Praetor ไปส่งข่าวให้ทุก Chapter — และ <em>ไม่มีใครปฏิเสธของขวัญจากพระหัตถ์ของจักรพรรดิได้</em></p>
+          <p class="ev-src">ที่มา: Codex: Space Marines (8th Edition), Codex: Adeptus Custodes</p>
+        </template>
+      </section>
+
+      <section id="part8">
+        <h2><span class="num">09</span>ภาค 8 · ผู้เชี่ยวชาญ ชีวิต และเกียรติยศ (ข้อ 40–52)</h2>
+        <p class="ca-part-lead">รายละเอียดที่ Codex กำหนดเกี่ยวกับตำแหน่งผู้เชี่ยวชาญ ขั้นตอนการเป็นนักรบ และธรรมเนียมที่ทำให้ Chapter เป็นมากกว่ากองทัพ</p>
+<article class="rule" id="r40"><div class="rule-num">40</div><div class="rule-body"><h3>Librarius — ลำดับยศของผู้ใช้พลังจิต</h3><p class="rule-law">ผู้ใช้พลังจิตของ Chapter ต้องผ่านการทดสอบและฝึกใน Librarius ไต่ยศจาก Lexicanium → Codicier → Epistolary และผู้นำคือ Chief Librarian</p><p>ผู้สมัครที่มีพลังจิตจะถูกทดสอบว่าจิตใจแข็งพอต้านการล่อลวงของปีศาจหรือไม่ ผู้ที่ผ่านจะได้หมวก <strong>Psychic Hood</strong> ที่ช่วยควบคุมพลังและกันพลังจิตศัตรู และอาวุธ <strong>Force Weapon</strong> ที่ส่งพลังจิตผ่านใบมีด Librarian ยังทำหน้าที่ทำนาย (Divination) สื่อสารทางจิต และเก็บรักษาบันทึกประวัติศาสตร์ของ Chapter</p><figure class="rule-fig"><img src="../images/units/librarian.webp" alt="Librarian ของ Ultramarines" loading="lazy" data-zoom><figcaption>Librarian ของ Ultramarines</figcaption></figure><div class="rule-foot"><span class="chip">Lexicanium · Codicier · Epistolary · Chief Librarian</span></div></div></article>
+<article class="rule" id="r41"><div class="rule-num">41</div><div class="rule-body"><h3>Reclusiam — ผู้พิทักษ์จิตวิญญาณ</h3><p class="rule-law">Chaplain ของทุกกองร้อยขึ้นกับ Reclusiam นำโดย Reclusiarch และ Master of Sanctity (High Chaplain) ผู้ดูแลลัทธิประจำ Chapter</p><p>Chaplain ดูแลพิธีกรรม ความศรัทธา และขวัญกำลังใจ เทศนาปลุกใจกลางสนามรบ เฝ้าดูจิตใจของพี่น้องไม่ให้แปดเปื้อน และตรวจผู้สมัครใหม่ทางจิตวิญญาณ สวมเกราะดำ หมวกหัวกะโหลก ถือกระบอง <strong>Crozius Arcanum</strong> และสร้อย <strong>Rosarius</strong> ที่สร้างโล่พลังงาน</p><figure class="rule-fig"><img src="../images/units/chaplain.webp" alt="Chaplain เกราะดำ" loading="lazy" data-zoom><figcaption>Chaplain เกราะดำ</figcaption></figure><div class="rule-foot"><span class="chip">Chaplain · Reclusiarch · Master of Sanctity</span></div></div></article>
+<article class="rule" id="r42"><div class="rule-num">42</div><div class="rule-body"><h3>Apothecarion — หมอผู้เก็บอนาคตของ Chapter</h3><p class="rule-law">Apothecary ต้องรักษาพี่น้อง และต้องเก็บต่อม Progenoid จากผู้ที่เสียชีวิตทุกคนกลับไปสร้างนักรบรุ่นต่อไป</p><p>Apothecary ใช้อุปกรณ์ <strong>Narthecium</strong> รักษาบาดแผล และ <strong>Reductor</strong> ผ่าเอาต่อม Progenoid ออกจากร่าง ถ้าพี่น้องบาดเจ็บจนไม่มีทางรอด Apothecary จะมอบ <strong>"Emperor's Peace"</strong> — การปลิดชีวิตอย่างเมตตา แล้วเก็บ Gene-seed ไว้ Apothecary ยังดูแลการผ่าตัดปลูกถ่ายอวัยวะให้ Neophyte และเฝ้าระวังการกลายพันธุ์ใน Gene-seed ของ Chapter</p><figure class="rule-fig"><img src="../images/units/apothecary.webp" alt="Primaris Apothecary" loading="lazy" data-zoom><figcaption>Primaris Apothecary</figcaption></figure><div class="rule-foot"><span class="chip">Narthecium · Reductor · Emperor's Peace</span></div></div></article>
+<article class="rule" id="r43"><div class="rule-num">43</div><div class="rule-body"><h3>Techmarine — ช่างที่ผ่านการฝึกบนดาว Mars</h3><p class="rule-law">ผู้ที่มีความสามารถด้านเครื่องจักรจะถูกส่งไปฝึกกับ Adeptus Mechanicus บนดาว Mars หลายปี แล้วกลับมาดูแลคลังอาวุธและยานรบของ Chapter</p><p>Techmarine เรียนพิธีกรรมปลุก Machine Spirit ภาษา Binharic และการซ่อมเครื่องจักรศักดิ์สิทธิ์ ได้แขนกล <strong>Servo-harness</strong> และ Servitor เป็นผู้ช่วย พวกเขาถือคำสาบานต่อทั้ง Chapter และ Machine God จึงอยู่ระหว่างสองโลกเสมอ ผู้นำคือ <strong>Master of the Forge</strong> ผู้ดูแล Armoury ทั้งหมด</p><figure class="rule-fig"><img src="../images/units/techmarine.webp" alt="Techmarine ในเกราะแดง" loading="lazy" data-zoom><figcaption>Techmarine ในเกราะแดง</figcaption></figure><div class="rule-foot"><span class="chip">Armoury · Master of the Forge</span></div></div></article>
+<article class="rule" id="r44"><div class="rule-num">44</div><div class="rule-body"><h3>Dreadnought — เกียรติของผู้บาดเจ็บปางตาย</h3><p class="rule-law">นักรบที่มีเกียรติซึ่งบาดเจ็บจนร่างกายรักษาไม่ได้ อาจถูกบรรจุในโลงเหล็กของ Dreadnought เพื่อรับใช้ Chapter ต่อไป และยังคงเป็นสมาชิกของกองร้อยเดิม</p><p>Dreadnought ส่วนใหญ่ถูกให้หลับในภาวะจำศีลระหว่างสงคราม และถูกปลุกด้วยพิธีกรรมเมื่อ Chapter ต้องการ Dreadnought ที่อยู่มาหลายพันปี (Venerable Dreadnought) เป็นทั้งอาวุธและคลังความทรงจำที่มีชีวิต ผู้นำ Chapter มักขอคำปรึกษาจากพวกเขา เกียรติประวัติถูกสลักบนตัวถัง (ดูข้อ 19)</p><div class="ca-two"><figure class="rule-fig"><img src="../images/units/venerable-dreadnought.webp" alt="Venerable Dreadnought" loading="lazy" data-zoom><figcaption>Venerable Dreadnought</figcaption></figure><figure class="rule-fig"><img src="../images/units/dreadnought.webp" alt="แผนผัง Dreadnought" loading="lazy" data-zoom><figcaption>แผนผัง Dreadnought</figcaption></figure></div><div class="rule-foot"><span class="chip">Venerable Dreadnought</span></div></div></article>
+<article class="rule" id="r45"><div class="rule-num">45</div><div class="rule-body"><h3>Chapter Champion และ Honour Guard</h3><p class="rule-law">Chapter Master อาจเลือกทหารผ่านศึกเป็น Honour Guard องครักษ์นอกทะเบียนกองร้อย และมี Chapter Champion นักรบที่เก่งที่สุดของทั้ง Chapter คอยท้าดวลและปกป้อง</p><p>Honour Guard คือเกียรติสูงสุดที่ทหารผ่านศึกได้รับ สวมเกราะ Artificer และถือธงของ Chapter ส่วน Champion มีหน้าที่ตามคำสอนใน Apocrypha of Skaros: "ปกป้องกัปตันจากอันตรายทั้งปวง แม้ต้องแลกด้วยชีวิต"</p><div class="ca-two"><figure class="rule-fig"><img src="../images/codex/honour-guard.webp" alt="Honour Guard ของ Ultramarines" loading="lazy" data-zoom><figcaption>Honour Guard ของ Ultramarines</figcaption></figure><figure class="rule-fig"><img src="../images/units/company-champion.webp" alt="Company Champion" loading="lazy" data-zoom><figcaption>Company Champion</figcaption></figure></div><div class="rule-foot"><span class="chip">Honour Guard · Champion</span><button type="button" class="btn btn-primary btn-sm btn-event" data-event="ev-aloysius"><svg class="i "><use href="#i-book"></use></svg> ดูเหตุการณ์ตัวอย่าง</button></div></div></article>
+<article class="rule" id="r46"><div class="rule-num">46</div><div class="rule-body"><h3>ยศภายในหน่วย: Battle-Brother → Sergeant → Veteran</h3><p class="rule-law">ทหารในหน่วยเรียกว่า Battle-Brother นำโดย Sergeant ส่วน Veteran Sergeant คือจ่าที่มีประสบการณ์สูง และมีสิทธิ์ฝึกหน่วย Scout</p><p>จ่าถือธงหน่วยและติดหัวกะโหลกแดงเป็นตรายศ (ข้อ 32) ทหารผ่านศึกจำนวนมากทำหน้าที่จ่าในกองร้อยต่าง ๆ ก่อนจะได้เข้ากองร้อยที่ 1 ทำให้กองร้อยทหารผ่านศึกเต็มไปด้วยผู้นำที่ผ่านการพิสูจน์แล้ว</p><figure class="rule-fig"><img src="../images/codex/vet-sergeant.webp" alt="ทหารผ่านศึกและจ่าอาวุโส" loading="lazy" data-zoom><figcaption>ทหารผ่านศึกและจ่าอาวุโส</figcaption></figure><div class="rule-foot"><span class="chip">Brother · Sergeant · Veteran Sergeant</span></div></div></article>
+<article class="rule" id="r47"><div class="rule-num">47</div><div class="rule-body"><h3>Black Carapace — ขั้นสุดท้ายของการเป็น Space Marine</h3><p class="rule-law">อวัยวะชิ้นสุดท้ายที่ปลูกถ่ายคือ Black Carapace ใต้ผิวหนังที่เชื่อมระบบประสาทกับชุด Power Armour — เมื่อได้รับแล้ว Neophyte จึงเป็น Battle-Brother เต็มตัว</p><p>เพราะยังไม่มี Black Carapace หน่วย Scout จึงใช้ Power Armour ไม่ได้และต้องสวมเกราะ Scout แบบเบา เมื่อผ่านการฝึกและพิสูจน์ตัวในกองร้อยที่ 10 จึงได้รับการผ่าตัดขั้นสุดท้ายและเข้าสู่ Devastator ในกองร้อยที่ 9 (ข้อ 10)</p><div class="ca-two"><figure class="rule-fig"><img src="../images/space-marines/armour-components.webp" alt="ส่วนประกอบของ Power Armour" loading="lazy" data-zoom><figcaption>ส่วนประกอบของ Power Armour</figcaption></figure><figure class="rule-fig"><img src="../images/space-marines/neophyte-scout.webp" alt="Neophyte ในเกราะ Scout" loading="lazy" data-zoom><figcaption>Neophyte ในเกราะ Scout</figcaption></figure></div><div class="rule-foot"><span class="chip">อวัยวะชิ้นที่ 19</span></div></div></article>
+<article class="rule" id="r48"><div class="rule-num">48</div><div class="rule-body"><h3>ข้ารับใช้และ Servitor</h3><p class="rule-law">งานที่ไม่ใช่การรบ — เสบียง บริหาร ซ่อมบำรุง — ให้ข้ารับใช้มนุษย์ (Chapter Serf) และ Servitor ทำ เพื่อให้ Battle-Brother ทุกนายอุทิศตัวให้การรบ</p><p>ข้ารับใช้จำนวนมากมาจากผู้สมัครที่ล้มเหลวและถูกล้างความจำ บางคนไต่เป็นผู้ดูแลกิจการของ Chapter ในตำแหน่ง "Lord of the Household" ส่วน Servitor คือมนุษย์ที่ถูกลบความคิดและดัดแปลงด้วยเครื่องจักร ทำงานซ้ำ ๆ ให้ Techmarine และประจำปืนป้อม</p><div class="ca-two"><figure class="rule-fig"><img src="../images/codex/chapter-serf.webp" alt="Chapter Serf" loading="lazy" data-zoom><figcaption>Chapter Serf</figcaption></figure><figure class="rule-fig"><img src="../images/units/servitor.webp" alt="Servitor" loading="lazy" data-zoom><figcaption>Servitor</figcaption></figure></div><div class="rule-foot"><span class="chip">Chapter Serf · Servitor</span></div></div></article>
+<article class="rule" id="r49"><div class="rule-num">49</div><div class="rule-body"><h3>ชื่อฉายาและธงประจำหน่วย</h3><p class="rule-law">กองร้อยและหน่วยมีธงประจำที่บันทึกวีรกรรม และหลายกองร้อยมีชื่อฉายาของตัวเอง ธงเหล่านี้ถูกถือโดย Ancient และจ่าในสนามรบ</p><p>ตัวอย่างเช่นกองร้อยที่ 2 ของ Ultramarines มีฉายาว่า <strong>"Guardians of the Temple"</strong> การสูญเสียธงถือเป็นความอัปยศ ขณะที่การที่ธงยังตั้งอยู่ปลุกให้ทหารรอบข้างสู้หนักขึ้น Codex ปล่อยให้การติดธงหลังของจ่าเป็นดุลยพินิจ (ข้อ 32)</p><div class="ca-two"><figure class="rule-fig"><img src="../images/units/ancient.webp" alt="Ancient ผู้ถือธง" loading="lazy" data-zoom><figcaption>Ancient ผู้ถือธง</figcaption></figure><figure class="rule-fig"><img src="../images/codex/guardians-temple.webp" alt="กองร้อยที่ 2 "Guardians of the Temple"" loading="lazy" data-zoom><figcaption>กองร้อยที่ 2 "Guardians of the Temple"</figcaption></figure></div><div class="rule-foot"><span class="chip">ธงกองร้อย · ฉายา</span></div></div></article>
+<article class="rule" id="r50"><div class="rule-num">50</div><div class="rule-body"><h3>เหรียญและเครื่องหมายเกียรติยศ</h3><p class="rule-law">วีรกรรมต้องถูกบันทึกบนเกราะ — ตราเกียรติยศมอบให้ตามความกล้าหาญและความชำนาญ และทหารแสดงไว้บนชุดเกราะอย่างภาคภูมิ</p><ul><li><strong>Crux Terminatus</strong> — สิทธิ์สวม Terminator (ข้อ 11)</li><li><strong>Iron Halo</strong> — วงแหวนสร้างโล่พลังงาน มอบให้ผู้บังคับบัญชาที่กล้าหาญ</li><li><strong>Imperial Laurel</strong> — สำหรับวีรกรรมโดดเด่น</li><li><strong>Marksman's Honour</strong> — พลแม่นปืน</li><li><strong>Purity Seal</strong> — กระดาษคำอวยพรติดเกราะก่อนรบ</li><li><strong>Service Studs</strong> — หมุดบนหน้าผากแสดงอายุการรับใช้</li></ul><p>ดูรายละเอียดทุกเหรียญที่ <a href="honours.html">เหรียญตราและเกียรติยศ</a></p><div class="ca-two"><figure class="rule-fig"><img src="../images/honours/sm-iron-halo.webp" alt="Iron Halo" loading="lazy" data-zoom><figcaption>Iron Halo</figcaption></figure><figure class="rule-fig"><img src="../images/honours/sm-purity-seal.webp" alt="Purity Seal" loading="lazy" data-zoom><figcaption>Purity Seal</figcaption></figure></div><div class="rule-foot"><span class="chip">ดูเพิ่มในหน้าเหรียญตรา</span></div></div></article>
+<article class="rule" id="r51"><div class="rule-num">51</div><div class="rule-body"><h3>โบราณวัตถุและอาวุธศักดิ์สิทธิ์</h3><p class="rule-law">อาวุธและเกราะของ Chapter ต้องได้รับการดูแลอย่างพิถีพิถัน และจารึกเกียรติประวัติของผู้ใช้คนก่อนด้วยอักษร High Gothic</p><p>ชุดเกราะหลายชุดส่งต่อกันมาหลายพันปี รอยสลักแต่ละบรรทัดบันทึกการรบของเจ้าของเดิม ชุด <strong>Artificer Armour</strong> ที่ช่างฝีมือทำด้วยมือมอบให้ผู้มีเกียรติสูง ส่วนโบราณวัตถุพิเศษ (Chapter Relics) นำออกสนามเฉพาะในยามคับขันที่สุด โดยมี Master of Relics เป็นผู้ดูแล (ข้อ 18)</p><figure class="rule-fig"><img src="../images/space-marines/armour-artificer.webp" alt="Artificer Armour" loading="lazy" data-zoom><figcaption>Artificer Armour</figcaption></figure><div class="rule-foot"><span class="chip">Artificer Armour · Chapter Relics</span></div></div></article>
+<article class="rule" id="r52"><div class="rule-num">52</div><div class="rule-body"><h3>ดาวบ้านเกิด — ปกครองและปกป้อง</h3><p class="rule-law">Chapter Master มีฐานะเทียบผู้ว่าการดาว ปกครองดาวบ้านเกิดและระบบดาวรอบข้างได้ ควบคุมทรัพยากร กองกำลังป้องกันดาว (PDF) Astropath และ Navigator ของ Chapter</p><p>ดาวบ้านเกิดเป็นทั้งแหล่งผู้สมัครและฐานทัพ Apothecary และ Chaplain เฝ้าดูประชากรจากระยะไกลเพื่อรักษาความบริสุทธิ์ทางพันธุกรรม (ข้อ 9) หลายเขตที่ Space Marine ปกครองกลับสงบและมั่นคงกว่าที่อื่น — แต่อำนาจนี้ก็เป็นดาบสองคม ดังที่เห็นใน Badab War (ข้อ 7)</p><figure class="rule-fig"><img src="../images/codex/fortress-monastery.webp" alt="Fortress-Monastery บนดาวบ้านเกิด" loading="lazy" data-zoom><figcaption>Fortress-Monastery บนดาวบ้านเกิด</figcaption></figure><div class="rule-foot"><span class="chip">Chapter Planet · PDF</span></div></div></article>
+      </section>
+
+      <section id="teachings">
+        <h2><span class="num">09</span>คำสอนของกิลลิมันที่เหลือรอด</h2>
+        <p>ต้นฉบับสมบูรณ์ของ Codex สูญหายไปแล้ว ถ้อยคำเหล่านี้มาจากสำเนาอย่าง Apocrypha of Skaros และบันทึกที่ Space Marine ท่องจำกันมาหมื่นปี</p>
+        <blockquote class="ca-quote ca-quote-big">"พวกเขาจะเป็นนักรบที่ดีที่สุดของข้า … ข้าจะปั้นพวกเขาดั่งดินเหนียว และหลอมพวกเขาในเตาไฟแห่งสงคราม พวกเขาจะมีเจตจำนงดั่งเหล็กและกล้ามเนื้อดั่งเหล็กกล้า … พวกเขาคือปราการของข้าต่อความสยดสยอง พวกเขาคือผู้พิทักษ์มนุษยชาติ พวกเขาคือ Space Marine ของข้า — <strong>และพวกเขาจะไม่รู้จักความกลัว</strong>"<cite>— จักรพรรดิแห่งมนุษยชาติ · บทนำของ Codex Astartes (Apocrypha of Skaros)</cite></blockquote>
+        <figure class="figure ca-wide"><img src="../images/codex/codex-tome.webp" alt="หน้ากระดาษแผนผังองค์กรจาก Codex Astartes" loading="lazy" data-zoom><figcaption>หน้าแผนผังองค์กร Chapter จาก Codex Astartes (ภาพในหนังสือทางการ)</figcaption></figure>
+      </section>
+
+      <section id="compliance">
+        <h2><span class="num">10</span>Chapter ต้นแบบของ Codex</h2>
+        <p>Chapter ที่ขึ้นชื่อว่าทำตาม Codex อย่างเคร่งครัดที่สุด ("Codex Chapter") ได้แก่ <strong>Ultramarines</strong> (ต้นแบบของทั้งหมด), <strong>Genesis Chapter</strong>, <strong>Red Scorpions</strong>, <strong>Praetors of Orpheus</strong>, <strong>Black Consuls</strong>, <strong>Novamarines</strong> และ <strong>Hammers of Dorn</strong></p>
+        <div class="callout tip"><svg class="i "><use href="#i-bulb"></use></svg><div><strong class="title">มีมยอดฮิตของแฟน ๆ</strong><p>ประโยค <em>"The Codex Astartes does not support this action"</em> ที่เห็นบ่อยในอินเทอร์เน็ต เป็นมีมล้อความเคร่งครัดของ Ultramarines ในหมู่แฟน ๆ <strong>ไม่ใช่</strong> ข้อความจากหนังสือทางการ</p></div></div>
+      </section>
+
+      <section id="tabletop">
+        <h2><span class="num">11</span>Codex Astartes ในเกมโต๊ะ</h2>
+        <p>หลักการของ Codex ถูกแปลงเป็นกติกาในเกมหลายรุ่น เพื่อให้กองทัพ Space Marine "รู้สึก" ว่าทำตามคัมภีร์</p>
+        <ul>
+          <li><strong>Combat Squads</strong> — กติการุ่นเก่าให้แบ่งหน่วย 10 นายเป็น 5 + 5 ก่อนวางกำลัง (ตามข้อ 15)</li>
+          <li><strong>Combat Doctrines</strong> — ใน Codex: Space Marines รุ่น 9 กองทัพเปลี่ยนหลักการรบตามรอบ: Devastator (ยิงหนัก) → Tactical → Assault (ประชิด) สะท้อนแนวคิดข้อ 23 และในรุ่น 10 Detachment <em>Gladius Task Force</em> ให้เลือกใช้แต่ละ Doctrine ได้ครั้งเดียวต่อเกม</li>
+          <li><strong>หน่วยนำ (Leader)</strong> — กัปตัน Lieutenant Chaplain Apothecary Librarian ที่ติดไปกับหน่วยในเกม ก็คือตำแหน่งตามข้อ 16–17</li>
+        </ul>
+        <div class="callout warn"><svg class="i "><use href="#i-alert"></use></svg><div><p>กติกาเปลี่ยนตามรุ่นของเกม เมื่อเล่นจริงในรุ่น 11 ให้ตรวจสอบจาก Codex ของ Space Marines ฉบับล่าสุดและแอป Warhammer 40,000 เสมอ ดูภาพรวมการจัดทัพที่ <a href="army-building.html">การจัดทัพ</a></p></div></div>
+      </section>
+
+      <section id="faq">
+        <h2><span class="num">12</span>คำถามที่พบบ่อย</h2>
+        <div class="faq">
+          <details><summary>Codex Astartes มีกี่เล่ม/กี่หน้า?</summary><p>ไม่มีการระบุจำนวนที่แน่นอน ในเนื้อเรื่องมันเป็น "ตำราขนาดมหึมา" ที่มีหลายเล่ม (มีการกล่าวถึง "เล่มที่ว่าด้วยบทบาทยุทธวิธี อุปกรณ์ เครื่องหมาย และโปรโตคอลการบัญชาการ") และมีคำอธิบายของนักการทหารรุ่นหลังเพิ่มเข้าไปอีกมาก</p></details>
+          <details><summary>ทำไม Space Marine ทั้งจักรวรรดิมีแค่ราว 1,000 Chapter?</summary><p>เพราะข้อ 1 จำกัด Chapter ละ 1,000 นาย และข้อ 5 ให้สร้าง Chapter ใหม่ได้ผ่าน Founding เท่านั้น ผลคือมี Space Marine รวมราวหนึ่งล้านนาย — น้อยกว่า 1 นายต่อดาวหนึ่งดวงของจักรวรรดิ</p></details>
+          <details><summary>Codex ใช้กับ Space Marine ฝ่าย Chaos ไหม?</summary><p>ไม่ Legion ที่ทรยศหนีเข้า Eye of Terror ก่อน Codex จะถูกใช้ พวกเขายังจัดองค์กรแบบ Legion เก่าหรือแบบ Warband และมองว่า Codex คือ "การฉีก Legion" ที่น่ารังเกียจ</p></details>
+          <details><summary>Codex กำหนดกองทัพมนุษย์ด้วยไหม?</summary><p>Codex Astartes ว่าด้วย Space Marine เท่านั้น แต่ในยุคเดียวกันกิลลิมันยังปฏิรูปกองทัพมนุษย์ แยกเป็น Astra Militarum (ทัพบก) และ Imperial Navy (ทัพเรือ) เพื่อไม่ให้แม่ทัพคนใดมีทั้งทหารและเรือพอจะก่อกบฏ</p></details>
+          <details><summary>ถ้าละเมิด Codex จะเกิดอะไรขึ้น?</summary><p>ขึ้นกับ Chapter — ใน Chapter ที่เคร่งครัดอย่าง Ultramarines อาจถูกไต่สวนและลงโทษรุนแรง (ดูเหตุการณ์ของ Uriel Ventris ในข้อ 37) ส่วนการละเมิดกฎระดับจักรวรรดิ เช่น ขยายกำลังเกินหรือไม่ส่ง Gene-seed อาจนำไปสู่การถูกประกาศเป็นกบฏ (ข้อ 7)</p></details>
+        </div>
+      </section>
+
+      <section id="sources">
+        <h2><span class="num">13</span>แหล่งอ้างอิง</h2>
+        <ul>
+          <li><a href="https://warhammer40k.fandom.com/wiki/Codex_Astartes" target="_blank" rel="noopener">Warhammer 40k Wiki — Codex Astartes</a>, <a href="https://warhammer40k.fandom.com/wiki/Apocrypha_of_Skaros" target="_blank" rel="noopener">Apocrypha of Skaros</a>, <a href="https://warhammer40k.fandom.com/wiki/Second_Founding" target="_blank" rel="noopener">Second Founding</a>, <a href="https://warhammer40k.fandom.com/wiki/Adeptus_Astartes" target="_blank" rel="noopener">Adeptus Astartes</a>, <a href="https://warhammer40k.fandom.com/wiki/Chapter_Command" target="_blank" rel="noopener">Chapter Command</a></li>
+          <li>หนังสือต้นฉบับ (อ้างผ่านวิกิ): Index Astartes I "Codex Astartes: The Holy Tome of the Space Marines", Codex: Space Marines (รุ่น 4, 5, 8 และ 9), Codex: Ultramarines (รุ่น 2), Insignium Astartes, Imperial Armour: The Badab War</li>
+          <li>นิยาย Black Library: <em>Know No Fear</em>, <em>Rules of Engagement</em>, ชุด Uriel Ventris, <em>Battle of the Fang</em>, <em>Dark Imperium</em></li>
+        </ul>
+        <p class="muted" style="font-size:.9rem">คำพูดใน Codex ถูกแปลเป็นภาษาไทยโดยถอดความ ไม่ใช่การแปลคำต่อคำ ปีและตัวเลขยึดตามแหล่งที่อ้าง ซึ่งบางครั้ง Games Workshop เองก็ให้ข้อมูลไม่ตรงกันในแต่ละรุ่น</p>
+        <p><a class="btn btn-ghost btn-sm" href="space-marines.html"><svg class="i "><use href="#i-shield"></use></svg> Space Marine เจาะลึก</a> <a class="btn btn-ghost btn-sm" href="lore/ultramarines.html"><svg class="i "><use href="#i-book"></use></svg> เนื้อเรื่อง Ultramarines</a> <a class="btn btn-ghost btn-sm" href="ranks.html"><svg class="i "><use href="#i-layers"></use></svg> ลำดับยศทุกฝ่าย</a></p>
+      </section>
+
+      <div class="mark-read"><button class="btn btn-ghost btn-sm" data-mark-read></button></div>
+      <div data-page-nav></div>
+    </article>
+  </div>
+</main>
+
+<script src="../js/layout.js?v=13"></script>
+<script src="../js/main.js?v=13"></script>
+</body>
+</html>

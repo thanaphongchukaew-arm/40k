@@ -7,13 +7,15 @@
   <meta name="description" content="คู่มือภาษาไทย Warhammer 40,000 (11th Edition) ตั้งแต่เนื้อเรื่อง ทัพต่าง ๆ กติกา การจัดทัพ จนถึงเกมแรกของคุณ อ่านง่าย มีรูปประกอบ">
   <meta name="theme-color" content="#0d0e11">
   <link rel="icon" href="images/icons/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Kanit:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=6">
+  <link rel="stylesheet" href="css/style.css?v=13">
 </head>
 <body data-page="home" data-root="./">
-<script src="js/icons.js?v=6"></script>
+<script src="js/icons.js?v=13"></script>
 
 <main>
   <!-- ============ HERO ============ -->
@@ -83,6 +85,7 @@
         <div class="eyebrow">เรียนตามลำดับ</div>
         <h2>เส้นทางจากศูนย์ สู่เกมแรก</h2>
         <p>อ่านเรียงตามลำดับนี้จะเข้าใจง่ายที่สุด ทุกหน้ามีปุ่ม "ถัดไป" ด้านล่าง · อ่านแล้ว <b class="gold" data-path-count>0 / 14</b> หน้า</p>
+        <div data-progress="getting-started,lore,factions,basics,turn,combat,terrain,stratagems,army-building,game-modes,first-game,hobby,glossary,quiz"><div class="progress-line"><i></i></div></div>
       </div>
       <div class="path reveal">
         <a data-id="getting-started" href="pages/getting-started.html"><svg class="i done"><use href="#i-check-circle"></use></svg><h3>เริ่มต้นต้องมีอะไร</h3><p>อุปกรณ์ ชุดเริ่มต้น และวิธีเลือกทัพแรก</p></a>
@@ -135,6 +138,10 @@
         <div class="eyebrow">เจาะลึกเนื้อเรื่อง</div>
         <h2>โลกของ 40K แบบละเอียด</h2>
         <p>อ่านเนื้อเรื่องย่อแล้วอยากรู้ต่อ? เลือกหัวข้อได้เลย แต่ละหน้าแยกยุค 30K และ 40K ไว้ชัดเจน</p>
+        <div data-progress="lore,gods,primarchs,lore-30k,lore-40k,compare,faction-lore">
+          <p class="mb-0" style="font-size:.92rem">อ่านส่วนโลกของ 40K แล้ว <b class="gold" data-progress-text>0 / 7</b> หน้า</p>
+          <div class="progress-line"><i></i></div>
+        </div>
       </div>
       <div class="grid grid-3">
         <a class="card img-card reveal" href="pages/gods.html">
@@ -159,7 +166,31 @@
         </a>
         <a class="card img-card reveal" href="pages/faction-lore.html">
           <div class="img"><img src="images/lore/xenos/craftworld-biel-tan.webp" alt="เนื้อเรื่องรายทัพ" loading="lazy"></div>
-          <div class="body"><span class="era era-now">41 ทัพ</span><h3 class="mt-2">เนื้อเรื่องรายทัพ</h3><p>ต้นกำเนิด วีรกรรม และเนื้อเรื่องล่าสุดของทุกทัพ</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
+          <div class="body"><span class="era era-now">47 ทัพ</span><h3 class="mt-2">เนื้อเรื่องรายทัพ</h3><p>ต้นกำเนิด วีรกรรม และเนื้อเรื่องล่าสุดของทุกทัพ</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
+        </a>
+        <a class="card img-card reveal" href="pages/characters.html">
+          <div class="img"><img src="images/characters/dante.webp" alt="บุคคลสำคัญ" loading="lazy"></div>
+          <div class="body"><span class="era era-now">สารานุกรม</span><h3 class="mt-2">บุคคลสำคัญ</h3><p>110 ตัวละคร ค้นหาและกรองได้</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
+        </a>
+        <a class="card img-card reveal" href="pages/space-marines.html">
+          <div class="img"><img src="images/factions/imperium/space-marines.webp" alt="Space Marine เจาะลึก" loading="lazy"></div>
+          <div class="body"><span class="era era-now">สารานุกรม</span><h3 class="mt-2">Space Marine เจาะลึก</h3><p>คัดคน อวัยวะ ชุดเกราะ Mark I–X และ Dreadnought</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
+        </a>
+        <a class="card img-card reveal" href="pages/ranks.html">
+          <div class="img"><img src="images/lore/golden-throne.webp" alt="ลำดับยศทุกฝ่าย" loading="lazy"></div>
+          <div class="body"><span class="era era-now">สารานุกรม</span><h3 class="mt-2">ลำดับยศทุกฝ่าย</h3><p>ใครสั่งใครได้ และแต่ละตำแหน่งมีกี่คน</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
+        </a>
+        <a class="card img-card reveal" href="pages/honours.html">
+          <div class="img"><img src="images/honours/am-various.webp" alt="เหรียญตราและเกียรติยศ" loading="lazy"></div>
+          <div class="body"><span class="era era-now">สารานุกรม</span><h3 class="mt-2">เหรียญตราและเกียรติยศ</h3><p>Crux Terminatus, Iron Halo, เหรียญทหาร</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
+        </a>
+        <a class="card img-card reveal" href="pages/galaxy-map.html">
+          <div class="img"><img src="images/lore/great-rift-galaxy-map.webp" alt="แผนที่กาแล็กซี" loading="lazy"></div>
+          <div class="body"><span class="era era-now">สารานุกรม</span><h3 class="mt-2">แผนที่กาแล็กซี</h3><p>กดดาวเพื่อดูผู้ครอบครองและเหตุการณ์</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
+        </a>
+        <a class="card img-card reveal" href="pages/organizations.html">
+          <div class="img"><img src="images/orgs/inquisitors-puritan-radical.webp" alt="องค์กรลับและกองกำลังพิเศษ" loading="lazy"></div>
+          <div class="body"><span class="era era-now">สารานุกรม</span><h3 class="mt-2">องค์กรลับและกองกำลังพิเศษ</h3><p>Inquisition, Assassins, Legion of the Damned</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
         </a>
       </div>
     </div>
@@ -216,7 +247,7 @@
   </section>
 </main>
 
-<script src="js/layout.js?v=6"></script>
-<script src="js/main.js?v=6"></script>
+<script src="js/layout.js?v=13"></script>
+<script src="js/main.js?v=13"></script>
 </body>
 </html>

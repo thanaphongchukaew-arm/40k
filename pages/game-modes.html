@@ -7,13 +7,15 @@
   <meta name="description" content="รูปแบบการเล่น Warhammer 40,000: Open, Narrative (Crusade, Dominatus), Matched Play, Combat Patrol และระบบภารกิจ Force Disposition ของ 11th Edition">
   <meta name="theme-color" content="#0d0e11">
   <link rel="icon" href="../images/icons/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="apple-touch-icon" href="../images/icons/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Kanit:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css?v=6">
+  <link rel="stylesheet" href="../css/style.css?v=13">
 </head>
 <body data-page="game-modes" data-root="../">
-<script src="../js/icons.js?v=6"></script>
+<script src="../js/icons.js?v=13"></script>
 
 <main>
   <header class="page-hero">
@@ -22,7 +24,7 @@
       <nav class="breadcrumb" aria-label="breadcrumb"><a href="../index.html">หน้าแรก</a><svg class="i"><use href="#i-chev-right"></use></svg><span>จัดทัพ & โหมด</span><svg class="i"><use href="#i-chev-right"></use></svg><span>รูปแบบการเล่น</span></nav>
       <h1>รูปแบบการเล่น & ภารกิจ</h1>
       <p class="lead">40K เล่นได้หลายแบบ ตั้งแต่เล่นชิลกับเพื่อน แคมเปญเล่าเรื่องต่อเนื่อง จนถึงทัวร์นาเมนต์ — และใน 11th ภารกิจจะขึ้นกับ "Force Disposition" ของทั้งสองฝ่าย</p>
-      <div class="page-meta"><span class="chip"><svg class="i"><use href="#i-clock"></use></svg> อ่าน ~10 นาที</span><span class="chip chip-gold">บทที่ 10</span><span class="chip chip-new">ระบบภารกิจใหม่</span></div>
+      <div class="page-meta"><span class="rules-date" title="วันที่ตรวจสอบกติกากับฉบับทางการล่าสุด"><svg class="i"><use href="#i-check-circle"></use></svg> กติกาตรวจล่าสุด 24 ก.ย. 2026 · Core Rules 11th Edition</span><span class="chip"><svg class="i"><use href="#i-clock"></use></svg> อ่าน ~10 นาที</span><span class="chip chip-gold">บทที่ 10</span><span class="chip chip-new">ระบบภารกิจใหม่</span></div>
     </div>
   </header>
 
@@ -61,11 +63,14 @@
           <thead><tr><th>รูปแบบ</th><th>ขนาดกองทัพ</th><th>เหมาะกับ</th></tr></thead>
           <tbody>
             <tr><td><strong>Combat Patrol</strong></td><td>กล่อง Combat Patrol 1 กล่อง</td><td>เกมแรก สอนเล่น เล่นเร็ว</td></tr>
-            <tr><td><strong>Incursion</strong></td><td>1,000 แต้ม · 2 DP</td><td>เกมขนาดกลาง หลังเล่น Combat Patrol คล่องแล้ว</td></tr>
-            <tr><td><strong>Strike Force</strong></td><td>2,000 แต้ม · 3 DP</td><td>ขนาดมาตรฐาน ทัวร์นาเมนต์ · โต๊ะประมาณ 44" × 60"</td></tr>
+            <tr><td><strong>เกมเล็ก</strong></td><td>500 แต้ม</td><td>เล่นกันเองเพื่อทดลองกองทัพได้ แต่ไม่ใช่ขนาดหลัก</td></tr>
+            <tr><td><strong>Incursion</strong></td><td>1,000 แต้ม · 2 DP</td><td>จุดเริ่มต้นที่ดีสำหรับเรียนรู้กองทัพ</td></tr>
+            <tr><td><strong>Strike Force</strong></td><td>2,000 แต้ม · 3 DP</td><td>ขนาดมาตรฐานที่คนเล่นจริงจังและงานแข่งใช้กันมาก · โต๊ะประมาณ 44" × 60"</td></tr>
+            <tr><td><strong>เกมใหญ่</strong></td><td>3,000 แต้ม</td><td>สำหรับเกมใหญ่ ใช้โมเดลเยอะและใช้เวลานานกว่า</td></tr>
+            <tr><td><strong>เกมใหญ่พิเศษ</strong></td><td>มากกว่า 3,000 แต้ม</td><td>ตกลงแต้มกับคู่ต่อสู้เองได้ ต้องใช้โต๊ะใหญ่และเวลาทั้งวัน</td></tr>
           </tbody>
         </table></div>
-        <p class="muted" style="font-size:.9rem">อยากเล่นเกมใหญ่กว่านี้ก็ได้ ตกลงแต้มกับคู่ต่อสู้เอง (กฎหลักระบุขนาดมาตรฐานไว้ 2 ขนาดข้างต้น)</p>
+        <p class="muted" style="font-size:.9rem">ขนาดที่ใช้บ่อยที่สุดคือ 1,000 และ 2,000 แต้ม ส่วนขนาดอื่นเล่นได้ถ้าตกลงกับคู่ต่อสู้</p>
       </section>
 
       <section id="narrative">
@@ -138,7 +143,7 @@
   </div>
 </main>
 
-<script src="../js/layout.js?v=6"></script>
-<script src="../js/main.js?v=6"></script>
+<script src="../js/layout.js?v=13"></script>
+<script src="../js/main.js?v=13"></script>
 </body>
 </html>

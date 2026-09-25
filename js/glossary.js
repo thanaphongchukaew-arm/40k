@@ -143,5 +143,13 @@
     cat = b.dataset.gcat; render();
   }));
   q.addEventListener('input', render);
+  /* มาจากหน้าค้นหาทั้งเว็บ: ?q=คำศัพท์ → กรองและเลื่อนไปยังคำนั้น */
+  let fromUrl = '';
+  try { fromUrl = new URLSearchParams(location.search).get('q') || ''; } catch (e) { /* เบราว์เซอร์เก่า */ }
+  if (fromUrl) q.value = fromUrl;
   render();
+  if (fromUrl) {
+    const hit = [...list.querySelectorAll('.g-item h3')].find(h => h.firstChild && h.firstChild.textContent.trim().toLowerCase() === fromUrl.toLowerCase());
+    if (hit) { hit.parentElement.classList.add('hit'); setTimeout(() => hit.parentElement.scrollIntoView({ block: 'center' }), 60); }
+  }
 })();

@@ -104,4 +104,11 @@
   });
   modal.addEventListener('click', e => { if (e.target === modal || e.target.closest('.modal-close')) close(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('open')) close(); });
+  /* ลิงก์ตรงไปยังทัพ เช่น factions.html#orks (มาจากการค้นหาทั้งเว็บ) */
+  const fromHash = () => {
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (id && data.some(x => x.id === id)) open(id);
+  };
+  window.addEventListener('hashchange', fromHash);
+  fromHash();
 })();
