@@ -1730,3 +1730,25 @@ span.gm-thumb { border-radius: 50%; width: 56px; height: 56px; margin: 4px; }
 tr[data-o].on td { background: var(--gold-dim); }
 tr[data-o] { cursor: pointer; }
 @media (max-width: 760px) { .xr-wrap { grid-template-columns: 1fr; } .xr-fig { max-width: 360px; margin: 0 auto; } .xr-info { position: static; } }
+
+/* ไทม์ไลน์ 40K (timeline.html) */
+.tl-tools { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 8px; position: sticky; top: 70px; z-index: 5; padding: 10px 0; background: var(--bg); }
+.tl { list-style: none; margin: 0; padding: 0 0 0 28px; position: relative; }
+.tl::before { content: ""; position: absolute; left: 9px; top: 0; bottom: 0; width: 2px; background: linear-gradient(var(--gold), rgba(var(--gold-rgb), .15)); }
+.tl-era { margin: 26px 0 12px -28px; }
+.tl-era-h { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; font-size: 1.4rem; margin: 0; padding: 8px 14px; border-radius: 12px; background: var(--gold-dim); border: 1px solid rgba(var(--gold-rgb), .3); }
+.tl-era-h small { font-size: .85rem; color: var(--muted); font-family: var(--font-body, inherit); font-weight: 400; }
+.tl-ev { position: relative; margin: 0 0 14px; }
+.tl-dot { position: absolute; left: -25px; top: 18px; width: 14px; height: 14px; border-radius: 50%; background: var(--bg); border: 3px solid var(--gold); }
+.tl-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 14px 16px; display: grid; gap: 6px; }
+.tl-card.has-img { grid-template-columns: minmax(0, 1fr) 200px; grid-template-areas: "date img" "h img" "p img" "l img"; column-gap: 16px; }
+.tl-card.has-img .tl-date { grid-area: date; } .tl-card.has-img h3 { grid-area: h; } .tl-card.has-img p { grid-area: p; } .tl-card.has-img .tl-links { grid-area: l; }
+.tl-img { grid-area: img; width: 100%; height: 140px; object-fit: cover; border-radius: 10px; align-self: start; cursor: zoom-in; }
+.tl-date { font: 600 .85rem/1.2 var(--font-head); color: var(--gold); letter-spacing: .02em; }
+.tl-card h3 { margin: 0; font-size: 1.08rem; }
+.tl-card h3 small { display: block; font-size: .8rem; color: var(--muted); font-weight: 400; margin-top: 2px; }
+.tl-card p { margin: 0; color: var(--text-soft); }
+.tl-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.tl-links .chip { font-size: .8rem; }
+.tl-ev:hover .tl-dot { background: var(--gold); }
+@media (max-width: 640px) { .tl-card.has-img { grid-template-columns: 1fr; grid-template-areas: "img" "date" "h" "p" "l"; } .tl-img { height: 170px; } .tl-tools { top: 60px; } }

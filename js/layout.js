@@ -14,6 +14,7 @@
     { id: 'home', file: 'index.html', title: 'หน้าแรก', icon: 'home', desc: 'ภาพรวมและเส้นทางการเรียน' },
     { id: 'getting-started', file: 'pages/getting-started.html', title: 'เริ่มต้นต้องมีอะไร', icon: 'box', desc: 'อุปกรณ์ ชุดเริ่มต้น และการเลือกทัพ' },
     { id: 'lore', file: 'pages/lore.html', title: 'เนื้อเรื่องย่อ', icon: 'book', desc: 'ภาพรวมจักรวาลแห่ง 41st Millennium' },
+    { id: 'timeline', file: 'pages/timeline.html', title: 'ไทม์ไลน์ 40K', icon: 'clock', desc: 'เหตุการณ์สำคัญตั้งแต่ยุคโบราณถึงปัจจุบัน' },
     { id: 'lore-ancient', file: 'pages/lore-ancient.html', title: 'ยุคโบราณ: ก่อนจักรวรรดิ', icon: 'clock', desc: 'Old Ones, War in Heaven, Dark Age of Technology' },
     { id: 'gods', file: 'pages/gods.html', title: 'เทพเจ้าทุกองค์', icon: 'star', desc: 'Chaos, Aeldari, Ork, C\'tan และอื่น ๆ' },
     { id: 'warp', file: 'pages/warp.html', title: 'Warp และกลไกของจักรวาล', icon: 'planet', desc: 'Navigator, Astropath, Psyker และ Great Rift' },
@@ -62,7 +63,7 @@
       ['เริ่มจากศูนย์', ['getting-started', 'factions', 'first-game', 'hobby']],
       ['ช่วยเลือกและทบทวน', ['finder', 'quiz']] ] },
     { label: 'เนื้อเรื่อง', secs: [
-      ['ไทม์ไลน์ตามยุค', ['lore', 'lore-ancient', 'lore-30k', 'lore-40k', 'compare']],
+      ['ไทม์ไลน์ตามยุค', ['lore', 'timeline', 'lore-ancient', 'lore-30k', 'lore-40k', 'compare']],
       ['กลไกของจักรวาล', ['gods', 'warp', 'realms', 'galaxy-map', 'organizations']] ] },
     { label: 'ทัพ & ตัวละคร', secs: [
       ['ทัพและเผ่าพันธุ์', ['faction-lore', 'space-marines', 'xenos-races']],
