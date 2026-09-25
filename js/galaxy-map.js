@@ -80,6 +80,28 @@
     '<button type="button" class="gm-pin st-' + p.st + (p.rank <= 30 ? ' major' : p.rank <= 120 ? ' mid' : ' minor') + (p.region ? ' region' : '') + '" data-id="' + p.id + '" style="left:' + (p.x / W * 100) + '%;top:' + (p.y / H * 100) + '%" aria-label="' + esc(p.name) + '">' +
       '<i></i><span>' + esc(p.name) + '</span></button>').join('');
 
+  /* ลิงก์ไปหน้าที่เกี่ยวข้องในเว็บนี้ (id ดาว → [ชื่อ, พาธจากราก]) */
+  const LG = (f, n) => ['Legion/Chapter: ' + n, 'pages/lore/' + f + '.html'], PM = (f, n) => ['Primarch: ' + n, 'pages/primarchs/' + f + '.html'];
+  const WARP = ['ภายใน Warp และมิติอื่น', 'pages/realms.html#where-meet'], AM = ['Astra Militarum', 'pages/lore/astra-militarum.html'], MECH = ['Adeptus Mechanicus', 'pages/lore/adeptus-mechanicus.html'], NID = ['Tyranids', 'pages/lore/tyranids.html'], HH = ['ยุค 30K: Horus Heresy', 'pages/lore-30k.html'];
+  const LINKS = {
+    terra: [['จักรพรรดิแห่งมนุษยชาติ', 'pages/primarchs/emperor.html'], ['Adeptus Custodes', 'pages/lore/adeptus-custodes.html']], mars: [MECH], titan: [['Grey Knights', 'pages/lore/grey-knights.html']],
+    'eye-of-terror': [WARP, ['Black Legion', 'pages/lore/black-legion.html']], maelstrom: [WARP, ['Red Corsairs', 'pages/lore/red-corsairs.html']], cadia: [AM, ['ยุค 40K', 'pages/lore-40k.html']],
+    baal: [LG('blood-angels', 'Blood Angels'), PM('sanguinius', 'Sanguinius')], macragge: [LG('ultramarines', 'Ultramarines'), PM('guilliman', 'Roboute Guilliman')],
+    fenris: [LG('space-wolves', 'Space Wolves'), PM('russ', 'Leman Russ')], caliban: [LG('dark-angels', 'Dark Angels'), PM('lion', "Lion El'Jonson")],
+    nostramo: [LG('night-lords', 'Night Lords'), PM('curze', 'Konrad Curze')], prospero: [LG('thousand-sons', 'Thousand Sons'), PM('magnus', 'Magnus the Red')],
+    'planet-of-the-sorcerers': [LG('thousand-sons', 'Thousand Sons'), WARP], nocturne: [LG('salamanders', 'Salamanders'), PM('vulkan', 'Vulkan')],
+    deliverance: [LG('raven-guard', 'Raven Guard'), PM('corax', 'Corax')], kiavahr: [LG('raven-guard', 'Raven Guard'), PM('corax', 'Corax')],
+    medusa: [LG('iron-hands', 'Iron Hands'), PM('ferrus', 'Ferrus Manus')], olympia: [LG('iron-warriors', 'Iron Warriors'), PM('perturabo', 'Perturabo')],
+    medrengard: [LG('iron-warriors', 'Iron Warriors'), WARP], barbarus: [LG('death-guard', 'Death Guard'), PM('mortarion', 'Mortarion')],
+    nuceria: [LG('world-eaters', 'World Eaters'), PM('angron', 'Angron')], colchis: [LG('word-bearers', 'Word Bearers'), PM('lorgar', 'Lorgar')], sicarus: [LG('word-bearers', 'Word Bearers'), WARP],
+    cthonia: [PM('horus', 'Horus'), ['Black Legion', 'pages/lore/black-legion.html']], inwit: [LG('imperial-fists', 'Imperial Fists'), PM('dorn', 'Rogal Dorn')],
+    chemos: [LG('emperors-children', "Emperor's Children"), PM('fulgrim', 'Fulgrim')], 'mundus-planus': [LG('white-scars', 'White Scars'), PM('khan', 'Jaghatai Khan')],
+    'isstvan-v': [HH, PM('ferrus', 'Ferrus Manus')], 'isstvan-iii': [HH], calth: [LG('ultramarines', 'Ultramarines'), LG('word-bearers', 'Word Bearers')], 'ullanor-prime': [HH, PM('horus', 'Horus')],
+    davin: [PM('horus', 'Horus'), HH], molech: [PM('horus', 'Horus'), HH], 'signus-prime': [LG('blood-angels', 'Blood Angels'), HH],
+    armageddon: [['Orks', 'pages/lore/orks.html']], 'vraks-prime': [AM], 'ophelia-vii': [['Adepta Sororitas', 'pages/lore/adepta-sororitas.html']], tau: [['T\'au Empire', 'pages/lore/tau-empire.html']],
+    'new-badab': [['Red Corsairs', 'pages/lore/red-corsairs.html']], sotha: [NID], 'ichar-iv': [NID], 'tarsis-ultra': [NID],
+    tallarn: [AM], catachan: [AM], krieg: [AM], valhalla: [AM], mordian: [AM], vostroya: [AM], tanith: [AM], verghast: [AM], ryza: [MECH], 'stygies-viii': [MECH], agripinaa: [MECH], lucius: [MECH]
+  };
   /* ---------- ซูม / เลื่อน ---------- */
   const view = { s: 1, x: 0, y: 0 };
   const apply = () => { clampView(view); inner.style.transform = 'translate(' + view.x + '%,' + view.y + '%) scale(' + view.s + ')'; map.style.setProperty('--z', view.s); map.classList.toggle('zoomed', view.s >= 1.6); map.classList.toggle('zoomed2', view.s >= 2.6); map.classList.toggle('zoomed3', view.s >= 7);
@@ -145,6 +167,7 @@
       (p.fact ? '<p class="gm-fact">' + ic('star') + ' ' + esc(p.fact) + '</p>' : '') +
       (!p.lore ? '<p class="gm-now"><b>ข้อมูลที่มี:</b> ดาวนี้ถูกกล่าวถึงในเนื้อเรื่องแต่ยังไม่มีรายละเอียดมากพอ สถานะจึงเป็น "ไม่ทราบ"' + (p.men && p.men.length ? ' — พบชื่อในบทความ: ' + p.men.map(m => '<a href="' + esc(m.u) + '" target="_blank" rel="noopener">' + esc(m.t) + '</a>').join(', ') : '') + '</p>' : '') +
       (p.x == null ? '<p class="muted gm-small">' + ic('info') + ' ไม่มีข้อมูลตำแหน่งที่ชัดเจน จึงไม่ได้ปักบนแผนที่</p>' : '<p class="muted gm-small">' + ic('info') + ' ตำแหน่งบนแผนที่เป็นตำแหน่งโดยประมาณตาม Segmentum/Sector</p>') +
+      (LINKS[p.id] ? '<h4>' + ic('book') + ' อ่านต่อในเว็บนี้</h4><p class="gm-links">' + LINKS[p.id].map(l => '<a class="chip" href="' + root + l[1] + '">' + esc(l[0]) + '</a>').join('') + '</p>' : '') +
       (p.src ? '<a class="btn btn-ghost btn-sm" href="' + esc(p.src) + '" target="_blank" rel="noopener">' + ic('external') + ' อ่านต้นฉบับ (อังกฤษ)</a>' : '') + '</div>';
     panel.classList.add('open'); panel.scrollTop = 0;
     if (pan) focusPin(p);
@@ -195,6 +218,13 @@
   document.getElementById('gm-lore').addEventListener('change', e => { lore = e.target.value; reset(); });
   more.addEventListener('click', () => { shown += PAGE; filter(); });
   all.addEventListener('click', () => { shown = Infinity; filter(); });
+  /* ดาวสุ่ม: เลือกจากดาวที่มีเนื้อเรื่องและผ่านตัวกรองปัจจุบัน */
+  document.getElementById('gm-random').addEventListener('click', () => {
+    const q = input.value, pool = P.filter(p => p.lore && matches(p, q, st, seg, lore));
+    const list = pool.length ? pool : P.filter(p => p.lore); if (!list.length) return;
+    let p; do { p = list[Math.floor(Math.random() * list.length)]; } while (list.length > 1 && location.hash === '#p-' + p.id);
+    location.hash = 'p-' + p.id;
+  });
 
   apply(); filter();
   /* เปิดดาวจากลิงก์ #p-ชื่อดาว (เช่นจากการค้นหาทั้งเว็บ) */

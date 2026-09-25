@@ -38,7 +38,7 @@
         <div class="gmap-tools">
           <div class="search"><svg class="i"><use href="#i-search"></use></svg><input type="search" id="gm-search" placeholder="ค้นหาดาว เช่น Terra, Baal, Forge World, Ultramar" aria-label="ค้นหาดาว"></div>
           <div class="gm-selects"><label><span>Segmentum</span><select id="gm-seg"><option value="all">ทั้งหมด</option><option value="Solar">Segmentum Solar</option><option value="Obscurus">Segmentum Obscurus</option><option value="Ultima">Ultima Segmentum</option><option value="Tempestus">Segmentum Tempestus</option><option value="Pacificus">Segmentum Pacificus</option></select></label>
-          <label><span>ข้อมูล</span><select id="gm-lore"><option value="all">ทุกดวง</option><option value="lore">มีเนื้อเรื่อง</option><option value="name">มีแค่ชื่อ (ไม่ทราบรายละเอียด)</option></select></label></div>
+          <label><span>ข้อมูล</span><select id="gm-lore"><option value="all">ทุกดวง</option><option value="lore">มีเนื้อเรื่อง</option><option value="name">มีแค่ชื่อ (ไม่ทราบรายละเอียด)</option></select></label><button type="button" class="btn btn-ghost btn-sm gm-random" id="gm-random" title="เปิดดาวที่มีเนื้อเรื่องแบบสุ่ม"><svg class="i "><use href="#i-dice"></use></svg> ดาวสุ่ม</button></div>
           <div class="gm-legend" role="group" aria-label="กรองตามสถานะ"><button type="button" class="chip chip-gold" data-st="all">ทั้งหมด</button><button type="button" class="chip" data-st="stable"><i class="dot stable"></i>มั่นคง (จักรวรรดิ)</button><button type="button" class="chip" data-st="war"><i class="dot war"></i>กำลังมีสงคราม</button><button type="button" class="chip" data-st="retaken"><i class="dot retaken"></i>ยึดคืนได้แล้ว</button><button type="button" class="chip" data-st="destroyed"><i class="dot destroyed"></i>ถูกทำลาย / ไร้ชีวิต</button><button type="button" class="chip" data-st="chaos"><i class="dot chaos"></i>ดินแดน Chaos</button><button type="button" class="chip" data-st="xenos"><i class="dot xenos"></i>ดินแดนเผ่าต่างดาว</button><button type="button" class="chip" data-st="unknown"><i class="dot unknown"></i>ไม่ทราบ</button></div>
         </div>
         <div class="gmap-wrap">
@@ -78,6 +78,6 @@
 <script src="../js/layout.js?v=17"></script>
 <script src="../js/main.js?v=18"></script>
 <script src="../js/planets-data.js?v=19"></script>
-<script src="../js/galaxy-map.js?v=20"></script>
+<script src="../js/galaxy-map.js?v=21"></script>
 </body>
 </html>
