@@ -16,6 +16,13 @@
     stealth: 'Stealth: ถูกยิงแล้วศัตรู Hit −1', fly: 'Fly: บินข้ามซากตึกได้' };
   const KW_TH = { assault: 'ยิงได้หลัง Advance', heavy: 'Hit +1 ถ้ายืนนิ่ง', pistol: 'ยิงได้ตอนติดพัน', rapid: 'A +1 ในครึ่งระยะ', torrent: 'โดนอัตโนมัติ', blast: 'A เพิ่มตามจำนวนเป้า',
     melta: 'D +2 ในครึ่งระยะ', sustained: '6 = โดนเพิ่ม 1', lethal: '6 = ทำแผลอัตโนมัติ', devastating: 'ทำแผลได้ 6 = ไม่มีเซฟ', psychic: 'พลังจิต' };
+  /* ข้อความอธิบายยูนิตเมื่อชี้เมาส์: ค่าพลัง อาวุธ และความสามารถ */
+  function unitTip(u) {
+    const kw = w => w[7].length ? ' [' + w[7].map(k => k.toUpperCase() + (KW_TH[k] ? ': ' + KW_TH[k] : '')).join(', ') + ']' : '';
+    const wl = (w, melee) => w ? (melee ? '⚔ ' : '➶ ') + w[0] + ' — ' + (melee ? 'ประชิด' : w[1] + '"') + ' A' + w[2] + ' ' + (w[3] ? (melee ? 'WS' : 'BS') + w[3] + '+' : 'โดนอัตโนมัติ') + ' S' + w[4] + ' AP' + (w[5] || 0) + ' D' + w[6] + kw(w) : '';
+    return [KIND[u.kind] + ' · ' + u.models + ' โมเดล · M' + u.M + '" T' + u.T + ' Sv' + (u.Sv > 6 ? '–' : u.Sv + '+') + (u.inv ? ' เซฟอมตะ ' + u.inv + '+' : '') + ' W' + u.W + ' Ld' + u.Ld + '+ OC' + u.OC,
+      wl(u.ranged), wl(u.melee, true)].concat((u.ab || []).map(a => '★ ' + AB[a]), u.fnp ? ['★ Feel No Pain ' + u.fnp + '+'] : [], u.epic ? ['★ Epic Hero: ใส่ได้ 1 ครั้ง'] : []).filter(Boolean).join('\n');
+  }
   const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   const FAC = Object.keys(TT.ARMIES);
 
@@ -37,7 +44,8 @@
     '<div class="tt-rule" data-rule="' + s + '"></div>' +
     '<div class="tt-pts"><div class="tt-bar"><i data-bar="' + s + '"></i></div><span data-pts="' + s + '"></span></div>' +
     '<div class="tt-roster" data-roster="' + s + '"></div>' +
-    '<div class="tt-army-btns"><button type="button" class="btn btn-ghost btn-sm" data-auto="' + s + '">' + ic('refresh') + ' จัดทัพอัตโนมัติ</button><button type="button" class="btn btn-ghost btn-sm" data-clear="' + s + '">' + ic('x') + ' ล้าง</button></div>' +
+    '<div class="tt-presets"><span>' + ic('star') + ' ทัพสำเร็จรูป:</span>' + Object.keys(TT.PRESETS).map(k => '<button type="button" class="btn btn-ghost btn-sm" data-preset="' + k + '" data-side="' + s + '">' + TT.PRESETS[k] + '</button>').join('') + '</div>' +
+    '<div class="tt-army-btns"><button type="button" class="btn btn-ghost btn-sm" data-auto="' + s + '">' + ic('dice') + ' สุ่มจัดทัพ</button><button type="button" class="btn btn-ghost btn-sm" data-clear="' + s + '">' + ic('x') + ' ล้าง</button></div>' +
     '</div>';
   app.innerHTML =
     '<details class="tt-setup-wrap" id="tt-setup-wrap" open><summary>' + ic('cog') + ' ตั้งค่าเกมและจัดทัพ <small id="tt-sum"></small></summary>' +
@@ -127,10 +135,11 @@
   }));
   app.querySelector('.tt-armies').addEventListener('click', e => {
     const b = e.target.closest('button'); if (!b) return;
-    const s = +(b.dataset.auto || b.dataset.clear || b.closest('[data-side]').dataset.side);
+    const s = +(b.dataset.auto || b.dataset.clear || b.dataset.side || b.closest('[data-side]').dataset.side);
     const fac = prefs.armies[s];
     if (!confirmRestart()) return;
-    if (b.dataset.auto != null) prefs.rosters[s] = TT.autoRoster(fac, prefs.size);
+    if (b.dataset.preset) { prefs.rosters[s] = TT.presetRoster(fac, prefs.size, b.dataset.preset); toast(SIDE_NAME[s] + ': ใส่ "' + TT.PRESETS[b.dataset.preset] + '" ' + TT.rosterPts(fac, prefs.rosters[s]).toLocaleString() + ' แต้มแล้ว'); }
+    else if (b.dataset.auto != null) prefs.rosters[s] = TT.autoRoster(fac, prefs.size);
     else if (b.dataset.clear != null) prefs.rosters[s] = [];
     else if (b.dataset.add) {
       const d = TT.unitDef(fac, b.dataset.add);
@@ -152,7 +161,7 @@
       app.querySelector('[data-who="' + s + '"]').textContent = isHuman(s) ? (prefs.opp === 'hot' ? 'ผู้เล่น ' + (s + 1) : 'คุณ') : 'บอท (' + TT.DIFF[prefs.diff] + ')';
       app.querySelector('[data-roster="' + s + '"]').innerHTML = A.units.map(u => {
         const n = R.filter(k => k === u.key).length, left = prefs.size - pts;
-        return '<div class="tt-ru' + (n ? ' on' : '') + '"><img src="../images/' + u.img + '" alt="" loading="lazy"><div><b>' + esc(u.name) + (u.epic ? ' <i class="tt-epic" title="Epic Hero ใส่ได้ 1 ครั้ง">★</i>' : '') + '</b><small>' + KIND[u.kind] + ' · ' + u.models + ' โมเดล · M' + u.M + ' T' + u.T + ' Sv' + (u.Sv > 6 ? '–' : u.Sv + '+') + ' W' + u.W + '</small></div>' +
+        return '<div class="tt-ru' + (n ? ' on' : '') + '" data-tip-title="' + esc(u.name + ' · ' + u.pts + ' แต้ม') + '" data-tip="' + esc(unitTip(u)) + '"><img src="../images/' + u.img + '" alt="' + esc(u.name) + '" loading="lazy" data-zoom><div><b>' + esc(u.name) + (u.epic ? ' <i class="tt-epic" title="Epic Hero ใส่ได้ 1 ครั้ง">★</i>' : '') + '</b><small>' + KIND[u.kind] + ' · ' + u.models + ' โมเดล · M' + u.M + ' T' + u.T + ' Sv' + (u.Sv > 6 ? '–' : u.Sv + '+') + ' W' + u.W + '</small></div>' +
           '<span class="tt-ru-pts">' + u.pts + '</span>' +
           '<span class="tt-ru-ctl"><button type="button" data-rem="' + u.key + '" aria-label="ลด ' + esc(u.name) + '"' + (n ? '' : ' disabled') + '>−</button><em>' + n + '</em><button type="button" data-add="' + u.key + '" aria-label="เพิ่ม ' + esc(u.name) + '"' + (u.pts > left ? ' disabled' : '') + '>+</button></span></div>';
       }).join('');

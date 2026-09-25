@@ -41,6 +41,14 @@ const itemCat = p => ({ 'pages/characters.html': 'ตัวละคร', 'pages
     if (f === 'pages/glossary.html') OLD.filter(e => e[0].startsWith('pages/glossary.html?q=')).forEach(e => out.push(e));
   }
   await b.close();
+  /* เก็บรายการเดิมที่ยังใช้ได้: ลิงก์ที่ JS เปิดจาก hash (เช่น factions.html#orks) หรือ anchor ที่ยังมีอยู่ในหน้า */
+  const have = new Set(out.map(e => e[0]));
+  OLD.forEach(e => {
+    if (have.has(e[0])) return;
+    const [f, h] = e[0].split('#');
+    if (!h || !fs.existsSync(ROOT + '/' + f)) return;
+    if (f === 'pages/factions.html' || fs.readFileSync(ROOT + '/' + f, 'utf8').includes('id="' + h + '"')) out.push(e);
+  });
   const seen = new Set(), final = out.filter(e => { if (seen.has(e[0])) return false; seen.add(e[0]); return e[1]; });
   fs.writeFileSync(ROOT + '/js/search-index.js', '/* ดัชนีค้นหาทั้งเว็บ — สร้างอัตโนมัติจาก gen/genindex.js ห้ามแก้มือ */\nwindow.SEARCH_INDEX = ' + JSON.stringify(final) + ';\n');
   console.log('entries', final.length, 'pages', files.length);

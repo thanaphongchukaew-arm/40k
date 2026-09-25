@@ -1,7 +1,7 @@
 /* =========================================================
    ข้อมูลยูนิตตัวอย่างสำหรับหน้าจัดทีม (army-builder)
    role: char = ตัวละคร, epic = ตัวละครมีชื่อ (Epic Hero), line = Battleline,
-         inf = ทหารราบ, veh = ยานพาหนะ, mon = สัตว์ประหลาด/หุ่นยักษ์, trans = ยานขนส่ง (Dedicated Transport)
+         inf = ทหารราบ, veh = ยานพาหนะ, knight = Knight ขนาดใหญ่ (มีคีย์เวิร์ด CHARACTER จึงเป็นแม่ทัพได้), mon = สัตว์ประหลาด/หุ่นยักษ์, trans = ยานขนส่ง (Dedicated Transport)
    pts = แต้มโดยประมาณเพื่อการเรียนรู้เท่านั้น — แต้มจริงเปลี่ยนตามเอกสาร Munitorum Field Manual
          ของ Games Workshop ให้เช็คในแอป Warhammer 40,000 เสมอ (ผู้ใช้แก้ตัวเลขได้ในหน้าเว็บ)
    ========================================================= */
@@ -71,8 +71,8 @@ window.ARMY_UNITS = {
     ['Skorpius Dunerider', 'trans', 85]
   ],
   'imperial-knights': [
-    ['Canis Rex', 'epic', 385], ['Knight Paladin', 'mon', 375], ['Knight Errant', 'mon', 370], ['Knight Gallant', 'mon', 355],
-    ['Knight Crusader', 'mon', 400], ['Armiger Warglaive', 'mon', 140], ['Armiger Helverin', 'mon', 140]
+    ['Canis Rex', 'epic', 385], ['Knight Paladin', 'knight', 375], ['Knight Errant', 'knight', 370], ['Knight Gallant', 'knight', 355],
+    ['Knight Crusader', 'knight', 400], ['Armiger Warglaive', 'mon', 140], ['Armiger Helverin', 'mon', 140]
   ],
   'imperial-agents': [
     ['Inquisitor', 'char', 55], ['Inquisitor Greyfax', 'epic', 65], ['Inquisitor Eisenhorn', 'epic', 75], ['Vindicare Assassin', 'char', 90],
@@ -109,7 +109,7 @@ window.ARMY_UNITS = {
     ['Flesh Hounds', 'inf', 75], ['Soul Grinder', 'mon', 180]
   ],
   'chaos-knights': [
-    ['Knight Abominant', 'mon', 360], ['Knight Desecrator', 'mon', 375], ['Knight Despoiler', 'mon', 365], ['Knight Rampager', 'mon', 390],
+    ['Knight Abominant', 'knight', 360], ['Knight Desecrator', 'knight', 375], ['Knight Despoiler', 'knight', 365], ['Knight Rampager', 'knight', 390],
     ['War Dog Karnivore', 'mon', 140], ['War Dog Stalker', 'mon', 140], ['War Dog Huntsman', 'mon', 150]
   ],
   'aeldari': [
@@ -169,11 +169,61 @@ window.checkArmy = function (roster, opts) {
     const lim = u.role === 'epic' ? 1 : (u.role === 'line' || u.role === 'trans') ? size.limit * 2 : size.limit;
     if (count[name] > lim) issues.push(name + ' ใส่ได้สูงสุด ' + lim + ' ยูนิต (ตอนนี้ ' + count[name] + ')' + (u.role === 'epic' ? ' — Epic Hero มีได้ชื่อละ 1' : ''));
   });
-  const chars = roster.filter(u => u.role === 'char' || u.role === 'epic');
+  const isChar = u => u.role === 'char' || u.role === 'epic' || u.role === 'knight';
+  const chars = roster.filter(isChar);
   if (roster.length && !chars.length) issues.push('ต้องมีตัวละคร (Character) อย่างน้อย 1 ตัวเพื่อเป็นแม่ทัพ (Warlord)');
-  else if (roster.length && (opts.warlord == null || !roster[opts.warlord] || !(roster[opts.warlord].role === 'char' || roster[opts.warlord].role === 'epic'))) issues.push('ยังไม่ได้เลือกแม่ทัพ (Warlord) — ต้องเป็นตัวละคร');
+  else if (roster.length && (opts.warlord == null || !roster[opts.warlord] || !isChar(roster[opts.warlord]))) issues.push('ยังไม่ได้เลือกแม่ทัพ (Warlord) — ต้องเป็นตัวละคร');
   else if (roster.length) ok.push('แม่ทัพ: ' + roster[opts.warlord].name);
   if ((opts.enh || 0) > size.enh) issues.push('Enhancement ใส่ได้สูงสุด ' + size.enh + ' ชิ้นในขนาดเกมนี้ (ตอนนี้ ' + opts.enh + ')');
   return { total, limit: size.pts, issues, ok, valid: issues.length === 0 };
 };
-if (typeof module !== 'undefined') module.exports = { ARMY_UNITS: window.ARMY_UNITS, ARMY_SIZES: window.ARMY_SIZES, checkArmy: window.checkArmy };
+/* ทัพสำเร็จรูป: สร้างรายชื่อทัพที่ถูกกติกาจากรายการยูนิตของทัพนั้น
+   style: 'balanced' = สมดุล (ตัวละครทั่วไป + Battleline + ยูนิตหลากประเภท)
+          'heroes'   = ฮีโร่ดัง (ใส่ Epic Hero ของทัพเป็นแม่ทัพ)
+   คืน { roster: [{name, role, pts, qty, enh}], warlord } */
+window.ARMY_PRESET_STYLES = { balanced: 'ทัพสมดุล', heroes: 'ทัพฮีโร่ดัง' };
+window.armyPreset = function (fid, sizeKey, style) {
+  const list = (window.ARMY_UNITS[fid] || []).map(u => ({ name: u[0], role: u[1], pts: u[2] }));
+  const size = window.ARMY_SIZES[sizeKey] || window.ARMY_SIZES.strike, L = size.pts;
+  const picks = [], cnt = {};
+  const lim = u => u.role === 'epic' ? 1 : (u.role === 'line' || u.role === 'trans') ? size.limit * 2 : size.limit;
+  const total = () => picks.reduce((a, u) => a + u.pts, 0);
+  const fits = u => (cnt[u.name] || 0) < lim(u) && total() + u.pts <= L;
+  const add = u => { picks.push(u); cnt[u.name] = (cnt[u.name] || 0) + 1; };
+  const epics = list.filter(u => u.role === 'epic').sort((a, b) => b.pts - a.pts);
+  if (style === 'heroes' && epics.length) {
+    epics.filter(u => u.pts <= L * 0.4).slice(0, sizeKey === 'strike' ? 2 : 1).forEach(u => { if (fits(u)) add(u); });
+    if (!picks.length) add(epics[epics.length - 1]);
+  } else {
+    const c = list.find(u => u.role === 'char') || list.filter(u => u.role === 'knight').sort((a, b) => a.pts - b.pts)[0] || epics[epics.length - 1];
+    if (c) add(c);
+  }
+  const line = list.filter(u => u.role === 'line');
+  if (line.length) { for (let i = 0; i < 2; i++) { const u = line[i % line.length]; if (fits(u)) add(u); } }
+  else { const u = list.filter(x => x.role === 'inf').sort((a, b) => a.pts - b.pts)[0]; if (u && fits(u)) add(u); }
+  /* เติมให้หลากหลาย: วนตามประเภท เลือกยูนิตที่ใส่ไปน้อยที่สุดก่อน */
+  const order = ['inf', 'veh', 'mon', 'knight', 'line', 'inf', 'trans', 'char'];
+  for (let guard = 0; guard < 60; guard++) {
+    let added = false;
+    for (const r of order) {
+      const c = list.filter(u => u.role === r && fits(u)).sort((a, b) => (cnt[a.name] || 0) - (cnt[b.name] || 0) || b.pts - a.pts)[0];
+      if (c) { add(c); added = true; }
+    }
+    if (!added) {
+      const any = list.filter(u => u.role !== 'epic' && fits(u)).sort((a, b) => b.pts - a.pts)[0];
+      if (!any) break; add(any);
+    }
+  }
+  /* รวมยูนิตซ้ำเป็นจำนวน (ตัวละครแยกบรรทัด) */
+  const roster = [];
+  picks.forEach(u => {
+    const isChar = u.role === 'char' || u.role === 'epic' || u.role === 'knight';
+    const ex = !isChar && roster.find(x => x.name === u.name);
+    if (ex) ex.qty++; else roster.push({ name: u.name, role: u.role, pts: u.pts, qty: 1, enh: false });
+  });
+  const R = ['epic', 'char', 'knight', 'line', 'inf', 'mon', 'veh', 'trans'];
+  roster.sort((a, b) => R.indexOf(a.role) - R.indexOf(b.role));
+  const warlord = roster.findIndex(u => u.role === (style === 'heroes' ? 'epic' : 'char'));
+  return { roster, warlord: warlord > -1 ? warlord : roster.findIndex(u => u.role === 'char' || u.role === 'epic' || u.role === 'knight') };
+};
+if (typeof module !== 'undefined') module.exports = { ARMY_UNITS: window.ARMY_UNITS, ARMY_SIZES: window.ARMY_SIZES, checkArmy: window.checkArmy, armyPreset: window.armyPreset };

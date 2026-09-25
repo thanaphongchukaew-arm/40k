@@ -1433,3 +1433,60 @@ template { display: none; }
 @media (max-width: 560px) { .tt-phases { grid-template-columns: repeat(3, 1fr); } .tt-roster { max-height: 260px; } }
 .tt-opt[hidden] { display: none; }
 .tt-phases li { white-space: nowrap; font-size: .7rem; padding: 6px 1px; }
+
+/* ===== คำอธิบายลอย (data-tip) ===== */
+.hover-tip { position: fixed; z-index: 400; max-width: 320px; padding: 9px 12px; border-radius: 10px; background: rgba(12,12,16,.96); color: #f1f1f4; border: 1px solid rgba(var(--gold-rgb), .5); box-shadow: 0 8px 28px rgba(0,0,0,.45); font-size: .82rem; line-height: 1.55; pointer-events: none; }
+.hover-tip[hidden] { display: none; }
+.hover-tip b { display: block; color: #fcd34d; font-family: var(--font-head); margin-bottom: 3px; }
+.hover-tip span { display: block; white-space: pre-line; }
+
+/* ===== หน้าจัดทัพ: รูปยูนิต ทัพสำเร็จรูป หน้าต่างคัดลอก ===== */
+.ab-catalog li { grid-template-columns: 34px 38px minmax(0, 1fr) auto 50px; cursor: default; }
+.ab-catalog li:hover { background: rgba(var(--gold-rgb), .06); }
+.ab-thumb { width: 38px; height: 38px; border-radius: 8px; object-fit: cover; object-position: center 20%; background: var(--surface-2); border: 1px solid var(--border); cursor: zoom-in; display: block; flex: none; }
+.ab-thumb:hover { border-color: var(--gold); }
+.ab-unitcell { display: flex; gap: 10px; align-items: center; }
+.ab-presets { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 14px; padding: 10px 14px; border: 1px dashed rgba(var(--gold-rgb), .45); border-radius: 12px; background: rgba(var(--gold-rgb), .05); }
+.ab-presets > span { display: inline-flex; gap: 6px; align-items: center; font-family: var(--font-head); color: var(--gold-soft); font-size: .92rem; }
+.chip.r-knight { color: #fda4af; border-color: rgba(251,113,133,.45); }
+.ab-modal { position: fixed; inset: 0; z-index: 300; display: grid; place-items: center; padding: 16px; background: rgba(4,4,8,.7); backdrop-filter: blur(3px); }
+.ab-modal[hidden] { display: none; }
+.ab-modal-box { width: min(560px, 100%); background: var(--surface); border: 1px solid var(--border-strong); border-radius: 16px; padding: 14px 16px 16px; box-shadow: 0 20px 60px rgba(0,0,0,.55); }
+.ab-modal-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 10px; }
+.ab-modal-head h3 { margin: 0; display: flex; gap: 8px; align-items: center; font-size: 1.05rem; }
+.ab-modal-x { width: 36px; height: 36px; border-radius: 10px; border: 1px solid var(--border-strong); background: var(--surface-2); color: var(--text); cursor: pointer; display: grid; place-items: center; }
+.ab-modal-x:hover { border-color: var(--gold); color: var(--gold); }
+.ab-modal textarea { width: 100%; min-height: 200px; resize: vertical; background: var(--surface-2); color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 10px; font: .88rem/1.6 var(--font-mono, monospace); }
+.ab-modal-foot { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px; }
+body.ab-modal-open { overflow: hidden; }
+@media print { .ab-presets, .ab-modal { display: none !important; } .ab-thumb { width: 26px; height: 26px; } }
+.tt-presets { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 8px 0 0; padding-top: 8px; border-top: 1px dashed var(--border); }
+.tt-presets > span { display: inline-flex; gap: 4px; align-items: center; font-size: .8rem; color: var(--gold-soft); font-family: var(--font-head); }
+.tt-presets .btn { padding: 4px 10px; font-size: .78rem; }
+.tt-ru img { cursor: zoom-in; } .tt-ru img:hover { outline: 2px solid var(--gold); }
+
+/* ===== ตารางความสัมพันธ์ Primarch: กรอบฝ่าย, ชื่อไม่ล้น, รูปขยายเมื่อชี้ ===== */
+.mx tbody th { min-width: 11.5em; max-width: 13em; white-space: normal; }
+.mx tbody th a { gap: 8px; line-height: 1.25; }
+.mx tbody th a span { overflow-wrap: anywhere; }
+.mx tbody th a:hover span { color: var(--gold); text-decoration: underline; }
+.mx-face { width: 32px; height: 32px; border-width: 2px; transition: transform .15s; flex: none; }
+.mx-face.loyal { border-color: #3b82f6; box-shadow: 0 0 0 1px rgba(59,130,246,.35); }
+.mx-face.traitor { border-color: #ef4444; box-shadow: 0 0 0 1px rgba(239,68,68,.35); }
+.mx a:hover .mx-face { transform: scale(1.12); }
+.mx .mx-split { border-left: 0; }
+.mx td.mx-split, .mx thead th.mx-split { box-shadow: inset 3px 0 0 rgba(239,68,68,.55); padding-left: 5px; }
+.mx tbody tr.mx-split th, .mx tbody tr.mx-split td { border-top: 3px solid rgba(239,68,68,.55); padding-top: 4px; }
+.mx-self-td { vertical-align: middle; } .mx-self { display: block; }
+.mx-howto { margin: 10px 0 12px; }
+.mx-legend { display: flex; flex-wrap: wrap; gap: 14px; margin: 0 0 8px; font-size: .88rem; }
+.mx-side { display: inline-flex; gap: 6px; align-items: center; }
+.mx-side i { width: 16px; height: 16px; border-radius: 50%; border: 3px solid; display: inline-block; }
+.mx-side.loyal i { border-color: #3b82f6; } .mx-side.traitor i { border-color: #ef4444; }
+.hover-zoom { position: fixed; z-index: 390; width: 220px; background: var(--surface); border: 3px solid var(--gold); border-radius: 14px; padding: 6px; box-shadow: 0 14px 40px rgba(0,0,0,.55); pointer-events: none; animation: hz-in .12s ease-out; }
+.hover-zoom[hidden] { display: none; }
+.hover-zoom.loyal { border-color: #3b82f6; } .hover-zoom.traitor { border-color: #ef4444; }
+.hover-zoom img { width: 100%; height: 240px; object-fit: cover; object-position: center 15%; border-radius: 9px; display: block; }
+.hover-zoom span { display: block; text-align: center; font-size: .82rem; font-family: var(--font-head); margin-top: 4px; color: var(--heading); }
+@keyframes hz-in { from { opacity: 0; transform: scale(.9); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .hover-zoom { animation: none; } }

@@ -275,4 +275,56 @@
 
   /* ---------- ปุ่มพิมพ์ ---------- */
   document.querySelectorAll('[data-print]').forEach(b => b.addEventListener('click', () => window.print()));
+
+  /* ---------- คำอธิบายลอยเมื่อชี้เมาส์ (data-tip, data-tip-title) — ใช้กับรายการที่สร้างด้วย JS ได้ ---------- */
+  const tip = document.createElement('div');
+  tip.className = 'hover-tip'; tip.setAttribute('role', 'tooltip'); tip.hidden = true;
+  document.body.appendChild(tip);
+  let tipFor = null;
+  const placeTip = (x, y) => {
+    const w = tip.offsetWidth, h = tip.offsetHeight, pad = 14;
+    let left = x + pad, top = y + pad;
+    if (left + w > innerWidth - 8) left = Math.max(8, x - w - pad);
+    if (top + h > innerHeight - 8) top = Math.max(8, y - h - pad);
+    tip.style.left = left + 'px'; tip.style.top = top + 'px';
+  };
+  const showTip = (el, x, y) => {
+    tipFor = el;
+    const t = el.getAttribute('data-tip-title');
+    tip.innerHTML = (t ? '<b>' + t.replace(/</g, '&lt;') + '</b>' : '') + '<span>' + el.getAttribute('data-tip').replace(/</g, '&lt;') + '</span>';
+    tip.hidden = false; placeTip(x, y);
+  };
+  const hideTip = () => { tipFor = null; tip.hidden = true; };
+  document.addEventListener('mouseover', e => {
+    const el = e.target.closest('[data-tip]');
+    if (el && el !== tipFor) showTip(el, e.clientX, e.clientY);
+    else if (!el && tipFor) hideTip();
+  });
+  document.addEventListener('mousemove', e => { if (tipFor) placeTip(e.clientX, e.clientY); });
+  document.addEventListener('focusin', e => { const el = e.target.closest('[data-tip]'); if (el) { const r = el.getBoundingClientRect(); showTip(el, r.left, r.bottom); } });
+  document.addEventListener('focusout', hideTip);
+  document.addEventListener('scroll', hideTip, true);
+
+  /* ---------- รูปขยายเมื่อชี้เมาส์ (data-hover-zoom) — ลอยอยู่นอกตาราง ไม่ถูกกรอบตัด; คลิกยังทำงานตามลิงก์เดิม ---------- */
+  const hz = document.createElement('div');
+  hz.className = 'hover-zoom'; hz.hidden = true; hz.setAttribute('aria-hidden', 'true');
+  hz.innerHTML = '<img alt=""><span></span>';
+  document.body.appendChild(hz);
+  let hzFor = null;
+  document.addEventListener('mouseover', e => {
+    const im = e.target.closest('img[data-hover-zoom]');
+    if (im === hzFor) return;
+    if (!im) { if (hzFor) { hzFor = null; hz.hidden = true; } return; }
+    hzFor = im;
+    hz.className = 'hover-zoom' + (im.classList.contains('loyal') ? ' loyal' : im.classList.contains('traitor') ? ' traitor' : '');
+    hz.querySelector('img').src = im.currentSrc || im.src;
+    hz.querySelector('span').textContent = im.alt;
+    hz.hidden = false;
+    const r = im.getBoundingClientRect(), W = 220, H = 280;
+    let left = r.left + r.width / 2 - W / 2, top = r.bottom + 10;
+    if (top + H > innerHeight - 8) top = Math.max(8, r.top - H - 10);
+    left = Math.max(8, Math.min(innerWidth - W - 8, left));
+    hz.style.left = left + 'px'; hz.style.top = top + 'px';
+  });
+  document.addEventListener('scroll', () => { if (hzFor) { hzFor = null; hz.hidden = true; } }, true);
 })();

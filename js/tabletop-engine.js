@@ -67,6 +67,8 @@
   /* ---------- บัญชีทัพ ---------- */
   const unitDef = (fac, key) => ARMIES[fac] && ARMIES[fac].units.find(u => u.key === key);
   const rosterPts = (fac, keys) => keys.reduce((s, k) => s + ((unitDef(fac, k) || {}).pts || 0), 0);
+  /* จำกัดจำนวนต่อชื่อ: ตัวละคร/Epic Hero 1, ทหารหลัก (Battleline — ทหารราบ OC 2 ขึ้นไป) 6, อื่น ๆ 3 */
+  const unitCap = u => (u.kind === 'char' || u.epic) ? 1 : (u.kind === 'inf' && u.OC >= 2 && u.models >= 5) ? 6 : 3;
   /* จัดทัพอัตโนมัติ: ตัวละคร 1 ตัวก่อน แล้วสุ่มเพิ่มจนเต็มแต้ม (ยูนิตเดียวกันไม่เกิน 3) */
   function autoRoster(fac, limit, rng) {
     rng = rng || Math.random;
@@ -78,9 +80,35 @@
     if (troops && rosterPts(fac, out) + troops.pts <= limit) out.push(troops.key);
     for (let tries = 0; tries < 200; tries++) {
       const left = limit - rosterPts(fac, out);
-      const ok = pool.filter(u => u.pts <= left && out.filter(k => k === u.key).length < (u.kind === 'char' || u.epic ? 1 : 3));
+      const ok = pool.filter(u => u.pts <= left && out.filter(k => k === u.key).length < unitCap(u));
       if (!ok.length) break;
       out.push(ok[Math.floor(rng() * ok.length)].key);
+    }
+    return out;
+  }
+
+  /* ทัพสำเร็จรูป: balanced = สมดุล, melee = บุกประชิด, ranged = ยิงไกล — ถูกกติกาแต้มเสมอ */
+  const PRESETS = { balanced: 'ทัพสมดุล', melee: 'บุกประชิด', ranged: 'ยิงไกล' };
+  function presetRoster(fac, limit, style) {
+    const pool = ARMIES[fac].units, out = [];
+    const cnt = k => out.filter(x => x === k).length;
+    const pts = () => rosterPts(fac, out);
+    const cap = unitCap;
+    const fits = u => cnt(u.key) < cap(u) && pts() + u.pts <= limit;
+    const mp = u => u.melee ? u.melee[2] * u.models * u.melee[6] * (7 - u.melee[3]) : 0;
+    const rp = u => u.ranged ? u.ranged[2] * u.models * u.ranged[6] * (u.ranged[3] ? 7 - u.ranged[3] : 5) * (u.ranged[1] >= 24 ? 1.2 : 0.8) : 0;
+    const pref = u => style === 'melee' ? (mp(u) + 1) / (rp(u) + mp(u) + 1) : style === 'ranged' ? (rp(u) + 1) / (rp(u) + mp(u) + 1) : 0.5;
+    /* แม่ทัพ: ตัวละครที่เข้ากับสไตล์ที่สุด (ถ้าแต้มพอ) */
+    const chars = pool.filter(u => u.kind === 'char' && u.pts <= limit * 0.3).sort((a, b) => pref(b) - pref(a) || a.pts - b.pts);
+    if (chars[0]) out.push(chars[0].key);
+    /* ทหารหลักอย่างน้อย 1 หน่วยไว้ยึดจุด */
+    const troop = pool.filter(u => u.kind === 'inf' && u.models >= 5 && fits(u)).sort((a, b) => pref(b) - pref(a) || a.pts - b.pts)[0];
+    if (troop) out.push(troop.key);
+    for (let g = 0; g < 80; g++) {
+      const c = pool.filter(u => u.kind !== 'char' || cnt(u.key) === 0).filter(fits)
+        .sort((a, b) => (pref(b) + (style === 'balanced' ? 0 : 0) ) / (1 + cnt(b.key) * 0.9) - (pref(a)) / (1 + cnt(a.key) * 0.9) || b.pts - a.pts)[0];
+      if (!c) break;
+      out.push(c.key);
     }
     return out;
   }
@@ -642,7 +670,7 @@
   }
 
   const API = { ENGAGE, OBJ_RANGE, ROUNDS, AURA, PHASES, PHASE_TH, DIFF, SIDE, ARMIES, MAPS, SIZES, STRATS, rngFrom, d6, cdist, edge, segRect, touches,
-    unitDef, rosterPts, autoRoster, createGame, startBattle, autoDeploy, deployCheck, deployTo, zoneOf, alive, enemiesOf, engagedWith, isEngaged, visible, inCover,
+    unitDef, rosterPts, unitCap, autoRoster, PRESETS, presetRoster, createGame, startBattle, autoDeploy, deployCheck, deployTo, zoneOf, alive, enemiesOf, engagedWith, isEngaged, visible, inCover,
     woundNeed, effT, shotInfo, meleeInfo, resolve, damage, mortal, moveCheck, move, canCharge, chargeNeed, contactSpot, chargeRoll, chargeTo, chargeTargets,
     stratOK, rerollCharge, canGrenade, grenadeTargets, grenade, callWaaagh, waaaghOn, rule, has, buildFightQueue, fightTarget, fight, consolidate,
     control, score, commandPhase, nextPhase, endTurn, checkWipe, belowHalf, expected, meleeMinded, aiMovePlan, aiShootTarget, aiPhase, fightAll, log };

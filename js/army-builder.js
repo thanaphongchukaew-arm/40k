@@ -8,7 +8,12 @@
   const F = window.FACTIONS || [], U = window.ARMY_UNITS || {}, S = window.ARMY_SIZES;
   const ic = n => window.icon ? window.icon(n) : '';
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-  const ROLE = { char: 'ตัวละคร', epic: 'Epic Hero', line: 'Battleline', inf: 'ทหารราบ', veh: 'ยานพาหนะ', mon: 'หุ่น/สัตว์ยักษ์', trans: 'ยานขนส่ง' };
+  const ROLE = { char: 'ตัวละคร', epic: 'Epic Hero', knight: 'Knight (ตัวละคร)', line: 'Battleline', inf: 'ทหารราบ', veh: 'ยานพาหนะ', mon: 'หุ่น/สัตว์ยักษ์', trans: 'ยานขนส่ง' };
+  const INFO = window.ARMY_INFO || {};
+  const isCharRole = r => r === 'char' || r === 'epic' || r === 'knight';
+  /* รูปยูนิต (กดเพื่อขยาย) + คำอธิบายเมื่อชี้เมาส์ */
+  const thumb = name => { const i = INFO[name]; return i ? '<img class="ab-thumb" src="../images/' + i.img + '" alt="' + esc(name + (i.info ? ' — ' + i.info : '')) + '" loading="lazy" data-zoom>' : '<span class="ab-thumb"></span>'; };
+  const tipAttr = name => { const i = INFO[name]; return i && i.info ? ' data-tip-title="' + esc(name) + '" data-tip="' + esc(i.info) + '"' : ''; };
   const store = window.siteStore || { get: () => null, set: () => {} };
 
   let st = store.get('w40k-army') || { faction: 'space-marines', size: 'strike', roster: [], warlord: null, name: '' };
@@ -32,17 +37,17 @@
   function save() { store.set('w40k-army', st); }
   function renderCatalog() {
     const list = (U[st.faction] || []).map((u, i) => ({ name: u[0], role: u[1], pts: u[2], i }))
-      .filter(u => roleFilter === 'all' || u.role === roleFilter || (roleFilter === 'char' && u.role === 'epic'));
+      .filter(u => roleFilter === 'all' || u.role === roleFilter || (roleFilter === 'char' && (u.role === 'epic' || u.role === 'knight')) || (roleFilter === 'mon' && u.role === 'knight'));
     $('ab-catalog').innerHTML = list.map(u =>
-      '<li><button type="button" class="ab-add" data-i="' + u.i + '" aria-label="เพิ่ม ' + esc(u.name) + '">' + ic('plus') + '</button>' +
+      '<li' + tipAttr(u.name) + '><button type="button" class="ab-add" data-i="' + u.i + '" aria-label="เพิ่ม ' + esc(u.name) + '">' + ic('plus') + '</button>' + thumb(u.name) +
       '<span class="ab-name">' + esc(u.name) + '</span><span class="chip r-' + u.role + '">' + ROLE[u.role] + '</span><span class="ab-pts">~' + u.pts + '</span></li>').join('') ||
       '<li class="muted">ไม่มียูนิตประเภทนี้</li>';
   }
   function renderRoster() {
     const r = st.roster;
     $('ab-roster').innerHTML = r.length ? r.map((u, i) => {
-      const isChar = u.role === 'char' || u.role === 'epic';
-      return '<tr><td><strong>' + esc(u.name) + '</strong><br><span class="chip r-' + u.role + '">' + ROLE[u.role] + '</span></td>' +
+      const isChar = isCharRole(u.role);
+      return '<tr' + tipAttr(u.name) + '><td><div class="ab-unitcell">' + thumb(u.name) + '<div><strong>' + esc(u.name) + '</strong><br><span class="chip r-' + u.role + '">' + ROLE[u.role] + '</span></div></div></td>' +
         '<td class="center"><div class="ab-qty"><button type="button" data-act="dec" data-i="' + i + '" aria-label="ลดจำนวน">−</button><b>' + u.qty + '</b><button type="button" data-act="inc" data-i="' + i + '" aria-label="เพิ่มจำนวน">+</button></div></td>' +
         '<td class="center"><input type="number" min="0" step="5" value="' + u.pts + '" data-act="pts" data-i="' + i + '" aria-label="แต้มต่อยูนิต"></td>' +
         '<td class="center"><b>' + (u.pts * u.qty) + '</b></td>' +
@@ -66,7 +71,7 @@
     document.querySelectorAll('[name="ab-size"]').forEach(x => { x.checked = x.value === st.size; });
     const f = F.find(x => x.id === st.faction);
     $('ab-faction-card').innerHTML = f ? '<img src="../images/' + f.img + '" alt="' + esc(f.name) + '"><div><b>' + esc(f.name) + '</b><p>' + esc(f.tagline) + '</p><a href="lore/' + f.id + '.html">' + ic('book') + ' เนื้อเรื่องของทัพนี้</a></div>' : '';
-    renderCatalog(); renderRoster();
+    renderCatalog(); renderRoster(); renderPresets();
   }
 
   /* เปลี่ยนทัพ: เก็บรายชื่อของทัพเดิมไว้ กลับมาแล้วยังอยู่ */
@@ -78,7 +83,7 @@
     st.roster = back.roster; st.warlord = back.warlord;
     renderAll();
   });
-  document.querySelectorAll('[name="ab-size"]').forEach(x => x.addEventListener('change', () => { st.size = x.value; renderRoster(); }));
+  document.querySelectorAll('[name="ab-size"]').forEach(x => x.addEventListener('change', () => { st.size = x.value; renderRoster(); renderPresets(); }));
   $('ab-roles').addEventListener('click', e => {
     const b = e.target.closest('[data-role]'); if (!b) return;
     roleFilter = b.dataset.role;
@@ -88,10 +93,10 @@
   $('ab-catalog').addEventListener('click', e => {
     const b = e.target.closest('.ab-add'); if (!b) return;
     const u = U[st.faction][+b.dataset.i];
-    const ex = st.roster.find(x => x.name === u[0] && x.role !== 'char' && x.role !== 'epic');
+    const ex = st.roster.find(x => x.name === u[0] && !isCharRole(x.role));
     if (ex) ex.qty++;
     else st.roster.push({ name: u[0], role: u[1], pts: u[2], qty: 1, enh: false });
-    if (st.warlord == null) { const ci = st.roster.findIndex(x => x.role === 'char' || x.role === 'epic'); if (ci > -1) st.warlord = ci; }
+    if (st.warlord == null) { const ci = st.roster.findIndex(x => isCharRole(x.role)); if (ci > -1) st.warlord = ci; }
     renderRoster();
   });
   $('ab-roster').addEventListener('click', e => {
@@ -113,19 +118,41 @@
     renderRoster();
   });
   $('ab-clear').addEventListener('click', () => { st.roster = []; st.warlord = null; renderRoster(); });
+  /* หน้าต่างคัดลอกรายชื่อทัพ: มีปุ่มปิด, กด Esc หรือคลิกพื้นหลังเพื่อปิด */
+  const modal = $('ab-copy-modal'), ta = $('ab-text');
+  const msg = t => { const els = document.querySelectorAll('#ab-copy-msg, .ab-modal-msg'); els.forEach(x => { x.textContent = t; }); clearTimeout(msg.tm); msg.tm = setTimeout(() => els.forEach(x => { x.textContent = ''; }), 2500); };
+  function doCopy() {
+    ta.focus(); ta.select();
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    if (ok) msg('คัดลอกแล้ว ✓');
+    else if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(ta.value).then(() => msg('คัดลอกแล้ว ✓'), () => msg('กด Ctrl+C / ⌘C เพื่อคัดลอก'));
+    else msg('กด Ctrl+C / ⌘C เพื่อคัดลอก');
+  }
+  const closeCopy = () => { modal.hidden = true; document.body.classList.remove('ab-modal-open'); $('ab-copy').focus(); };
   $('ab-copy').addEventListener('click', () => {
     const f = F.find(x => x.id === st.faction), size = S[st.size];
     const res = window.checkArmy(st.roster, { size: st.size, warlord: st.warlord, enh: st.roster.filter(u => u.enh).length });
-    const txt = [(f ? f.name : '') + ' — ' + size.label + ' (' + res.total + '/' + size.pts + ' แต้ม)'].concat(
+    ta.value = [(f ? f.name : '') + ' — ' + size.label + ' (' + res.total + '/' + size.pts + ' แต้ม)'].concat(
       st.roster.map((u, i) => '• ' + (u.qty > 1 ? u.qty + 'x ' : '') + u.name + ' [' + u.pts * u.qty + ']' + (st.warlord === i ? ' (Warlord)' : '') + (u.enh ? ' + Enhancement' : ''))).join('\n');
-    /* แสดงข้อความให้เลือกเองเสมอ เผื่อเบราว์เซอร์ไม่อนุญาตให้คัดลอกอัตโนมัติ */
-    const ta = $('ab-text'); ta.value = txt; ta.hidden = false; ta.focus(); ta.select();
-    const msg = t => { $('ab-copy-msg').textContent = t; setTimeout(() => { $('ab-copy-msg').textContent = ''; }, 2500); };
-    let ok = false;
-    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
-    if (ok) msg('คัดลอกแล้ว');
-    else if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(() => msg('คัดลอกแล้ว'), () => msg('กด Ctrl+C / ⌘C เพื่อคัดลอก'));
-    else msg('กด Ctrl+C / ⌘C เพื่อคัดลอก');
+    modal.hidden = false; document.body.classList.add('ab-modal-open');
+    doCopy();
+  });
+  $('ab-copy-again').addEventListener('click', doCopy);
+  modal.addEventListener('click', e => { if (e.target === modal || e.target.closest('[data-close]')) closeCopy(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hidden) closeCopy(); });
+  /* ทัพสำเร็จรูป */
+  const PS = window.ARMY_PRESET_STYLES || {};
+  function renderPresets() {
+    $('ab-presets').innerHTML = '<span>' + ic('star') + ' ทัพสำเร็จรูป (' + S[st.size].label + ' ' + S[st.size].pts.toLocaleString() + ' แต้ม):</span>' +
+      Object.keys(PS).map(k => '<button type="button" class="btn btn-ghost btn-sm" data-preset="' + k + '">' + PS[k] + '</button>').join('');
+  }
+  $('ab-presets').addEventListener('click', e => {
+    const b = e.target.closest('[data-preset]'); if (!b) return;
+    if (st.roster.length && !window.confirm('แทนที่รายชื่อทัพปัจจุบันด้วย "' + PS[b.dataset.preset] + '"?')) return;
+    const p = window.armyPreset(st.faction, st.size, b.dataset.preset);
+    st.roster = p.roster; st.warlord = p.warlord > -1 ? p.warlord : null;
+    renderRoster(); msg('ใส่ ' + PS[b.dataset.preset] + ' แล้ว — ปรับเพิ่ม/ลดต่อได้');
   });
   $('ab-print').addEventListener('click', () => window.print());
   renderAll();

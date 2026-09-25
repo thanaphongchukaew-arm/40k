@@ -28,7 +28,12 @@
         { key: 'terminators', name: 'Terminator Squad', kind: 'inf', img: 'units/terminator.webp', pts: 170, M: 5, T: 5, Sv: 2, inv: 4, W: 3, Ld: 6, OC: 1, models: 5,
           ranged: ['Storm bolter', 24, 2, 3, 4, 0, 1, ['rapid']], melee: ['Power fist', 0, 3, 3, 8, -2, 2, []] },
         { key: 'redemptor', name: 'Redemptor Dreadnought', kind: 'veh', img: 'space-marines/dread-redemptor.webp', pts: 210, M: 8, T: 10, Sv: 2, inv: 0, W: 12, Ld: 6, OC: 4, models: 1,
-          ranged: ['Onslaught gatling cannon', 24, 8, 3, 6, 0, 1, []], melee: ['Redemptor fist', 0, 5, 3, 12, -2, 3, []] }
+          ranged: ['Onslaught gatling cannon', 24, 8, 3, 6, 0, 1, []], melee: ['Redemptor fist', 0, 5, 3, 12, -2, 3, []] },
+        { key: 'calgar', name: 'Marneus Calgar', epic: true, kind: 'char', img: 'characters/marneus-calgar.webp', pts: 200, r: 1.0, M: 6, T: 6, Sv: 2, inv: 4, W: 6, Ld: 5, OC: 2, models: 1, ranged: ['Gauntlets of Ultramar (ยิง)', 18, 4, 2, 4, -1, 2, []], melee: ['Gauntlets of Ultramar', 0, 6, 2, 8, -3, 3, []] },
+        { key: 'hellblasters', name: 'Hellblaster Squad', kind: 'inf', img: 'units/hellblasters.webp', pts: 110, M: 6, T: 4, Sv: 3, inv: 0, W: 2, Ld: 6, OC: 1, models: 5, ranged: ['Plasma incinerator', 24, 2, 3, 7, -2, 1, ['rapid']], melee: ['Close combat weapon', 0, 3, 3, 4, 0, 1, []] },
+        { key: 'heavyint', name: 'Heavy Intercessor Squad', kind: 'inf', img: 'units/heavy-intercessors.webp', pts: 100, M: 5, T: 6, Sv: 3, inv: 0, W: 3, Ld: 6, OC: 1, models: 5, ranged: ['Heavy bolt rifle', 30, 2, 3, 5, -1, 1, ['assault', 'heavy']], melee: ['Close combat weapon', 0, 3, 3, 4, 0, 1, []] },
+        { key: 'predator', name: 'Predator Destructor', kind: 'veh', img: 'units/predator.webp', pts: 130, M: 10, T: 10, Sv: 3, inv: 0, W: 11, Ld: 6, OC: 3, models: 1, ranged: ['Predator autocannon', 48, 4, 3, 9, -1, 3, []], melee: ['Armoured hull', 0, 3, 4, 6, 0, 1, []] },
+        { key: 'landraider', name: 'Land Raider', kind: 'veh', img: 'units/land-raider.webp', pts: 240, r: 1.9, M: 10, T: 12, Sv: 2, inv: 0, W: 16, Ld: 6, OC: 5, models: 1, ranged: ['Godhammer lascannon', 48, 2, 3, 12, -3, 5, []], melee: ['Armoured hull', 0, 6, 4, 8, 0, 1, []] }
       ]
     },
     orks: {
@@ -52,7 +57,10 @@
         { key: 'gretchin', name: 'Gretchin', kind: 'inf', img: 'units/gretchin.webp', pts: 40, M: 5, T: 2, Sv: 7, inv: 0, W: 1, Ld: 8, OC: 2, models: 10,
           ranged: ['Grot blasta', 12, 1, 4, 3, 0, 1, ['pistol']], melee: ['Close combat weapon', 0, 1, 5, 2, 0, 1, []] },
         { key: 'deffdread', name: 'Deff Dread', kind: 'veh', img: 'space-marines/dread-deff-dread.webp', pts: 120, M: 6, T: 9, Sv: 2, inv: 0, W: 11, Ld: 7, OC: 3, models: 1,
-          ranged: ['Big shootas', 36, 6, 5, 5, 0, 1, []], melee: ['Dread klaws', 0, 5, 3, 12, -2, 3, []] }
+          ranged: ['Big shootas', 36, 6, 5, 5, 0, 1, []], melee: ['Dread klaws', 0, 5, 3, 12, -2, 3, []] },
+        { key: 'bigmek', name: 'Big Mek', kind: 'char', img: 'units/big-mek.webp', pts: 65, M: 6, T: 5, Sv: 4, inv: 0, W: 4, Ld: 7, OC: 1, models: 1, ranged: ['Kustom mega-blasta', 24, 3, 5, 9, -2, 3, ['heavy']], melee: ['Close combat weapon', 0, 3, 3, 5, 0, 1, []] },
+        { key: 'painboy', name: 'Painboy', kind: 'char', img: 'units/painboy.webp', pts: 70, M: 6, T: 5, Sv: 5, inv: 0, W: 4, Ld: 7, OC: 1, models: 1, fnp: 5, ranged: null, melee: ['’Urty syringe & power klaw', 0, 4, 3, 9, -2, 2, []] },
+        { key: 'battlewagon', name: 'Battlewagon', kind: 'veh', img: 'units/battlewagon.webp', pts: 160, r: 1.9, M: 10, T: 10, Sv: 3, inv: 0, W: 16, Ld: 7, OC: 5, models: 1, ranged: ['Big shootas', 36, 6, 5, 5, 0, 1, []], melee: ['Deff rolla', 0, 8, 3, 8, -1, 2, []] }
       ]
     },
     necrons: {
@@ -76,7 +84,10 @@
         { key: 'wraiths', name: 'Canoptek Wraiths', kind: 'inf', img: 'units/canoptek.webp', pts: 110, M: 8, T: 6, Sv: 4, inv: 4, W: 4, Ld: 8, OC: 1, models: 3, ab: ['fly'],
           ranged: null, melee: ['Vicious claws', 0, 4, 4, 6, -2, 2, []] },
         { key: 'ctan', name: "C'tan Shard", epic: true, kind: 'mon', img: 'units/ctan-shard.webp', pts: 280, M: 8, T: 11, Sv: 4, inv: 4, W: 14, Ld: 6, OC: 4, models: 1, ab: ['fly'],
-          ranged: ['Star-god power', 24, 4, 2, 8, -3, 3, ['devastating']], melee: ['Star-god fist', 0, 6, 2, 12, -3, 3, []] }
+          ranged: ['Star-god power', 24, 4, 2, 8, -3, 3, ['devastating']], melee: ['Star-god fist', 0, 6, 2, 12, -3, 3, []] },
+        { key: 'trazyn', name: 'Trazyn the Infinite', epic: true, kind: 'char', img: 'characters/trazyn.webp', pts: 75, M: 5, T: 5, Sv: 3, inv: 4, W: 6, Ld: 6, OC: 1, models: 1, ranged: null, melee: ['Empathic Obliterator', 0, 4, 3, 6, -1, 2, ['devastating']] },
+        { key: 'skorpekh', name: 'Skorpekh Destroyers', kind: 'inf', img: 'units/skorpekh.webp', pts: 90, M: 8, T: 6, Sv: 3, inv: 0, W: 3, Ld: 7, OC: 1, models: 3, ranged: null, melee: ['Skorpekh reaping blades', 0, 4, 3, 7, -2, 2, []] },
+        { key: 'doomsday', name: 'Doomsday Ark', kind: 'veh', img: 'units/doomsday-ark.webp', pts: 200, r: 1.9, M: 10, T: 10, Sv: 3, inv: 0, W: 14, Ld: 7, OC: 3, models: 1, ab: ['fly'], ranged: ['Doomsday cannon', 72, 4, 4, 14, -3, 4, ['blast', 'heavy']], melee: ['Armoured bulk', 0, 6, 4, 6, 0, 1, []] }
       ]
     },
     tyranids: {
@@ -98,7 +109,11 @@
         { key: 'zoanthropes', name: 'Zoanthropes', kind: 'inf', img: 'units/zoanthrope.webp', pts: 100, M: 5, T: 5, Sv: 5, inv: 4, W: 3, Ld: 7, OC: 1, models: 3, ab: ['synapse', 'fly'],
           ranged: ['Warp blast', 24, 1, 3, 10, -3, 3, ['psychic', 'devastating']], melee: ['Chitin claws', 0, 1, 4, 3, 0, 1, []] },
         { key: 'carnifex', name: 'Carnifex', kind: 'mon', img: 'units/carnifex.webp', pts: 115, M: 8, T: 9, Sv: 2, inv: 0, W: 8, Ld: 8, OC: 3, models: 1,
-          ranged: ['Deathspitter with slimer maggots', 24, 3, 4, 7, -1, 1, []], melee: ['Monstrous scything talons', 0, 6, 3, 9, -2, 3, []] }
+          ranged: ['Deathspitter with slimer maggots', 24, 3, 4, 7, -1, 1, []], melee: ['Monstrous scything talons', 0, 6, 3, 9, -2, 3, []] },
+        { key: 'oldoneeye', name: 'Old One Eye', epic: true, kind: 'mon', img: 'characters/old-one-eye.webp', pts: 150, M: 8, T: 9, Sv: 2, inv: 0, W: 9, Ld: 7, OC: 3, models: 1, fnp: 6, ranged: null, melee: ['Monstrous crushing claws', 0, 6, 2, 12, -3, 3, []] },
+        { key: 'deathleaper', name: 'Deathleaper', epic: true, kind: 'char', img: 'characters/deathleaper.webp', pts: 80, M: 8, T: 5, Sv: 4, inv: 0, W: 6, Ld: 7, OC: 1, models: 1, ab: ['stealth'], ranged: null, melee: ['Talons', 0, 6, 2, 7, -2, 2, ['lethal']] },
+        { key: 'hormagaunts', name: 'Hormagaunts', kind: 'inf', img: 'units/hormagaunts.webp', pts: 65, M: 10, T: 3, Sv: 5, inv: 0, W: 1, Ld: 8, OC: 2, models: 10, ranged: null, melee: ['Scything talons', 0, 3, 4, 3, -1, 1, ['sustained']] },
+        { key: 'tyrannofex', name: 'Tyrannofex', kind: 'mon', img: 'units/tyrannofex.webp', pts: 200, r: 1.9, M: 8, T: 11, Sv: 2, inv: 0, W: 16, Ld: 8, OC: 4, models: 1, ranged: ['Rupture cannon', 48, 2, 4, 15, -3, 6, []], melee: ['Powerful limbs', 0, 4, 4, 7, -1, 2, []] }
       ]
     },
     guard: {
@@ -120,7 +135,12 @@
         { key: 'ogryns', name: 'Ogryns', kind: 'inf', img: 'units/ogryn.webp', pts: 60, M: 6, T: 6, Sv: 5, inv: 0, W: 3, Ld: 7, OC: 1, models: 3,
           ranged: ['Ripper gun', 18, 3, 4, 5, 0, 1, []], melee: ['Huge knife', 0, 4, 3, 6, -1, 2, []] },
         { key: 'lemanruss', name: 'Leman Russ Battle Tank', kind: 'veh', img: 'units/leman-russ.webp', pts: 160, r: 1.9, M: 10, T: 11, Sv: 2, inv: 0, W: 13, Ld: 7, OC: 3, models: 1,
-          ranged: ['Leman Russ battle cannon', 48, 6, 4, 10, -1, 3, ['blast', 'heavy']], melee: ['Armoured tracks', 0, 3, 4, 6, 0, 1, []] }
+          ranged: ['Leman Russ battle cannon', 48, 6, 4, 10, -1, 3, ['blast', 'heavy']], melee: ['Armoured tracks', 0, 3, 4, 6, 0, 1, []] },
+        { key: 'kasrkin', name: 'Kasrkin', kind: 'inf', img: 'units/kasrkin.webp', pts: 110, M: 6, T: 3, Sv: 4, inv: 0, W: 1, Ld: 6, OC: 2, models: 10, ranged: ['Hot-shot lasgun', 24, 1, 3, 3, -2, 1, ['rapid']], melee: ['Close combat weapon', 0, 1, 3, 3, 0, 1, []] },
+        { key: 'catachan', name: 'Catachan Jungle Fighters', kind: 'inf', img: 'units/catachan.webp', pts: 60, M: 6, T: 3, Sv: 5, inv: 0, W: 1, Ld: 7, OC: 2, models: 10, ranged: ['Lasgun', 24, 1, 4, 3, 0, 1, ['rapid']], melee: ['Catachan fighting knife', 0, 2, 3, 4, 0, 1, []] },
+        { key: 'krieg', name: 'Death Korps of Krieg', kind: 'inf', img: 'units/death-korps.webp', pts: 65, M: 6, T: 3, Sv: 5, inv: 0, W: 1, Ld: 7, OC: 2, models: 10, ranged: ['Lasgun', 24, 1, 4, 3, 0, 1, ['rapid']], melee: ['Bayonet', 0, 1, 4, 3, 0, 1, []] },
+        { key: 'basilisk', name: 'Basilisk', kind: 'veh', img: 'units/basilisk.webp', pts: 140, M: 10, T: 10, Sv: 3, inv: 0, W: 11, Ld: 7, OC: 3, models: 1, ranged: ['Earthshaker cannon', 72, 4, 4, 9, -2, 3, ['blast', 'heavy']], melee: ['Armoured tracks', 0, 3, 4, 6, 0, 1, []] },
+        { key: 'rogaldorn', name: 'Rogal Dorn Battle Tank', kind: 'veh', img: 'units/rogal-dorn-tank.webp', pts: 240, r: 2.0, M: 10, T: 12, Sv: 2, inv: 0, W: 18, Ld: 7, OC: 5, models: 1, ranged: ['Twin battle cannon', 48, 8, 4, 10, -1, 3, ['blast', 'heavy']], melee: ['Armoured tracks', 0, 6, 4, 7, 0, 1, []] }
       ]
     },
     csm: {
@@ -142,7 +162,11 @@
         { key: 'possessed', name: 'Possessed', kind: 'inf', img: 'units/possessed.webp', pts: 120, M: 9, T: 5, Sv: 3, inv: 5, W: 2, Ld: 6, OC: 1, models: 5,
           ranged: null, melee: ['Hideous mutations', 0, 4, 3, 5, -2, 2, []] },
         { key: 'dprince', name: 'Daemon Prince', kind: 'mon', img: 'units/daemon-prince.webp', pts: 180, M: 8, T: 10, Sv: 2, inv: 4, W: 10, Ld: 6, OC: 3, models: 1, ab: ['fly'],
-          ranged: ['Infernal cannon', 24, 3, 2, 5, -1, 2, []], melee: ['Hellforged sword', 0, 6, 2, 8, -2, 3, []] }
+          ranged: ['Infernal cannon', 24, 3, 2, 5, -1, 2, []], melee: ['Hellforged sword', 0, 6, 2, 8, -2, 3, []] },
+        { key: 'abaddon', name: 'Abaddon the Despoiler', epic: true, kind: 'char', img: 'units/abaddon.webp', pts: 270, r: 1.1, M: 5, T: 5, Sv: 2, inv: 4, W: 9, Ld: 5, OC: 3, models: 1, ranged: ['Talon of Horus', 24, 3, 2, 5, -1, 2, []], melee: ['Drach’nyen', 0, 8, 2, 8, -3, 3, []] },
+        { key: 'terminators', name: 'Chaos Terminator Squad', kind: 'inf', img: 'units/chaos-terminators.webp', pts: 180, M: 5, T: 5, Sv: 2, inv: 4, W: 3, Ld: 6, OC: 1, models: 5, ranged: ['Combi-bolter', 24, 2, 3, 4, 0, 1, ['rapid']], melee: ['Accursed weapon', 0, 4, 3, 5, -2, 1, []] },
+        { key: 'helbrute', name: 'Helbrute', kind: 'veh', img: 'space-marines/dread-helbrute.webp', pts: 140, M: 6, T: 9, Sv: 2, inv: 0, W: 8, Ld: 8, OC: 3, models: 1, ranged: ['Multi-melta', 18, 2, 3, 9, -4, 4, ['melta']], melee: ['Helbrute fist', 0, 5, 3, 12, -2, 3, []] },
+        { key: 'forgefiend', name: 'Forgefiend', kind: 'mon', img: 'units/forgefiend.webp', pts: 130, M: 8, T: 10, Sv: 3, inv: 5, W: 12, Ld: 6, OC: 3, models: 1, ranged: ['Hades autocannon', 36, 8, 3, 8, -1, 2, []], melee: ['Armoured feet', 0, 3, 4, 6, 0, 1, []] }
       ]
     },
     aeldari: {
@@ -162,7 +186,12 @@
         { key: 'wraithguard', name: 'Wraithguard', kind: 'inf', img: 'units/wraithguard.webp', pts: 150, M: 5, T: 7, Sv: 2, inv: 0, W: 3, Ld: 6, OC: 1, models: 5,
           ranged: ['Wraithcannon', 18, 1, 4, 12, -4, 4, ['heavy']], melee: ['Wraithguard fists', 0, 2, 4, 5, 0, 1, []] },
         { key: 'avatar', name: 'Avatar of Khaine', epic: true, kind: 'mon', img: 'units/avatar-of-khaine.webp', pts: 280, M: 10, T: 11, Sv: 2, inv: 4, W: 14, Ld: 6, OC: 5, models: 1,
-          ranged: ['The Wailing Doom', 12, 1, 2, 16, -4, 6, ['melta']], melee: ['The Wailing Doom', 0, 6, 2, 16, -4, 3, []] }
+          ranged: ['The Wailing Doom', 12, 1, 2, 16, -4, 6, ['melta']], melee: ['The Wailing Doom', 0, 6, 2, 16, -4, 3, []] },
+        { key: 'eldrad', name: 'Eldrad Ulthran', epic: true, kind: 'char', img: 'characters/eldrad.webp', pts: 110, M: 7, T: 3, Sv: 6, inv: 4, W: 5, Ld: 6, OC: 1, models: 1, ranged: ['Eldritch Storm', 18, 6, 2, 6, -2, 2, ['psychic', 'blast']], melee: ['Staff of Ulthamar', 0, 3, 2, 4, -1, 3, []] },
+        { key: 'banshees', name: 'Howling Banshees', kind: 'inf', img: 'units/howling-banshees.webp', pts: 90, M: 8, T: 3, Sv: 4, inv: 4, W: 1, Ld: 6, OC: 1, models: 5, ranged: ['Shuriken pistol', 12, 1, 2, 4, -1, 1, ['pistol']], melee: ['Banshee blade', 0, 3, 2, 4, -2, 1, []] },
+        { key: 'firedragons', name: 'Fire Dragons', kind: 'inf', img: 'units/fire-dragons.webp', pts: 120, M: 7, T: 3, Sv: 3, inv: 0, W: 1, Ld: 6, OC: 1, models: 5, ranged: ['Dragon fusion gun', 12, 1, 3, 9, -4, 4, ['melta']], melee: ['Close combat weapon', 0, 2, 3, 3, 0, 1, []] },
+        { key: 'wraithlord', name: 'Wraithlord', kind: 'mon', img: 'space-marines/dread-wraithlord.webp', pts: 140, M: 8, T: 10, Sv: 2, inv: 0, W: 10, Ld: 6, OC: 3, models: 1, ranged: ['Bright lance', 36, 1, 3, 12, -3, 5, []], melee: ['Wraithbone fists', 0, 4, 3, 12, -2, 3, []] },
+        { key: 'serpent', name: 'Wave Serpent', kind: 'veh', img: 'units/wave-serpent.webp', pts: 120, r: 1.8, M: 14, T: 9, Sv: 3, inv: 0, W: 13, Ld: 7, OC: 2, models: 1, ab: ['fly'], ranged: ['Twin shuriken cannon', 24, 6, 3, 6, -1, 2, []], melee: ['Wraithbone hull', 0, 3, 4, 6, 0, 1, []] }
       ]
     },
     tau: {
@@ -180,7 +209,13 @@
         { key: 'crisis', name: 'Crisis Battlesuits', kind: 'inf', img: 'units/crisis.webp', pts: 120, M: 10, T: 5, Sv: 3, inv: 0, W: 4, Ld: 7, OC: 2, models: 3, ab: ['fly'],
           ranged: ['Plasma rifle ×2', 24, 2, 4, 8, -3, 3, []], melee: ['Battlesuit fists', 0, 3, 5, 5, 0, 1, []] },
         { key: 'kroot', name: 'Kroot Carnivores', kind: 'inf', img: 'units/kroot.webp', pts: 60, M: 7, T: 3, Sv: 6, inv: 0, W: 1, Ld: 7, OC: 1, models: 10, ab: ['stealth'],
-          ranged: ['Kroot rifle', 24, 1, 4, 4, -1, 1, ['rapid']], melee: ['Tanglebomb & blades', 0, 2, 3, 3, 0, 1, []] }
+          ranged: ['Kroot rifle', 24, 1, 4, 4, -1, 1, ['rapid']], melee: ['Tanglebomb & blades', 0, 2, 3, 3, 0, 1, []] },
+        { key: 'farsight', name: 'Commander Farsight', epic: true, kind: 'char', img: 'characters/farsight.webp', pts: 110, M: 10, T: 5, Sv: 2, inv: 4, W: 6, Ld: 6, OC: 2, models: 1, ab: ['fly'], ranged: ['High-intensity plasma rifle', 24, 2, 2, 8, -3, 3, []], melee: ['Dawn Blade', 0, 5, 2, 8, -3, 3, []] },
+        { key: 'fireblade', name: 'Cadre Fireblade', kind: 'char', img: 'units/cadre-fireblade.webp', pts: 50, M: 6, T: 3, Sv: 4, inv: 0, W: 3, Ld: 7, OC: 1, models: 1, ab: ['officer'], ranged: ['Fireblade pulse rifle', 30, 2, 2, 5, 0, 1, ['rapid']], melee: ['Close combat weapon', 0, 2, 4, 3, 0, 1, []] },
+        { key: 'breachers', name: 'Breacher Team', kind: 'inf', img: 'units/breacher-team.webp', pts: 100, M: 6, T: 3, Sv: 4, inv: 0, W: 1, Ld: 7, OC: 2, models: 10, ranged: ['Pulse blaster', 10, 2, 4, 6, -1, 1, []], melee: ['Close combat weapon', 0, 1, 5, 3, 0, 1, []] },
+        { key: 'broadsides', name: 'Broadside Battlesuits', kind: 'inf', img: 'units/broadside.webp', pts: 160, r: 1.3, M: 5, T: 6, Sv: 2, inv: 0, W: 6, Ld: 7, OC: 2, models: 2, ranged: ['Heavy rail rifle', 60, 1, 4, 12, -4, 5, ['heavy', 'devastating']], melee: ['Crushing bulk', 0, 2, 5, 5, 0, 1, []] },
+        { key: 'riptide', name: 'Riptide Battlesuit', kind: 'mon', img: 'units/riptide.webp', pts: 190, M: 10, T: 9, Sv: 2, inv: 5, W: 14, Ld: 7, OC: 4, models: 1, ab: ['fly'], ranged: ['Heavy burst cannon', 36, 12, 4, 6, -1, 2, []], melee: ['Crushing bulk', 0, 4, 4, 6, 0, 1, []] },
+        { key: 'hammerhead', name: 'Hammerhead Gunship', kind: 'veh', img: 'units/hammerhead.webp', pts: 145, r: 1.8, M: 10, T: 10, Sv: 3, inv: 0, W: 14, Ld: 7, OC: 3, models: 1, ab: ['fly'], ranged: ['Railgun', 72, 1, 4, 20, -5, 8, ['heavy', 'devastating']], melee: ['Armoured hull', 0, 3, 5, 6, 0, 1, []] }
       ]
     },
     sororitas: {
@@ -200,7 +235,11 @@
         { key: 'repentia', name: 'Sisters Repentia', kind: 'inf', img: 'units/repentia.webp', pts: 80, M: 7, T: 3, Sv: 7, inv: 0, W: 1, Ld: 7, OC: 1, models: 5, fnp: 5,
           ranged: null, melee: ['Penitent eviscerator', 0, 3, 3, 7, -2, 2, []] },
         { key: 'penitent', name: 'Penitent Engine', kind: 'veh', img: 'units/penitent-engine.webp', pts: 75, M: 8, T: 6, Sv: 4, inv: 0, W: 8, Ld: 8, OC: 1, models: 1, fnp: 5,
-          ranged: ['Penitent flamers', 12, 6, 0, 5, -1, 1, ['torrent']], melee: ['Penitent buzz-blades', 0, 4, 4, 7, -2, 2, []] }
+          ranged: ['Penitent flamers', 12, 6, 0, 5, -1, 1, ['torrent']], melee: ['Penitent buzz-blades', 0, 4, 4, 7, -2, 2, []] },
+        { key: 'vahl', name: 'Morvenn Vahl', epic: true, kind: 'char', img: 'units/morvenn-vahl.webp', pts: 170, r: 1.2, M: 8, T: 7, Sv: 2, inv: 4, W: 8, Ld: 6, OC: 3, models: 1, ranged: ['Fidelis & Veritas', 18, 3, 2, 6, -1, 2, ['sustained']], melee: ['Lance of Illumination', 0, 6, 2, 8, -3, 3, []] },
+        { key: 'dominions', name: 'Dominion Squad', kind: 'inf', img: 'units/dominion-squad.webp', pts: 115, M: 7, T: 3, Sv: 3, inv: 0, W: 1, Ld: 7, OC: 2, models: 5, ranged: ['Meltagun', 12, 1, 3, 9, -4, 4, ['melta']], melee: ['Close combat weapon', 0, 1, 4, 3, 0, 1, []] },
+        { key: 'exorcist', name: 'Exorcist', kind: 'veh', img: 'units/exorcist.webp', pts: 210, r: 1.8, M: 10, T: 10, Sv: 3, inv: 0, W: 11, Ld: 7, OC: 3, models: 1, ranged: ['Exorcist missile launcher', 48, 4, 3, 10, -3, 3, []], melee: ['Armoured tracks', 0, 3, 4, 6, 0, 1, []] },
+        { key: 'immolator', name: 'Immolator', kind: 'veh', img: 'units/immolator.webp', pts: 115, M: 10, T: 9, Sv: 3, inv: 0, W: 10, Ld: 7, OC: 2, models: 1, ranged: ['Immolation flamers', 12, 7, 0, 6, -1, 1, ['torrent']], melee: ['Armoured tracks', 0, 3, 4, 6, 0, 1, []] }
       ]
     },
     deathguard: {
@@ -218,7 +257,12 @@
         { key: 'deathshroud', name: 'Deathshroud Terminators', kind: 'inf', img: 'units/deathshroud.webp', pts: 120, M: 4, T: 6, Sv: 2, inv: 4, W: 4, Ld: 6, OC: 1, models: 3, fnp: 5,
           ranged: ['Plaguespurt gauntlet', 12, 3, 0, 4, -1, 1, ['torrent']], melee: ['Manreaper', 0, 3, 3, 8, -2, 3, []] },
         { key: 'plaguebearers', name: 'Plaguebearers', kind: 'inf', img: 'units/plaguebearers.webp', pts: 100, M: 5, T: 5, Sv: 7, inv: 5, W: 2, Ld: 7, OC: 1, models: 10, fnp: 5,
-          ranged: null, melee: ['Plaguesword', 0, 2, 4, 4, -1, 1, ['lethal']] }
+          ranged: null, melee: ['Plaguesword', 0, 2, 4, 4, -1, 1, ['lethal']] },
+        { key: 'mortarion', name: 'Mortarion', epic: true, kind: 'mon', img: 'primarchs/mortarion-now.webp', pts: 380, r: 2.1, M: 10, T: 12, Sv: 2, inv: 4, W: 16, Ld: 5, OC: 6, models: 1, fnp: 5, ab: ['fly'], ranged: ['The Lantern', 24, 1, 2, 12, -4, 6, []], melee: ['Silence', 0, 8, 2, 14, -3, 4, []] },
+        { key: 'plaguecaster', name: 'Malignant Plaguecaster', kind: 'char', img: 'units/plaguecaster.webp', pts: 65, M: 5, T: 5, Sv: 3, inv: 5, W: 4, Ld: 6, OC: 1, models: 1, fnp: 5, ranged: ['Pestilent Fallout', 18, 3, 3, 5, -1, 2, ['psychic', 'devastating']], melee: ['Corrupted staff', 0, 3, 3, 6, -1, 2, []] },
+        { key: 'blightlords', name: 'Blightlord Terminators', kind: 'inf', img: 'units/blightlords.webp', pts: 185, M: 4, T: 6, Sv: 2, inv: 4, W: 3, Ld: 6, OC: 1, models: 5, fnp: 5, ranged: ['Combi-bolter', 24, 2, 3, 4, 0, 1, ['rapid', 'lethal']], melee: ['Bubotic weapons', 0, 3, 3, 6, -2, 2, ['lethal']] },
+        { key: 'crawler', name: 'Plagueburst Crawler', kind: 'veh', img: 'units/plagueburst-crawler.webp', pts: 180, r: 1.8, M: 10, T: 11, Sv: 2, inv: 0, W: 12, Ld: 7, OC: 4, models: 1, fnp: 6, ranged: ['Plagueburst mortar', 48, 4, 4, 8, -1, 2, ['blast', 'heavy']], melee: ['Armoured hull', 0, 5, 4, 6, 0, 1, []] },
+        { key: 'bloatdrone', name: 'Foetid Bloat-drone', kind: 'veh', img: 'units/bloat-drone.webp', pts: 90, M: 10, T: 9, Sv: 3, inv: 0, W: 10, Ld: 7, OC: 3, models: 1, fnp: 6, ab: ['fly'], ranged: ['Plaguespitters', 12, 5, 0, 6, -1, 1, ['torrent']], melee: ['Grasping plague probe', 0, 4, 4, 6, 0, 1, []] }
       ]
     },
     worldeaters: {
@@ -238,7 +282,10 @@
         { key: 'dprince', name: 'Daemon Prince of Khorne', kind: 'mon', img: 'units/daemon-prince.webp', pts: 200, M: 8, T: 10, Sv: 2, inv: 4, W: 10, Ld: 6, OC: 3, models: 1,
           ranged: ['Infernal cannon', 24, 3, 2, 5, -1, 2, []], melee: ['Hellforged weapons', 0, 8, 2, 8, -2, 3, []] },
         { key: 'bloodthirster', name: 'Bloodthirster', kind: 'mon', img: 'units/bloodthirster.webp', pts: 340, r: 2.1, M: 12, T: 12, Sv: 2, inv: 4, W: 18, Ld: 6, OC: 5, models: 1, ab: ['fly'],
-          ranged: ['Hellfire', 12, 6, 0, 6, -1, 1, ['torrent']], melee: ['Great axe of Khorne', 0, 8, 2, 18, -3, 6, []] }
+          ranged: ['Hellfire', 12, 6, 0, 6, -1, 1, ['torrent']], melee: ['Great axe of Khorne', 0, 8, 2, 18, -3, 6, []] },
+        { key: 'angron', name: 'Angron', epic: true, kind: 'mon', img: 'primarchs/angron-now.webp', pts: 400, r: 2.1, M: 12, T: 12, Sv: 2, inv: 4, W: 16, Ld: 5, OC: 6, models: 1, fnp: 6, ab: ['fly'], ranged: null, melee: ['Samni’arius & Spinegrinder', 0, 10, 2, 16, -4, 4, []] },
+        { key: 'fleshhounds', name: 'Flesh Hounds', kind: 'inf', img: 'units/flesh-hounds.webp', pts: 75, M: 10, T: 4, Sv: 7, inv: 5, W: 2, Ld: 8, OC: 1, models: 5, ranged: null, melee: ['Gore-drenched fangs', 0, 3, 3, 5, -1, 1, []] },
+        { key: 'landraider', name: 'Chaos Land Raider', kind: 'veh', img: 'units/chaos-land-raider.webp', pts: 240, r: 1.9, M: 10, T: 12, Sv: 2, inv: 0, W: 16, Ld: 6, OC: 5, models: 1, ranged: ['Soulshatter lascannon', 48, 2, 3, 12, -3, 5, []], melee: ['Armoured hull', 0, 6, 4, 8, 0, 1, []] }
       ]
     },
     custodes: {
@@ -258,7 +305,9 @@
         { key: 'praetors', name: 'Vertus Praetors', kind: 'inf', img: 'units/vertus-praetor.webp', pts: 240, r: 1.6, M: 12, T: 7, Sv: 2, inv: 4, W: 4, Ld: 6, OC: 2, models: 3,
           ranged: ['Salvo launcher', 24, 2, 2, 8, -2, 2, []], melee: ['Interceptor lance', 0, 5, 2, 7, -2, 2, []] },
         { key: 'contemptor', name: 'Contemptor-Achillus Dreadnought', kind: 'veh', img: 'units/contemptor.webp', pts: 155, M: 6, T: 9, Sv: 2, inv: 4, W: 10, Ld: 6, OC: 3, models: 1,
-          ranged: ['Achillus dreadspear (ยิง)', 18, 2, 2, 9, -2, 3, ['melta']], melee: ['Achillus dreadspear', 0, 5, 2, 12, -3, 3, []] }
+          ranged: ['Achillus dreadspear (ยิง)', 18, 2, 2, 9, -2, 3, ['melta']], melee: ['Achillus dreadspear', 0, 5, 2, 12, -3, 3, []] },
+        { key: 'wardens', name: 'Custodian Wardens', kind: 'inf', img: 'units/custodian-wardens.webp', pts: 150, M: 6, T: 6, Sv: 2, inv: 4, W: 3, Ld: 6, OC: 2, models: 3, fnp: 6, ranged: ['Castellan axe (ยิง)', 24, 2, 2, 4, -1, 2, ['assault']], melee: ['Castellan axe', 0, 4, 2, 9, -1, 3, []] },
+        { key: 'landraider', name: 'Venerable Land Raider', kind: 'veh', img: 'units/venerable-land-raider.webp', pts: 240, r: 1.9, M: 10, T: 12, Sv: 2, inv: 0, W: 16, Ld: 6, OC: 5, models: 1, ranged: ['Godhammer lascannon', 48, 2, 2, 12, -3, 5, []], melee: ['Armoured hull', 0, 6, 4, 8, 0, 1, []] }
       ]
     }
   };
