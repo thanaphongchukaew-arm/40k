@@ -28,6 +28,7 @@
     { id: 'xenos-races', file: 'pages/xenos-races.html', title: 'เผ่าพันธุ์อื่น ๆ ในจักรวาล', icon: 'eye', desc: 'Jokaero, Hrud, Enslavers และอีกกว่า 70 เผ่า' },
     { id: 'characters', file: 'pages/characters.html', title: 'บุคคลสำคัญ', icon: 'users', desc: 'ตัวละครที่มีชื่อ พร้อมค้นหาและตัวกรอง' },
     { id: 'space-marines', file: 'pages/space-marines.html', title: 'Space Marine เจาะลึก', icon: 'shield', desc: 'คัดคน อวัยวะ ชุดเกราะ Mk I–X และ Dreadnought' },
+    { id: 'wargear', file: 'pages/wargear.html', title: 'อาวุธและยานรบ', icon: 'sword', desc: 'Bolter, Lasgun, Land Raider, Titan และอาวุธต่างดาว' },
     { id: 'codex-astartes', file: 'pages/codex-astartes.html', title: 'Codex Astartes', icon: 'scroll', desc: 'คัมภีร์ของ Space Marine ทั้ง 52 ข้อ พร้อมเหตุการณ์จริง' },
     { id: 'ranks', file: 'pages/ranks.html', title: 'ลำดับยศทุกฝ่าย', icon: 'layers', desc: 'ใครสั่งใครได้ และแต่ละตำแหน่งมีกี่คน' },
     { id: 'honours', file: 'pages/honours.html', title: 'เหรียญตราและเกียรติยศ', icon: 'award', desc: 'Crux Terminatus, Iron Halo, เหรียญทหาร และอื่น ๆ' },
@@ -66,7 +67,7 @@
       ['ไทม์ไลน์ตามยุค', ['lore', 'timeline', 'lore-ancient', 'lore-30k', 'lore-40k', 'compare']],
       ['กลไกของจักรวาล', ['gods', 'warp', 'realms', 'galaxy-map', 'organizations']] ] },
     { label: 'ทัพ & ตัวละคร', secs: [
-      ['ทัพและเผ่าพันธุ์', ['faction-lore', 'space-marines', 'xenos-races']],
+      ['ทัพและเผ่าพันธุ์', ['faction-lore', 'space-marines', 'wargear', 'xenos-races']],
       ['บุคคลสำคัญ', ['primarchs', 'primarch-relations', 'characters', 'ranks', 'honours']] ] },
     { link: 'codex-astartes' },
     { label: 'กติกา & จัดทัพ', secs: [

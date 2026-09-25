@@ -1752,3 +1752,26 @@ tr[data-o] { cursor: pointer; }
 .tl-links .chip { font-size: .8rem; }
 .tl-ev:hover .tl-dot { background: var(--gold); }
 @media (max-width: 640px) { .tl-card.has-img { grid-template-columns: 1fr; grid-template-areas: "img" "date" "h" "p" "l"; } .tl-img { height: 170px; } .tl-tools { top: 60px; } }
+
+/* อาวุธและยานรบ (wargear.html) */
+.wg-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; margin: 14px 0 8px; }
+.wg-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; transition: border-color .2s, transform .2s; }
+.wg-card:hover { border-color: rgba(var(--gold-rgb), .5); transform: translateY(-2px); }
+.wg-img { background: #f3f1ec; height: 150px; display: grid; place-items: center; padding: 8px; }
+.wg-card.veh .wg-img { background: var(--surface-2); padding: 0; }
+.wg-img img { max-width: 100%; max-height: 100%; object-fit: contain; cursor: zoom-in; }
+.wg-card.veh .wg-img img { width: 100%; height: 100%; object-fit: cover; }
+.wg-body { padding: 12px 14px 14px; display: grid; gap: 6px; }
+.wg-body h3 { margin: 0; font-size: 1.05rem; }
+.wg-body h3 small { display: block; font-size: .8rem; color: var(--gold); font-weight: 400; margin-top: 2px; }
+.wg-body p { margin: 0; color: var(--text-soft); font-size: .92rem; }
+.wg-who { font-size: .8rem !important; color: var(--muted) !important; display: flex; gap: 6px; align-items: flex-start; }
+.wg-who .i { flex-shrink: 0; margin-top: 2px; }
+.wg-pc { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 4px; font-size: .84rem; }
+.wg-pc li { padding-left: 20px; position: relative; color: var(--text-soft); }
+.wg-pc li::before { position: absolute; left: 0; top: 0; font-weight: 700; }
+.wg-pc .pro::before { content: "+"; color: #4fbf82; } .wg-pc .con::before { content: "−"; color: #e2474f; }
+.wg-role { font-size: .84rem !important; }
+.wg-img { overflow: hidden; flex-shrink: 0; }
+.doc-body .wg-img img { width: auto; height: auto; max-width: 100%; max-height: 134px; margin: 0; border-radius: 6px; }
+.doc-body .wg-card.veh .wg-img img { width: 100%; height: 150px; max-height: none; object-fit: cover; border-radius: 0; }
