@@ -15,6 +15,7 @@
     { id: 'getting-started', file: 'pages/getting-started.html', title: 'เริ่มต้นต้องมีอะไร', icon: 'box', desc: 'อุปกรณ์ ชุดเริ่มต้น และการเลือกทัพ' },
     { id: 'lore', file: 'pages/lore.html', title: 'เนื้อเรื่องย่อ', icon: 'book', desc: 'ภาพรวมจักรวาลแห่ง 41st Millennium' },
     { id: 'timeline', file: 'pages/timeline.html', title: 'ไทม์ไลน์ 40K', icon: 'clock', desc: 'เหตุการณ์สำคัญตั้งแต่ยุคโบราณถึงปัจจุบัน' },
+    { id: 'events', file: 'pages/events.html', title: 'มหาสงครามและเหตุการณ์สำคัญ', icon: 'swords', desc: 'Great Crusade, Horus Heresy, Cadia และอีก 23 เหตุการณ์' },
     { id: 'lore-ancient', file: 'pages/lore-ancient.html', title: 'ยุคโบราณ: ก่อนจักรวรรดิ', icon: 'clock', desc: 'Old Ones, War in Heaven, Dark Age of Technology' },
     { id: 'gods', file: 'pages/gods.html', title: 'เทพเจ้าทุกองค์', icon: 'star', desc: 'Chaos, Aeldari, Ork, C\'tan และอื่น ๆ' },
     { id: 'warp', file: 'pages/warp.html', title: 'Warp และกลไกของจักรวาล', icon: 'planet', desc: 'Navigator, Astropath, Psyker และ Great Rift' },
@@ -64,7 +65,7 @@
       ['เริ่มจากศูนย์', ['getting-started', 'factions', 'first-game', 'hobby']],
       ['ช่วยเลือกและทบทวน', ['finder', 'quiz']] ] },
     { label: 'เนื้อเรื่อง', secs: [
-      ['ไทม์ไลน์ตามยุค', ['lore', 'timeline', 'lore-ancient', 'lore-30k', 'lore-40k', 'compare']],
+      ['ไทม์ไลน์ตามยุค', ['lore', 'timeline', 'events', 'lore-ancient', 'lore-30k', 'lore-40k', 'compare']],
       ['กลไกของจักรวาล', ['gods', 'warp', 'realms', 'galaxy-map', 'organizations']] ] },
     { label: 'ทัพ & ตัวละคร', secs: [
       ['ทัพและเผ่าพันธุ์', ['faction-lore', 'space-marines', 'wargear', 'xenos-races']],
@@ -81,17 +82,32 @@
 
 
   /* ---------- ธีมและขนาดตัวอักษร ---------- */
-  const THEMES = [['dark', 'ธีมดำ'], ['light', 'ธีมขาว'], ['chaos', 'ธีมม่วง Chaos']];
+  const THEMES = [['dark', 'มืด'], ['light', 'สว่าง'], ['chaos', 'ม่วง Chaos']];
+  /* สีหลัก: ไม่ได้เลือก = ทอง (ธีม Chaos ใช้ม่วงของตัวเองจนกว่าจะเลือก) */
+  const ACCENTS = [['gold', 'ทอง'], ['cyan', 'Cyan'], ['orange', 'ส้ม'], ['red', 'แดง']];
+  const FS = { '-1': 'เล็ก', '0': 'ปกติ', '1': 'ใหญ่', '2': 'ใหญ่มาก' };
   const save = (k, v) => { try { localStorage.setItem(k, v); } catch (e) { /* ไม่เป็นไร */ } };
-  const themeSwitch = () => '<div class="theme-switch" role="group" aria-label="เลือกธีม">' +
-    THEMES.map(([id, label]) => '<button type="button" class="t-' + id + '" data-theme-set="' + id + '" title="' + label + '" aria-label="' + label + '"></button>').join('') + '</div>';
-  const fontSwitch = () => '<div class="font-switch" role="group" aria-label="ขนาดตัวอักษร">' +
-    '<button type="button" data-fs-step="-1" title="ตัวอักษรเล็กลง" aria-label="ตัวอักษรเล็กลง">ก-</button>' +
-    '<button type="button" data-fs-step="1" title="ตัวอักษรใหญ่ขึ้น" aria-label="ตัวอักษรใหญ่ขึ้น">ก+</button></div>';
+  /* ธีมและขนาดตัวอักษรรวมอยู่ในปุ่ม "การแสดงผล" ปุ่มเดียว — ไม่ต้องกินที่บนแถบเมนู */
+  const settingsHTML = () => '<div class="settings">' +
+    '<button type="button" class="settings-btn" aria-expanded="false" aria-controls="site-settings" aria-label="การแสดงผล: ธีม สีหลัก และขนาดตัวอักษร" title="การแสดงผล">' + ic('cog') + '</button>' +
+    '<div class="settings-panel" id="site-settings" hidden>' +
+      '<div class="settings-h">ธีม</div><div class="theme-switch" role="group" aria-label="เลือกธีม">' +
+        THEMES.map(([id, label]) => '<button type="button" data-theme-set="' + id + '"><i class="sw t-' + id + '" aria-hidden="true"></i>' + label + '</button>').join('') + '</div>' +
+      '<div class="settings-h">สีหลัก</div><div class="accent-switch" role="group" aria-label="เลือกสีหลัก">' +
+        ACCENTS.map(([id, label]) => '<button type="button" data-accent-set="' + id + '"><i class="sw a-' + id + '" aria-hidden="true"></i>' + label + '</button>').join('') + '</div>' +
+      '<div class="settings-h">ขนาดตัวอักษร</div><div class="font-switch" role="group" aria-label="ขนาดตัวอักษร">' +
+        '<button type="button" data-fs-step="-1" aria-label="ตัวอักษรเล็กลง">ก−</button><output data-fs-label aria-live="polite"></output>' +
+        '<button type="button" data-fs-step="1" aria-label="ตัวอักษรใหญ่ขึ้น">ก+</button></div>' +
+    '</div></div>';
   const html = document.documentElement;
   const paintTheme = () => {
     const cur = html.getAttribute('data-theme') || 'dark';
     document.querySelectorAll('[data-theme-set]').forEach(b => b.setAttribute('aria-pressed', b.dataset.themeSet === cur));
+    const acc = html.getAttribute('data-accent') || (cur === 'chaos' ? '' : 'gold');
+    document.querySelectorAll('[data-accent-set]').forEach(b => b.setAttribute('aria-pressed', b.dataset.accentSet === acc));
+    const fs = html.getAttribute('data-fs') || '0';
+    document.querySelectorAll('[data-fs-label]').forEach(o => { o.textContent = FS[fs]; });
+    document.querySelectorAll('[data-fs-step]').forEach(b => { b.disabled = (+b.dataset.fsStep < 0 && fs === '-1') || (+b.dataset.fsStep > 0 && fs === '2'); });
   };
   document.addEventListener('click', e => {
     const t = e.target.closest('[data-theme-set]');
@@ -100,12 +116,17 @@
       if (v === 'dark') html.removeAttribute('data-theme'); else html.setAttribute('data-theme', v);
       save('w40k-theme', v === 'dark' ? '' : v); paintTheme();
     }
+    const a = e.target.closest('[data-accent-set]');
+    if (a) {
+      html.setAttribute('data-accent', a.dataset.accentSet);
+      save('w40k-accent', a.dataset.accentSet); paintTheme();
+    }
     const f = e.target.closest('[data-fs-step]');
     if (f) {
       const cur = +(html.getAttribute('data-fs') || 0);
       const next = Math.max(-1, Math.min(2, cur + +f.dataset.fsStep));
       if (next === 0) html.removeAttribute('data-fs'); else html.setAttribute('data-fs', next);
-      save('w40k-fs', next === 0 ? '' : String(next));
+      save('w40k-fs', next === 0 ? '' : String(next)); paintTheme();
     }
   });
 
@@ -134,14 +155,20 @@
     '<div class="container">' +
       '<a class="brand" href="' + root + 'index.html" aria-label="หน้าแรก">' +
         '<span class="brand-mark">' + ic('aquila') + '</span>' +
-        '<span>คู่มือ 40K ฉบับมือใหม่<small>Warhammer 40,000 · 11th Edition</small></span></a>' +
-      '<nav class="nav" aria-label="เมนูหลัก">' + navHTML +
-        '<div class="mobile-tools">ขนาดตัวอักษร ' + fontSwitch() + '</div></nav>' +
-      '<div class="header-tools"><button type="button" class="search-btn" data-open-search aria-label="ค้นหาทั้งเว็บ" title="ค้นหาทั้งเว็บ (กด / )">' + ic('search') + '<span>ค้นหา</span><kbd>/</kbd></button>' + fontSwitch() + themeSwitch() + '</div>' +
+        '<span>คู่มือ 40K ฉบับมือใหม่<small>WH40K / 11th Edition</small></span></a>' +
+      '<nav class="nav" aria-label="เมนูหลัก">' + navHTML + '</nav>' +
+      '<div class="header-tools"><button type="button" class="search-btn" data-open-search aria-label="ค้นหาทั้งเว็บ" title="ค้นหาทั้งเว็บ (กด / )">' + ic('search') + '<span>ค้นหา</span><kbd>/</kbd></button>' + settingsHTML() + '</div>' +
       '<button class="nav-toggle" aria-label="เปิดเมนู" aria-expanded="false">' + ic('menu') + '</button>' +
     '</div><div class="read-progress"></div>';
   body.insertBefore(header, body.children[1] || null);
   paintTheme();
+
+  /* แผงการแสดงผล: เปิด/ปิดด้วยปุ่ม, Esc หรือคลิกนอกแผง */
+  const setBtn = header.querySelector('.settings-btn'), setPanel = header.querySelector('.settings-panel');
+  const setOpen = o => { setPanel.hidden = !o; setBtn.setAttribute('aria-expanded', o); };
+  setBtn.addEventListener('click', () => setOpen(setPanel.hidden));
+  document.addEventListener('click', e => { if (!setPanel.hidden && !e.target.closest('.settings')) setOpen(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !setPanel.hidden) { setOpen(false); setBtn.focus(); } });
 
   /* mobile toggle */
   const toggle = header.querySelector('.nav-toggle');
@@ -179,7 +206,7 @@
     '<div class="container"><div class="footer-grid">' +
       '<div><a class="brand" href="' + root + 'index.html"><span class="brand-mark">' + ic('aquila') + '</span><span>คู่มือ 40K ฉบับมือใหม่</span></a>' +
       '<p class="mt-2">เว็บสรุปกติกาและเนื้อเรื่อง Warhammer 40,000 ภาษาไทย สำหรับคนที่เพิ่งเริ่ม อ้างอิงกติกา 11th Edition (เปิดตัว มิ.ย. 2026)</p></div>' +
-      '<div><h4>เริ่มต้น & โลกของ 40K</h4><ul>' + col(['getting-started', 'lore', 'gods', 'primarchs', 'lore-30k', 'lore-40k', 'factions', 'first-game']) + '</ul></div>' +
+      '<div><h4>เริ่มต้น & โลกของ 40K</h4><ul>' + col(['getting-started', 'lore', 'gods', 'primarchs', 'events', 'lore-30k', 'lore-40k', 'factions', 'first-game']) + '</ul></div>' +
       '<div><h4>กติกา</h4><ul>' + col(['basics', 'turn', 'combat', 'terrain', 'stratagems']) + '</ul></div>' +
       '<div><h4>เครื่องมือ & อื่น ๆ</h4><ul>' + col(['army-builder', 'tabletop', 'finder', 'cheat-sheet', 'hobby', 'glossary', 'quiz']) +
       '<li><a href="' + root + 'pages/credits.html">แหล่งอ้างอิง & เครดิตรูป</a></li></ul></div>' +
@@ -232,16 +259,29 @@
   ss.src = root + 'js/search.js' + (ver ? '?' + ver : '');
   body.appendChild(ss);
 
+  /* ---------- โหลดแชทบอท 40K (ปุ่มลอย + แผงแชท) ----------
+     โหลดต่อจาก search.js ทันที แต่เฉพาะ chatbot.js เอง (ไม่ถึง 30KB) เพื่อให้ปุ่มแชทขึ้นให้เห็นตั้งแต่เปิดหน้า
+     ส่วนที่หนักกว่า (js/chatbot-data.js + js/chatbot-lexicon.js รวม ~77KB, js/search-index.js ที่แชทใช้ค้นเว็บ,
+     js/chatbot-translate.js ที่ค้น Wiki+แปล) ยังโหลดแบบ lazy เฉพาะตอนกดเปิดแชทจริงเท่านั้น (ดู js/chatbot.js)
+     — คนที่ไม่เปิดแชทเลยจะไม่โหลดข้อมูลส่วนนี้ */
+  const cs = document.createElement('script');
+  cs.src = root + 'js/chatbot.js' + (ver ? '?' + ver : '');
+  body.appendChild(cs);
+
   /* ---------- สารบัญอัตโนมัติ ---------- */
   const toc = document.querySelector('[data-toc]');
   if (toc) {
     const secs = [...document.querySelectorAll('.doc-body > section[id] > h2')];
-    toc.innerHTML = '<h4>ในหน้านี้</h4><ol>' + secs.map(h => {
+    toc.innerHTML = '<h4>ในหน้านี้ <span class="toc-pct" aria-hidden="true">0%</span></h4><div class="toc-bar" aria-hidden="true"><i></i></div><ol>' + secs.map(h => {
       const t = h.cloneNode(true); t.querySelectorAll('.num, svg').forEach(n => n.remove());
       return '<li><a href="#' + h.parentElement.id + '">' + t.textContent.trim() + '</a></li>';
     }).join('') + '</ol>';
     const links = [...toc.querySelectorAll('a')];
+    const pct = toc.querySelector('.toc-pct'), tbar = toc.querySelector('.toc-bar i');
     const spy = () => {
+      const de = document.documentElement, max = de.scrollHeight - de.clientHeight;
+      const p = max > 0 ? Math.min(100, Math.round(de.scrollTop / max * 100)) : 0;
+      pct.textContent = p + '%'; tbar.style.width = p + '%';
       let cur = secs[0] && secs[0].parentElement.id;
       secs.forEach(h => { if (h.getBoundingClientRect().top < 140) cur = h.parentElement.id; });
       links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
@@ -254,7 +294,13 @@
     sheet.className = 'toc-sheet'; sheet.setAttribute('role', 'dialog'); sheet.setAttribute('aria-label', 'สารบัญหน้านี้');
     sheet.innerHTML = '<h4>ในหน้านี้ <button type="button" aria-label="ปิดสารบัญ">' + ic('x') + '</button></h4>' + toc.querySelector('ol').outerHTML;
     const back = document.createElement('div'); back.className = 'toc-backdrop';
-    const setOpen = o => { sheet.classList.toggle('open', o); back.classList.toggle('open', o); };
+    const setOpen = o => {
+      sheet.classList.toggle('open', o); back.classList.toggle('open', o);
+      fab.setAttribute('aria-expanded', o);
+      if (o) sheet.querySelector('a.active, a').focus({ preventScroll: true }); else if (sheet.contains(document.activeElement)) fab.focus();
+    };
+    fab.setAttribute('aria-expanded', 'false');
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && sheet.classList.contains('open')) setOpen(false); });
     fab.addEventListener('click', () => setOpen(true));
     back.addEventListener('click', () => setOpen(false));
     sheet.addEventListener('click', e => { if (e.target.closest('a, h4 button')) setOpen(false); });

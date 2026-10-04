@@ -5,38 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>คู่มือ Warhammer 40K ฉบับมือใหม่ | เรียนตั้งแต่ศูนย์จนเล่นเป็น</title>
   <meta name="description" content="คู่มือภาษาไทย Warhammer 40,000 (11th Edition) ตั้งแต่เนื้อเรื่อง ทัพต่าง ๆ กติกา การจัดทัพ จนถึงเกมแรกของคุณ อ่านง่าย มีรูปประกอบ">
-  <meta name="theme-color" content="#0d0e11">
+  <meta name="theme-color" content="#0b0c0e">
   <link rel="icon" href="images/icons/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Kanit:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=23">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=32">
 </head>
 <body data-page="home" data-root="./">
-<script src="js/icons.js?v=17"></script>
+<script src="js/icons.js?v=19"></script>
 
 <main>
   <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="hero-bg"><img src="images/lore/hero-ultramarines-vs-black-legion.webp" alt="Ultramarines ปะทะ Black Legion ของ Chaos ในสมรภูมิ"></div>
-    <div class="container">
+    <div class="container hero-grid">
       <div class="hero-content">
         <div class="eyebrow">คู่มือภาษาไทย · อัปเดตตามกติกา 11th Edition</div>
-        <h1>ในอนาคตอันมืดมิดของ <span>สหัสวรรษที่ 41</span> มีเพียงสงคราม</h1>
+        <h1><span>ในอนาคตอันมืดมิดของ</span> <span class="hl">สหัสวรรษที่ 41</span> <span>มีเพียงสงคราม</span></h1>
         <p class="lead">เรียน <span class="term">Warhammer 40,000 <span class="th">(วอร์แฮมเมอร์ โฟร์ตี้เค)</span></span> ตั้งแต่ศูนย์ — รู้จักเนื้อเรื่อง เลือกทัพที่ใช่ เข้าใจกติกาแบบเห็นภาพ แล้วลงสนามเกมแรกได้อย่างมั่นใจ</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="pages/getting-started.html"><svg class="i"><use href="#i-flag"></use></svg> เริ่มเรียนเลย</a>
+          <a class="btn btn-primary" href="pages/getting-started.html" data-continue><svg class="i"><use href="#i-flag"></use></svg> <span>เริ่มเรียนเลย</span></a>
           <a class="btn btn-ghost" href="pages/factions.html"><svg class="i"><use href="#i-shield"></use></svg> ดูทัพทั้งหมด</a>
         </div>
-        <div class="hero-stats">
-          <div><b>20+</b><span>ฝ่าย/กองทัพให้เลือก</span></div>
-          <div><b>5</b><span>เฟสในแต่ละเทิร์น</span></div>
-          <div><b>5</b><span>รอบการรบต่อเกม</span></div>
-          <div><b>D6</b><span>ลูกเต๋าที่ใช้ทั้งเกม</span></div>
-        </div>
       </div>
+      <aside class="hero-spec" aria-label="ตัวเลขสำคัญของเกม">
+        <div class="hero-spec-h label"><span>Game brief / 40K</span><span class="on">11th Ed</span></div>
+        <dl>
+          <div><dt>Factions</dt><dd>20+<small>ฝ่าย/กองทัพให้เลือก</small></dd></div>
+          <div><dt>Phases / turn</dt><dd>5<small>เฟสในแต่ละเทิร์น</small></dd></div>
+          <div><dt>Battle rounds</dt><dd>5<small>รอบการรบต่อเกม</small></dd></div>
+          <div><dt>Dice</dt><dd>D6<small>ลูกเต๋าที่ใช้ทั้งเกม</small></dd></div>
+        </dl>
+      </aside>
     </div>
   </section>
 
@@ -44,7 +47,7 @@
   <section class="section">
     <div class="container split">
       <div class="reveal">
-        <div class="eyebrow">ทำความรู้จัก</div>
+        <div class="eyebrow"><span class="idx">01</span>ทำความรู้จัก</div>
         <h2>Warhammer 40K คืออะไร?</h2>
         <p>Warhammer 40,000 เป็น<strong>เกมสงครามบนโต๊ะ (tabletop wargame)</strong> ของบริษัท <span class="term">Games Workshop <span class="th">(เกมส์ เวิร์คช็อป)</span></span> จากอังกฤษ ผู้เล่นสองฝ่ายนำ<strong>โมเดลจำลอง (miniatures)</strong> ที่ประกอบและทำสีเองมาวางบนโต๊ะที่จัดฉากเป็นสนามรบ แล้วผลัดกันเดิน ยิง และบุกประชิด โดยใช้<strong>ตลับเมตรวัดระยะ (นิ้ว)</strong> และ<strong>ลูกเต๋าหกด้าน (D6)</strong> ตัดสินผล</p>
         <p>ผู้ชนะไม่จำเป็นต้องเป็นฝ่ายที่ฆ่าศัตรูหมด แต่คือฝ่ายที่ทำ <span class="term">Victory Points <span class="th">(วิกตอรี พอยต์ — แต้มชัยชนะ)</span></span> ได้มากกว่าเมื่อครบ 5 รอบ เช่น จากการยึดพื้นที่สำคัญหรือทำภารกิจสำเร็จ</p>
@@ -64,25 +67,25 @@
   <!-- ============ 4 ส่วนของงานอดิเรก ============ -->
   <section class="section section-alt">
     <div class="container">
-      <div class="section-head center reveal">
-        <div class="eyebrow">มากกว่าแค่เกม</div>
+      <div class="section-head wide reveal">
+        <div class="eyebrow"><span class="idx">02</span>มากกว่าแค่เกม</div>
         <h2>งานอดิเรกที่มี 4 มิติ</h2>
         <p>คนเล่น 40K ส่วนใหญ่สนุกกับหลายส่วนพร้อมกัน จะชอบด้านไหนมากกว่าก็ไม่ผิด</p>
       </div>
-      <div class="grid grid-4">
-        <div class="card reveal"><div class="card-icon"><svg class="i"><use href="#i-box"></use></svg></div><h3>สะสม</h3><p>เลือกกองทัพที่ชอบ แล้วค่อย ๆ ขยายจากกล่องเล็กเป็นกองทัพใหญ่</p></div>
-        <div class="card reveal"><div class="card-icon red"><svg class="i"><use href="#i-brush"></use></svg></div><h3>ประกอบ & ทำสี</h3><p>ตัดชิ้นส่วนจากแผง ประกอบ และลงสีตามสีประจำทัพหรือออกแบบเอง</p></div>
-        <div class="card reveal"><div class="card-icon blue"><svg class="i"><use href="#i-dice"></use></svg></div><h3>เล่นเกม</h3><p>วางแผน วัดระยะ ทอยเต๋า — มีตั้งแต่เล่นชิล ๆ กับเพื่อนถึงทัวร์นาเมนต์</p></div>
-        <div class="card reveal"><div class="card-icon green"><svg class="i"><use href="#i-book"></use></svg></div><h3>อ่านเนื้อเรื่อง</h3><p>จักรวาลที่มีประวัติศาสตร์กว่า 10,000 ปีในเรื่อง นิยายนับร้อยเล่ม</p></div>
-      </div>
+      <ol class="dims reveal">
+        <li><span class="dims-n label">01 / Collect</span><svg class="i"><use href="#i-box"></use></svg><h3>สะสม</h3><p>เลือกกองทัพที่ชอบ แล้วค่อย ๆ ขยายจากกล่องเล็กเป็นกองทัพใหญ่</p></li>
+        <li><span class="dims-n label">02 / Build</span><svg class="i"><use href="#i-brush"></use></svg><h3>ประกอบ & ทำสี</h3><p>ตัดชิ้นส่วนจากแผง ประกอบ และลงสีตามสีประจำทัพหรือออกแบบเอง</p></li>
+        <li><span class="dims-n label">03 / Play</span><svg class="i"><use href="#i-dice"></use></svg><h3>เล่นเกม</h3><p>วางแผน วัดระยะ ทอยเต๋า — มีตั้งแต่เล่นชิล ๆ กับเพื่อนถึงทัวร์นาเมนต์</p></li>
+        <li><span class="dims-n label">04 / Read</span><svg class="i"><use href="#i-book"></use></svg><h3>อ่านเนื้อเรื่อง</h3><p>จักรวาลที่มีประวัติศาสตร์กว่า 10,000 ปีในเรื่อง นิยายนับร้อยเล่ม</p></li>
+      </ol>
     </div>
   </section>
 
   <!-- ============ เส้นทางการเรียน ============ -->
   <section class="section" id="path">
     <div class="container">
-      <div class="section-head reveal">
-        <div class="eyebrow">เรียนตามลำดับ</div>
+      <div class="section-head wide reveal">
+        <div class="eyebrow"><span class="idx">03</span>เรียนตามลำดับ</div>
         <h2>เส้นทางจากศูนย์ สู่เกมแรก</h2>
         <p>อ่านเรียงตามลำดับนี้จะเข้าใจง่ายที่สุด ทุกหน้ามีปุ่ม "ถัดไป" ด้านล่าง · อ่านแล้ว <b class="gold" data-path-count>0 / 14</b> หน้า</p>
         <div data-progress="getting-started,lore,factions,basics,turn,combat,terrain,stratagems,army-building,game-modes,first-game,hobby,glossary,quiz"><div class="progress-line"><i></i></div></div>
@@ -109,12 +112,12 @@
   <!-- ============ 3 ฝ่าย ============ -->
   <section class="section section-alt">
     <div class="container">
-      <div class="section-head reveal">
-        <div class="eyebrow">ใครรบกับใคร</div>
+      <div class="section-head wide reveal">
+        <div class="eyebrow"><span class="idx">04</span>ใครรบกับใคร</div>
         <h2>สามขั้วอำนาจแห่งกาแล็กซี</h2>
         <p>ทุกกองทัพในเกมแบ่งได้เป็น 3 กลุ่มใหญ่ ทุกฝ่ายรบกันเองได้หมด (แม้แต่พวกเดียวกัน)</p>
       </div>
-      <div class="grid grid-3">
+      <div class="grid grid-3 home-row">
         <a class="card img-card reveal" href="pages/factions.html#imperium">
           <div class="img"><img src="images/factions/imperium/space-marines.webp" alt="Space Marine ของ Ultramarines" loading="lazy"></div>
           <div class="body"><span class="chip chip-imperium">IMPERIUM</span><h3 class="mt-2">จักรวรรดิแห่งมนุษยชาติ</h3><p>อาณาจักรมนุษย์ที่ยิ่งใหญ่แต่ล้าหลังและโหดร้าย ปกป้องโดย Space Marines, กองทัพมนุษย์ และหุ่นรบยักษ์</p><span class="more">ดูทัพ Imperium <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
@@ -128,82 +131,69 @@
           <div class="body"><span class="chip chip-xenos">XENOS</span><h3 class="mt-2">เผ่าพันธุ์ต่างดาว</h3><p>ตั้งแต่ Orks ที่รักการต่อสู้ ไปจนถึงหุ่นโครงกระดูก Necron และฝูงสัตว์ประหลาด Tyranid</p><span class="more">ดูทัพ Xenos <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
         </a>
       </div>
+      <div class="cta-strip reveal">
+        <p><b>ยังเลือกไม่ได้ว่าจะเล่นทัพไหน?</b> ตอบคำถามสั้น ๆ เรื่องสไตล์การเล่นหรือนิสัยที่ชอบ แล้วเว็บจะแนะนำทัพที่เข้ากับคุณ</p>
+        <a class="btn btn-primary" href="pages/faction-finder.html"><svg class="i"><use href="#i-compass"></use></svg> ทัพไหนเหมาะกับคุณ</a>
+      </div>
     </div>
   </section>
 
   <!-- ============ โลกของ 40K ============ -->
   <section class="section">
     <div class="container">
-      <div class="section-head reveal">
-        <div class="eyebrow">เจาะลึกเนื้อเรื่อง</div>
+      <div class="section-head wide reveal">
+        <div class="eyebrow"><span class="idx">05</span>เจาะลึกเนื้อเรื่อง</div>
         <h2>โลกของ 40K แบบละเอียด</h2>
         <p>อ่านเนื้อเรื่องย่อแล้วอยากรู้ต่อ? เลือกหัวข้อได้เลย แต่ละหน้าแยกยุค 30K และ 40K ไว้ชัดเจน</p>
-        <div data-progress="lore,gods,primarchs,lore-30k,lore-40k,compare,faction-lore">
-          <p class="mb-0" style="font-size:.92rem">อ่านส่วนโลกของ 40K แล้ว <b class="gold" data-progress-text>0 / 7</b> หน้า</p>
+        <div data-progress="lore,events,gods,primarchs,lore-30k,lore-40k,compare,faction-lore">
+          <p class="mb-0 progress-note">อ่านส่วนโลกของ 40K แล้ว <b class="gold" data-progress-text>0 / 8</b> หน้า</p>
           <div class="progress-line"><i></i></div>
         </div>
       </div>
-      <div class="grid grid-3">
-        <a class="card img-card reveal" href="pages/gods.html">
-          <div class="img"><img src="images/gods/realm-of-chaos-map.webp" alt="เทพเจ้าแห่ง 40K" loading="lazy"></div>
-          <div class="body"><span class="era era-now">เทพ</span><h3 class="mt-2">เทพเจ้าแห่ง 40K</h3><p>Chaos Gods, God-Emperor, C'tan, เทพ Aeldari และ Orks</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
+      <div class="grid grid-3 home-row">
+        <a class="card img-card reveal" href="pages/timeline.html">
+          <div class="img"><img src="images/lore/30k/emperor-great-crusade.webp" alt="จักรพรรดิแห่งมนุษยชาตินำทัพ Great Crusade" loading="lazy" style="object-position:65% 40%"></div>
+          <div class="body"><h3>ไทม์ไลน์ 40K</h3><p>36 เหตุการณ์สำคัญตั้งแต่ 60 ล้านปีก่อนถึงปัจจุบัน กรองตามยุคได้ — เริ่มตรงนี้ถ้ายังไม่รู้ว่าอะไรเกิดก่อนหลัง</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
         </a>
         <a class="card img-card reveal" href="pages/primarchs.html">
-          <div class="img"><img src="images/lore/emperor-of-mankind.webp" alt="จักรพรรดิ & Primarch ทั้ง 20" loading="lazy"></div>
-          <div class="body"><span class="era era-30k">ตัวละคร</span><h3 class="mt-2">จักรพรรดิ & Primarch ทั้ง 20</h3><p>ชีวิตของจักรพรรดิและบุตรทั้ง 20 — ใครภักดี ใครทรยศ ใครยังอยู่</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
-        </a>
-        <a class="card img-card reveal" href="pages/timeline.html">
-          <div class="img"><img src="images/lore/30k/emperor-great-crusade.webp" alt="ไทม์ไลน์ 40K" loading="lazy"></div>
-          <div class="body"><span class="era era-now">ไทม์ไลน์</span><h3 class="mt-2">ไทม์ไลน์ 40K</h3><p>36 เหตุการณ์สำคัญตั้งแต่ 60 ล้านปีก่อนถึงปัจจุบัน กรองตามยุคได้</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
-        </a>
-        <a class="card img-card reveal" href="pages/lore-30k.html">
-          <div class="img"><img src="images/lore/30k/siege-of-terra.webp" alt="ยุค Great Crusade & Horus Heresy" loading="lazy"></div>
-          <div class="body"><span class="era era-30k">30K</span><h3 class="mt-2">ยุค Great Crusade & Horus Heresy</h3><p>ยุคที่จักรพรรดิยังเดินบนโลก และสงครามกลางเมืองที่เปลี่ยนทุกอย่าง</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
-        </a>
-        <a class="card img-card reveal" href="pages/lore-40k.html">
-          <div class="img"><img src="images/lore/fall-of-cadia.webp" alt="หมื่นปีหลัง Heresy" loading="lazy"></div>
-          <div class="body"><span class="era era-40k">40K</span><h3 class="mt-2">หมื่นปีหลัง Heresy</h3><p>ไทม์ไลน์ถึงการล่มสลายของ Cadia และสงครามล่าสุด</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
-        </a>
-        <a class="card img-card reveal" href="pages/compare-30k-40k.html">
-          <div class="img"><img src="images/lore/30k/primarchs-ullanor-horus-fulgrim.webp" alt="30K vs 40K" loading="lazy"></div>
-          <div class="body"><span class="era era-40k">เปรียบเทียบ</span><h3 class="mt-2">30K vs 40K</h3><p>อะไรเปลี่ยนไปบ้างในหมื่นปี พร้อมภาพเทียบทุก Legion</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
+          <div class="img"><img src="images/lore/emperor-of-mankind.webp" alt="จักรพรรดิแห่งมนุษยชาติบนบัลลังก์" loading="lazy" style="object-position:center 6%"></div>
+          <div class="body"><h3>จักรพรรดิ & Primarch ทั้ง 20</h3><p>ชีวิตของจักรพรรดิและบุตรทั้ง 20 — ใครภักดี ใครทรยศ ใครยังอยู่ถึงวันนี้</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
         </a>
         <a class="card img-card reveal" href="pages/faction-lore.html">
-          <div class="img"><img src="images/lore/xenos/craftworld-biel-tan.webp" alt="เนื้อเรื่องรายทัพ" loading="lazy"></div>
-          <div class="body"><span class="era era-now">47 ทัพ</span><h3 class="mt-2">เนื้อเรื่องรายทัพ</h3><p>ต้นกำเนิด วีรกรรม และเนื้อเรื่องล่าสุดของทุกทัพ</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
+          <div class="img"><img src="images/lore/xenos/craftworld-biel-tan.webp" alt="Craftworld Biel-Tan ของ Aeldari" loading="lazy" style="object-position:center 20%"></div>
+          <div class="body"><h3>เนื้อเรื่องรายทัพ</h3><p>ต้นกำเนิด วีรกรรม และเนื้อเรื่องล่าสุดของทั้ง 47 ทัพ อ่านเฉพาะทัพที่สนใจได้</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
         </a>
-        <a class="card img-card reveal" href="pages/characters.html">
-          <div class="img"><img src="images/characters/dante.webp" alt="บุคคลสำคัญ" loading="lazy"></div>
-          <div class="body"><span class="era era-now">สารานุกรม</span><h3 class="mt-2">บุคคลสำคัญ</h3><p>110 ตัวละคร ค้นหาและกรองได้</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
-        </a>
-        <a class="card img-card reveal" href="pages/space-marines.html">
-          <div class="img"><img src="images/factions/imperium/space-marines.webp" alt="Space Marine เจาะลึก" loading="lazy"></div>
-          <div class="body"><span class="era era-now">สารานุกรม</span><h3 class="mt-2">Space Marine เจาะลึก</h3><p>คัดคน อวัยวะ ชุดเกราะ Mark I–X และ Dreadnought</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
-        </a>
-        <a class="card img-card reveal" href="pages/ranks.html">
-          <div class="img"><img src="images/lore/golden-throne.webp" alt="ลำดับยศทุกฝ่าย" loading="lazy"></div>
-          <div class="body"><span class="era era-now">สารานุกรม</span><h3 class="mt-2">ลำดับยศทุกฝ่าย</h3><p>ใครสั่งใครได้ และแต่ละตำแหน่งมีกี่คน</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
-        </a>
-        <a class="card img-card reveal" href="pages/honours.html">
-          <div class="img"><img src="images/honours/am-various.webp" alt="เหรียญตราและเกียรติยศ" loading="lazy"></div>
-          <div class="body"><span class="era era-now">สารานุกรม</span><h3 class="mt-2">เหรียญตราและเกียรติยศ</h3><p>Crux Terminatus, Iron Halo, เหรียญทหาร</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
-        </a>
-        <a class="card img-card reveal" href="pages/galaxy-map.html">
-          <div class="img"><img src="images/lore/great-rift-galaxy-map.webp" alt="แผนที่กาแล็กซี" loading="lazy"></div>
-          <div class="body"><span class="era era-now">สารานุกรม</span><h3 class="mt-2">แผนที่กาแล็กซี</h3><p>968 ดาวในเนื้อเรื่อง กดดาวเพื่อดูประวัติ สถานะ และเหตุการณ์</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
-        </a>
-        <a class="card img-card reveal" href="pages/realms.html">
-          <div class="img"><img src="images/realms/realm-of-chaos.webp" alt="ภายใน Warp และมิติอื่น" loading="lazy"></div>
-          <div class="body"><span class="era era-now">มิติ</span><h3 class="mt-2">ภายใน Warp และมิติอื่น</h3><p>อาณาจักรของเทพทั้งสี่ Webway, Commorragh และ Eye of Terror</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
-        </a>
-        <a class="card img-card reveal" href="pages/wargear.html">
-          <div class="img"><img src="images/units/land-raider.webp" alt="อาวุธและยานรบ" loading="lazy"></div>
-          <div class="body"><span class="era era-now">สารานุกรม</span><h3 class="mt-2">อาวุธและยานรบ</h3><p>Bolter, Plasma, Land Raider, Baneblade และอาวุธต่างดาว</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
-        </a>
-        <a class="card img-card reveal" href="pages/organizations.html">
-          <div class="img"><img src="images/orgs/inquisitors-puritan-radical.webp" alt="องค์กรลับและกองกำลังพิเศษ" loading="lazy"></div>
-          <div class="body"><span class="era era-now">สารานุกรม</span><h3 class="mt-2">องค์กรลับและกองกำลังพิเศษ</h3><p>Inquisition, Assassins, Legion of the Damned</p><span class="more">อ่านต่อ <svg class="i"><use href="#i-arrow-right"></use></svg></span></div>
-        </a>
+      </div>
+      <div class="link-groups reveal">
+        <div>
+          <h3 class="lg-h">ยุคและจักรวาล</h3>
+          <ul class="thumb-list">
+            <li><a href="pages/events.html"><img src="images/lore/emperor-confronts-horus.webp" alt="" loading="lazy"><span><b>มหาสงครามและเหตุการณ์สำคัญ <span class="chip">ใหม่</span></b><small>23 เหตุการณ์แบบละเอียด: Horus Heresy, Siege of Terra, Cadia, Great Rift</small></span></a></li>
+            <li><a href="pages/lore-ancient.html"><img src="images/lore/extra/old-ones.webp" alt="" loading="lazy"><span><b>ยุคโบราณ: ก่อนจักรวรรดิ</b><small>Old Ones, War in Heaven, C'tan และ Age of Strife</small></span></a></li>
+            <li><a href="pages/lore-30k.html"><img src="images/lore/30k/siege-of-terra.webp" alt="" loading="lazy"><span><b>Great Crusade & Horus Heresy <span class="era era-30k">30K</span></b><small>ยุคที่จักรพรรดิยังเดินบนโลก และสงครามกลางเมือง</small></span></a></li>
+            <li><a href="pages/lore-40k.html"><img src="images/lore/fall-of-cadia.webp" alt="" loading="lazy"><span><b>หมื่นปีหลัง Heresy <span class="era era-40k">40K</span></b><small>ถึงการล่มสลายของ Cadia และสงครามล่าสุด</small></span></a></li>
+            <li><a href="pages/compare-30k-40k.html"><img src="images/lore/30k/primarchs-ullanor-horus-fulgrim.webp" alt="" loading="lazy"><span><b>30K vs 40K</b><small>อะไรเปลี่ยนไปในหมื่นปี พร้อมภาพเทียบทุก Legion</small></span></a></li>
+            <li><a href="pages/primarch-relations.html"><img src="images/lore/primarchs-triumph-of-ullanor.webp" alt="" loading="lazy"><span><b>แผนผังความสัมพันธ์ Primarch</b><small>ใครรักใคร ใครเกลียดใคร กดดูได้ทุกคู่</small></span></a></li>
+            <li><a href="pages/gods.html"><img src="images/gods/realm-of-chaos-map.webp" alt="" loading="lazy"><span><b>เทพเจ้าแห่ง 40K</b><small>Chaos Gods, God-Emperor, C'tan, เทพ Aeldari และ Orks</small></span></a></li>
+            <li><a href="pages/realms.html"><img src="images/realms/realm-of-chaos.webp" alt="" loading="lazy"><span><b>ภายใน Warp และมิติอื่น</b><small>อาณาจักรเทพทั้งสี่ Webway และ Eye of Terror</small></span></a></li>
+            <li><a href="pages/warp.html"><img src="images/lore/warp-immaterium.webp" alt="" loading="lazy"><span><b>Warp และกลไกของจักรวาล</b><small>Navigator, Astropath, Gellar Field และ Great Rift</small></span></a></li>
+            <li><a href="pages/galaxy-map.html"><img src="images/lore/great-rift-galaxy-map.webp" alt="" loading="lazy"><span><b>แผนที่กาแล็กซี</b><small>968 ดาว กดดาวเพื่อดูประวัติและสถานะ</small></span></a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="lg-h">สารานุกรม</h3>
+          <ul class="thumb-list">
+            <li><a href="pages/characters.html"><img src="images/characters/dante.webp" alt="" loading="lazy"><span><b>บุคคลสำคัญ</b><small>110 ตัวละคร ค้นหาและกรองได้</small></span></a></li>
+            <li><a href="pages/space-marines.html"><img src="images/factions/imperium/space-marines.webp" alt="" loading="lazy"><span><b>Space Marine เจาะลึก</b><small>คัดคน อวัยวะ ชุดเกราะ Mark I–X และ Dreadnought</small></span></a></li>
+            <li><a href="pages/codex-astartes.html"><img src="images/codex/codex-tome.webp" alt="" loading="lazy"><span><b>Codex Astartes</b><small>คัมภีร์ของ Space Marine และกฎทั้ง 52 ข้อ</small></span></a></li>
+            <li><a href="pages/wargear.html"><img src="images/units/land-raider.webp" alt="" loading="lazy"><span><b>อาวุธและยานรบ</b><small>Bolter, Plasma, Land Raider, Baneblade และอาวุธต่างดาว</small></span></a></li>
+            <li><a href="pages/ranks.html"><img src="images/lore/golden-throne.webp" alt="" loading="lazy"><span><b>ลำดับยศทุกฝ่าย</b><small>ใครสั่งใครได้ และแต่ละตำแหน่งมีกี่คน</small></span></a></li>
+            <li><a href="pages/honours.html"><img src="images/honours/am-various.webp" alt="" loading="lazy"><span><b>เหรียญตราและเกียรติยศ</b><small>Crux Terminatus, Iron Halo, เหรียญทหาร</small></span></a></li>
+            <li><a href="pages/organizations.html"><img src="images/orgs/inquisitors-puritan-radical.webp" alt="" loading="lazy"><span><b>องค์กรลับและกองกำลังพิเศษ</b><small>Inquisition, Assassins, Legion of the Damned</small></span></a></li>
+            <li><a href="pages/xenos-races.html"><img src="images/races/jokaero.webp" alt="" loading="lazy"><span><b>เผ่าพันธุ์อื่น ๆ ในจักรวาล</b><small>Jokaero, Hrud, Kroot และอีกกว่า 70 เผ่าที่ไม่มีทัพให้เล่น</small></span></a></li>
+            <li><a href="pages/novels.html"><img src="images/characters/gregor-eisenhorn.webp" alt="" loading="lazy"><span><b>นิยายที่ควรเริ่มอ่าน</b><small>เริ่มจากเล่มไหนดี พร้อมระดับความยากภาษาอังกฤษ</small></span></a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -216,7 +206,7 @@
         <figcaption>เกมที่งานอีเวนต์: ผู้เล่นยืนรอบโต๊ะ มีฉากซากตึกกั้นแนวยิง · ภาพ: Wikimedia Commons (CC)</figcaption>
       </figure>
       <div class="reveal">
-        <div class="eyebrow">ภาพรวม 1 เกม</div>
+        <div class="eyebrow"><span class="idx">06</span>ภาพรวม 1 เกม</div>
         <h2>หนึ่งเกมเล่นยังไง?</h2>
         <ol class="steps">
           <li><strong>จัดทัพตามแต้ม</strong>ตกลงขนาดเกม เช่น 1,000 หรือ 2,000 แต้ม แล้วเลือกยูนิตให้ไม่เกินนั้น</li>
@@ -233,14 +223,17 @@
   <!-- ============ เครื่องมือ ============ -->
   <section class="section">
     <div class="container">
-      <div class="section-head reveal">
-        <div class="eyebrow">ลองเล่นได้ในเว็บ</div>
+      <div class="section-head wide reveal">
+        <div class="eyebrow"><span class="idx">07</span>ลองเล่นได้ในเว็บ</div>
         <h2>เครื่องมือช่วยเรียน</h2>
       </div>
-      <div class="grid grid-3">
-        <a class="card reveal" href="pages/combat.html#simulator"><div class="card-icon"><svg class="i"><use href="#i-dice"></use></svg></div><h3>ตัวจำลองการโจมตี</h3><p>ใส่ค่าอาวุธและเป้าหมาย แล้วทอยเต๋าจำลองทีละขั้น พร้อมค่าเฉลี่ยที่คาดหวัง</p><span class="more">ลองเลย <svg class="i"><use href="#i-arrow-right"></use></svg></span></a>
-        <a class="card reveal" href="pages/basics.html#datasheet"><div class="card-icon red"><svg class="i"><use href="#i-scroll"></use></svg></div><h3>Datasheet แบบโต้ตอบ</h3><p>ชี้หรือแตะที่ค่าบนการ์ดยูนิต เพื่อดูว่าแต่ละตัวเลขหมายความว่าอะไร</p><span class="more">ลองเลย <svg class="i"><use href="#i-arrow-right"></use></svg></span></a>
-        <a class="card reveal" href="pages/quiz.html"><div class="card-icon blue"><svg class="i"><use href="#i-help"></use></svg></div><h3>แบบทดสอบ</h3><p>คำถามสั้น ๆ พร้อมเฉลยอธิบาย ช่วยเช็กว่าเข้าใจกติกาครบหรือยัง</p><span class="more">ทำแบบทดสอบ <svg class="i"><use href="#i-arrow-right"></use></svg></span></a>
+      <div class="tool-list reveal">
+        <a href="pages/combat.html#simulator"><span class="tool-ic"><svg class="i"><use href="#i-dice"></use></svg></span><span class="tool-n label">Tool 01</span><div class="tool-txt"><h3>ตัวจำลองการโจมตี</h3><p>ใส่ค่าอาวุธและเป้าหมาย แล้วทอยเต๋าจำลองทีละขั้น พร้อมค่าเฉลี่ยที่คาดหวัง</p></div><span class="more">ลองเลย <svg class="i"><use href="#i-arrow-right"></use></svg></span></a>
+        <a href="pages/basics.html#datasheet"><span class="tool-ic"><svg class="i"><use href="#i-scroll"></use></svg></span><span class="tool-n label">Tool 02</span><div class="tool-txt"><h3>Datasheet แบบโต้ตอบ</h3><p>ชี้หรือแตะที่ค่าบนการ์ดยูนิต เพื่อดูว่าแต่ละตัวเลขหมายความว่าอะไร</p></div><span class="more">ลองเลย <svg class="i"><use href="#i-arrow-right"></use></svg></span></a>
+        <a href="pages/quiz.html"><span class="tool-ic"><svg class="i"><use href="#i-help"></use></svg></span><span class="tool-n label">Tool 03</span><div class="tool-txt"><h3>แบบทดสอบ</h3><p>สองชุด กติกาและเนื้อเรื่อง ชุดละ 20 ข้อ พร้อมเฉลยอธิบาย ช่วยเช็กว่าเข้าใจครบหรือยัง</p></div><span class="more">ทำแบบทดสอบ <svg class="i"><use href="#i-arrow-right"></use></svg></span></a>
+        <a href="pages/faction-finder.html"><span class="tool-ic"><svg class="i"><use href="#i-compass"></use></svg></span><span class="tool-n label">Tool 04</span><div class="tool-txt"><h3>ทัพไหนเหมาะกับคุณ</h3><p>ตอบคำถามเรื่องสไตล์การเล่นหรือนิสัยที่ชอบ แล้วรับคำแนะนำทัพที่เข้ากับคุณ</p></div><span class="more">เริ่มเลย <svg class="i"><use href="#i-arrow-right"></use></svg></span></a>
+        <a href="pages/army-builder.html"><span class="tool-ic"><svg class="i"><use href="#i-list"></use></svg></span><span class="tool-n label">Tool 05</span><div class="tool-txt"><h3>ทดลองจัดทีม</h3><p>เลือกทัพและขนาดเกม ใส่ยูนิตกับตัวละคร แล้วให้เว็บตรวจกติกาการจัดทัพเบื้องต้น</p></div><span class="more">ลองจัดทัพ <svg class="i"><use href="#i-arrow-right"></use></svg></span></a>
+        <a href="pages/tabletop.html"><span class="tool-ic"><svg class="i"><use href="#i-swords"></use></svg></span><span class="tool-n label">Tool 06</span><div class="tool-txt"><h3>โต๊ะจำลองการรบ</h3><p>เล่นเกมย่อกับบอท 12 กองทัพ เดิน ยิง ชาร์จ ต่อสู้ ทอยลูกเต๋าจริงทุกขั้น</p></div><span class="more">ลงสนาม <svg class="i"><use href="#i-arrow-right"></use></svg></span></a>
       </div>
     </div>
   </section>
@@ -259,7 +252,7 @@
   </section>
 </main>
 
-<script src="js/layout.js?v=18"></script>
-<script src="js/main.js?v=18"></script>
+<script src="js/layout.js?v=29"></script>
+<script src="js/main.js?v=19"></script>
 </body>
 </html>

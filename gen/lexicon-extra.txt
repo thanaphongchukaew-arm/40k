@@ -1,0 +1,132 @@
+# คลังชื่อเฉพาะ 40K เสริม ที่เว็บยังไม่มีหน้าของตัวเอง (ไม่อยู่ใน search-index.js หรือ glossary.js)
+# รูปแบบ: English|คำอ่านไทย (เว้นว่างได้ถ้าไม่มั่นใจ)|ประเภท
+# ประเภท: character, faction, term, lore, rule, place
+# ห้ามเดาคำอ่านไทยที่ไม่มั่นใจ — เว้นว่างไว้แทน
+# รันใหม่ด้วย: node gen/genlexicon.js
+
+# ดาวและสถานที่สำคัญ
+Terra||place
+Holy Terra||place
+Cadia|เคเดีย|place
+Fenris|เฟนริส|place
+Baal||place
+Macragge|มาคราจ|place
+Mars|ดาวอังคาร|place
+Armageddon|อาร์มาเก็ดดอน|place
+Vigilus|วิจิลัส|place
+Prospero||place
+Nocturne||place
+Medusa||place
+Chemos||place
+Caliban||place
+Colchis||place
+Deliverance||place
+Barbarus||place
+Davin||place
+Istvaan III||place
+Istvaan V||place
+Molech||place
+Commorragh|คอมมอราห์|place
+Eye of Terror|อายออฟเทอเรอร์|place
+Maelstrom||place
+Segmentum Solar||place
+Segmentum Obscurus||place
+Segmentum Pacificus||place
+Segmentum Tempestus||place
+Ultima Segmentum||place
+Sol System||place
+Imperial Palace||place
+Sanctum Imperialis||place
+
+# เหตุการณ์สำคัญ
+Great Crusade|เกรตครูเสด|lore
+Siege of Terra|ซีจออฟเทอร์รา|lore
+Istvaan III Atrocity||lore
+Dropsite Massacre||lore
+Scouring||lore
+Age of Apostasy||lore
+Age of the Imperium||lore
+Great Rift||lore
+Noctis Aeterna||lore
+Indomitus Crusade||lore
+Plague Wars||lore
+Gathering Storm||lore
+Fall of Cadia||lore
+13th Black Crusade||lore
+Badab War||lore
+
+# ตัวละครรองและสำคัญที่ยังไม่มีหน้าแยก
+Belisarius Cawl|เบลิซาริอัส คอล|character
+Trazyn the Infinite|ทราซิน|character
+Imotekh the Stormlord|อิโมเทค|character
+Ghazghkull Thraka|กาซกูล ธรากา|character
+Yvraine|อีฟเรน|character
+Celestine|เซเลสทีน|character
+Eldrad Ulthran|เอลดราด อัลธราน|character
+Asdrubael Vect|แอสดรูเบล เวคต์|character
+Vashtorr||character
+Szarekh||character
+The Void Dragon||character
+Yarrick|ยาร์ริค|character
+Creed|ครีด|character
+Pedro Kantor||character
+Azrael||character
+Bjorn the Fell-Handed||character
+Leman Russ|ลีแมน รัสส์|character
+Rogal Dorn|โรกัล ดอร์น|character
+Perturabo|เพอร์ทูราโบ|character
+Ferrus Manus|เฟอรัส มานัส|character
+Corvus Corax|คอร์วัส คอแรกซ์|character
+Konrad Curze|คอนราด เคิร์ซ|character
+Fulgrim|ฟูลกริม|character
+Mortarion|มอร์ทาเรียน|character
+Magnus the Red|แมกนัส เดอะ เรด|character
+Lorgar Aurelian|ลอร์การ์ ออเรเลียน|character
+Angron|แองกรอน|character
+Alpharius Omegon||character
+Jaghatai Khan|จาฮาไท ข่าน|character
+Lion El'Jonson|ไลออน เอล จอนสัน|character
+Sanguinius|แซงกวิเนียส|character
+Vulkan|วัลแคน|character
+Roboute Guilliman|โรโบท กิลลิแมน|character
+
+# ทัพ/กลุ่มที่อาจพิมพ์ชื่อย่อ
+Imperial Guard||faction
+Sisters of Battle||faction
+Custodians||faction
+Custodian Guard||faction
+Space Wolves|สเปซ วูล์ฟ|faction
+Ultramarines|อัลตร้ามารีน|faction
+GSC||faction
+AdMech||faction
+Tau Empire||faction
+Necrons|เนครอน|faction
+Tyranids|ไทรานิดส์|faction
+Orks|ออร์ค|faction
+Eldar||faction
+Dark Eldar||faction
+Drukhari|ดรูคารี|faction
+Aeldari|เอลดาริ|faction
+
+# เกมและสื่ออื่นในจักรวาล 40K
+Dawn of War||lore
+Space Marine 2||lore
+Rogue Trader||lore
+Boltgun||lore
+Darktide||lore
+Mechanicus||lore
+Inquisitor Martyr||lore
+
+# ศัพท์กติกาที่อาจยังไม่มีในอภิธานศัพท์
+Servo-skull||term
+Power Armour||term
+Terminator Armour||term
+Dreadnought|เดรดนอต|term
+Land Raider||term
+Rhino||term
+Titan|ไททัน|term
+Knight||term
+Lasgun|ลาสกัน|term
+Bolter|โบลเตอร์|term
+Chainsword||term
+Power Fist||term

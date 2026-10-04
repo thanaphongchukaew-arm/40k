@@ -26,15 +26,41 @@
     { q: 'ในเกม Matched Play คะแนน VP เต็มคือเท่าไร?', o: ['50', '90', '100', '150'], a: 2, e: 'ภารกิจหลัก 45 + ภารกิจรอง 45 + Battle Ready 10 = 100' }
   ];
 
+  /* ชุดเนื้อเรื่อง — คำตอบอิงเนื้อหาในหน้าเนื้อเรื่องของเว็บนี้ */
+  const L = [
+    { q: 'Primarch คนใดทรยศจักรพรรดิและเป็นผู้นำ Horus Heresy?', o: ['Horus Lupercal', 'Lion El\'Jonson', 'Rogal Dorn', 'Sanguinius'], a: 0, e: 'Horus ได้ตำแหน่ง Warmaster แล้วถูก Chaos ชักจูงจนทรยศ พา Legion ครึ่งหนึ่งไปด้วย' },
+    { q: 'จักรพรรดิประทับอยู่บนสิ่งใดมาตลอดหนึ่งหมื่นปี?', o: ['Golden Throne', 'Astronomican', 'Eye of Terror', 'Phalanx'], a: 0, e: 'หลังบาดเจ็บสาหัสจากการสู้กับ Horus ร่างของจักรพรรดิถูกค้ำชีวิตไว้บน Golden Throne บนดาว Terra' },
+    { q: 'Primarch คนใดเสียชีวิตบนเรือของ Horus ระหว่างการสู้รบตอนจบ Heresy?', o: ['Sanguinius', 'Ferrus Manus', 'Vulkan', 'Leman Russ'], a: 0, e: 'Sanguinius แห่ง Blood Angels สู้กับ Horus ก่อนจักรพรรดิมาถึง และถูกสังหาร' },
+    { q: 'สงครามตอนจบของ Horus Heresy ที่ดาว Terra เรียกว่าอะไร?', o: ['Siege of Terra', 'Battle of Calth', 'Drop Site Massacre', 'Fall of Cadia'], a: 0, e: 'Horus บุก Terra เพื่อปิดล้อมพระราชวังของจักรพรรดิ — Calth และ Drop Site Massacre เป็นศึกช่วงต้นของ Heresy' },
+    { q: 'Primarch คนใดฟื้นคืนชีพในยุคปัจจุบันและนำ Indomitus Crusade?', o: ['Roboute Guilliman', 'Rogal Dorn', 'Corax', 'Jaghatai Khan'], a: 0, e: 'Guilliman ฟื้นขึ้นมาและเป็น Lord Commander of the Imperium นำสงครามครูเสดครั้งใหญ่หลัง Great Rift' },
+    { q: 'ตำรา Codex Astartes ที่แบ่ง Legion เป็น Chapter เขียนโดยใคร?', o: ['Roboute Guilliman', 'จักรพรรดิ', 'Rogal Dorn', 'Malcador'], a: 0, e: 'Guilliman เขียนหลัง Heresy เพื่อไม่ให้ใครคุมกำลังมหาศาลได้คนเดียวอีก' },
+    { q: 'ข้อใด<strong>ไม่ใช่</strong>เทพแห่ง Chaos?', o: ['Gork', 'Khorne', 'Nurgle', 'Slaanesh'], a: 0, e: 'เทพ Chaos ทั้งสี่คือ Khorne, Nurgle, Tzeentch และ Slaanesh ส่วน Gork เป็นเทพของ Orks' },
+    { q: 'Black Crusade ครั้งที่ 13 ของ Abaddon ทำให้ดาวป้อมปราการใดล่มสลาย?', o: ['Cadia', 'Macragge', 'Armageddon', 'Fenris'], a: 0, e: 'Cadia เฝ้าทางออกของ Eye of Terror มาหลายพันปี การล่มสลายของ Cadia นำไปสู่การเกิด Great Rift' },
+    { q: 'รอยแยก Warp ที่ผ่ากาแล็กซีเป็นสองซีกในยุคปัจจุบันเรียกว่าอะไร?', o: ['Great Rift (Cicatrix Maledictum)', 'Maelstrom', 'Webway', 'Gellar Field'], a: 0, e: 'Great Rift ตัดจักรวรรดิออกเป็นสองฝั่ง ฝั่งที่มองไม่เห็นแสง Astronomican เรียกว่า Imperium Nihilus' },
+    { q: 'Navigator ใช้แสงอะไรนำทางยานผ่าน Warp?', o: ['Astronomican', 'Gellar Field', 'Golden Throne', 'Warp Storm'], a: 0, e: 'Astronomican คือแสงพลังจิตที่ส่งจาก Terra ส่วน Gellar Field คือสนามพลังกันปีศาจรอบตัวยาน' },
+    { q: 'อวัยวะที่ส่งต่อพันธุกรรมของ Primarch ให้ Space Marine แต่ละรุ่นเรียกว่าอะไร?', o: ['Gene-seed', 'Black Carapace', 'Progenoid', 'Servo-skull'], a: 0, e: 'Gene-seed ทำให้ Space Marine แต่ละ Chapter มีลักษณะเฉพาะสืบทอดจาก Primarch ต้นสาย' },
+    { q: 'ดาวบ้านของ Ultramarines คือดาวอะไร?', o: ['Macragge', 'Fenris', 'Baal', 'Nocturne'], a: 0, e: 'Macragge เป็นเมืองหลวงของ Ultramar — Fenris เป็นของ Space Wolves, Baal ของ Blood Angels, Nocturne ของ Salamanders' },
+    { q: 'Primarch ของ Space Wolves คือใคร?', o: ['Leman Russ', 'Jaghatai Khan', 'Lion El\'Jonson', 'Konrad Curze'], a: 0, e: 'Leman Russ เป็น "หมาป่าของจักรพรรดิ" — Jaghatai Khan เป็นของ White Scars' },
+    { q: 'Primarch คนใดนำ Death Guard และรับใช้ Nurgle?', o: ['Mortarion', 'Angron', 'Perturabo', 'Fulgrim'], a: 0, e: 'Mortarion และ Death Guard ติดโรคระบาดใน Warp จนกลายเป็นผู้รับใช้ Nurgle — Angron (Khorne), Fulgrim (Slaanesh), Perturabo (Iron Warriors)' },
+    { q: 'ผู้นำ Black Legion ที่พยายามทำลายจักรวรรดิมาตลอดหมื่นปีคือใคร?', o: ['Abaddon the Despoiler', 'Ahriman', 'Kharn', 'Huron Blackheart'], a: 0, e: 'Abaddon เคยเป็นกัปตันคนสนิทของ Horus แล้วเปลี่ยนชื่อ Sons of Horus เป็น Black Legion' },
+    { q: 'ก่อนกลายเป็นหุ่นโลหะ Necron เคยเป็นเผ่าอะไร?', o: ['Necrontyr', 'Old Ones', 'Aeldari', 'C\'tan'], a: 0, e: 'Necrontyr ยอมให้ C\'tan ย้ายจิตไปไว้ในร่างโลหะ แลกกับการไม่ตายแต่สูญเสียวิญญาณ' },
+    { q: 'การกำเนิดของเทพองค์ใดทำให้อาณาจักร Aeldari ล่มสลาย?', o: ['Slaanesh', 'Khorne', 'Khaine', 'Cegorach'], a: 0, e: 'ความหลงระเริงของ Aeldari ให้กำเนิด Slaanesh ซึ่งกลืนวิญญาณ Aeldari ไปจำนวนมหาศาล (The Fall)' },
+    { q: 'Tyranid มาจากที่ใด?', o: ['นอกกาแล็กซี', 'ใน Eye of Terror', 'ใต้ผิวดาว Terra', 'ใน Webway'], a: 0, e: 'กองเรือรัง (Hive Fleet) ของ Tyranid บุกเข้ามาจากอวกาศนอกกาแล็กซีเพื่อกลืนกินชีวมวล' },
+    { q: 'ปรัชญาที่ T\'au ทุกวรรณะยึดถือคืออะไร?', o: ['The Greater Good', 'The Imperial Truth', 'The Codex Astartes', 'Waaagh!'], a: 0, e: 'Greater Good ให้ทุกคนทำงานเพื่อส่วนรวม และเปิดรับเผ่าอื่นอย่าง Kroot และ Vespid' },
+    { q: 'Primarch กี่คนที่ถูกลบออกจากบันทึกของจักรวรรดิ?', o: ['2 คน', '1 คน', '4 คน', 'ไม่มีเลย'], a: 0, e: 'Legion ที่ II และ XI ถูกลบจากบันทึกทั้งหมด จึงมี Primarch ที่รู้จักกันเพียง 18 คนจาก 20' }
+  ];
+
+  const SETS = { rules: Q, lore: L };
+  let set = /lore/.test(location.hash) ? 'lore' : 'rules', cur = SETS[set];
   const wrap = document.getElementById('quiz');
   const scoreEl = document.getElementById('quiz-score');
   let answered = 0, correct = 0;
   const shuffle = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
-  const upd = () => { scoreEl.innerHTML = '<span>ตอบแล้ว <b>' + answered + '/' + Q.length + '</b> · ถูก <b class="gold">' + correct + '</b></span>' + (answered === Q.length ? '<b>' + (correct >= 18 ? '🏆 พร้อมลงสนามแล้ว!' : correct >= 13 ? '👍 ดีมาก ทบทวนอีกนิด' : '📖 ลองอ่านหน้ากติกาอีกรอบ') + '</b>' : '<button class="btn btn-ghost btn-sm" id="quiz-reset" type="button">เริ่มใหม่</button>'); const r = document.getElementById('quiz-reset'); if (r) r.onclick = build; };
+  const upd = () => { scoreEl.innerHTML = '<span>ตอบแล้ว <b>' + answered + '/' + cur.length + '</b> · ถูก <b class="gold">' + correct + '</b></span>' + (answered === cur.length ? '<b>' + (correct >= cur.length * .9 ? (set === 'lore' ? '🏆 รู้จักจักรวาล 40K ดีมาก!' : '🏆 พร้อมลงสนามแล้ว!') : correct >= cur.length * .65 ? '👍 ดีมาก ทบทวนอีกนิด' : (set === 'lore' ? '📖 ลองอ่านหน้าเนื้อเรื่องอีกรอบ' : '📖 ลองอ่านหน้ากติกาอีกรอบ')) + '</b>' : '<button class="btn btn-ghost btn-sm" id="quiz-reset" type="button">เริ่มใหม่</button>'); const r = document.getElementById('quiz-reset'); if (r) r.onclick = build; };
 
   function build() {
     answered = 0; correct = 0;
-    wrap.innerHTML = Q.map((x, i) => {
+    wrap.innerHTML = cur.map((x, i) => {
       const opts = shuffle(x.o.map((t, k) => ({ t, ok: k === x.a })));
       return '<div class="quiz-q" data-i="' + i + '"><h3>' + (i + 1) + '. ' + x.q + '</h3><div class="quiz-opts">' +
         opts.map(o => '<button class="quiz-opt" type="button" data-ok="' + (o.ok ? 1 : 0) + '">' + o.t + '</button>').join('') +
@@ -52,5 +78,15 @@
     if (b.dataset.ok === '1') correct++; else b.classList.add('wrong');
     answered++; upd();
   });
+  /* แท็บเลือกชุดคำถาม: กติกา / เนื้อเรื่อง (ลิงก์ตรง quiz.html#lore) */
+  const tabs = document.getElementById('quiz-sets');
+  const setTab = () => tabs && tabs.querySelectorAll('.tab').forEach(t => { const on = t.dataset.set === set; t.classList.toggle('active', on); t.setAttribute('aria-selected', on); });
+  if (tabs) tabs.addEventListener('click', e => {
+    const t = e.target.closest('.tab');
+    if (!t || t.dataset.set === set) return;
+    set = t.dataset.set; cur = SETS[set]; setTab(); build();
+    history.replaceState(null, '', set === 'lore' ? '#lore' : location.pathname + location.search);
+  });
+  setTab();
   build();
 })();

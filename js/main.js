@@ -165,7 +165,7 @@
   });
 
   /* ---------- อนิเมชันตอนเลื่อน: หัวข้อในหน้าเนื้อหา + รายการแบบไล่ทีละชิ้น ---------- */
-  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if ('IntersectionObserver' in window && document.documentElement.classList.contains('fx-ready')) {
     const io2 = new IntersectionObserver(es => es.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add('in'); io2.unobserve(e.target); }
     }), { rootMargin: '0px 0px -6% 0px' });
@@ -182,18 +182,6 @@
       g.classList.add('stagger'); io2.observe(g);
     });
   }
-
-  /* ---------- ปุ่มกดมีคลื่นกระเพื่อม ---------- */
-  document.addEventListener('pointerdown', e => {
-    const b = e.target.closest('.btn');
-    if (!b) return;
-    const r = b.getBoundingClientRect(), d = Math.max(r.width, r.height);
-    const w = document.createElement('span');
-    w.className = 'ripple';
-    w.style.cssText = 'width:' + d + 'px;height:' + d + 'px;left:' + (e.clientX - r.left - d / 2) + 'px;top:' + (e.clientY - r.top - d / 2) + 'px';
-    b.appendChild(w);
-    setTimeout(() => w.remove(), 650);
-  });
 
   /* ---------- อ่านแล้ว ---------- */
   const page = document.body.dataset.page;
@@ -217,7 +205,20 @@
     paint();
   }
   /* แสดงสถานะบนเส้นทางการเรียน (หน้าแรก) */
-  document.querySelectorAll('.path a[data-id]').forEach(a => a.classList.toggle('is-read', read.includes(a.dataset.id)));
+  const pathLinks = [...document.querySelectorAll('.path a[data-id]')];
+  pathLinks.forEach(a => a.classList.toggle('is-read', read.includes(a.dataset.id)));
+  /* บอกว่าควรอ่านหน้าไหนต่อ: หน้าแรกของเส้นทางที่ยังไม่อ่าน */
+  const nextUp = pathLinks.find(a => !a.classList.contains('is-read'));
+  const started = pathLinks.some(a => a.classList.contains('is-read'));
+  if (nextUp) {
+    nextUp.classList.add('is-next');
+    nextUp.insertAdjacentHTML('beforeend', '<span class="next-tag">' + (started ? 'อ่านต่อ' : 'เริ่มที่นี่') + '</span>');
+    const cont = document.querySelector('[data-continue]');
+    if (cont && started) {
+      cont.href = nextUp.getAttribute('href');
+      cont.querySelector('span').textContent = 'อ่านต่อ: ' + nextUp.querySelector('h3').textContent;
+    }
+  }
   document.querySelectorAll('[data-progress]').forEach(el => {
     const ids = el.dataset.progress.split(',');
     const n = ids.filter(id => read.includes(id)).length;

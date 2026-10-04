@@ -16,7 +16,8 @@
   /* คำย่อที่คนนิยมพิมพ์ แต่ในเนื้อหาเขียนเต็ม: Mk VII → Mark VII */
   const qnorm = s => norm(s).replace(/(^|\s)mk\.?(?=\s|[ivx\d]|$)\s*/g, '$1mark ').trim();
 
-  function search(index, query, limit) {
+  /* เหมือน search() แต่คืนคะแนนมาด้วย {e, score}[] — ใช้ตอนต้องตัดสินว่าคะแนน "ดีพอจะตอบ" หรือไม่ (เช่น แชทบอท) */
+  function searchScored(index, query, limit) {
     const q = qnorm(query);
     if (!q) return [];
     const tokens = q.split(' ').filter(Boolean);
@@ -47,7 +48,11 @@
       out.push({ e, score });
     }
     out.sort((a, b) => b.score - a.score || a.e[1].length - b.e[1].length);
-    return out.slice(0, limit || 40).map(r => r.e);
+    return out.slice(0, limit || 40);
+  }
+
+  function search(index, query, limit) {
+    return searchScored(index, query, limit).map(r => r.e);
   }
 
   function snippet(text, query) {
@@ -70,7 +75,7 @@
     return h;
   }
 
-  window.SiteSearch = { norm, search, snippet };
+  window.SiteSearch = { norm, search, searchScored, snippet };
   if (!hasDOM) return;
 
   /* ---------- UI ---------- */
@@ -105,6 +110,7 @@
     s.onload = res; s.onerror = rej;
     document.head.appendChild(s);
   }));
+  window.SiteSearch.loadIndex = loadIndex; // ให้ js/chatbot.js เรียกใช้ซ้ำได้ ไม่ต้องโหลดดัชนีซ้ำสองรอบ
 
   function render() {
     const q = input.value;

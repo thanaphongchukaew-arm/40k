@@ -5,7 +5,8 @@ global.window = {}; require(ROOT + '/js/search-index.js'); const OLD = window.SE
 const oldCat = {}; OLD.forEach(e => { const p = e[0].split(/[#?]/)[0]; if (e[0] === p) oldCat[p] = e[3]; });
 const files = ['index.html'].concat(fs.readdirSync(ROOT + '/pages').filter(f => f.endsWith('.html')).map(f => 'pages/' + f))
   .concat(fs.readdirSync(ROOT + '/pages/lore').filter(f => f.endsWith('.html')).map(f => 'pages/lore/' + f))
-  .concat(fs.readdirSync(ROOT + '/pages/primarchs').filter(f => f.endsWith('.html')).map(f => 'pages/primarchs/' + f));
+  .concat(fs.readdirSync(ROOT + '/pages/primarchs').filter(f => f.endsWith('.html')).map(f => 'pages/primarchs/' + f))
+  .concat(fs.readdirSync(ROOT + '/pages/events').filter(f => f.endsWith('.html')).map(f => 'pages/events/' + f));
 const catFor = p => oldCat[p] || (p.startsWith('pages/lore/') ? 'เนื้อเรื่องทัพ' : p.startsWith('pages/primarchs/') ? 'ตัวละคร' : 'โลกของ 40K');
 const itemCat = p => ({ 'pages/characters.html': 'ตัวละคร', 'pages/factions.html': 'ทัพ', 'pages/primarchs.html': 'ตัวละคร' }[p]);
 (async () => {

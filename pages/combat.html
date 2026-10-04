@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>การโจมตี & ทอยเต๋า | คู่มือ Warhammer 40K ฉบับมือใหม่</title>
   <meta name="description" content="ลำดับการโจมตีของ Warhammer 40,000 11th Edition: Hit, Wound, Save, Damage พร้อมตาราง Wound และตัวจำลองการทอยเต๋า">
-  <meta name="theme-color" content="#0d0e11">
+  <meta name="theme-color" content="#0b0c0e">
   <link rel="icon" href="../images/icons/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="../manifest.webmanifest">
   <link rel="apple-touch-icon" href="../images/icons/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Kanit:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css?v=23">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=32">
 </head>
 <body data-page="combat" data-root="../">
-<script src="../js/icons.js?v=17"></script>
+<script src="../js/icons.js?v=19"></script>
 
 <main>
   <header class="page-hero">
@@ -24,7 +24,7 @@
       <nav class="breadcrumb" aria-label="breadcrumb"><a href="../index.html">หน้าแรก</a><svg class="i"><use href="#i-chev-right"></use></svg><span>กติกา & จัดทัพ</span><svg class="i"><use href="#i-chev-right"></use></svg><span>การโจมตี</span></nav>
       <h1>การโจมตี: Hit → Wound → Save → Damage</h1>
       <p class="lead">ทุกการยิงและการฟันในเกมใช้ลำดับ 4 ขั้นเดียวกัน เข้าใจหน้านี้ = เข้าใจการต่อสู้ทั้งเกม พร้อมตัวจำลองให้ลองทอยเอง</p>
-      <div class="page-meta"><span class="rules-date" title="วันที่ตรวจสอบกติกากับฉบับทางการล่าสุด"><svg class="i"><use href="#i-check-circle"></use></svg> กติกาตรวจล่าสุด 24 ก.ย. 2026 · Core Rules 11th Edition</span><span class="chip"><svg class="i"><use href="#i-clock"></use></svg> อ่าน ~12 นาที</span><span class="chip chip-gold">บทที่ 6</span><span class="chip chip-new">11th Edition</span></div>
+      <div class="page-meta"><span class="rules-date" title="วันที่ตรวจสอบกติกากับฉบับทางการล่าสุด"><svg class="i"><use href="#i-check-circle"></use></svg> กติกาตรวจล่าสุด 24 ก.ย. 2026 · Core Rules 11th Edition</span><span class="chip"><svg class="i"><use href="#i-clock"></use></svg> อ่าน ~12 นาที</span><span class="chip chip-gold">บทที่ 6</span></div>
     </div>
   </header>
 
@@ -43,9 +43,9 @@
         </ol>
         <div class="grid grid-4">
           <div class="card card-step"><span class="step-n">1</span><div class="card-icon"><svg class="i"><use href="#i-target"></use></svg></div><h3>Hit</h3><p>โดนไหม? เทียบกับ BS/WS</p></div>
-          <div class="card card-step"><span class="step-n">2</span><div class="card-icon red"><svg class="i"><use href="#i-sword"></use></svg></div><h3>Wound</h3><p>ทะลุความอึดไหม? S เทียบ T</p></div>
-          <div class="card card-step"><span class="step-n">3</span><div class="card-icon blue"><svg class="i"><use href="#i-shield"></use></svg></div><h3>Save</h3><p>เกราะกันได้ไหม? ฝ่ายรับทอย</p></div>
-          <div class="card card-step"><span class="step-n">4</span><div class="card-icon green"><svg class="i"><use href="#i-skull"></use></svg></div><h3>Damage</h3><p>ลดแผลตามค่า D</p></div>
+          <div class="card card-step"><span class="step-n">2</span><div class="card-icon"><svg class="i"><use href="#i-sword"></use></svg></div><h3>Wound</h3><p>ทะลุความอึดไหม? S เทียบ T</p></div>
+          <div class="card card-step"><span class="step-n">3</span><div class="card-icon"><svg class="i"><use href="#i-shield"></use></svg></div><h3>Save</h3><p>เกราะกันได้ไหม? ฝ่ายรับทอย</p></div>
+          <div class="card card-step"><span class="step-n">4</span><div class="card-icon"><svg class="i"><use href="#i-skull"></use></svg></div><h3>Damage</h3><p>ลดแผลตามค่า D</p></div>
         </div>
       </section>
 
@@ -146,12 +146,12 @@
         <form class="tool" id="sim">
           <div class="tool-head"><div class="card-icon"><svg class="i"><use href="#i-dice"></use></svg></div><h3>ผู้โจมตี</h3></div>
           <div class="form-grid">
-            <div class="field"><label>จำนวนโมเดลที่โจมตี</label><input name="models" type="number" min="1" max="40" value="5"></div>
-            <div class="field"><label>A (Attacks) ต่อโมเดล</label><input name="A" type="number" min="1" max="20" value="2"></div>
-            <div class="field"><label>BS / WS</label><select name="BS"><option value="2">2+</option><option value="3" selected>3+</option><option value="4">4+</option><option value="5">5+</option><option value="6">6+</option></select></div>
-            <div class="field"><label>S (Strength)</label><input name="S" type="number" min="1" max="30" value="4"></div>
-            <div class="field"><label>AP</label><select name="AP"><option value="0">0</option><option value="-1" selected>-1</option><option value="-2">-2</option><option value="-3">-3</option><option value="-4">-4</option><option value="-5">-5</option></select></div>
-            <div class="field"><label>D (Damage)</label><select name="D"><option>1</option><option>2</option><option>3</option><option>D3</option><option>D6</option><option>D6+1</option></select></div>
+            <div class="field"><label for="fld-models-1">จำนวนโมเดลที่โจมตี</label><input id="fld-models-1" name="models" type="number" min="1" max="40" value="5"></div>
+            <div class="field"><label for="fld-a-2">A (Attacks) ต่อโมเดล</label><input id="fld-a-2" name="A" type="number" min="1" max="20" value="2"></div>
+            <div class="field"><label for="fld-bs-3">BS / WS</label><select id="fld-bs-3" name="BS"><option value="2">2+</option><option value="3" selected>3+</option><option value="4">4+</option><option value="5">5+</option><option value="6">6+</option></select></div>
+            <div class="field"><label for="fld-s-4">S (Strength)</label><input id="fld-s-4" name="S" type="number" min="1" max="30" value="4"></div>
+            <div class="field"><label for="fld-ap-5">AP</label><select id="fld-ap-5" name="AP"><option value="0">0</option><option value="-1" selected>-1</option><option value="-2">-2</option><option value="-3">-3</option><option value="-4">-4</option><option value="-5">-5</option></select></div>
+            <div class="field"><label for="fld-d-6">D (Damage)</label><select id="fld-d-6" name="D"><option>1</option><option>2</option><option>3</option><option>D3</option><option>D6</option><option>D6+1</option></select></div>
           </div>
           <div class="checks">
             <label class="check"><input type="checkbox" name="cover"> เป้าอยู่ในที่กำบัง (BS แย่ลง 1)</label>
@@ -164,14 +164,14 @@
             <label class="check"><input type="checkbox" name="dev"> [DEVASTATING WOUNDS]</label>
             <label class="check"><input type="checkbox" name="anti"> [ANTI-X 4+] เป้ามีคีย์เวิร์ดตรง</label>
           </div>
-          <div class="tool-head mt-2"><div class="card-icon red"><svg class="i"><use href="#i-shield"></use></svg></div><h3>เป้าหมาย</h3></div>
+          <div class="tool-head mt-2"><div class="card-icon"><svg class="i"><use href="#i-shield"></use></svg></div><h3>เป้าหมาย</h3></div>
           <div class="form-grid">
-            <div class="field"><label>T (Toughness)</label><input name="T" type="number" min="1" max="30" value="3"></div>
-            <div class="field"><label>Sv (Save)</label><select name="Sv"><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option><option value="5" selected>5+</option><option value="6">6+</option><option value="7">ไม่มี</option></select></div>
-            <div class="field"><label>Invulnerable Save</label><select name="Inv"><option value="0" selected>ไม่มี</option><option value="3">3+</option><option value="4">4+</option><option value="5">5+</option><option value="6">6+</option></select></div>
-            <div class="field"><label>W ต่อโมเดล</label><input name="W" type="number" min="1" max="30" value="1"></div>
-            <div class="field"><label>จำนวนโมเดลในยูนิต</label><input name="N" type="number" min="1" max="40" value="10"></div>
-            <div class="field"><label>Feel No Pain</label><select name="FNP"><option value="0" selected>ไม่มี</option><option value="4">4+</option><option value="5">5+</option><option value="6">6+</option></select></div>
+            <div class="field"><label for="fld-t-7">T (Toughness)</label><input id="fld-t-7" name="T" type="number" min="1" max="30" value="3"></div>
+            <div class="field"><label for="fld-sv-8">Sv (Save)</label><select id="fld-sv-8" name="Sv"><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option><option value="5" selected>5+</option><option value="6">6+</option><option value="7">ไม่มี</option></select></div>
+            <div class="field"><label for="fld-inv-9">Invulnerable Save</label><select id="fld-inv-9" name="Inv"><option value="0" selected>ไม่มี</option><option value="3">3+</option><option value="4">4+</option><option value="5">5+</option><option value="6">6+</option></select></div>
+            <div class="field"><label for="fld-w-10">W ต่อโมเดล</label><input id="fld-w-10" name="W" type="number" min="1" max="30" value="1"></div>
+            <div class="field"><label for="fld-n-11">จำนวนโมเดลในยูนิต</label><input id="fld-n-11" name="N" type="number" min="1" max="40" value="10"></div>
+            <div class="field"><label for="fld-fnp-12">Feel No Pain</label><select id="fld-fnp-12" name="FNP"><option value="0" selected>ไม่มี</option><option value="4">4+</option><option value="5">5+</option><option value="6">6+</option></select></div>
           </div>
           <div class="tool-actions"><button class="btn btn-primary" type="submit"><svg class="i"><use href="#i-dice"></use></svg> ทอยเต๋า!</button></div>
           <div class="result" id="sim-result" aria-live="polite"></div>
@@ -212,8 +212,8 @@
   </div>
 </main>
 
-<script src="../js/layout.js?v=18"></script>
-<script src="../js/main.js?v=18"></script>
+<script src="../js/layout.js?v=29"></script>
+<script src="../js/main.js?v=19"></script>
 <script src="../js/combat.js?v=17"></script>
 </body>
 </html>
